@@ -9,7 +9,7 @@ branches:
 sudo: true
 
 before_script:
-  - npm i -g @angular/cli@8.3.25
+  - npm i -g @angular/cli
 
 cache:
   yarn: true
