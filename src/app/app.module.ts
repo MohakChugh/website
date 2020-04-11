@@ -9,6 +9,10 @@ import { ContactComponent } from './contact/contact.component';
 import { ProjectsComponent } from './projects/projects.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { FooterComponent } from './footer/footer.component';
+import { FarmersappComponent } from './projects/farmersapp/farmersapp.component';
+import { CitizensappComponent } from './projects/citizensapp/citizensapp.component';
+import { PropertyManagementComponent } from './projects/property-management/property-management.component';
+import { ContentPusherComponent } from './projects/content-pusher/content-pusher.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +22,11 @@ import { FooterComponent } from './footer/footer.component';
     ContactComponent,
     ProjectsComponent,
     NavbarComponent,
-    FooterComponent
+    FooterComponent,
+    FarmersappComponent,
+    CitizensappComponent,
+    PropertyManagementComponent,
+    ContentPusherComponent
   ],
   imports: [
     BrowserModule,
