@@ -13,6 +13,7 @@ import { FarmersappComponent } from './projects/farmersapp/farmersapp.component'
 import { CitizensappComponent } from './projects/citizensapp/citizensapp.component';
 import { PropertyManagementComponent } from './projects/property-management/property-management.component';
 import { ContentPusherComponent } from './projects/content-pusher/content-pusher.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -30,7 +31,8 @@ import { ContentPusherComponent } from './projects/content-pusher/content-pusher
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
