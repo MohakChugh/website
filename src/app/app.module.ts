@@ -34,7 +34,7 @@ import { BlogsComponent } from './blogs/blogs.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

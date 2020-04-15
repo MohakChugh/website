@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
+import * as axios from 'axios';
 
 @Component({
   selector: 'app-blogs',
@@ -8,14 +8,16 @@ import { HttpClient } from '@angular/common/http';
 })
 export class BlogsComponent implements OnInit {
 
-  array = [1, 2, 3, 4, 5];
-  constructor(private http: HttpClient) { }
+  array: any;
+  constructor() { }
 
   ngOnInit(): void {
-    this.http.get('https://website-backend-mohak.herokuapp.com/blogs')
-      .subscribe(Response => {
-        console.log(Response);
-      });
+    axios.default.get('https://website-backend-mohak.herokuapp.com/blogs')
+      .then(res => {
+        this.array = res.data.blogs;
+        console.log(this.array);
+      })
+      .catch(err => console.log(err));
   }
 
 }
