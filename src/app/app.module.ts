@@ -14,6 +14,7 @@ import { CitizensappComponent } from './projects/citizensapp/citizensapp.compone
 import { PropertyManagementComponent } from './projects/property-management/property-management.component';
 import { ContentPusherComponent } from './projects/content-pusher/content-pusher.component';
 import { FormsModule } from '@angular/forms';
+import { BlogsComponent } from './blogs/blogs.component';
 
 @NgModule({
   declarations: [
@@ -27,7 +28,8 @@ import { FormsModule } from '@angular/forms';
     FarmersappComponent,
     CitizensappComponent,
     PropertyManagementComponent,
-    ContentPusherComponent
+    ContentPusherComponent,
+    BlogsComponent
   ],
   imports: [
     BrowserModule,

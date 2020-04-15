@@ -8,17 +8,19 @@ import { CitizensappComponent } from './projects/citizensapp/citizensapp.compone
 import { FarmersappComponent } from './projects/farmersapp/farmersapp.component';
 import { ContentPusherComponent } from './projects/content-pusher/content-pusher.component';
 import { PropertyManagementComponent } from './projects/property-management/property-management.component';
+import { BlogsComponent } from './blogs/blogs.component';
 
 
 const routes: Routes = [
   { path: '', component: IndexComponent },
   { path: 'cv', component: CvComponent },
   { path: 'contact', component: ContactComponent },
-  { path: 'project', component: ProjectsComponent } ,
+  { path: 'project', component: ProjectsComponent },
   { path: 'citizensapp', component: CitizensappComponent },
   { path: 'farmersapp', component: FarmersappComponent },
   { path: 'blogger', component: ContentPusherComponent },
-  { path: 'propertymanagement', component: PropertyManagementComponent }
+  { path: 'propertymanagement', component: PropertyManagementComponent },
+  { path: 'blogs', component: BlogsComponent }
 ];
 
 @NgModule({
