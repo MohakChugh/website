@@ -1,0 +1,10 @@
+version: '3.4'
+
+services:
+  website:
+    image: website
+    build: .
+    environment:
+      NODE_ENV: production
+    ports:
+      - 4200
