@@ -9,13 +9,16 @@ import * as axios from 'axios';
 export class BlogsComponent implements OnInit {
 
   array: any;
+  loading = false;
   constructor() { }
 
   ngOnInit(): void {
+    this.loading = true;
     axios.default.get('https://website-backend-mohak.herokuapp.com/blogs')
       .then(res => {
         this.array = res.data.blogs;
         console.log(this.array);
+        this.loading = false;
       })
       .catch(err => console.log(err));
   }
