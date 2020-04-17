@@ -2,9 +2,6 @@
 <div class="article-clean" id="topHeading">
     <div class="container">
         <div class="row">
-            <div *ngIf="loading" class="alert alert-danger">
-                Hold On Tight!! Awesome Content Takes Time!
-            </div>
             <div *ngFor="let item of array" class="col-lg-10 col-xl-8 offset-lg-1 offset-xl-2">
                 <div class="intro">
                     <p class="text-center"><span class="by">by</span> <a [routerLink]="['/']">Mohak Chugh</a><span
@@ -14,6 +11,11 @@
 
                 </div>
             </div>
+        </div>
+        <div class="text-center">
+            <h1 class="alert">Awesome content takes time!</h1>
+            <i *ngIf="loading" class="fa fa-spinner fa-spin" style="font-size:50px"></i>
+            <br>
         </div>
     </div>
 </div>
