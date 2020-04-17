@@ -1,6 +1,6 @@
 <div>
     <app-navbar></app-navbar>
-    <main class="page lanidng-page">
+    <main class="page lanidng-page" id="top-heading">
         <section class="portfolio-block block-intro">
             <div class="container">
                 <div class="avatar" style="background-image: url(&quot;assets/img/avatars/dp1.jpg&quot;);"></div>
@@ -14,12 +14,12 @@
         <section class="portfolio-block photography">
             <div class="container">
                 <div class="row no-gutters">
-                    <div class="col-md-6 col-lg-4 item zoom-on-hover"><a href="#"><img class="img-fluid image"
-                                src="assets/img/tech/agritech.png"></a></div>
-                    <div class="col-md-6 col-lg-4 item zoom-on-hover"><a href="#"><img class="img-fluid image"
-                                src="assets/img/tech/pm.png"></a></div>
-                    <div class="col-md-6 col-lg-4 item zoom-on-hover"><a href="#"><img class="img-fluid image"
-                                src="assets/img/tech/citizens.png"></a></div>
+                    <div class="col-md-6 col-lg-4 item zoom-on-hover"><a [routerLink]="['/project']"><img
+                                class="img-fluid image" src="assets/img/tech/agritech.png"></a></div>
+                    <div class="col-md-6 col-lg-4 item zoom-on-hover"><a [routerLink]="['/project']"><img
+                                class="img-fluid image" src="assets/img/tech/pm.png"></a></div>
+                    <div class="col-md-6 col-lg-4 item zoom-on-hover"><a [routerLink]="['/project']"><img
+                                class="img-fluid image" src="assets/img/tech/citizens.png"></a></div>
                 </div>
             </div>
         </section>
@@ -27,7 +27,7 @@
             <div class="container">
                 <div class="d-flex justify-content-center align-items-center content">
                     <h3>Like what you see?</h3><button class="btn btn-outline-primary btn-lg" type="button">
-                        <a href="github.com/mohakchugh"> Check Out My Github To Learn More</a>
+                        <a href="http://github.com/mohakchugh"> Check Out My Github To Learn More</a>
                     </button>
                 </div>
             </div>
