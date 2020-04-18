@@ -13,7 +13,7 @@
             </div>
         </div>
         <div class="text-center">
-            <h1 class="alert">Awesome content takes time!</h1>
+            <h1 *ngIf="loading" class="alert">Awesome content takes time!</h1>
             <i *ngIf="loading" class="fa fa-spinner fa-spin" style="font-size:50px"></i>
             <br>
         </div>
