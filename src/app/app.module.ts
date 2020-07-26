@@ -15,6 +15,7 @@ import { PropertyManagementComponent } from './projects/property-management/prop
 import { ContentPusherComponent } from './projects/content-pusher/content-pusher.component';
 import { FormsModule } from '@angular/forms';
 import { BlogsComponent } from './blogs/blogs.component';
+import { DroneDashComponent } from './projects/drone-dash/drone-dash.component';
 
 @NgModule({
   declarations: [
@@ -29,7 +30,8 @@ import { BlogsComponent } from './blogs/blogs.component';
     CitizensappComponent,
     PropertyManagementComponent,
     ContentPusherComponent,
-    BlogsComponent
+    BlogsComponent,
+    DroneDashComponent
   ],
   imports: [
     BrowserModule,
