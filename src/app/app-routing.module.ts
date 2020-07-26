@@ -17,12 +17,15 @@ const routes: Routes = [
   { path: 'cv', component: CvComponent },
   { path: 'contact', component: ContactComponent },
   { path: 'project', component: ProjectsComponent },
+  { path: 'blogs', component: BlogsComponent },
+
+  // Projects Urls here
   { path: 'citizensapp', component: CitizensappComponent },
   { path: 'farmersapp', component: FarmersappComponent },
   { path: 'blogger', component: ContentPusherComponent },
   { path: 'propertymanagement', component: PropertyManagementComponent },
   { path: 'dronedash', component: DroneDashComponent },
-  { path: 'blogs', component: BlogsComponent }
+
 ];
 
 @NgModule({
