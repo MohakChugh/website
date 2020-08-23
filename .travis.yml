@@ -18,6 +18,7 @@ cache:
 
 script:
   - ng build --prod
+  - cp index.html 404.html 
 
 deploy:
   provider: pages
