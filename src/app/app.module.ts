@@ -16,6 +16,7 @@ import { ContentPusherComponent } from './projects/content-pusher/content-pusher
 import { FormsModule } from '@angular/forms';
 import { BlogsComponent } from './blogs/blogs.component';
 import { DroneDashComponent } from './projects/drone-dash/drone-dash.component';
+import { SocialMediaAccordianComponent } from './contact/social-media-accordian/social-media-accordian.component';
 
 @NgModule({
   declarations: [
@@ -31,7 +32,8 @@ import { DroneDashComponent } from './projects/drone-dash/drone-dash.component';
     PropertyManagementComponent,
     ContentPusherComponent,
     BlogsComponent,
-    DroneDashComponent
+    DroneDashComponent,
+    SocialMediaAccordianComponent
   ],
   imports: [
     BrowserModule,
