@@ -17,7 +17,7 @@ cache:
     - node_modules
 
 script:
-  - ng build --prod
+  - ng build --prod --base-href /portfolio/
   - cp ./dist/portfolio/index.html ./dist/portfolio/404.html 
 
 deploy:
