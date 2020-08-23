@@ -36,6 +36,7 @@
                   "with": "src/environments/environment.prod.ts"
                 }
               ],
+              "baseHref": "https://mohakchugh.github.io/website/",
               "optimization": true,
               "outputHashing": "all",
               "sourceMap": false,
