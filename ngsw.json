@@ -1,0 +1,106 @@
+{
+  "configVersion": 1,
+  "timestamp": 1598291428579,
+  "index": "/website/index.html",
+  "assetGroups": [
+    {
+      "name": "app",
+      "installMode": "prefetch",
+      "updateMode": "prefetch",
+      "urls": [
+        "/website/favicon.ico",
+        "/website/index.html",
+        "/website/main-es2015.0685383fb3d98499b4fe.js",
+        "/website/main-es5.0685383fb3d98499b4fe.js",
+        "/website/manifest.webmanifest",
+        "/website/polyfills-es2015.95bb65e853d2781ac3bd.js",
+        "/website/polyfills-es5.341d48ffc88eaeae911d.js",
+        "/website/runtime-es2015.409e6590615fb48d139f.js",
+        "/website/runtime-es5.409e6590615fb48d139f.js",
+        "/website/styles.4e9440cb2230925df2b0.css"
+      ],
+      "patterns": []
+    },
+    {
+      "name": "assets",
+      "installMode": "lazy",
+      "updateMode": "prefetch",
+      "urls": [
+        "/website/assets/blog/assets/css/styles.min.css",
+        "/website/assets/bootstrap/css/bootstrap.min.css",
+        "/website/assets/google5f0f4d45152d0e94.html",
+        "/website/assets/icons/icon-128x128.png",
+        "/website/assets/icons/icon-144x144.png",
+        "/website/assets/icons/icon-152x152.png",
+        "/website/assets/icons/icon-192x192.png",
+        "/website/assets/icons/icon-384x384.png",
+        "/website/assets/icons/icon-512x512.png",
+        "/website/assets/icons/icon-72x72.png",
+        "/website/assets/icons/icon-96x96.png",
+        "/website/assets/img/avatars/dp1.jpg",
+        "/website/assets/img/favicon.png",
+        "/website/assets/img/logo_transparent.png",
+        "/website/assets/img/tech/agritech.png",
+        "/website/assets/img/tech/citizens.png",
+        "/website/assets/img/tech/dronedash.png",
+        "/website/assets/img/tech/pm.png",
+        "/website/assets/img/tech/text-editor.gif",
+        "/website/assets/js/script.min.js",
+        "/website/assets/portfolio.gif"
+      ],
+      "patterns": []
+    }
+  ],
+  "dataGroups": [],
+  "hashTable": {
+    "/website/assets/blog/assets/css/styles.min.css": "ee3e6a3002e749c2b99aa844bceae96e5bec8b43",
+    "/website/assets/bootstrap/css/bootstrap.min.css": "a6dbc16ec0dc9d3bc24e1df34dc1705bef383e35",
+    "/website/assets/google5f0f4d45152d0e94.html": "42fff54797d2c5dd427b5f4a2915f900f2ecf46a",
+    "/website/assets/icons/icon-128x128.png": "dae3b6ed49bdaf4327b92531d4b5b4a5d30c7532",
+    "/website/assets/icons/icon-144x144.png": "b0bd89982e08f9bd2b642928f5391915b74799a7",
+    "/website/assets/icons/icon-152x152.png": "7479a9477815dfd9668d60f8b3b2fba709b91310",
+    "/website/assets/icons/icon-192x192.png": "1abd80d431a237a853ce38147d8c63752f10933b",
+    "/website/assets/icons/icon-384x384.png": "329749cd6393768d3131ed6304c136b1ca05f2fd",
+    "/website/assets/icons/icon-512x512.png": "559d9c4318b45a1f2b10596bbb4c960fe521dbcc",
+    "/website/assets/icons/icon-72x72.png": "c457e56089a36952cd67156f9996bc4ce54a5ed9",
+    "/website/assets/icons/icon-96x96.png": "3914125a4b445bf111c5627875fc190f560daa41",
+    "/website/assets/img/avatars/dp1.jpg": "75d9f3319946b3293b71d897e3f14c378c2929a7",
+    "/website/assets/img/favicon.png": "ad4a8bc7431ab719aa3ca0bdc581771b801ce4e8",
+    "/website/assets/img/logo_transparent.png": "fbf830d9c90427498e53dd65aa23728ca4f21bec",
+    "/website/assets/img/tech/agritech.png": "485930255bb4d17368a65b44d942a4ed329ad2e0",
+    "/website/assets/img/tech/citizens.png": "04d899c9ece020a2bda3a618683c90fd592c118a",
+    "/website/assets/img/tech/dronedash.png": "7758ffa350af849f49a4e677da3516cc231fd698",
+    "/website/assets/img/tech/pm.png": "9267d60200aa2cca90ec81341740b27d10cdfb12",
+    "/website/assets/img/tech/text-editor.gif": "cf19e553885ebed3e4d55b01cc6aba4d0c87dd16",
+    "/website/assets/js/script.min.js": "e11f36e76d078010bfaf95e1f257255c4dfa4b58",
+    "/website/assets/portfolio.gif": "508215b75eb8d9b732af1d960e39f1ebf7be7e6d",
+    "/website/favicon.ico": "22f6a4a3bcaafafb0254e0f2fa4ceb89e505e8b2",
+    "/website/index.html": "d376daa99736890064bff496d531ee18f5762fc6",
+    "/website/main-es2015.0685383fb3d98499b4fe.js": "2821e7e768eb1e92de233b359391231cb52570bc",
+    "/website/main-es5.0685383fb3d98499b4fe.js": "b1b5f2a74e1956cfa9eb4c8d36482851568169bd",
+    "/website/manifest.webmanifest": "e14484a4f652e2f158ec8045c44ef1b6d61e9f2d",
+    "/website/polyfills-es2015.95bb65e853d2781ac3bd.js": "72ad4ccc0a3916ae4598199447cdeadd6d380570",
+    "/website/polyfills-es5.341d48ffc88eaeae911d.js": "8aa26ea87b9958c6bd13b7c257c0e9940438e684",
+    "/website/runtime-es2015.409e6590615fb48d139f.js": "a9aafcf49f49145093fc831efd9b8e2f6c71bb9c",
+    "/website/runtime-es5.409e6590615fb48d139f.js": "a9aafcf49f49145093fc831efd9b8e2f6c71bb9c",
+    "/website/styles.4e9440cb2230925df2b0.css": "f0681dee1138c489d503aa685db47fbb8f4416f6"
+  },
+  "navigationUrls": [
+    {
+      "positive": true,
+      "regex": "^\\/.*$"
+    },
+    {
+      "positive": false,
+      "regex": "^\\/(?:.+\\/)?[^/]*\\.[^/]*$"
+    },
+    {
+      "positive": false,
+      "regex": "^\\/(?:.+\\/)?[^/]*__[^/]*$"
+    },
+    {
+      "positive": false,
+      "regex": "^\\/(?:.+\\/)?[^/]*__[^/]*\\/.*$"
+    }
+  ]
+}
