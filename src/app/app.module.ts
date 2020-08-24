@@ -17,6 +17,8 @@ import { FormsModule } from '@angular/forms';
 import { BlogsComponent } from './blogs/blogs.component';
 import { DroneDashComponent } from './projects/drone-dash/drone-dash.component';
 import { SocialMediaAccordianComponent } from './contact/social-media-accordian/social-media-accordian.component';
+import { ServiceWorkerModule } from '@angular/service-worker';
+import { environment } from '../environments/environment';
 
 @NgModule({
   declarations: [
@@ -39,6 +41,7 @@ import { SocialMediaAccordianComponent } from './contact/social-media-accordian/
     BrowserModule,
     AppRoutingModule,
     FormsModule,
+    ServiceWorkerModule.register('ngsw-worker.js', { enabled: environment.production }),
   ],
   providers: [],
   bootstrap: [AppComponent]
