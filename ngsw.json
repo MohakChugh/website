@@ -1,6 +1,6 @@
 {
   "configVersion": 1,
-  "timestamp": 1606553114998,
+  "timestamp": 1611390449595,
   "index": "/website/index.html",
   "assetGroups": [
     {
@@ -9,8 +9,8 @@
       "updateMode": "prefetch",
       "urls": [
         "/website/index.html",
-        "/website/main-es2015.53f28db8800b7c4eebc0.js",
-        "/website/main-es5.53f28db8800b7c4eebc0.js",
+        "/website/main-es2015.37add824b18ec1154d1b.js",
+        "/website/main-es5.37add824b18ec1154d1b.js",
         "/website/manifest.webmanifest",
         "/website/polyfills-es2015.95bb65e853d2781ac3bd.js",
         "/website/polyfills-es5.341d48ffc88eaeae911d.js",
@@ -32,6 +32,7 @@
         "/website/assets/img/avatars/dp1.jpg",
         "/website/assets/img/favicon.png",
         "/website/assets/img/logo_transparent.png",
+        "/website/assets/img/tech/Dashboard_Demo.gif",
         "/website/assets/img/tech/agritech.png",
         "/website/assets/img/tech/citizens.png",
         "/website/assets/img/tech/dronedash.png",
@@ -52,6 +53,7 @@
     "/website/assets/img/avatars/dp1.jpg": "75d9f3319946b3293b71d897e3f14c378c2929a7",
     "/website/assets/img/favicon.png": "ad4a8bc7431ab719aa3ca0bdc581771b801ce4e8",
     "/website/assets/img/logo_transparent.png": "fbf830d9c90427498e53dd65aa23728ca4f21bec",
+    "/website/assets/img/tech/Dashboard_Demo.gif": "c93af6417ceaadfbebb29742309663f5479bce0f",
     "/website/assets/img/tech/agritech.png": "ba5f11d489db557ff8a494da91d15ffcf02d8fc3",
     "/website/assets/img/tech/citizens.png": "bdfaacd197716496e51bb0f9c89df359e4781af8",
     "/website/assets/img/tech/dronedash.png": "7701dce0ae1406779b49b4c1f3bc757e759ca852",
@@ -59,9 +61,9 @@
     "/website/assets/img/tech/text-editor.gif": "b79782530ec975a1375a101750276de545b175e4",
     "/website/assets/js/script.min.js": "e11f36e76d078010bfaf95e1f257255c4dfa4b58",
     "/website/assets/portfolio.gif": "0c6e6e4e67e4434c6a137e3299a71c14c95b8436",
-    "/website/index.html": "6d4a53bf645eef803bf3b27b55b787d077093957",
-    "/website/main-es2015.53f28db8800b7c4eebc0.js": "e880e40946e7f78b0ed730df08204d48ac95cb85",
-    "/website/main-es5.53f28db8800b7c4eebc0.js": "552ce321e6758eab8f36965a527acd877871697b",
+    "/website/index.html": "8aca1e9fc9649148c281607b2babe2af21083163",
+    "/website/main-es2015.37add824b18ec1154d1b.js": "7887d5ecdd2cf2e18cb34ac8b276d1c6b497d843",
+    "/website/main-es5.37add824b18ec1154d1b.js": "44f316be4d8b9b0569002776208fb796ba4bf33d",
     "/website/manifest.webmanifest": "dd93c2dfac12d68d97e6c3935853247914e9fe22",
     "/website/polyfills-es2015.95bb65e853d2781ac3bd.js": "72ad4ccc0a3916ae4598199447cdeadd6d380570",
     "/website/polyfills-es5.341d48ffc88eaeae911d.js": "8aa26ea87b9958c6bd13b7c257c0e9940438e684",
