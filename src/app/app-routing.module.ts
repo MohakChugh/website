@@ -9,6 +9,7 @@ import { FarmersappComponent } from './projects/farmersapp/farmersapp.component'
 import { ContentPusherComponent } from './projects/content-pusher/content-pusher.component';
 import { PropertyManagementComponent } from './projects/property-management/property-management.component';
 import { BlogsComponent } from './blogs/blogs.component';
+import { ClassifierSelectorComponent } from './projects/classifier-selector/classifier-selector.component';
 import { DroneDashComponent } from './projects/drone-dash/drone-dash.component';
 
 
@@ -25,6 +26,7 @@ const routes: Routes = [
   { path: 'blogger', component: ContentPusherComponent },
   { path: 'propertymanagement', component: PropertyManagementComponent },
   { path: 'dronedash', component: DroneDashComponent },
+  { path: 'classifierSelector', component: ClassifierSelectorComponent }
 
 ];
 

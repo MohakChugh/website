@@ -19,6 +19,7 @@ import { DroneDashComponent } from './projects/drone-dash/drone-dash.component';
 import { SocialMediaAccordianComponent } from './contact/social-media-accordian/social-media-accordian.component';
 import { ServiceWorkerModule } from '@angular/service-worker';
 import { environment } from '../environments/environment';
+import { ClassifierSelectorComponent } from './projects/classifier-selector/classifier-selector.component';
 
 @NgModule({
   declarations: [
@@ -35,7 +36,8 @@ import { environment } from '../environments/environment';
     ContentPusherComponent,
     BlogsComponent,
     DroneDashComponent,
-    SocialMediaAccordianComponent
+    SocialMediaAccordianComponent,
+    ClassifierSelectorComponent
   ],
   imports: [
     BrowserModule,
