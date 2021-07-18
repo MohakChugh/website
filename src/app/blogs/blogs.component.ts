@@ -14,15 +14,13 @@ export class BlogsComponent implements OnInit {
 
   ngOnInit(): void {
     this.loading = true;
-    axios.default.get('http://website-backend-mohak.herokuapp.com/blogs')
+    axios.default.get('https://website-backend-mohak.herokuapp.com/blogs')
       .then(res => {
         this.array = res.data.blogs;
-        // loop through array and add a new property to each blog object
         // tslint:disable-next-line: prefer-for-of
         for (let i = 0; i < this.array.length; i++) {
           this.array[i].link = 'https://mohakchugh.github.io/website/#/blog/' + this.array[i]._id;
         }
-        
         console.log(this.array);
         this.loading = false;
       })
