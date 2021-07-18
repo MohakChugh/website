@@ -20,6 +20,7 @@ import { SocialMediaAccordianComponent } from './contact/social-media-accordian/
 import { ServiceWorkerModule } from '@angular/service-worker';
 import { environment } from '../environments/environment';
 import { ClassifierSelectorComponent } from './projects/classifier-selector/classifier-selector.component';
+import { UniqueBlogComponent } from './unique-blog/unique-blog.component';
 
 @NgModule({
   declarations: [
@@ -37,7 +38,8 @@ import { ClassifierSelectorComponent } from './projects/classifier-selector/clas
     BlogsComponent,
     DroneDashComponent,
     SocialMediaAccordianComponent,
-    ClassifierSelectorComponent
+    ClassifierSelectorComponent,
+    UniqueBlogComponent
   ],
   imports: [
     BrowserModule,

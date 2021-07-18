@@ -1,0 +1,26 @@
+<app-navbar></app-navbar>
+<div class="article-clean" id="topHeading">
+    <div class="container">
+        <div class="row">
+            <div *ngFor="let item of array" class="col-lg-10 col-xl-8 offset-lg-1 offset-xl-2">
+                <br>
+                <hr>
+                <br>
+                <div class="intro">
+                    <p class="text-center"><span class="by">by</span> <a [routerLink]="['/']">Mohak Chugh</a><span
+                            class="date">{{item.time | date }} </span></p>
+                </div>
+                <div class="text" [innerHTML]="item.Content">
+
+                </div>
+            </div>
+        </div>
+        <div class="text-center">
+            <h1 *ngIf="loading" class="alert">Quality content takes time!</h1>
+            <i *ngIf="loading" class="fa fa-spinner fa-spin" style="font-size:50px"></i>
+            <br>
+            <br>
+        </div>
+    </div>
+</div>
+<app-footer></app-footer>

@@ -11,6 +11,7 @@ import { PropertyManagementComponent } from './projects/property-management/prop
 import { BlogsComponent } from './blogs/blogs.component';
 import { ClassifierSelectorComponent } from './projects/classifier-selector/classifier-selector.component';
 import { DroneDashComponent } from './projects/drone-dash/drone-dash.component';
+import { UniqueBlogComponent } from './unique-blog/unique-blog.component';
 
 
 const routes: Routes = [
@@ -19,6 +20,7 @@ const routes: Routes = [
   { path: 'contact', component: ContactComponent },
   { path: 'project', component: ProjectsComponent },
   { path: 'blogs', component: BlogsComponent },
+  { path: 'blog/:id', component: UniqueBlogComponent },
 
   // Projects Urls here
   { path: 'citizensapp', component: CitizensappComponent },
