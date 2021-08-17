@@ -11,7 +11,6 @@ export class ContactComponent implements OnInit {
   subject: string;
   message: string;
   email: string;
-  mailto = `mailto:me.mohakchugh@gmail.com?subject=${this.subject}&body=${this.email + ':' + this.message}`;
   constructor() { }
 
   ngOnInit(): void {
