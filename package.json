@@ -21,6 +21,8 @@
     "@angular/router": "~9.1.1",
     "@angular/service-worker": "~9.1.1",
     "axios": "^0.21.4",
+    "html2pdf.js": "^0.10.1",
+    "jspdf": "^2.5.0",
     "rxjs": "~6.5.4",
     "tslib": "^1.10.0",
     "zone.js": "~0.10.2"
