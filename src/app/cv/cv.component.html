@@ -2,14 +2,13 @@
     <app-navbar></app-navbar>
     <main id="cv-content" class="page cv-page">
         <section class="portfolio-block cv">
-            <div class="container" id="cv-content">
+            <div class="container">
                 <div class="heading">
-                    <h2 class="text-center" id="top-heading">Mohak Chugh</h2>
-                    me.mohakchugh@gmail.com | https://www.linkedin.com/in/mohakchugh
+                    <h1 class="text-center" id="top-heading">Mohak Chugh</h1>
                 </div>
                 <div class="work-experience group">
                     <div class="heading">
-                        <h4 class="text-center" id="top-heading">Work Experience and achievements</h4>
+                        <h4 class="text-center">Work Experience and achievements</h4>
                     </div>
                     <div class="item">
                         <div class="row">
@@ -205,9 +204,12 @@
                             <div class="col-6"><span class="period">2021</span></div>
                             <!-- </a> -->
                         </div>
-                        <p class="text-muted"><a class="text-muted"
-                                href="https://ui.adsabs.harvard.edu/abs/2021EJASP2021...43S/abstract">Link:
-                                https://ui.adsabs.harvard.edu/abs/2021EJASP2021...43S/abstract</a></p>
+                        <p class="text-muted">
+                            <a class="text-muted"
+                                href="https://ui.adsabs.harvard.edu/abs/2021EJASP2021...43S/abstract">
+                                Link:
+                                https://ui.adsabs.harvard.edu/abs/2021EJASP2021...43S/abstract</a>
+                        </p>
                     </div>
                 </div>
                 <div class="group">
@@ -243,10 +245,6 @@
                                     <div class="col-1"><i class="icon ion-person icon"></i></div>
                                     <div class="col-9"><span>Mohak Chugh</span></div>
                                 </div>
-                                <!-- <div class="row">
-                                    <div class="col-1"><i class="icon ion-ios-telephone icon"></i></div>
-                                    <div class="col-9"><span>+91 9810178257</span></div>
-                                </div> -->
                                 <div class="row">
                                     <div class="col-1"><i class="icon ion-at icon"></i></div>
                                     <div class="col-9"><span>me.mohakchugh@gmail.com</span></div>
@@ -264,18 +262,15 @@
                                 </div>
                             </div>
                         </div>
-                        <br>
-                        <br>
-                        <div class="col-md-12">
-                            <br>
-                            <div class="contact-info" style="text-align:center">
-                                <button class="btn btn-primary" (click)="generateCv()">Generate CV</button>
-                            </div>
-                        </div>
                     </div>
                 </div>
             </div>
         </section>
     </main>
+    <div class="col-md-12" style="margin-bottom:2em;">
+        <div *ngIf="showGenerateCvButton" class="contact-info" style="text-align:center">
+            <button class="btn btn-primary" (click)="generateCv()">Generate CV</button>
+        </div>
+    </div>
     <app-footer></app-footer>
 </div>
