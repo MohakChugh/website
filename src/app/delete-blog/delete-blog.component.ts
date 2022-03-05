@@ -18,7 +18,7 @@ export class DeleteBlogComponent implements OnInit {
   ngOnInit(): void {
     this.username = this.route.snapshot.paramMap.get('username');
     this.password = this.route.snapshot.paramMap.get('password');
-  
+
     axios.default.get('https://website-backend-mohak.herokuapp.com/blogs')
       .then(res => {
         this.blogs = res.data.blogs;
@@ -28,35 +28,48 @@ export class DeleteBlogComponent implements OnInit {
           this.blogs[i].username = this.username;
           this.blogs[i].password = this.password;
         }
-        console.log(this.blogs);
         this.loading = false;
       })
       .catch(err => console.log(err));
   }
 
   deleteBlog(item: any): void {
-    console.log(item);
-    axios.default.post('https://website-backend-mohak.herokuapp.com/delete', {
-      username: item.username,
-      password: item.password,
-      id: item._id
-    })
-      .then(response => console.log(response.data))
-      .catch(err => console.log(err));
-    
-    axios.default.get('https://website-backend-mohak.herokuapp.com/blogs')
-      .then(res => {
-        this.blogs = res.data.blogs;
-        // tslint:disable-next-line: prefer-for-of
-        for (let i = 0; i < this.blogs.length; i++) {
-          this.blogs[i].link = 'https://mohakchugh.github.io/website/#/blog/' + this.blogs[i]._id;
-          this.blogs[i].username = this.username;
-          this.blogs[i].password = this.password;
-        }
-        console.log(this.blogs);
-        this.loading = false;
+    if (confirm("Are you sure you want to delete this Blog?") == true) {
+      axios.default.post('https://website-backend-mohak.herokuapp.com/delete', {
+        username: item.username,
+        password: item.password,
+        id: item._id
       })
-      .catch(err => console.log(err));
+        .then(response => {
+          if(response.data.success) {
+            alert("Blog deleted successfully");
+          }
+          else {
+            alert("Error deleting blog: " + response.data.message);
+          }
+        })
+        .catch(err => {
+          alert("Error deleting blog: " + err);
+        });
+
+      axios.default.get('https://website-backend-mohak.herokuapp.com/blogs')
+        .then(res => {
+          this.blogs = res.data.blogs;
+          // tslint:disable-next-line: prefer-for-of
+          for (let i = 0; i < this.blogs.length; i++) {
+            this.blogs[i].link = 'https://mohakchugh.github.io/website/#/blog/' + this.blogs[i]._id;
+            this.blogs[i].username = this.username;
+            this.blogs[i].password = this.password;
+          }
+          this.loading = false;
+        })
+        .catch(err => console.log(err));
+    } else {
+      alert("The Blog Deletion is Cancelled!");
+    }
+
+
+
   }
 
 
