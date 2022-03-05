@@ -12,6 +12,7 @@ import { BlogsComponent } from './blogs/blogs.component';
 import { ClassifierSelectorComponent } from './projects/classifier-selector/classifier-selector.component';
 import { DroneDashComponent } from './projects/drone-dash/drone-dash.component';
 import { UniqueBlogComponent } from './unique-blog/unique-blog.component';
+import { DeleteBlogComponent } from './delete-blog/delete-blog.component';
 
 
 const routes: Routes = [
@@ -21,6 +22,7 @@ const routes: Routes = [
   { path: 'project', component: ProjectsComponent },
   { path: 'blogs', component: BlogsComponent },
   { path: 'blog/:id', component: UniqueBlogComponent },
+  { path: 'blog/:username/:password', component: DeleteBlogComponent },
 
   // Projects Urls here
   { path: 'citizensapp', component: CitizensappComponent },

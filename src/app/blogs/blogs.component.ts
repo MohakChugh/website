@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
 import * as axios from 'axios';
 
 @Component({
@@ -10,7 +11,7 @@ export class BlogsComponent implements OnInit {
 
   array: any;
   loading = false;
-  constructor() { }
+  constructor(private router: ActivatedRoute) { }
 
   ngOnInit(): void {
     this.loading = true;
@@ -25,5 +26,11 @@ export class BlogsComponent implements OnInit {
         this.loading = false;
       })
       .catch(err => console.log(err));
+  }
+
+  async getUrlParams() {
+    this.router.queryParams.subscribe(res => {
+      console.log(res)
+    })
   }
 }

@@ -21,6 +21,7 @@ import { ServiceWorkerModule } from '@angular/service-worker';
 import { environment } from '../environments/environment';
 import { ClassifierSelectorComponent } from './projects/classifier-selector/classifier-selector.component';
 import { UniqueBlogComponent } from './unique-blog/unique-blog.component';
+import { DeleteBlogComponent } from './delete-blog/delete-blog.component';
 
 @NgModule({
   declarations: [
@@ -39,7 +40,8 @@ import { UniqueBlogComponent } from './unique-blog/unique-blog.component';
     DroneDashComponent,
     SocialMediaAccordianComponent,
     ClassifierSelectorComponent,
-    UniqueBlogComponent
+    UniqueBlogComponent,
+    DeleteBlogComponent
   ],
   imports: [
     BrowserModule,
