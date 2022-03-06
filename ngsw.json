@@ -1,6 +1,6 @@
 {
   "configVersion": 1,
-  "timestamp": 1646517154708,
+  "timestamp": 1646573965812,
   "index": "/website/index.html",
   "assetGroups": [
     {
@@ -33,7 +33,6 @@
         "/website/assets/bootstrap/css/bootstrap.min.css",
         "/website/assets/google5f0f4d45152d0e94.html",
         "/website/assets/icons/favicon.png",
-        "/website/assets/img/avatars/dp1.jpg",
         "/website/assets/img/favicon.png",
         "/website/assets/img/logo_transparent.png",
         "/website/assets/img/tech/Dashboard_Demo.gif",
@@ -58,7 +57,6 @@
     "/website/assets/bootstrap/css/bootstrap.min.css": "a6dbc16ec0dc9d3bc24e1df34dc1705bef383e35",
     "/website/assets/google5f0f4d45152d0e94.html": "42fff54797d2c5dd427b5f4a2915f900f2ecf46a",
     "/website/assets/icons/favicon.png": "ad4a8bc7431ab719aa3ca0bdc581771b801ce4e8",
-    "/website/assets/img/avatars/dp1.jpg": "75d9f3319946b3293b71d897e3f14c378c2929a7",
     "/website/assets/img/favicon.png": "ad4a8bc7431ab719aa3ca0bdc581771b801ce4e8",
     "/website/assets/img/logo_transparent.png": "fbf830d9c90427498e53dd65aa23728ca4f21bec",
     "/website/assets/img/tech/Dashboard_Demo.gif": "ab39389bb9a563f3f276154626301ef2cdca9298",
@@ -69,7 +67,7 @@
     "/website/assets/img/tech/text-editor.gif": "b79782530ec975a1375a101750276de545b175e4",
     "/website/assets/js/script.min.js": "e11f36e76d078010bfaf95e1f257255c4dfa4b58",
     "/website/assets/portfolio.gif": "0c6e6e4e67e4434c6a137e3299a71c14c95b8436",
-    "/website/index.html": "761fb9ffe53c4f2b007d71e831d4e1288c63267f",
+    "/website/index.html": "35f74e7cef525e9a182a0b884c1b2e34b1184a2c",
     "/website/main-es2015.fea55d96916310fabc0c.js": "9f21a739baf1e1e0d42a19ecd03bb4616ff7eba6",
     "/website/main-es5.fea55d96916310fabc0c.js": "0673dda440e683c3a74a8fa59160bd1a50b53c60",
     "/website/manifest.webmanifest": "dd93c2dfac12d68d97e6c3935853247914e9fe22",
