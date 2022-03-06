@@ -1,3 +1,15 @@
 #topHeading {
-    margin-top: 7rem;
+  margin-top: 7rem;
+}
+
+div {
+  word-wrap: break-word;
+}
+
+p {
+  word-wrap: break-word;
+}
+
+a {
+  word-wrap: break-word;
 }
