@@ -165,6 +165,26 @@
   }
 }
 
+/* ── Route View Transitions (must be global, not component-scoped) ── */
+::view-transition-old(root) {
+  animation: vt-fade-out 0.25s var(--ease-out-expo) both;
+}
+::view-transition-new(root) {
+  animation: vt-fade-in 0.35s var(--ease-out-expo) both;
+}
+@keyframes vt-fade-out {
+  to {
+    opacity: 0;
+    transform: translateY(-8px);
+  }
+}
+@keyframes vt-fade-in {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+}
+
 /* ── Accessibility: motion is enhancement, never required ─────────── */
 @media (prefers-reduced-motion: reduce) {
   *,

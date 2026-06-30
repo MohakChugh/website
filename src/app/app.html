@@ -1,1 +1,10 @@
-<router-outlet />
+<!-- Fixed animated canvas: dot-grid + drifting aurora, behind everything -->
+<div class="pointer-events-none fixed inset-0 -z-10 bg-dotgrid bg-aurora"></div>
+
+<app-navbar />
+
+<main id="main">
+  <router-outlet />
+</main>
+
+<app-footer />

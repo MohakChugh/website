@@ -1,0 +1,153 @@
+<app-ask-palette #palette />
+
+<!-- ── HERO ───────────────────────────────────────────────────────── -->
+<section class="relative mx-auto flex min-h-[92vh] max-w-5xl flex-col justify-center px-6 pt-28 pb-16">
+  <!-- giant faded watermark wordmark (Toukoum-style) -->
+  <span
+    aria-hidden="true"
+    class="pointer-events-none absolute inset-x-0 bottom-4 select-none text-center font-display text-[22vw] font-bold leading-none tracking-tighter text-foreground/[0.03]"
+  >
+    Mohak
+  </span>
+
+  <div class="relative">
+    <p class="eyebrow reveal" appReveal>{{ profile.tagline }}</p>
+
+    <h1
+      class="reveal mt-4 font-display text-5xl font-bold leading-[1.05] tracking-tight sm:text-6xl md:text-7xl"
+      appReveal
+      [revealDelay]="60"
+    >
+      Hi, I'm <span class="text-gradient">Mohak Chugh</span>.
+      <br class="hidden sm:block" />
+      <span class="text-muted-foreground">I'm a </span>
+      <!-- rotating role word -->
+      <span class="relative inline-grid">
+        @for (role of profile.roles; track role; let i = $index) {
+          <span
+            class="col-start-1 row-start-1 text-gradient transition-all duration-500"
+            [class.opacity-100]="i === roleIndex()"
+            [class.opacity-0]="i !== roleIndex()"
+            [class.translate-y-0]="i === roleIndex()"
+            [class.translate-y-2]="i !== roleIndex()"
+            [attr.aria-hidden]="i !== roleIndex() ? 'true' : null"
+          >
+            {{ role }}
+          </span>
+        }
+      </span>
+    </h1>
+
+    <p
+      class="reveal mt-6 max-w-2xl text-lg leading-relaxed text-muted-foreground"
+      appReveal
+      [revealDelay]="120"
+    >
+      {{ profile.intro }}
+    </p>
+
+    <!-- Ask-me input (signature) -->
+    <div class="reveal mt-8 max-w-xl" appReveal [revealDelay]="180">
+      <button
+        type="button"
+        (click)="palette.openWith()"
+        class="glass group flex w-full items-center gap-3 rounded-full px-5 py-4 text-left transition-all hover:border-primary/40"
+      >
+        <ng-icon name="lucideSparkles" class="size-5 text-primary" />
+        <span class="text-muted-foreground">Ask me anything…</span>
+        <kbd
+          class="ml-auto hidden rounded border border-border bg-secondary px-2 py-0.5 font-mono text-xs text-muted-foreground sm:inline"
+        >
+          ⌘K
+        </kbd>
+      </button>
+    </div>
+
+    <!-- CTAs -->
+    <div class="reveal mt-6 flex flex-wrap gap-3" appReveal [revealDelay]="240">
+      <a hlmBtn size="lg" [routerLink]="['/contact']">
+        <ng-icon name="lucideMail" class="mr-2 size-4" /> Get in touch
+      </a>
+      <a hlmBtn variant="outline" size="lg" [routerLink]="['/projects']">
+        View projects <ng-icon name="lucideArrowRight" class="ml-2 size-4" />
+      </a>
+      <a hlmBtn variant="ghost" size="lg" [href]="profile.githubUrl" target="_blank" rel="noopener">
+        <ng-icon name="lucideGithub" class="mr-2 size-4" /> GitHub
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ── FEATURED PROJECTS ──────────────────────────────────────────── -->
+<section class="mx-auto max-w-5xl px-6 py-16">
+  <div class="reveal mb-10 flex items-end justify-between" appReveal>
+    <div>
+      <p class="eyebrow">01 · Selected Work</p>
+      <h2 class="mt-2 font-display text-3xl font-bold tracking-tight sm:text-4xl">
+        Featured <span class="text-ghost">Projects</span>
+      </h2>
+    </div>
+    <a
+      [routerLink]="['/projects']"
+      class="hidden items-center gap-1 text-sm text-muted-foreground transition-colors hover:text-primary sm:flex"
+    >
+      All projects <ng-icon name="lucideArrowRight" class="size-4" />
+    </a>
+  </div>
+
+  <div class="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+    @for (project of featured; track project.slug; let i = $index) {
+      <div class="reveal" appReveal [revealDelay]="i * 100">
+        <app-project-card [project]="project" />
+      </div>
+    }
+  </div>
+</section>
+
+<!-- ── SKILLS ─────────────────────────────────────────────────────── -->
+<section class="mx-auto max-w-5xl px-6 py-16">
+  <div class="reveal mb-10" appReveal>
+    <p class="eyebrow">02 · What I Do</p>
+    <h2 class="mt-2 font-display text-3xl font-bold tracking-tight sm:text-4xl">
+      Special <span class="text-ghost">Skills</span>
+    </h2>
+  </div>
+
+  <div class="grid gap-6 md:grid-cols-3">
+    @for (skill of skills; track skill.title; let i = $index) {
+      <div
+        class="reveal group rounded-2xl border border-border bg-card p-6 transition-all duration-300 hover:-translate-y-1 hover:border-primary/40"
+        appReveal
+        [revealDelay]="i * 100"
+      >
+        <div
+          class="grid size-12 place-items-center rounded-xl border border-border bg-secondary text-primary transition-colors group-hover:border-primary/40"
+        >
+          <ng-icon [name]="skill.icon" class="size-6" />
+        </div>
+        <h3 class="mt-4 font-display text-lg font-semibold">{{ skill.title }}</h3>
+        <p class="mt-2 text-sm leading-relaxed text-muted-foreground">{{ skill.body }}</p>
+      </div>
+    }
+  </div>
+</section>
+
+<!-- ── CTA STRIP ──────────────────────────────────────────────────── -->
+<section class="mx-auto max-w-5xl px-6 py-16">
+  <div
+    class="reveal relative overflow-hidden rounded-3xl border border-border bg-card p-10 text-center"
+    appReveal
+  >
+    <div class="bg-aurora absolute inset-0 -z-10 opacity-60"></div>
+    <h2 class="font-display text-3xl font-bold tracking-tight sm:text-4xl">Like what you see?</h2>
+    <p class="mx-auto mt-3 max-w-md text-muted-foreground">
+      I love building solutions that boost productivity, bring in business, and save time and money.
+    </p>
+    <div class="mt-6 flex flex-wrap justify-center gap-3">
+      <a hlmBtn size="lg" [routerLink]="['/contact']">Let's build something</a>
+      <a hlmBtn variant="outline" size="lg" [href]="profile.githubUrl" target="_blank" rel="noopener">
+        <ng-icon name="lucideGithub" class="mr-2 size-4" /> Explore my GitHub
+      </a>
+    </div>
+  </div>
+</section>

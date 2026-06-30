@@ -1,0 +1,43 @@
+<footer class="relative border-t border-border/60 mt-24">
+  <div class="mx-auto max-w-5xl px-6 py-12">
+    <div class="flex flex-col items-center gap-8 sm:flex-row sm:justify-between">
+      <div class="text-center sm:text-left">
+        <a [routerLink]="['/']" class="font-display text-lg font-semibold">
+          {{ profile.name }}
+        </a>
+        <p class="mt-1 text-sm text-muted-foreground">{{ profile.tagline }}</p>
+      </div>
+
+      <nav class="flex flex-wrap justify-center gap-x-6 gap-y-2" aria-label="Footer">
+        @for (link of links; track link.path) {
+          <a
+            [routerLink]="[link.path]"
+            class="text-sm text-muted-foreground transition-colors hover:text-foreground"
+          >
+            {{ link.label }}
+          </a>
+        }
+      </nav>
+
+      <div class="flex items-center gap-2">
+        @for (s of socials; track s.label) {
+          <a
+            [href]="s.url"
+            target="_blank"
+            rel="noopener noreferrer"
+            [attr.aria-label]="s.label"
+            class="grid size-10 place-items-center rounded-full border border-border text-muted-foreground transition-all hover:-translate-y-0.5 hover:border-primary/50 hover:text-primary"
+          >
+            <ng-icon [name]="s.icon" class="size-4" />
+          </a>
+        }
+      </div>
+    </div>
+
+    <div class="mt-8 border-t border-border/40 pt-6 text-center">
+      <p class="text-xs text-muted-foreground">
+        © {{ year }} {{ profile.name }} · Built with Angular & Tailwind
+      </p>
+    </div>
+  </div>
+</footer>

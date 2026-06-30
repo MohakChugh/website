@@ -1,0 +1,79 @@
+<header class="fixed inset-x-0 top-4 z-50 flex justify-center px-4">
+  <nav
+    class="glass flex items-center gap-1 rounded-full py-2 pl-5 pr-2 shadow-lg shadow-black/20"
+    aria-label="Primary"
+  >
+    <!-- Brand -->
+    <a
+      [routerLink]="['/']"
+      class="mr-2 flex items-center gap-2 font-display text-sm font-semibold tracking-tight"
+    >
+      <img src="assets/img/logo_transparent.png" alt="" width="24" height="24" class="size-6" />
+      <span class="hidden sm:inline">Mohak Chugh</span>
+    </a>
+
+    <!-- Desktop links -->
+    <ul class="hidden items-center gap-1 md:flex">
+      @for (item of items; track item.path) {
+        <li>
+          <a
+            [routerLink]="[item.path]"
+            routerLinkActive="bg-secondary text-foreground"
+            [routerLinkActiveOptions]="{ exact: item.path === '/' }"
+            class="rounded-full px-4 py-1.5 text-sm text-muted-foreground transition-colors hover:text-foreground"
+          >
+            {{ item.label }}
+          </a>
+        </li>
+      }
+    </ul>
+
+    <div class="mx-1 hidden h-5 w-px bg-border md:block"></div>
+
+    <!-- Theme toggle -->
+    <button
+      hlmBtn
+      variant="ghost"
+      size="icon"
+      class="rounded-full"
+      (click)="toggleTheme()"
+      [attr.aria-label]="theme() === 'dark' ? 'Switch to light mode' : 'Switch to dark mode'"
+    >
+      <ng-icon [name]="theme() === 'dark' ? 'lucideSun' : 'lucideMoon'" class="size-4" />
+    </button>
+
+    <!-- Mobile menu (sheet) -->
+    <hlm-sheet class="md:hidden">
+      <button
+        hlmSheetTrigger
+        side="right"
+        hlmBtn
+        variant="ghost"
+        size="icon"
+        class="rounded-full md:hidden"
+        aria-label="Open menu"
+      >
+        <ng-icon name="lucideMenu" class="size-5" />
+      </button>
+      <hlm-sheet-content *hlmSheetPortal="let ctx" class="glass">
+        <hlm-sheet-header>
+          <h2 hlmSheetTitle class="font-display">Navigate</h2>
+        </hlm-sheet-header>
+        <nav class="mt-4 flex flex-col gap-1 px-2" aria-label="Mobile">
+          @for (item of items; track item.path) {
+            <a
+              [routerLink]="[item.path]"
+              routerLinkActive="bg-secondary text-foreground"
+              [routerLinkActiveOptions]="{ exact: item.path === '/' }"
+              (click)="ctx.close()"
+              class="flex items-center gap-3 rounded-lg px-3 py-3 text-base text-muted-foreground transition-colors hover:bg-secondary hover:text-foreground"
+            >
+              <ng-icon [name]="item.icon" class="size-5" />
+              {{ item.label }}
+            </a>
+          }
+        </nav>
+      </hlm-sheet-content>
+    </hlm-sheet>
+  </nav>
+</header>
