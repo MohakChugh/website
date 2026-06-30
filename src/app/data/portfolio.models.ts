@@ -20,8 +20,10 @@ export interface Project {
   title: string;
   /** one-line summary used on cards */
   tagline: string;
-  /** hero/card image path under /assets */
-  image: string;
+  /** hero/card image path under /assets. Omit to render a themed gradient tile. */
+  image?: string;
+  /** lucide icon name shown on the gradient tile when there is no image */
+  placeholderIcon?: string;
   /** optional looping video (mp4) shown on the detail hero in place of the image */
   video?: string;
   /** tech-stack chips */

@@ -46,8 +46,18 @@ export const SKILL_BARS: SkillBar[] = [
   { label: 'Soft Skills', level: 85 },
 ];
 
-/** Work experience & achievements, ported verbatim from the legacy CV. */
+/** Work experience & achievements. */
 export const EXPERIENCE: ExperienceItem[] = [
+  {
+    role: 'Software Development Engineer 2 · Amazon',
+    org: 'Oct 2024 – Present · Backend, Data Systems & LLMs',
+    body: 'Architected a DFS-based sorting algorithm and self-healing reconciliation for employee-data backfills (5MM+ employees) with zero data loss within a 10-min SLA, eliminating loss-of-access during Amazon re-orgs. Drove RDS performance optimizations (query times 20 min → under 30s) impacting 200+ downstream ETL pipelines and shifting the org to micro-batching. Led design and API contracts for a new Candidate Search service and re-architected the high-volume Search Populations API (5s → under 200ms P99) for the Q1 2026 Amazon Jobs search launch. As Operational Excellence Champion, drove SEV2s from 21 to 3 and SAS risks from 104 to 6 per month, and led operational readiness reviews for a SOX/GRC-compliant reconciliation tool processing 100B records/day.',
+  },
+  {
+    role: 'Software Development Engineer 1 · Amazon',
+    org: 'Dec 2022 – Sep 2024',
+    body: 'Built a Spark-based big-data reconciliation engine processing 1B+ records daily across SQL and NoSQL sources and multiple AWS accounts, ensuring 100% coverage of internal financial data through the central data lake. Led an award-winning RAG-based LLM Q&A bot (300+ users, 5K questions/day, 93% accuracy) — published as one of the first AI posts on the AWS Blog. Designed and deployed an Airflow-based notification system for Workforce Capacity Planning dashboards notifying 300+ analysts within SLA.',
+  },
   {
     role: 'Data Engineer',
     org: 'Amazon India',

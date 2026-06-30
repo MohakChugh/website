@@ -6,6 +6,14 @@ import {
   lucideExternalLink,
   lucideGithub,
   lucideFileText,
+  lucideWorkflow,
+  lucideUsers,
+  lucideWrench,
+  lucideSmartphone,
+  lucideDumbbell,
+  lucideShieldCheck,
+  lucideBookOpen,
+  lucideCode,
 } from '@ng-icons/lucide';
 import { HlmButtonImports } from '@spartan-ng/helm/button';
 import { HlmBadgeImports } from '@spartan-ng/helm/badge';
@@ -17,7 +25,20 @@ import { RevealDirective } from '../../shared/reveal.directive';
   changeDetection: ChangeDetectionStrategy.OnPush,
   imports: [RouterLink, NgIcon, HlmButtonImports, HlmBadgeImports, RevealDirective],
   providers: [
-    provideIcons({ lucideArrowLeft, lucideExternalLink, lucideGithub, lucideFileText }),
+    provideIcons({
+      lucideArrowLeft,
+      lucideExternalLink,
+      lucideGithub,
+      lucideFileText,
+      lucideWorkflow,
+      lucideUsers,
+      lucideWrench,
+      lucideSmartphone,
+      lucideDumbbell,
+      lucideShieldCheck,
+      lucideBookOpen,
+      lucideCode,
+    }),
   ],
   templateUrl: './project-detail.html',
 })

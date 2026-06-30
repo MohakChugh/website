@@ -1,15 +1,37 @@
 import { ChangeDetectionStrategy, Component, input } from '@angular/core';
 import { RouterLink } from '@angular/router';
 import { NgIcon, provideIcons } from '@ng-icons/core';
-import { lucideArrowUpRight } from '@ng-icons/lucide';
+import {
+  lucideArrowUpRight,
+  lucideWorkflow,
+  lucideUsers,
+  lucideWrench,
+  lucideSmartphone,
+  lucideDumbbell,
+  lucideShieldCheck,
+  lucideBookOpen,
+  lucideCode,
+} from '@ng-icons/lucide';
 import { Project } from '../../data/portfolio.models';
 
-/** Reusable project card with image, tech badges, hover lift + glow. */
+/** Reusable project card with image (or themed gradient tile), badges, hover lift + glow. */
 @Component({
   selector: 'app-project-card',
   changeDetection: ChangeDetectionStrategy.OnPush,
   imports: [RouterLink, NgIcon],
-  providers: [provideIcons({ lucideArrowUpRight })],
+  providers: [
+    provideIcons({
+      lucideArrowUpRight,
+      lucideWorkflow,
+      lucideUsers,
+      lucideWrench,
+      lucideSmartphone,
+      lucideDumbbell,
+      lucideShieldCheck,
+      lucideBookOpen,
+      lucideCode,
+    }),
+  ],
   template: `
     <a
       [routerLink]="['/projects', project().slug]"
@@ -21,13 +43,26 @@ import { Project } from '../../data/portfolio.models';
       ></div>
 
       <div class="aspect-video overflow-hidden bg-secondary">
-        <img
-          [src]="project().image"
-          [alt]="project().title"
-          loading="lazy"
-          decoding="async"
-          class="size-full object-cover object-top transition-transform duration-500 group-hover:scale-105"
-        />
+        @if (project().image) {
+          <img
+            [src]="project().image"
+            [alt]="project().title"
+            loading="lazy"
+            decoding="async"
+            class="size-full object-cover object-top transition-transform duration-500 group-hover:scale-105"
+          />
+        } @else {
+          <!-- themed gradient tile for projects without a screenshot -->
+          <div
+            class="relative grid size-full place-items-center bg-dotgrid"
+            style="background-image: radial-gradient(120% 120% at 0% 0%, oklch(0.78 0.13 200 / 0.18), transparent 55%), radial-gradient(120% 120% at 100% 100%, oklch(0.65 0.2 290 / 0.18), transparent 55%)"
+          >
+            <ng-icon
+              [name]="project().placeholderIcon ?? 'lucideCode'"
+              class="size-12 text-foreground/70 transition-transform duration-500 group-hover:scale-110"
+            />
+          </div>
+        }
       </div>
 
       <div class="p-5">

@@ -32,7 +32,7 @@
       </div>
     </header>
 
-    <!-- hero media: looping video when available, else image -->
+    <!-- hero media: looping video, image, or themed gradient tile -->
     <div class="reveal mt-10 overflow-hidden rounded-2xl border border-border" appReveal>
       @if (p.video) {
         <video
@@ -45,8 +45,15 @@
           preload="none"
           class="w-full object-cover"
         ></video>
-      } @else {
+      } @else if (p.image) {
         <img [src]="p.image" [alt]="p.title" loading="lazy" class="w-full object-cover" />
+      } @else {
+        <div
+          class="grid aspect-video w-full place-items-center bg-dotgrid"
+          style="background-image: radial-gradient(120% 120% at 0% 0%, oklch(0.78 0.13 200 / 0.18), transparent 55%), radial-gradient(120% 120% at 100% 100%, oklch(0.65 0.2 290 / 0.18), transparent 55%)"
+        >
+          <ng-icon [name]="p.placeholderIcon ?? 'lucideCode'" class="size-20 text-foreground/70" />
+        </div>
       }
     </div>
 
