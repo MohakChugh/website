@@ -43,4 +43,33 @@ describe('AskService', () => {
     const results = service.search('devops');
     expect(results[0].keywords).toContain('devops');
   });
+
+  describe('searchProjects', () => {
+    it('returns no projects for an empty query', () => {
+      expect(service.searchProjects('').length).toBe(0);
+    });
+
+    it('finds a project by title token', () => {
+      const r = service.searchProjects('drone');
+      expect(r.length).toBeGreaterThan(0);
+      expect(r[0].slug).toBe('drone-dash');
+    });
+
+    it('finds projects by tech tag', () => {
+      const r = service.searchProjects('webrtc');
+      expect(r.some((p) => p.slug === 'connectus')).toBe(true);
+    });
+
+    it('caps results at 3', () => {
+      expect(service.searchProjects('app').length).toBeLessThanOrEqual(3);
+    });
+  });
+
+  describe('agent easter egg', () => {
+    it('matches bot/agent questions and points to /llms.txt', () => {
+      for (const q of ['are you a bot', 'agent', 'llms']) {
+        expect(service.bestMatch(q)?.route).toBe('/llms.txt');
+      }
+    });
+  });
 });

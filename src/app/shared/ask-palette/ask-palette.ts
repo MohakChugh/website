@@ -19,7 +19,8 @@ import {
 } from '@ng-icons/lucide';
 import { AskService } from '../ask.service';
 import { ASK_CHIPS } from '../../data/ask.data';
-import { AskEntry } from '../../data/portfolio.models';
+import { AskEntry, Project } from '../../data/portfolio.models';
+import { ProjectCard } from '../project-card/project-card';
 
 /**
  * "Ask me anything" command palette — the site's signature interaction.
@@ -29,7 +30,7 @@ import { AskEntry } from '../../data/portfolio.models';
 @Component({
   selector: 'app-ask-palette',
   changeDetection: ChangeDetectionStrategy.OnPush,
-  imports: [NgIcon],
+  imports: [NgIcon, ProjectCard],
   providers: [
     provideIcons({
       lucideSearch,
@@ -52,6 +53,8 @@ export class AskPalette {
   private readonly input = viewChild<ElementRef<HTMLInputElement>>('searchInput');
 
   readonly results = computed<AskEntry[]>(() => this.ask.search(this.query()));
+  /** Real project cards matching the query, shown inline above the answers. */
+  readonly projectResults = computed<Project[]>(() => this.ask.searchProjects(this.query()));
 
   @HostListener('document:keydown', ['$event'])
   onKeydown(e: KeyboardEvent): void {
@@ -83,9 +86,18 @@ export class AskPalette {
   }
 
   goto(entry: AskEntry): void {
-    if (entry.route) {
-      this.close();
+    if (!entry.route) return;
+    this.close();
+    // Static files (e.g. /llms.txt) aren't Angular routes — navigate the browser.
+    if (entry.route.includes('.')) {
+      window.open(entry.route, '_blank', 'noopener');
+    } else {
       this.router.navigateByUrl(entry.route);
     }
+  }
+
+  /** Close the palette when a project card inside it is clicked. */
+  closeAfterNav(): void {
+    this.close();
   }
 }

@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 import { ASK_ENTRIES } from '../data/ask.data';
-import { AskEntry } from '../data/portfolio.models';
+import { PROJECTS } from '../data/projects.data';
+import { AskEntry, Project } from '../data/portfolio.models';
 
 /**
  * Search over the local Ask-me knowledge base. Pure, synchronous, testable —
@@ -62,5 +63,32 @@ export class AskService {
   /** Best single answer for a query, or null when nothing matches. */
   bestMatch(query: string): AskEntry | null {
     return this.search(query)[0] ?? null;
+  }
+
+  /**
+   * Projects matching the query (by title, tags, kind, tagline), best first.
+   * Used by the palette to surface real project cards inline. Empty query → none.
+   */
+  searchProjects(query: string): Project[] {
+    const tokens = this.tokens(query);
+    if (tokens.length === 0) return [];
+    return PROJECTS.map((p) => {
+      const title = p.title.toLowerCase();
+      const tags = p.tags.join(' ').toLowerCase();
+      const kind = p.kind.toLowerCase();
+      const tagline = p.tagline.toLowerCase();
+      let score = 0;
+      for (const t of tokens) {
+        if (title.includes(t)) score += 4;
+        if (tags.includes(t)) score += 3;
+        if (kind.includes(t)) score += 2;
+        if (tagline.includes(t)) score += 1;
+      }
+      return { p, score };
+    })
+      .filter((r) => r.score > 0)
+      .sort((a, b) => b.score - a.score)
+      .slice(0, 3)
+      .map((r) => r.p);
   }
 }

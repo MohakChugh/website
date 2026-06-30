@@ -1,0 +1,80 @@
+{
+  "$schema": "https://schema.org/Person",
+  "name": "Mohak Chugh",
+  "headline": "Software Development Engineer 2 (SDE 2) at Amazon — Backend, Data Systems & LLMs",
+  "summary": "Full Stack Web Developer and Data Engineer who loves system design, building projects end to end, and the DevOps and entrepreneurial side of shipping software. Currently SDE 2 at Amazon working across backend, data systems and LLMs.",
+  "location": "Delhi NCR, India",
+  "links": {
+    "portfolio": "https://mohakchugh.github.io/website/",
+    "email": "me.mohakchugh@gmail.com",
+    "github": "https://github.com/MohakChugh",
+    "linkedin": "https://www.linkedin.com/in/mohakchugh/",
+    "resume": "https://mohakchugh.github.io/resume/Resume.pdf"
+  },
+  "currentRole": {
+    "title": "Software Development Engineer 2",
+    "company": "Amazon",
+    "since": "2024-10",
+    "focus": ["backend", "data systems", "LLMs"]
+  },
+  "experience": [
+    {
+      "title": "Software Development Engineer 2",
+      "company": "Amazon",
+      "period": "2024-10 / present",
+      "highlights": [
+        "DFS-based reconciliation for 5MM+ employees with zero data loss in a 10-min SLA",
+        "RDS optimizations: query times 20 min -> under 30s across 200+ ETL pipelines",
+        "Designed a Candidate Search service; re-architected Search Populations API (5s -> <200ms P99)",
+        "Operational Excellence Champion: drove SEV2s from 21 to 3 per month"
+      ]
+    },
+    {
+      "title": "Software Development Engineer 1",
+      "company": "Amazon",
+      "period": "2022-12 / 2024-09",
+      "highlights": [
+        "Spark big-data reconciliation engine processing 1B+ records/day",
+        "Award-winning RAG LLM Q&A bot (300+ users, 93% accuracy), published on the AWS Blog",
+        "Airflow-based notification system for 300+ analysts"
+      ]
+    },
+    {
+      "title": "Data Engineer",
+      "company": "Amazon",
+      "period": "2021-09 / 2022-12",
+      "highlights": [
+        "AI-driven headcount management tools (95% forecast accuracy)",
+        "E-invoicing compliance for 3,000+ global vendors",
+        "Analytical mesh data lake re-architecture across Redshift clusters"
+      ]
+    }
+  ],
+  "skills": {
+    "backendAndData": ["Java", "Python", "Spark", "Scala", "Hadoop", "Airflow", "Advanced SQL", "DynamoDB", "PostgreSQL", "Redshift", "AWS EMR", "AWS Lambda", "AWS Glue", "AWS Step Functions"],
+    "aiAndLlm": ["RAG architecture", "NLP", "vector knowledge bases", "embeddings", "LLM fine-tuning"],
+    "fullStack": ["Angular", "React", "Node.js", "TypeScript"],
+    "devops": ["Docker", "Kubernetes", "CI/CD", "AWS CDK"]
+  },
+  "projects": [
+    { "slug": "bridge", "title": "Bridge — Control AI from Anywhere", "summary": "Drive AI coding agents from a web dashboard, iMessage, or Slack with a visual workflow builder.", "tags": ["Python", "FastAPI", "React", "React Flow"], "url": "https://mohakchugh.github.io/website/projects/bridge" },
+    { "slug": "imessage-claude-bridge", "title": "iMessage → Claude Bridge", "summary": "Control Claude Code from your iPhone via iMessage — persistent sessions, task queuing.", "tags": ["Python", "FastAPI", "AppleScript"], "url": "https://mohakchugh.github.io/website/projects/imessage-claude-bridge" },
+    { "slug": "recruiter-automation", "title": "Recruiter Automation", "summary": "Browser-based tool that runs an LLM locally (Phi-3.5 via WebGPU) to rank resumes and chat about candidates, fully offline.", "tags": ["React", "WebGPU", "IndexedDB", "pdf.js"], "url": "https://mohakchugh.github.io/website/projects/recruiter-automation" },
+    { "slug": "fit-strong-90", "title": "FitStrong 90", "summary": "A 90-day fitness transformation tracker with per-set logging and progress charts.", "tags": ["React", "TypeScript", "Recharts"], "url": "https://mohakchugh.github.io/website/projects/fit-strong-90" },
+    { "slug": "connectus", "title": "ConnectUs", "summary": "Frontend-only end-to-end encrypted video calling with no backend.", "tags": ["WebRTC", "Web Crypto API", "Insertable Streams"], "url": "https://mohakchugh.github.io/website/projects/connectus" },
+    { "slug": "flashread", "title": "FlashRead", "summary": "Minimalist RSVP speed-reading tool with optimal-recognition-point highlighting.", "tags": ["JavaScript", "Web Speech API"], "url": "https://mohakchugh.github.io/website/projects/flashread" },
+    { "slug": "agritech", "title": "AgriTech — Farmers App", "summary": "Real-time crop-bidding platform on a transparent open network.", "tags": ["Angular", "Node.js", "MongoDB", "NLP"], "url": "https://mohakchugh.github.io/website/projects/agritech" },
+    { "slug": "drone-dash", "title": "Drone Dash", "summary": "A one-stop dashboard for drone surveillance with role-based access.", "tags": ["Angular", "Node.js", "PostgreSQL", "AWS S3"], "url": "https://mohakchugh.github.io/website/projects/drone-dash" },
+    { "slug": "citizens", "title": "Citizens App", "summary": "Reach government officials through an open, transparent channel.", "tags": ["Angular", "Firebase"], "url": "https://mohakchugh.github.io/website/projects/citizens" },
+    { "slug": "content-collaborator", "title": "Content Collaborator", "summary": "Real-time collaborative content editor over WebSockets.", "tags": ["Angular", "Node.js", "MongoDB"], "url": "https://mohakchugh.github.io/website/projects/content-collaborator" },
+    { "slug": "property-management", "title": "Property Management", "summary": "A secure property management system.", "tags": ["Angular", "Node.js", "PostgreSQL", "Hasura"], "url": "https://mohakchugh.github.io/website/projects/property-management" },
+    { "slug": "classifier-selector", "title": "Classifier Selector", "summary": "ML dashboard comparing classifiers on the Iris dataset.", "tags": ["Python", "scikit-learn"], "url": "https://mohakchugh.github.io/website/projects/classifier-selector" }
+  ],
+  "publications": [
+    { "title": "Benchmarking geospatial database on Kubernetes cluster", "year": 2021, "doi": "10.1186/s13634-021-00754-2" }
+  ],
+  "meta": {
+    "note": "This JSON is a machine-readable profile for LLMs and AI agents. Human site at the portfolio URL. See also /llms.txt.",
+    "builtWith": ["Angular 22", "Tailwind v4", "spartan-ng"]
+  }
+}

@@ -51,7 +51,20 @@
       </div>
 
       <!-- results -->
-      <ul class="max-h-[46vh] overflow-y-auto p-2">
+      <div class="max-h-[52vh] overflow-y-auto p-2">
+        <!-- inline matching project cards -->
+        @if (projectResults().length) {
+          <div class="px-1 pb-2 pt-1">
+            <p class="eyebrow mb-2 px-2">Matching projects</p>
+            <div class="grid gap-3 sm:grid-cols-2" (click)="closeAfterNav()">
+              @for (project of projectResults(); track project.slug) {
+                <app-project-card [project]="project" />
+              }
+            </div>
+          </div>
+        }
+
+        <ul>
         @for (entry of results(); track entry.question) {
           <li
             class="group rounded-xl p-3 transition-colors hover:bg-secondary/60"
@@ -75,14 +88,17 @@
             }
           </li>
         } @empty {
-          <li class="p-8 text-center">
-            <ng-icon name="lucideSparkles" class="mx-auto mb-2 size-6 text-muted-foreground" />
-            <p class="text-sm text-muted-foreground">
-              No match — try “projects”, “skills”, “Amazon”, or “contact”.
-            </p>
-          </li>
+          @if (!projectResults().length) {
+            <li class="p-8 text-center">
+              <ng-icon name="lucideSparkles" class="mx-auto mb-2 size-6 text-muted-foreground" />
+              <p class="text-sm text-muted-foreground">
+                No match — try “projects”, “Amazon”, “drone”, or even “are you a bot?”
+              </p>
+            </li>
+          }
         }
-      </ul>
+        </ul>
+      </div>
 
       <!-- footer hint -->
       <div

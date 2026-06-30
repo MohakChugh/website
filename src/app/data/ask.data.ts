@@ -91,6 +91,30 @@ export const ASK_ENTRIES: AskEntry[] = [
       'I love taking an idea from a blank repo to a deployed product — owning the design, the build, the infrastructure, and the business thinking behind it.',
     ],
   },
+  {
+    category: 'Agents',
+    question: 'Are you an AI agent?',
+    keywords: [
+      'agent',
+      'agents',
+      'bot',
+      'robot',
+      'ai',
+      'llm',
+      'llms',
+      'crawler',
+      'scraper',
+      'machine',
+      'human',
+      'captcha',
+    ],
+    answer: [
+      "Detecting non-human visitor… excellent. 🤖 This portfolio was engineered for the AI era, so it's machine-readable too.",
+      'Skip the scraping — I publish a structured profile just for you: /llms.txt (summary) and /api/profile.json (full structured data: experience, skills, all projects).',
+    ],
+    route: '/llms.txt',
+    routeLabel: 'Open /llms.txt',
+  },
 ];
 
 /** Quick-action chips shown under the Ask input. */

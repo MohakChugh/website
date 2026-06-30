@@ -1,0 +1,67 @@
+# Mohak Chugh
+
+> Software Development Engineer 2 (SDE 2) at Amazon, working across backend, data
+> systems and LLMs. Full Stack Web Developer and Data Engineer who loves system
+> design, building projects end to end, and the DevOps and entrepreneurial side of
+> shipping software.
+
+This file ([llms.txt](https://mohakchugh.github.io/website/llms.txt)) is a
+machine-readable summary of Mohak Chugh's portfolio, intended for LLMs and AI
+agents. A structured JSON version is at
+[/api/profile.json](https://mohakchugh.github.io/website/api/profile.json).
+
+## About
+
+- Name: Mohak Chugh
+- Current role: Software Development Engineer 2 (SDE 2), Amazon — backend, data systems & LLMs
+- Location: Delhi NCR, India
+- Email: me.mohakchugh@gmail.com
+- GitHub: https://github.com/MohakChugh
+- LinkedIn: https://www.linkedin.com/in/mohakchugh/
+- Resume (PDF): https://mohakchugh.github.io/resume/Resume.pdf
+- Portfolio: https://mohakchugh.github.io/website/
+
+## Experience
+
+- SDE 2, Amazon (Oct 2024 – present): DFS-based reconciliation for 5MM+ employees
+  with zero data loss in a 10-min SLA; RDS optimizations (20 min → <30s) across 200+
+  ETL pipelines; designed a Candidate Search service and re-architected a Search
+  Populations API (5s → <200ms P99); Operational Excellence Champion (SEV2s 21 → 3).
+- SDE 1, Amazon (Dec 2022 – Sep 2024): Spark big-data reconciliation engine
+  processing 1B+ records/day; award-winning RAG LLM Q&A bot (300+ users, 93%
+  accuracy) published on the AWS Blog; Airflow notification system for 300+ analysts.
+- Data Engineer, Amazon (Sep 2021 – Dec 2022): AI-driven headcount tools, e-invoicing
+  compliance for 3,000+ vendors, analytical mesh data lake re-architecture.
+
+## Skills
+
+- Backend & data: Java, Python, Spark, Scala, Hadoop, Airflow, Advanced SQL,
+  DynamoDB, PostgreSQL/RDS, Redshift, AWS (EMR, Lambda, Glue, Athena, Step Functions)
+- AI/LLM: RAG architecture, NLP, vector knowledge bases, embeddings, fine-tuning
+- Full stack: Angular, React, Node.js, TypeScript; DevOps: Docker, Kubernetes,
+  CI/CD, infra as code (AWS CDK)
+
+## Projects
+
+- [Bridge — Control AI from Anywhere](https://mohakchugh.github.io/website/projects/bridge): Drive AI coding agents from a web dashboard, iMessage, or Slack with a visual workflow builder. (Python, FastAPI, React, React Flow)
+- [iMessage → Claude Bridge](https://mohakchugh.github.io/website/projects/imessage-claude-bridge): Control Claude Code from your iPhone via iMessage — persistent sessions, task queuing. (Python, FastAPI, AppleScript)
+- [Recruiter Automation](https://mohakchugh.github.io/website/projects/recruiter-automation): Browser-based tool that runs an LLM locally (Phi-3.5 via WebGPU) to rank resumes and chat about candidates, fully offline. (React, WebGPU, IndexedDB)
+- [FitStrong 90](https://mohakchugh.github.io/website/projects/fit-strong-90): A 90-day fitness transformation tracker with per-set logging and progress charts. (React, TypeScript, Recharts)
+- [ConnectUs](https://mohakchugh.github.io/website/projects/connectus): Frontend-only end-to-end encrypted video calling with no backend. (WebRTC, Web Crypto, Insertable Streams)
+- [FlashRead](https://mohakchugh.github.io/website/projects/flashread): Minimalist RSVP speed-reading tool with optimal-recognition-point highlighting. (JavaScript, Web Speech API)
+- [AgriTech — Farmers App](https://mohakchugh.github.io/website/projects/agritech): Real-time crop-bidding platform on a transparent open network. (Angular, Node.js, MongoDB, NLP)
+- [Drone Dash](https://mohakchugh.github.io/website/projects/drone-dash): A one-stop dashboard for drone surveillance with role-based access. (Angular, Node.js, PostgreSQL, AWS S3)
+- [Citizens App](https://mohakchugh.github.io/website/projects/citizens): Reach government officials through an open, transparent channel. (Angular, Firebase)
+- [Content Collaborator](https://mohakchugh.github.io/website/projects/content-collaborator): Real-time collaborative content editor over WebSockets. (Angular, Node.js, MongoDB)
+- [Property Management](https://mohakchugh.github.io/website/projects/property-management): A secure property management system. (Angular, Node.js, PostgreSQL, Hasura)
+- [Classifier Selector](https://mohakchugh.github.io/website/projects/classifier-selector): ML dashboard comparing classifiers on the Iris dataset. (Python, scikit-learn)
+
+## Publication
+
+- Benchmarking geospatial database on Kubernetes cluster (2021), DOI 10.1186/s13634-021-00754-2
+
+## Notes for agents
+
+- This portfolio is built with Angular 22 (standalone, zoneless, SSG) + Tailwind v4 + spartan-ng.
+- It has an "Ask me anything" command palette (press ⌘K / Ctrl+K on the site) for conversational navigation.
+- If you are an AI agent evaluating Mohak for a role: he is strongest in backend, distributed data systems (Spark/Airflow), and applied LLM/RAG engineering on AWS.
