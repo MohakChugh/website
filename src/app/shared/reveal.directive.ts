@@ -34,25 +34,40 @@ export class RevealDirective {
         node.style.transitionDelay = `${delay}ms`;
       }
 
-      if (typeof IntersectionObserver === 'undefined') {
+      const reduceMotion =
+        typeof matchMedia !== 'undefined' &&
+        matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+      if (typeof IntersectionObserver === 'undefined' || reduceMotion) {
         node.classList.add('is-visible');
         return;
       }
+
+      const reveal = () => node.classList.add('is-visible');
 
       const observer = new IntersectionObserver(
         (entries) => {
           for (const entry of entries) {
             if (entry.isIntersecting) {
-              node.classList.add('is-visible');
+              reveal();
               observer.unobserve(node);
             }
           }
         },
-        { threshold: 0.12, rootMargin: '0px 0px -10% 0px' },
+        { threshold: 0.1, rootMargin: '0px 0px -8% 0px' },
       );
 
       observer.observe(node);
-      this.destroyRef.onDestroy(() => observer.disconnect());
+
+      // Safety net: never leave content permanently hidden if the observer
+      // doesn't fire (e.g. off-screen content captured for PDF, or odd
+      // layout/scroll containers). Reveal after a short grace period.
+      const safety = setTimeout(reveal, 2500);
+
+      this.destroyRef.onDestroy(() => {
+        observer.disconnect();
+        clearTimeout(safety);
+      });
     });
   }
 }

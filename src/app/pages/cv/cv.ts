@@ -63,6 +63,9 @@ export class Cv {
     const el = this.cvContent()?.nativeElement;
     if (!el) return;
     this.generating.set(true);
+    // Ensure any not-yet-revealed (scroll-animated) sections are visible in the
+    // captured PDF, regardless of scroll position.
+    el.querySelectorAll('.reveal').forEach((n) => n.classList.add('is-visible'));
     try {
       // Lazy-load html2pdf only in the browser when actually needed (keeps it
       // out of the main bundle and out of SSR).
