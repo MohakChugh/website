@@ -21,7 +21,7 @@ import {
   lucideBrain,
 } from '@ng-icons/lucide';
 import { HlmButtonImports } from '@spartan-ng/helm/button';
-import { PROFILE, SKILL_CARDS, STATS } from '../../data/profile.data';
+import { PROFILE, SKILL_CARDS } from '../../data/profile.data';
 import { FEATURED_PROJECTS } from '../../data/projects.data';
 import { RevealDirective } from '../../shared/reveal.directive';
 import { AskPalette } from '../../shared/ask-palette/ask-palette';
@@ -29,7 +29,6 @@ import { ProjectCard } from '../../shared/project-card/project-card';
 import { TiltDirective } from '../../shared/motion/tilt.directive';
 import { MagneticDirective } from '../../shared/motion/magnetic.directive';
 import { ScrollFillDirective } from '../../shared/motion/scroll-fill.directive';
-import { CountUpDirective } from '../../shared/motion/count-up.directive';
 import { ScrambleDirective } from '../../shared/motion/scramble.directive';
 
 @Component({
@@ -45,7 +44,6 @@ import { ScrambleDirective } from '../../shared/motion/scramble.directive';
     TiltDirective,
     MagneticDirective,
     ScrollFillDirective,
-    CountUpDirective,
     ScrambleDirective,
   ],
   providers: [
@@ -68,7 +66,6 @@ export class Home implements OnInit {
 
   readonly profile = PROFILE;
   readonly skills = SKILL_CARDS;
-  readonly stats = STATS;
   /** curated projects shown as "featured" on the home page */
   readonly featured = FEATURED_PROJECTS;
 
