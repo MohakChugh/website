@@ -9,16 +9,16 @@ import {
 
 export const PROFILE = {
   name: 'Mohak Chugh',
-  roles: ['Full Stack Developer', 'Data Engineer', 'System Designer', 'Builder'],
-  tagline: 'FULL-STACK · DATA · ML',
-  location: 'India',
+  roles: ['SDE 2 @ Amazon', 'Full Stack Developer', 'System Designer', 'Builder'],
+  tagline: 'BACKEND · DATA · LLMs',
+  location: 'Delhi NCR, India',
   email: 'me.mohakchugh@gmail.com',
-  resumeUrl: 'https://bit.ly/mohakchughcv',
+  resumeUrl: 'https://mohakchugh.github.io/resume/Resume.pdf',
   githubUrl: 'https://github.com/MohakChugh',
   intro:
-    "I'm a computer science graduate, Full Stack Web Developer and Data Engineer. I have a passion for system design, building projects from scratch, and working on the DevOps and entrepreneurial side of projects.",
+    "I'm a Software Development Engineer 2 at Amazon, working across backend, data systems and LLMs. I love system design, building projects from scratch, and the DevOps and entrepreneurial side of shipping software.",
   about:
-    'I love building projects end to end — from how the frontend talks to the backend, to how the backend is structured, to deploying it at scale. I currently work as a Data Engineer at Amazon.',
+    'I love building projects end to end — from how the frontend talks to the backend, to how the backend is structured, to deploying it at scale. I currently work as a Software Development Engineer 2 (SDE 2) at Amazon.',
   dob: '17/07/1999',
 };
 

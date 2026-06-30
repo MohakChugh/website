@@ -1,11 +1,4 @@
-import {
-  ChangeDetectionStrategy,
-  Component,
-  ElementRef,
-  inject,
-  signal,
-  viewChild,
-} from '@angular/core';
+import { ChangeDetectionStrategy, Component } from '@angular/core';
 import { NgIcon, provideIcons } from '@ng-icons/core';
 import {
   lucideDownload,
@@ -56,32 +49,6 @@ export class Cv {
   readonly skills = SKILL_BARS;
   readonly amcatUrl = AMCAT_URL;
 
-  readonly generating = signal(false);
-  private readonly cvContent = viewChild<ElementRef<HTMLElement>>('cvContent');
-
-  async downloadPdf(): Promise<void> {
-    const el = this.cvContent()?.nativeElement;
-    if (!el) return;
-    this.generating.set(true);
-    // Ensure any not-yet-revealed (scroll-animated) sections are visible in the
-    // captured PDF, regardless of scroll position.
-    el.querySelectorAll('.reveal').forEach((n) => n.classList.add('is-visible'));
-    try {
-      // Lazy-load html2pdf only in the browser when actually needed (keeps it
-      // out of the main bundle and out of SSR).
-      const html2pdf = (await import('html2pdf.js')).default;
-      await html2pdf()
-        .from(el)
-        .set({
-          margin: 8,
-          filename: 'mohakchugh_cv.pdf',
-          image: { type: 'jpeg', quality: 0.98 },
-          html2canvas: { scale: 2, backgroundColor: '#0a0a0a', useCORS: true },
-          jsPDF: { unit: 'mm', format: 'a4', orientation: 'portrait' },
-        })
-        .save();
-    } finally {
-      this.generating.set(false);
-    }
-  }
+  /** URL of the hosted, professionally-formatted resume PDF. */
+  readonly resumeUrl = PROFILE.resumeUrl;
 }

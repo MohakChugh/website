@@ -1,5 +1,5 @@
 import { ChangeDetectionStrategy, Component } from '@angular/core';
-import { PROJECTS } from '../../data/projects.data';
+import { PROJECTS_ORDERED } from '../../data/projects.data';
 import { ProjectCard } from '../../shared/project-card/project-card';
 import { RevealDirective } from '../../shared/reveal.directive';
 
@@ -10,5 +10,5 @@ import { RevealDirective } from '../../shared/reveal.directive';
   templateUrl: './projects.html',
 })
 export class Projects {
-  readonly projects = PROJECTS;
+  readonly projects = PROJECTS_ORDERED;
 }

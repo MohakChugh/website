@@ -273,35 +273,6 @@ export const PROJECTS: Project[] = [
     ],
   },
   {
-    slug: 'dev-vibes',
-    title: 'Dev Vibes',
-    tagline:
-      'A fast, all-in-one developer toolbox bringing formatters, encoders, converters, and generators together in one clean, offline-friendly web app.',
-    kind: 'Developer Tool',
-    tags: ['Astro', 'React 19', 'TypeScript', 'Tailwind CSS 4', 'Radix UI', 'Vitest', 'Playwright'],
-    placeholderIcon: 'lucideWrench',
-    links: [
-      { label: 'GitHub', url: 'https://github.com/MohakChugh/dev-vibes', icon: 'lucideGithub' },
-    ],
-    sections: [
-      {
-        body: [
-          'Dev Vibes consolidates the everyday tools engineers reach for — formatters, encoders, converters, and generators — into a single fast, well-organized interface. It is built as a static Astro site with React 19 islands for interactivity, styled with Tailwind CSS 4 and Radix UI / shadcn components, with tools grouped into twelve categories spanning data, formatting, encoding, math, networking, text, units, and media.',
-        ],
-      },
-      {
-        heading: 'Capabilities',
-        bullets: [
-          'Formatters: JSON, SQL, XML, GraphQL, YAML, CSV, and Markdown tables',
-          'Encoding & crypto: Base64/Base32, Base58, hashing, URL/punycode, UUID',
-          'Helpers: cron expression explanations, KaTeX math rendering, user-agent parsing',
-          'Polished UX: command palette, light/dark theming, toast notifications',
-          'Quality-focused: Vitest unit tests and Playwright end-to-end coverage',
-        ],
-      },
-    ],
-  },
-  {
     slug: 'imessage-claude-bridge',
     title: 'iMessage → Claude Bridge',
     tagline:
@@ -435,3 +406,34 @@ export const PROJECTS: Project[] = [
 ];
 
 export const PROJECT_MAP = new Map(PROJECTS.map((p) => [p.slug, p]));
+
+/** Display order, newest first. Anything not listed falls to the end. */
+const DISPLAY_ORDER = [
+  'bridge',
+  'imessage-claude-bridge',
+  'recruiter-automation',
+  'fit-strong-90',
+  'connectus',
+  'flashread',
+  'classifier-selector',
+  'drone-dash',
+  'content-collaborator',
+  'property-management',
+  'citizens',
+  'agritech',
+];
+
+/** All projects in newest-first display order. */
+export const PROJECTS_ORDERED: Project[] = [...PROJECTS].sort((a, b) => {
+  const ai = DISPLAY_ORDER.indexOf(a.slug);
+  const bi = DISPLAY_ORDER.indexOf(b.slug);
+  return (ai === -1 ? Infinity : ai) - (bi === -1 ? Infinity : bi);
+});
+
+/** Slugs featured on the home page, in order. */
+const FEATURED_SLUGS = ['fit-strong-90', 'bridge', 'imessage-claude-bridge'];
+
+/** Projects shown in the home "Featured" section. */
+export const FEATURED_PROJECTS: Project[] = FEATURED_SLUGS.map((s) => PROJECT_MAP.get(s)!).filter(
+  Boolean,
+);
