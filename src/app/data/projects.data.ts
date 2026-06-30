@@ -234,9 +234,10 @@ export const PROJECTS: Project[] = [
     slug: 'recruiter-automation',
     title: 'Recruiter Automation',
     tagline:
-      'A free, browser-based tool that uses AI to rank resumes and analyze candidates — processing up to 1,000 files entirely offline, with no backend or API keys.',
+      'A free, browser-based tool that runs an LLM locally to rank resumes and chat about candidates — processing up to 1,000 files entirely offline, with no backend or API keys.',
+    image: 'assets/img/tech/recruiter-automation.png',
     kind: 'AI Tooling',
-    tags: ['React', 'TypeScript', 'Vite', 'Tailwind CSS', 'IndexedDB', 'pdf.js', 'PWA'],
+    tags: ['React', 'TypeScript', 'WebGPU', 'Phi-3.5', 'IndexedDB', 'pdf.js', 'PWA'],
     placeholderIcon: 'lucideUsers',
     links: [
       {
@@ -253,20 +254,20 @@ export const PROJECTS: Project[] = [
     sections: [
       {
         body: [
-          'Recruiter Automation is a fully client-side recruiting tool that streamlines candidate screening directly in the browser. Recruiters can bulk-upload up to 1,000 PDF or DOCX resumes, after which the app automatically extracts skills, location, and years of experience from each document. It is completely free, requiring no backend, API keys, or subscriptions.',
+          'Recruiter Automation is a fully client-side recruiting tool that streamlines candidate screening directly in the browser. You define a job profile — title, seniority, years of experience, must-have and nice-to-have skills, and a pasted job description — then bulk-upload up to 1,000 PDF or DOCX resumes. The tool extracts skills, location, and experience from each document and ranks every candidate against the role. It is completely free, with no backend, API keys, or subscriptions.',
         ],
         bullets: [
+          'Define rich job profiles with weighted must-have / nice-to-have skills',
           'Bulk upload of up to 1,000 PDF/DOCX resumes',
-          'Automatic extraction of skills, location, and experience',
-          'Two-tier scoring: rule-based ranking plus AI reasoning',
-          'Natural-language chat to query the candidate pool',
+          'Two-tier scoring: rule-based matching plus on-device AI reasoning',
+          'Natural-language chat to ask questions about the candidate pool',
           'Installable PWA that works fully offline',
         ],
       },
       {
-        heading: 'Architecture & privacy',
+        heading: 'On-device AI — nothing leaves your machine',
         body: [
-          'Built as an installable Progressive Web App, the tool runs offline and keeps all candidate data local in IndexedDB (via Dexie.js), so no resume data ever leaves the user’s machine. Heavy parsing is offloaded to Web Workers using pdf.js and mammoth.js to keep the UI responsive. The frontend is a Vite-powered React 18 + TypeScript stack styled with shadcn/ui and Tailwind CSS.',
+          'The standout is that the AI runs entirely in the browser. On first use the app downloads and caches two models for offline use: a Phi-3.5 Mini LLM (~2.2 GB) for deep analysis and chat, and a GTE-small embedding model (~33 MB) for semantic resume matching, accelerated with WebGPU where available. All candidate data lives locally in IndexedDB and heavy parsing is offloaded to Web Workers via pdf.js and mammoth.js, so no resume ever leaves the user’s device. The frontend is a Vite-powered React + TypeScript stack styled with shadcn/ui and Tailwind CSS.',
         ],
       },
     ],
@@ -337,6 +338,7 @@ export const PROJECTS: Project[] = [
     title: 'FitStrong 90',
     tagline:
       'A 90-day fitness transformation tracker that guides you through a structured 3-phase program with per-set logging, progress charts, and full offline support.',
+    image: 'assets/img/tech/fit-strong-90.png',
     kind: 'Fitness',
     tags: ['React', 'TypeScript', 'Vite', 'Tailwind CSS', 'shadcn/ui', 'Recharts'],
     placeholderIcon: 'lucideDumbbell',
@@ -351,14 +353,15 @@ export const PROJECTS: Project[] = [
     sections: [
       {
         body: [
-          'FitStrong 90 structures a complete 90-day transformation into three progressive phases — Foundation, Hypertrophy, and Strength — built around a 6-day training split. Every workout is tracked at the set level with weight, reps, and RPE, and all data lives in the browser via localStorage, so the app works fully offline with no account or backend.',
+          'FitStrong 90 structures a complete 90-day transformation into three progressive phases — Foundation, Hypertrophy, and Strength — built around a 6-day training split. A guided onboarding captures your start date, weight, and goal, then drops you into a dashboard that surfaces the day’s workout, weekly stats, phase progress, and your current streak. Every set is logged with weight, reps, and RPE, and all data lives in the browser via localStorage, so it works fully offline with no account or backend.',
         ],
         bullets: [
-          '90-day program across 3 progressive phases',
-          '6-day split with per-set weight, reps, and RPE tracking',
-          'Built-in rest timer and exercise library with demos',
-          'Progress charts for volume, bodyweight, and personal records',
-          'Workout history calendar and JSON export/import',
+          '90-day program across 3 progressive phases (Foundation, Hypertrophy, Strength)',
+          'Dashboard with today’s workout, weekly volume, total sets, and streak tracking',
+          '6-day split with per-set weight, reps, and RPE logging',
+          'Built-in rest timer and an exercise library with instructions and demos',
+          'Progress charts for volume, bodyweight, and personal records (Recharts)',
+          'Health-aware tips (blood sugar, hydration, sleep) and JSON export/import',
         ],
       },
     ],
@@ -368,20 +371,27 @@ export const PROJECTS: Project[] = [
     title: 'ConnectUs',
     tagline:
       'A frontend-only, end-to-end encrypted video calling app with no custom backend — using WebRTC and application-layer frame encryption over an untrusted relay.',
+    image: 'assets/img/tech/connectus.png',
     kind: 'Web App',
-    tags: ['React', 'TypeScript', 'Material UI', 'Vite', 'WebRTC', 'Web Crypto API'],
+    tags: ['React', 'TypeScript', 'Material UI', 'WebRTC', 'Web Crypto API', 'Insertable Streams'],
     placeholderIcon: 'lucideShieldCheck',
     links: [
+      {
+        label: 'Live Demo',
+        url: 'https://mohakchugh.github.io/connectus/',
+        icon: 'lucideExternalLink',
+      },
       { label: 'GitHub', url: 'https://github.com/MohakChugh/connectus', icon: 'lucideGithub' },
     ],
     sections: [
       {
         body: [
-          'ConnectUs is a zero-backend, end-to-end encrypted video call application deployed as a static site. There is no database, no analytics, and no trackers — signaling rides over an untrusted public WebSocket relay that only ever sees encrypted payloads. The room key lives only in the URL hash fragment and is never transmitted to any server.',
+          'ConnectUs is a zero-backend, end-to-end encrypted video call application deployed as a static site. There is no database, no analytics, and no trackers — signaling rides over an untrusted public WebSocket relay that only ever sees encrypted payloads, and the room key lives only in the URL hash fragment, never transmitted to any server. On launch it runs a compatibility check, confirming the browser supports the secure context, Web Crypto API, WebRTC, media devices, Insertable Streams, and Web Workers it relies on.',
         ],
         bullets: [
           'End-to-end encrypted signaling (AES-GCM-256) over an untrusted relay',
           'Application-layer media frame encryption via WebRTC Insertable Streams',
+          'Room key lives only in the URL fragment — never sent to a server',
           'Signal-style safety-number verification for peer identity',
           'Two-party room enforcement and replay protection',
           'No backend, no database, no analytics, no trackers',
@@ -394,22 +404,29 @@ export const PROJECTS: Project[] = [
     title: 'FlashRead',
     tagline:
       'A minimalist RSVP speed-reading tool that flashes text one word at a time with optimal-recognition-point highlighting — to read at the speed of thought.',
+    image: 'assets/img/tech/flashread.png',
     kind: 'Productivity',
     tags: ['JavaScript', 'HTML', 'CSS', 'Web Speech API', 'localStorage'],
     placeholderIcon: 'lucideBookOpen',
     links: [
+      {
+        label: 'Live Demo',
+        url: 'https://mohakchugh.github.io/FLASHREAD/',
+        icon: 'lucideExternalLink',
+      },
       { label: 'GitHub', url: 'https://github.com/MohakChugh/FLASHREAD', icon: 'lucideGithub' },
     ],
     sections: [
       {
         body: [
-          'FlashRead is a single-page RSVP speed-reading tool — paste in an article or chapter and it flashes words one at a time at a configurable pace, using an Optimal Recognition Point (ORP) highlight to keep your eyes fixed at the center of each word. It is a self-contained, framework-free web app, with settings that persist between sessions.',
+          'FlashRead is a single-page RSVP speed-reading tool — paste in an article or chapter and it flashes words one at a time at a configurable pace. An Optimal Recognition Point (ORP) highlight marks one letter of each word in red and pins it to a fixed centre line, so your eyes never move; a next-word preview and the surrounding sentence keep you oriented, while a progress bar shows words read and time remaining. It is a self-contained, framework-free web app with settings that persist between sessions.',
         ],
         bullets: [
-          'Adjustable reading speed (100–1000 WPM) and font size',
-          'ORP word highlighting with previous/next preview and sentence context',
-          '“Start from word” input, progress bar, and time-remaining estimate',
-          'Optional voice narration via the Web Speech API',
+          'Adjustable reading speed (100–1000 WPM) and display font size',
+          'ORP letter highlighting on a fixed centre line, with next-word preview',
+          'Live sentence context, progress bar, and time-remaining estimate',
+          '“Start from word” jump-in, plus −10 / −50 / +50 / +10 scrubbing',
+          'Optional text-to-speech narration via the Web Speech API',
           'Full keyboard shortcuts and a completion summary (words, time, avg WPM)',
         ],
       },

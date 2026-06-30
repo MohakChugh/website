@@ -28,20 +28,6 @@
       }
     </ul>
 
-    <div class="mx-1 hidden h-5 w-px bg-border md:block"></div>
-
-    <!-- Theme toggle -->
-    <button
-      hlmBtn
-      variant="ghost"
-      size="icon"
-      class="rounded-full"
-      (click)="toggleTheme()"
-      [attr.aria-label]="theme() === 'dark' ? 'Switch to light mode' : 'Switch to dark mode'"
-    >
-      <ng-icon [name]="theme() === 'dark' ? 'lucideSun' : 'lucideMoon'" class="size-4" />
-    </button>
-
     <!-- Mobile menu (sheet) -->
     <hlm-sheet class="md:hidden">
       <button

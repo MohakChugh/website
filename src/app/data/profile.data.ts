@@ -152,8 +152,8 @@ export const SOCIALS: SocialLink[] = [
   },
   {
     platform: 'LinkedIn',
-    handle: 'mohak-chugh',
-    url: 'http://bit.ly/mohakchughLinkedIN',
+    handle: 'mohakchugh',
+    url: 'https://www.linkedin.com/in/mohakchugh/',
     icon: 'lucideLinkedin',
     blurb: 'Connect with me on a professional level.',
   },

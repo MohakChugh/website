@@ -24,7 +24,7 @@ export class Footer {
     { icon: 'lucideGithub', url: 'https://github.com/MohakChugh', label: 'GitHub' },
     {
       icon: 'lucideLinkedin',
-      url: 'http://bit.ly/mohakchughLinkedIN',
+      url: 'https://www.linkedin.com/in/mohakchugh/',
       label: 'LinkedIn',
     },
     { icon: 'lucideMail', url: 'mailto:' + PROFILE.email, label: 'Email' },
