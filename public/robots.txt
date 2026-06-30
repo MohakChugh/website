@@ -2,6 +2,6 @@ User-agent: *
 Allow: /
 
 # Machine-readable profile for LLMs and AI agents
-# See also: /website/llms.txt and /website/api/profile.json
+# See also: /llms.txt and /api/profile.json
 
-Sitemap: https://mohakchugh.github.io/website/sitemap.xml
+Sitemap: https://mohakchugh.is-a.dev/sitemap.xml

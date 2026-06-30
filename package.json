@@ -8,7 +8,7 @@
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
     "test:unit": "vitest run --root src",
-    "build:ghpages": "ng build --base-href /website/ && touch dist/portfolio/browser/.nojekyll && cp dist/portfolio/browser/index.html dist/portfolio/browser/404.html"
+    "build:ghpages": "ng build --base-href / && touch dist/portfolio/browser/.nojekyll && cp dist/portfolio/browser/index.html dist/portfolio/browser/404.html"
   },
   "private": true,
   "packageManager": "npm@11.16.0",
