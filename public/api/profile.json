@@ -5,7 +5,7 @@
   "summary": "Full Stack Web Developer and Data Engineer who loves system design, building projects end to end, and the DevOps and entrepreneurial side of shipping software. Currently SDE 2 at Amazon working across backend, data systems and LLMs.",
   "location": "Delhi NCR, India",
   "links": {
-    "portfolio": "https://mohakchugh.is-a.dev/",
+    "portfolio": "https://mohakchugh.github.io/website/",
     "email": "me.mohakchugh@gmail.com",
     "github": "https://github.com/MohakChugh",
     "linkedin": "https://www.linkedin.com/in/mohakchugh/",
@@ -57,18 +57,18 @@
     "devops": ["Docker", "Kubernetes", "CI/CD", "AWS CDK"]
   },
   "projects": [
-    { "slug": "bridge", "title": "Bridge — Control AI from Anywhere", "summary": "Drive AI coding agents from a web dashboard, iMessage, or Slack with a visual workflow builder.", "tags": ["Python", "FastAPI", "React", "React Flow"], "url": "https://mohakchugh.is-a.dev/projects/bridge" },
-    { "slug": "imessage-claude-bridge", "title": "iMessage → Claude Bridge", "summary": "Control Claude Code from your iPhone via iMessage — persistent sessions, task queuing.", "tags": ["Python", "FastAPI", "AppleScript"], "url": "https://mohakchugh.is-a.dev/projects/imessage-claude-bridge" },
-    { "slug": "recruiter-automation", "title": "Recruiter Automation", "summary": "Browser-based tool that runs an LLM locally (Phi-3.5 via WebGPU) to rank resumes and chat about candidates, fully offline.", "tags": ["React", "WebGPU", "IndexedDB", "pdf.js"], "url": "https://mohakchugh.is-a.dev/projects/recruiter-automation" },
-    { "slug": "fit-strong-90", "title": "FitStrong 90", "summary": "A 90-day fitness transformation tracker with per-set logging and progress charts.", "tags": ["React", "TypeScript", "Recharts"], "url": "https://mohakchugh.is-a.dev/projects/fit-strong-90" },
-    { "slug": "connectus", "title": "ConnectUs", "summary": "Frontend-only end-to-end encrypted video calling with no backend.", "tags": ["WebRTC", "Web Crypto API", "Insertable Streams"], "url": "https://mohakchugh.is-a.dev/projects/connectus" },
-    { "slug": "flashread", "title": "FlashRead", "summary": "Minimalist RSVP speed-reading tool with optimal-recognition-point highlighting.", "tags": ["JavaScript", "Web Speech API"], "url": "https://mohakchugh.is-a.dev/projects/flashread" },
-    { "slug": "agritech", "title": "AgriTech — Farmers App", "summary": "Real-time crop-bidding platform on a transparent open network.", "tags": ["Angular", "Node.js", "MongoDB", "NLP"], "url": "https://mohakchugh.is-a.dev/projects/agritech" },
-    { "slug": "drone-dash", "title": "Drone Dash", "summary": "A one-stop dashboard for drone surveillance with role-based access.", "tags": ["Angular", "Node.js", "PostgreSQL", "AWS S3"], "url": "https://mohakchugh.is-a.dev/projects/drone-dash" },
-    { "slug": "citizens", "title": "Citizens App", "summary": "Reach government officials through an open, transparent channel.", "tags": ["Angular", "Firebase"], "url": "https://mohakchugh.is-a.dev/projects/citizens" },
-    { "slug": "content-collaborator", "title": "Content Collaborator", "summary": "Real-time collaborative content editor over WebSockets.", "tags": ["Angular", "Node.js", "MongoDB"], "url": "https://mohakchugh.is-a.dev/projects/content-collaborator" },
-    { "slug": "property-management", "title": "Property Management", "summary": "A secure property management system.", "tags": ["Angular", "Node.js", "PostgreSQL", "Hasura"], "url": "https://mohakchugh.is-a.dev/projects/property-management" },
-    { "slug": "classifier-selector", "title": "Classifier Selector", "summary": "ML dashboard comparing classifiers on the Iris dataset.", "tags": ["Python", "scikit-learn"], "url": "https://mohakchugh.is-a.dev/projects/classifier-selector" }
+    { "slug": "bridge", "title": "Bridge — Control AI from Anywhere", "summary": "Drive AI coding agents from a web dashboard, iMessage, or Slack with a visual workflow builder.", "tags": ["Python", "FastAPI", "React", "React Flow"], "url": "https://mohakchugh.github.io/website/projects/bridge" },
+    { "slug": "imessage-claude-bridge", "title": "iMessage → Claude Bridge", "summary": "Control Claude Code from your iPhone via iMessage — persistent sessions, task queuing.", "tags": ["Python", "FastAPI", "AppleScript"], "url": "https://mohakchugh.github.io/website/projects/imessage-claude-bridge" },
+    { "slug": "recruiter-automation", "title": "Recruiter Automation", "summary": "Browser-based tool that runs an LLM locally (Phi-3.5 via WebGPU) to rank resumes and chat about candidates, fully offline.", "tags": ["React", "WebGPU", "IndexedDB", "pdf.js"], "url": "https://mohakchugh.github.io/website/projects/recruiter-automation" },
+    { "slug": "fit-strong-90", "title": "FitStrong 90", "summary": "A 90-day fitness transformation tracker with per-set logging and progress charts.", "tags": ["React", "TypeScript", "Recharts"], "url": "https://mohakchugh.github.io/website/projects/fit-strong-90" },
+    { "slug": "connectus", "title": "ConnectUs", "summary": "Frontend-only end-to-end encrypted video calling with no backend.", "tags": ["WebRTC", "Web Crypto API", "Insertable Streams"], "url": "https://mohakchugh.github.io/website/projects/connectus" },
+    { "slug": "flashread", "title": "FlashRead", "summary": "Minimalist RSVP speed-reading tool with optimal-recognition-point highlighting.", "tags": ["JavaScript", "Web Speech API"], "url": "https://mohakchugh.github.io/website/projects/flashread" },
+    { "slug": "agritech", "title": "AgriTech — Farmers App", "summary": "Real-time crop-bidding platform on a transparent open network.", "tags": ["Angular", "Node.js", "MongoDB", "NLP"], "url": "https://mohakchugh.github.io/website/projects/agritech" },
+    { "slug": "drone-dash", "title": "Drone Dash", "summary": "A one-stop dashboard for drone surveillance with role-based access.", "tags": ["Angular", "Node.js", "PostgreSQL", "AWS S3"], "url": "https://mohakchugh.github.io/website/projects/drone-dash" },
+    { "slug": "citizens", "title": "Citizens App", "summary": "Reach government officials through an open, transparent channel.", "tags": ["Angular", "Firebase"], "url": "https://mohakchugh.github.io/website/projects/citizens" },
+    { "slug": "content-collaborator", "title": "Content Collaborator", "summary": "Real-time collaborative content editor over WebSockets.", "tags": ["Angular", "Node.js", "MongoDB"], "url": "https://mohakchugh.github.io/website/projects/content-collaborator" },
+    { "slug": "property-management", "title": "Property Management", "summary": "A secure property management system.", "tags": ["Angular", "Node.js", "PostgreSQL", "Hasura"], "url": "https://mohakchugh.github.io/website/projects/property-management" },
+    { "slug": "classifier-selector", "title": "Classifier Selector", "summary": "ML dashboard comparing classifiers on the Iris dataset.", "tags": ["Python", "scikit-learn"], "url": "https://mohakchugh.github.io/website/projects/classifier-selector" }
   ],
   "publications": [
     { "title": "Benchmarking geospatial database on Kubernetes cluster", "year": 2021, "doi": "10.1186/s13634-021-00754-2" }
