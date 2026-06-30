@@ -32,14 +32,22 @@
       </div>
     </header>
 
-    <!-- hero image -->
+    <!-- hero media: looping video when available, else image -->
     <div class="reveal mt-10 overflow-hidden rounded-2xl border border-border" appReveal>
-      <img
-        [src]="p.image"
-        [alt]="p.title"
-        loading="lazy"
-        class="w-full object-cover"
-      />
+      @if (p.video) {
+        <video
+          [poster]="p.image"
+          [src]="p.video"
+          autoplay
+          loop
+          muted
+          playsinline
+          preload="none"
+          class="w-full object-cover"
+        ></video>
+      } @else {
+        <img [src]="p.image" [alt]="p.title" loading="lazy" class="w-full object-cover" />
+      }
     </div>
 
     <!-- sections -->

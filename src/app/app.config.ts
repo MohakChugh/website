@@ -15,6 +15,9 @@ export const appConfig: ApplicationConfig = {
     provideBrowserGlobalErrorListeners(),
     provideRouter(
       routes,
+      // Path-based routing keeps the SSG-prerendered HTML per route (best first
+      // paint + SEO). On GitHub Pages, deep links are handled by a 404.html that
+      // mirrors index.html (the SPA fallback), generated in build:ghpages.
       withViewTransitions(),
       withComponentInputBinding(),
       withInMemoryScrolling({ scrollPositionRestoration: 'enabled', anchorScrolling: 'enabled' }),

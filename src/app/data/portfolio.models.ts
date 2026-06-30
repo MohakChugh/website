@@ -22,6 +22,8 @@ export interface Project {
   tagline: string;
   /** hero/card image path under /assets */
   image: string;
+  /** optional looping video (mp4) shown on the detail hero in place of the image */
+  video?: string;
   /** tech-stack chips */
   tags: string[];
   /** external links (demo, github, ppt) */

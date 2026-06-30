@@ -82,7 +82,8 @@ export const PROJECTS: Project[] = [
     title: 'Content Collaborator',
     tagline:
       'A real-time content editor that lets a group of users collaborate on documents or webpage content, see changes live, and publish in no time.',
-    image: 'assets/img/tech/text-editor.gif',
+    image: 'assets/img/tech/text-editor.jpg',
+    video: 'assets/img/tech/text-editor.mp4',
     kind: 'Full Stack',
     tags: ['Angular', 'Node.js', 'MongoDB', 'WebSockets', 'Docker'],
     links: [
@@ -162,7 +163,8 @@ export const PROJECTS: Project[] = [
     title: 'Classifier Selector',
     tagline:
       'A machine-learning dashboard for predicting the class of the Iris dataset, with support for multiple classifiers.',
-    image: 'assets/img/tech/Dashboard_Demo.gif',
+    image: 'assets/img/tech/Dashboard_Demo.jpg',
+    video: 'assets/img/tech/Dashboard_Demo.mp4',
     kind: 'Dashboard',
     tags: ['Python', 'Machine Learning', 'Dashboard', 'scikit-learn'],
     links: [
