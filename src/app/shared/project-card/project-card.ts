@@ -13,12 +13,13 @@ import {
   lucideCode,
 } from '@ng-icons/lucide';
 import { Project } from '../../data/portfolio.models';
+import { TiltDirective } from '../motion/tilt.directive';
 
-/** Reusable project card with image (or themed gradient tile), badges, hover lift + glow. */
+/** Reusable project card with image (or themed gradient tile), badges, 3D tilt + glow. */
 @Component({
   selector: 'app-project-card',
   changeDetection: ChangeDetectionStrategy.OnPush,
-  imports: [RouterLink, NgIcon],
+  imports: [RouterLink, NgIcon, TiltDirective],
   providers: [
     provideIcons({
       lucideArrowUpRight,
@@ -35,14 +36,15 @@ import { Project } from '../../data/portfolio.models';
   template: `
     <a
       [routerLink]="['/projects', project().slug]"
-      class="group relative block overflow-hidden rounded-2xl border border-border bg-card transition-all duration-300 hover:-translate-y-1 hover:border-primary/40 hover:shadow-xl hover:shadow-primary/5"
+      appTilt
+      class="tilt tilt-glow border-animate group relative block overflow-hidden rounded-2xl border border-border bg-card transition-[box-shadow,border-color] duration-300 hover:border-primary/40 hover:shadow-xl hover:shadow-primary/5"
     >
       <!-- gradient glow on hover -->
       <div
         class="pointer-events-none absolute inset-0 -z-10 bg-gradient-to-br from-primary/0 to-primary/0 opacity-0 transition-opacity duration-300 group-hover:from-primary/10 group-hover:to-transparent group-hover:opacity-100"
       ></div>
 
-      <div class="aspect-video overflow-hidden bg-secondary">
+      <div class="relative z-[2] aspect-video overflow-hidden bg-secondary">
         @if (project().image) {
           <img
             [src]="project().image"
@@ -65,7 +67,7 @@ import { Project } from '../../data/portfolio.models';
         }
       </div>
 
-      <div class="p-5">
+      <div class="relative z-[2] p-5">
         <div class="flex items-start justify-between gap-2">
           <div>
             <span class="eyebrow">{{ project().kind }}</span>

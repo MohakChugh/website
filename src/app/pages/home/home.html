@@ -18,7 +18,7 @@
       appReveal
       [revealDelay]="60"
     >
-      Hi, I'm <span class="text-gradient">Mohak Chugh</span>.
+      Hi, I'm <span class="text-gradient" appScramble>Mohak Chugh</span>.
       <br class="hidden sm:block" />
       <span class="text-muted-foreground">I'm a </span>
       <!-- rotating role word -->
@@ -39,9 +39,10 @@
     </h1>
 
     <p
-      class="reveal mt-6 max-w-2xl text-lg leading-relaxed text-muted-foreground"
+      class="reveal mt-6 max-w-2xl text-lg leading-relaxed"
       appReveal
       [revealDelay]="120"
+      appScrollFill
     >
       {{ profile.intro }}
     </p>
@@ -51,7 +52,9 @@
       <button
         type="button"
         (click)="palette.openWith()"
-        class="glass group flex w-full items-center gap-3 rounded-full px-5 py-4 text-left transition-all hover:border-primary/40"
+        appTilt
+        [tiltMax]="4"
+        class="tilt tilt-glow border-animate glass group flex w-full items-center gap-3 rounded-full px-5 py-4 text-left transition-[border-color] hover:border-primary/40"
       >
         <ng-icon name="lucideSparkles" class="size-5 text-primary" />
         <span class="text-muted-foreground">Ask me anything…</span>
@@ -65,16 +68,37 @@
 
     <!-- CTAs -->
     <div class="reveal mt-6 flex flex-wrap gap-3" appReveal [revealDelay]="240">
-      <a hlmBtn size="lg" [routerLink]="['/contact']">
+      <a hlmBtn size="lg" appMagnetic class="border-animate" [routerLink]="['/contact']">
         <ng-icon name="lucideMail" class="mr-2 size-4" /> Get in touch
       </a>
-      <a hlmBtn variant="outline" size="lg" [routerLink]="['/projects']">
+      <a hlmBtn variant="outline" size="lg" appMagnetic [routerLink]="['/projects']">
         View projects <ng-icon name="lucideArrowRight" class="ml-2 size-4" />
       </a>
       <a hlmBtn variant="ghost" size="lg" [href]="profile.githubUrl" target="_blank" rel="noopener">
         <ng-icon name="lucideGithub" class="mr-2 size-4" /> GitHub
       </a>
     </div>
+  </div>
+</section>
+
+<!-- ── BY THE NUMBERS ─────────────────────────────────────────────── -->
+<section class="mx-auto max-w-5xl px-6 py-12">
+  <div class="reveal grid grid-cols-2 gap-6 sm:grid-cols-4" appReveal>
+    @for (stat of stats; track stat.label; let i = $index) {
+      <div class="text-center" appReveal [revealDelay]="i * 80">
+        <div class="font-display text-4xl font-bold tracking-tight sm:text-5xl">
+          <span
+            class="text-gradient"
+            appCountUp
+            [countTo]="stat.value"
+            [prefix]="stat.prefix ?? ''"
+            [suffix]="stat.suffix ?? ''"
+            >{{ stat.prefix ?? '' }}{{ stat.value }}{{ stat.suffix ?? '' }}</span
+          >
+        </div>
+        <p class="mt-2 text-sm text-muted-foreground">{{ stat.label }}</p>
+      </div>
+    }
   </div>
 </section>
 
@@ -116,17 +140,19 @@
   <div class="grid gap-6 md:grid-cols-3">
     @for (skill of skills; track skill.title; let i = $index) {
       <div
-        class="reveal group rounded-2xl border border-border bg-card p-6 transition-all duration-300 hover:-translate-y-1 hover:border-primary/40"
+        class="reveal tilt tilt-glow group rounded-2xl border border-border bg-card p-6 transition-[border-color] duration-300 hover:border-primary/40"
         appReveal
         [revealDelay]="i * 100"
+        appTilt
+        [tiltMax]="5"
       >
         <div
-          class="grid size-12 place-items-center rounded-xl border border-border bg-secondary text-primary transition-colors group-hover:border-primary/40"
+          class="relative z-[2] grid size-12 place-items-center rounded-xl border border-border bg-secondary text-primary transition-colors group-hover:border-primary/40"
         >
           <ng-icon [name]="skill.icon" class="size-6" />
         </div>
-        <h3 class="mt-4 font-display text-lg font-semibold">{{ skill.title }}</h3>
-        <p class="mt-2 text-sm leading-relaxed text-muted-foreground">{{ skill.body }}</p>
+        <h3 class="relative z-[2] mt-4 font-display text-lg font-semibold">{{ skill.title }}</h3>
+        <p class="relative z-[2] mt-2 text-sm leading-relaxed text-muted-foreground">{{ skill.body }}</p>
       </div>
     }
   </div>

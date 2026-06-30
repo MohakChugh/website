@@ -125,6 +125,24 @@
       radial-gradient(60% 50% at 20% 10%, oklch(0.78 0.13 200 / 0.12), transparent 70%),
       radial-gradient(50% 45% at 85% 20%, oklch(0.65 0.2 290 / 0.12), transparent 70%);
     pointer-events: none;
+    /* slow living drift */
+    animation: aurora-drift 18s ease-in-out infinite alternate;
+  }
+
+  /* Cursor-following light pocket over the dot-grid (--mx/--my set by a directive,
+     default centred). Lives on the fixed background layer. */
+  .bg-spotlight::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+    pointer-events: none;
+    background: radial-gradient(
+      28rem 28rem at var(--mx, 50%) var(--my, 30%),
+      oklch(0.78 0.13 200 / 0.1),
+      transparent 60%
+    );
+    transition: background 0.2s linear;
   }
 
   /* Scroll-reveal: starts hidden+shifted, .is-visible (set by directive) animates in */
@@ -138,6 +156,95 @@
   .reveal.is-visible {
     opacity: 1;
     transform: none;
+  }
+
+  /* 3D tilt + spotlight glow (driven by appTilt directive via --rx/--ry/--mx/--my) */
+  .tilt {
+    transform: perspective(800px) rotateX(var(--ry, 0deg)) rotateY(var(--rx, 0deg));
+    transform-style: preserve-3d;
+    transition: transform 0.2s var(--ease-out-expo);
+  }
+  .tilt-glow::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    z-index: 1;
+    border-radius: inherit;
+    pointer-events: none;
+    opacity: 0;
+    background: radial-gradient(
+      18rem 18rem at var(--mx, 50%) var(--my, 50%),
+      oklch(0.8 0.13 220 / 0.18),
+      transparent 60%
+    );
+    transition: opacity 0.3s ease;
+  }
+  .tilt-glow:hover::before {
+    opacity: 1;
+  }
+
+  /* Scroll word-by-word fill: each word dim by default, .lit when scrolled past */
+  .fill-word {
+    color: var(--color-muted-foreground);
+    opacity: 0.35;
+    transition:
+      opacity 0.4s var(--ease-out-expo),
+      color 0.4s var(--ease-out-expo);
+  }
+  .fill-word.lit {
+    opacity: 1;
+    color: var(--color-foreground);
+  }
+
+  /* Animated conic-gradient border on hover (cyan→violet sweep) */
+  .border-animate {
+    position: relative;
+  }
+  .border-animate::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    border-radius: inherit;
+    padding: 1px;
+    background: conic-gradient(
+      from var(--angle, 0deg),
+      transparent 0%,
+      oklch(0.8 0.13 200 / 0.9) 25%,
+      oklch(0.65 0.2 290 / 0.9) 50%,
+      transparent 75%
+    );
+    -webkit-mask:
+      linear-gradient(#000 0 0) content-box,
+      linear-gradient(#000 0 0);
+    -webkit-mask-composite: xor;
+    mask-composite: exclude;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+  }
+  .border-animate:hover::after {
+    opacity: 1;
+    animation: border-spin 3s linear infinite;
+  }
+}
+
+/* Custom-property registration so the conic-gradient angle can animate */
+@property --angle {
+  syntax: '<angle>';
+  initial-value: 0deg;
+  inherits: false;
+}
+
+@keyframes aurora-drift {
+  0% {
+    transform: translate3d(0, 0, 0) scale(1);
+  }
+  100% {
+    transform: translate3d(-3%, 2%, 0) scale(1.08);
+  }
+}
+@keyframes border-spin {
+  to {
+    --angle: 360deg;
   }
 }
 
@@ -161,6 +268,44 @@
   }
 }
 
+/* ── Custom cursor (desktop, fine-pointer only) ───────────────────── */
+@media (pointer: fine) {
+  /* hide native cursor only once the JS cursor is active */
+  html.has-cursor,
+  html.has-cursor a,
+  html.has-cursor button,
+  html.has-cursor [data-cursor] {
+    cursor: none;
+  }
+  .cursor-dot {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 200;
+    height: 16px;
+    width: 16px;
+    border-radius: 9999px;
+    background: oklch(0.85 0.13 210);
+    mix-blend-mode: difference;
+    pointer-events: none;
+    transform: translate(-50%, -50%);
+    will-change: transform;
+  }
+  .cursor-ring {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 200;
+    height: 44px;
+    width: 44px;
+    border-radius: 9999px;
+    border: 1px solid oklch(0.85 0.13 210 / 0.5);
+    pointer-events: none;
+    transform: translate(-50%, -50%);
+    will-change: transform;
+  }
+}
+
 /* ── Accessibility: motion is enhancement, never required ─────────── */
 @media (prefers-reduced-motion: reduce) {
   *,
@@ -174,5 +319,12 @@
   .reveal {
     opacity: 1;
     transform: none;
+  }
+  .fill-word {
+    opacity: 1;
+    color: var(--color-foreground);
+  }
+  .bg-aurora::before {
+    animation: none;
   }
 }

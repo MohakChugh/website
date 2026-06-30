@@ -22,6 +22,24 @@ export const PROFILE = {
   dob: '17/07/1999',
 };
 
+/** "By the numbers" strip on the home page — values count up on scroll. */
+export interface Stat {
+  /** numeric target the counter animates to */
+  value: number;
+  /** text shown before the number (e.g. a currency) */
+  prefix?: string;
+  /** text shown after the number (e.g. '+', 'B+', 'MM+') */
+  suffix?: string;
+  label: string;
+}
+
+export const STATS: Stat[] = [
+  { value: 13, label: 'Projects shipped' },
+  { value: 3, suffix: '+', label: 'Years at Amazon' },
+  { value: 1, suffix: 'B+', label: 'Records reconciled / day' },
+  { value: 5, suffix: 'MM+', label: 'Employees processed' },
+];
+
 export const SKILL_CARDS: SkillCard[] = [
   {
     title: 'Full Stack Development',
