@@ -1,30 +1,45 @@
-# Portfolio
+# Mohak Chugh — Portfolio
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 9.1.1.
+A modern, dark-first, animated developer portfolio.
 
-## URL Link
-- https://mohakchugh.github.io/website
+🔗 **Live:** https://mohakchugh.github.io/website
 
-## Development server
+## Stack
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+- **Angular 22** — standalone components, signals, zoneless change detection,
+  new control flow (`@if`/`@for`/`@defer`), SSG prerendering
+- **spartan-ng** (shadcn/ui port for Angular) + **Tailwind CSS v4** (OKLCH tokens)
+- Self-hosted **Geist** + **Inter** + **Geist Mono** variable fonts
+- **lucide** icons via `@ng-icons`
+- Dark-first theme with a cyan→violet accent and a light-mode toggle
 
-## Code scaffolding
+## Features
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+- Floating glass nav (mobile sheet drawer), animated dot-grid + aurora background
+- Scroll-reveal animations, rotating-role hero, View Transitions between routes
+- **"Ask me anything" command palette** (⌘K) — local keyword-scored Q&A, no backend
+- Projects grid + per-project detail pages (prerendered)
+- CV with PDF export (`html2pdf`, lazy-loaded), Contact with social cards
+- All motion respects `prefers-reduced-motion`
 
-## Build
+## Develop
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
+```bash
+nvm use            # Node 24 (see .nvmrc)
+npm install
+npm start          # dev server at http://localhost:4200
+```
 
-## Running unit tests
+## Test & build
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+```bash
+npm run test:unit      # Vitest unit tests
+npm run build          # production build (SSG, dist/portfolio/browser)
+npm run build:ghpages  # build for GitHub Pages (base-href /website/, 404.html, .nojekyll)
+```
 
-## Running end-to-end tests
+## Deploy
 
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+Pushing to `master` triggers the GitHub Actions workflow
+(`.github/workflows/deploy.yml`), which runs `build:ghpages` and publishes
+`dist/portfolio/browser` to GitHub Pages.
