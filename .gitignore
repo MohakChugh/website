@@ -46,3 +46,10 @@ testem.log
 Thumbs.db
 
 backend/
+
+# legacy Angular 9 app kept for content/asset porting reference
+_legacy_src/
+
+# inspiration screenshots (reference only)
+docs/inspiration/
+.playwright-mcp/
