@@ -2,14 +2,13 @@ import { ChangeDetectionStrategy, Component, input } from '@angular/core';
 import { RouterLink } from '@angular/router';
 import { NgIcon, provideIcons } from '@ng-icons/core';
 import { lucideArrowUpRight } from '@ng-icons/lucide';
-import { NgOptimizedImage } from '@angular/common';
 import { Project } from '../../data/portfolio.models';
 
 /** Reusable project card with image, tech badges, hover lift + glow. */
 @Component({
   selector: 'app-project-card',
   changeDetection: ChangeDetectionStrategy.OnPush,
-  imports: [RouterLink, NgIcon, NgOptimizedImage],
+  imports: [RouterLink, NgIcon],
   providers: [provideIcons({ lucideArrowUpRight })],
   template: `
     <a
@@ -23,11 +22,11 @@ import { Project } from '../../data/portfolio.models';
 
       <div class="aspect-video overflow-hidden bg-secondary">
         <img
-          [ngSrc]="project().image"
+          [src]="project().image"
           [alt]="project().title"
-          fill
-          class="object-cover transition-transform duration-500 group-hover:scale-105"
-          sizes="(max-width: 768px) 100vw, 33vw"
+          loading="lazy"
+          decoding="async"
+          class="size-full object-cover object-top transition-transform duration-500 group-hover:scale-105"
         />
       </div>
 

@@ -13,18 +13,18 @@ import {
   injectBrnDialogContext,
   injectBrnDialogDefaultOptions,
   provideBrnDialogDefaultOptions
-} from "./chunk-KKDFZHB2.js";
+} from "./chunk-LPRYJO7J.js";
 import {
   cssClassesToArray
-} from "./chunk-MAJBEXLM.js";
-import "./chunk-JGRVC4C7.js";
-import "./chunk-QOAZVKZ4.js";
-import "./chunk-5CYKHHIP.js";
-import "./chunk-DP4RKSM7.js";
-import "./chunk-Y36MECYX.js";
-import "./chunk-R6W3E7W4.js";
-import "./chunk-55R2KRJF.js";
-import "./chunk-GOMI4DH3.js";
+} from "./chunk-RZBEWHPR.js";
+import "./chunk-C5IO5QSQ.js";
+import "./chunk-UR7ZYNOF.js";
+import "./chunk-3OBYZF3Q.js";
+import "./chunk-VPGSPB2P.js";
+import "./chunk-PLBFJPKG.js";
+import "./chunk-6QNWAMQG.js";
+import "./chunk-4FXLZEUY.js";
+import "./chunk-H2SRQSE4.js";
 export {
   BrnDialog,
   BrnDialogClose,

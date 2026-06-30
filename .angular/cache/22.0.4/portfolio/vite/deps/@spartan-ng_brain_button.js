@@ -1,6 +1,6 @@
 import {
   takeUntilDestroyed
-} from "./chunk-R6W3E7W4.js";
+} from "./chunk-6QNWAMQG.js";
 import {
   Directive,
   ElementRef,
@@ -14,11 +14,11 @@ import {
   setClassMetadata,
   ɵɵattribute,
   ɵɵdefineDirective
-} from "./chunk-55R2KRJF.js";
+} from "./chunk-4FXLZEUY.js";
 import {
   __spreadProps,
   __spreadValues
-} from "./chunk-GOMI4DH3.js";
+} from "./chunk-H2SRQSE4.js";
 
 // node_modules/@spartan-ng/brain/fesm2022/spartan-ng-brain-button.mjs
 var BrnButton = class _BrnButton {

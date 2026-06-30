@@ -7,18 +7,18 @@ import {
   BrnDialogOverlay,
   BrnDialogTitle,
   BrnDialogTrigger
-} from "./chunk-PJ57BKQ4.js";
+} from "./chunk-V3X2P5RX.js";
 import {
   provideCustomClassSettableExisting,
   provideExposedSideProviderExisting,
   provideExposesStateProviderExisting
-} from "./chunk-6RCBT6RK.js";
-import "./chunk-5FASJ265.js";
-import "./chunk-LIHD6F3Q.js";
-import "./chunk-DWEWCYRT.js";
-import "./chunk-SNKGQ7BV.js";
-import "./chunk-UWNCB2MR.js";
-import "./chunk-L7KM3PPE.js";
+} from "./chunk-GD6UL2VA.js";
+import "./chunk-MHIY3EPE.js";
+import "./chunk-OELTRBG5.js";
+import "./chunk-MDBRUCRN.js";
+import "./chunk-VJRGX2X3.js";
+import "./chunk-LMIEROQN.js";
+import "./chunk-SHCUTIJ5.js";
 import {
   Directive,
   Input,
@@ -32,8 +32,8 @@ import {
   ɵɵProvidersFeature,
   ɵɵdefineDirective,
   ɵɵgetInheritedFactory
-} from "./chunk-POAZVYWT.js";
-import "./chunk-6DU2HRTW.js";
+} from "./chunk-W7MQVTJ6.js";
+import "./chunk-SOE35BD4.js";
 
 // node_modules/@spartan-ng/brain/fesm2022/spartan-ng-brain-sheet.mjs
 var BrnSheet = class _BrnSheet extends BrnDialog {

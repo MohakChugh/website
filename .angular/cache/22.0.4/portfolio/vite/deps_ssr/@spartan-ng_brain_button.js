@@ -1,7 +1,7 @@
 import { createRequire } from 'module';const require = createRequire(import.meta.url);
 import {
   takeUntilDestroyed
-} from "./chunk-5FASJ265.js";
+} from "./chunk-MHIY3EPE.js";
 import {
   Directive,
   ElementRef,
@@ -15,12 +15,12 @@ import {
   setClassMetadata,
   ɵɵattribute,
   ɵɵdefineDirective
-} from "./chunk-POAZVYWT.js";
+} from "./chunk-W7MQVTJ6.js";
 import {
   __spreadProps,
   __spreadValues,
   __toESM
-} from "./chunk-6DU2HRTW.js";
+} from "./chunk-SOE35BD4.js";
 
 // node_modules/@spartan-ng/brain/fesm2022/spartan-ng-brain-button.mjs
 var import_rxjs = __toESM(require_cjs(), 1);

@@ -1,0 +1,20 @@
+<section class="mx-auto max-w-5xl px-6 pt-32 pb-16">
+  <header class="reveal mb-12" appReveal>
+    <p class="eyebrow">Portfolio</p>
+    <h1 class="mt-2 font-display text-4xl font-bold tracking-tight sm:text-5xl">
+      Recent <span class="text-ghost">Work</span>
+    </h1>
+    <p class="mt-4 max-w-2xl text-lg text-muted-foreground">
+      A selection of products I've built end to end — from real-time platforms and dashboards to
+      machine-learning tools.
+    </p>
+  </header>
+
+  <div class="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+    @for (project of projects; track project.slug; let i = $index) {
+      <div class="reveal" appReveal [revealDelay]="(i % 3) * 100">
+        <app-project-card [project]="project" />
+      </div>
+    }
+  </div>
+</section>

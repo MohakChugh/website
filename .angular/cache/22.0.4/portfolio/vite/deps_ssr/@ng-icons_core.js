@@ -1,8 +1,8 @@
 import { createRequire } from 'module';const require = createRequire(import.meta.url);
 import {
   isPlatformServer
-} from "./chunk-UWNCB2MR.js";
-import "./chunk-L7KM3PPE.js";
+} from "./chunk-LMIEROQN.js";
+import "./chunk-SHCUTIJ5.js";
 import {
   ChangeDetectionStrategy,
   Component,
@@ -33,11 +33,11 @@ import {
   ɵɵprojection,
   ɵɵprojectionDef,
   ɵɵstyleProp
-} from "./chunk-POAZVYWT.js";
+} from "./chunk-W7MQVTJ6.js";
 import {
   __spreadValues,
   __toESM
-} from "./chunk-6DU2HRTW.js";
+} from "./chunk-SOE35BD4.js";
 
 // node_modules/@ng-icons/core/fesm2022/ng-icons-core.mjs
 var import_rxjs = __toESM(require_cjs(), 1);

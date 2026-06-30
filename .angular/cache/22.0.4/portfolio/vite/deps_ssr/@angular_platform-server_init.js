@@ -2,7 +2,7 @@ import { createRequire } from 'module';const require = createRequire(import.meta
 import {
   index
 } from "./chunk-7VO7PY3Q.js";
-import "./chunk-6DU2HRTW.js";
+import "./chunk-SOE35BD4.js";
 
 // node_modules/@angular/platform-server/fesm2022/init.mjs
 function applyShims() {

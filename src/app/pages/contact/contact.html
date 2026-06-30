@@ -1,0 +1,47 @@
+<section class="mx-auto max-w-3xl px-6 pt-32 pb-16">
+  <header class="reveal text-center" appReveal>
+    <p class="eyebrow">Get in touch</p>
+    <h1 class="mt-2 font-display text-4xl font-bold tracking-tight sm:text-5xl">
+      Let's <span class="text-gradient">build</span> something
+    </h1>
+    <p class="mx-auto mt-4 max-w-xl text-lg text-muted-foreground">
+      Wanna work on a project? Hit me up and let's start working on it!
+    </p>
+
+    <a hlmBtn size="lg" class="mt-8" [href]="mailto">
+      <ng-icon name="lucideMail" class="mr-2 size-4" /> {{ profile.email }}
+    </a>
+  </header>
+
+  <!-- social cards -->
+  <div class="mt-16">
+    <p class="reveal eyebrow text-center" appReveal>Follow me on social media</p>
+    <div class="mt-6 grid gap-4 sm:grid-cols-3">
+      @for (social of socials; track social.platform; let i = $index) {
+        <a
+          [href]="social.url"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="reveal group relative overflow-hidden rounded-2xl border border-border bg-card p-6 transition-all duration-300 hover:-translate-y-1 hover:border-primary/40"
+          appReveal
+          [revealDelay]="i * 100"
+        >
+          <div
+            class="grid size-12 place-items-center rounded-xl border border-border bg-secondary text-foreground transition-colors group-hover:border-primary/40 group-hover:text-primary"
+          >
+            <ng-icon [name]="social.icon" class="size-6" />
+          </div>
+          <div class="mt-4 flex items-center justify-between">
+            <h2 class="font-display font-semibold">{{ social.platform }}</h2>
+            <ng-icon
+              name="lucideArrowUpRight"
+              class="size-4 text-muted-foreground transition-all group-hover:-translate-y-0.5 group-hover:translate-x-0.5 group-hover:text-primary"
+            />
+          </div>
+          <p class="mt-1 font-mono text-xs text-muted-foreground">@{{ social.handle }}</p>
+          <p class="mt-2 text-sm text-muted-foreground">{{ social.blurb }}</p>
+        </a>
+      }
+    </div>
+  </div>
+</section>
