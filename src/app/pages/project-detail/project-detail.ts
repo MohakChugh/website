@@ -1,5 +1,6 @@
-import { ChangeDetectionStrategy, Component, computed, input } from '@angular/core';
+import { ChangeDetectionStrategy, Component, computed, effect, inject, input } from '@angular/core';
 import { RouterLink } from '@angular/router';
+import { SeoService } from '../../shared/seo.service';
 import { NgIcon, provideIcons } from '@ng-icons/core';
 import {
   lucideArrowLeft,
@@ -43,7 +44,23 @@ import { RevealDirective } from '../../shared/reveal.directive';
   templateUrl: './project-detail.html',
 })
 export class ProjectDetail {
+  private readonly seo = inject(SeoService);
+
   /** bound from the route param via withComponentInputBinding() */
   readonly slug = input<string>('');
   readonly project = computed(() => PROJECT_MAP.get(this.slug()) ?? null);
+
+  constructor() {
+    // Set keyword-rich, per-project SEO (runs on navigation and during prerender).
+    effect(() => {
+      const p = this.project();
+      if (!p) return;
+      this.seo.apply({
+        title: `${p.title} — Mohak Chugh`,
+        description: `${p.tagline} A ${p.kind.toLowerCase()} project by Mohak Chugh (Amazon SDE 2). Built with ${p.tags.slice(0, 4).join(', ')}.`,
+        path: `/projects/${p.slug}`,
+      });
+    });
+  }
 }
+
