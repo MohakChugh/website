@@ -8,7 +8,7 @@
       Wanna work on a project? Hit me up and let's start working on it!
     </p>
 
-    <a hlmBtn size="lg" class="mt-8" [href]="mailto">
+    <a hlmBtn size="lg" appMagnetic class="border-animate mt-8" [href]="mailto">
       <ng-icon name="lucideMail" class="mr-2 size-4" /> {{ profile.email }}
     </a>
   </header>
@@ -22,24 +22,26 @@
           [href]="social.url"
           target="_blank"
           rel="noopener noreferrer"
-          class="reveal group relative overflow-hidden rounded-2xl border border-border bg-card p-6 transition-all duration-300 hover:-translate-y-1 hover:border-primary/40"
+          class="reveal tilt tilt-glow group relative overflow-hidden rounded-2xl border border-border bg-card p-6 transition-[border-color] duration-300 hover:border-primary/40"
           appReveal
           [revealDelay]="i * 100"
+          appTilt
+          [tiltMax]="6"
         >
           <div
-            class="grid size-12 place-items-center rounded-xl border border-border bg-secondary text-foreground transition-colors group-hover:border-primary/40 group-hover:text-primary"
+            class="relative z-[2] grid size-12 place-items-center rounded-xl border border-border bg-secondary text-foreground transition-colors group-hover:border-primary/40 group-hover:text-primary"
           >
             <ng-icon [name]="social.icon" class="size-6" />
           </div>
-          <div class="mt-4 flex items-center justify-between">
+          <div class="relative z-[2] mt-4 flex items-center justify-between">
             <h2 class="font-display font-semibold">{{ social.platform }}</h2>
             <ng-icon
               name="lucideArrowUpRight"
               class="size-4 text-muted-foreground transition-all group-hover:-translate-y-0.5 group-hover:translate-x-0.5 group-hover:text-primary"
             />
           </div>
-          <p class="mt-1 font-mono text-xs text-muted-foreground">@{{ social.handle }}</p>
-          <p class="mt-2 text-sm text-muted-foreground">{{ social.blurb }}</p>
+          <p class="relative z-[2] mt-1 font-mono text-xs text-muted-foreground">@{{ social.handle }}</p>
+          <p class="relative z-[2] mt-2 text-sm text-muted-foreground">{{ social.blurb }}</p>
         </a>
       }
     </div>

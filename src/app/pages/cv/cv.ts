@@ -21,11 +21,13 @@ import {
   AMCAT_URL,
 } from '../../data/profile.data';
 import { RevealDirective } from '../../shared/reveal.directive';
+import { MagneticDirective } from '../../shared/motion/magnetic.directive';
+import { CharRevealDirective } from '../../shared/motion/char-reveal.directive';
 
 @Component({
   selector: 'app-cv',
   changeDetection: ChangeDetectionStrategy.OnPush,
-  imports: [NgIcon, HlmButtonImports, RevealDirective],
+  imports: [NgIcon, HlmButtonImports, RevealDirective, MagneticDirective, CharRevealDirective],
   providers: [
     provideIcons({
       lucideDownload,

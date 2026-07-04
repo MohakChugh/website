@@ -10,11 +10,13 @@ import {
 import { HlmButtonImports } from '@spartan-ng/helm/button';
 import { PROFILE, SOCIALS } from '../../data/profile.data';
 import { RevealDirective } from '../../shared/reveal.directive';
+import { TiltDirective } from '../../shared/motion/tilt.directive';
+import { MagneticDirective } from '../../shared/motion/magnetic.directive';
 
 @Component({
   selector: 'app-contact',
   changeDetection: ChangeDetectionStrategy.OnPush,
-  imports: [NgIcon, HlmButtonImports, RevealDirective],
+  imports: [NgIcon, HlmButtonImports, RevealDirective, TiltDirective, MagneticDirective],
   providers: [
     provideIcons({ lucideGithub, lucideLinkedin, lucideInstagram, lucideMail, lucideArrowUpRight }),
   ],
