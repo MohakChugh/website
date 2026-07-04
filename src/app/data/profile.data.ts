@@ -38,6 +38,11 @@ export const SKILL_CARDS: SkillCard[] = [
     icon: 'lucideBrain',
     body: 'I love working on the business side too. I build data-driven projects and use that data in machine-learning models to automate the decision-making process.',
   },
+  {
+    title: 'LLMs & Generative AI',
+    icon: 'lucideSparkles',
+    body: 'I build RAG systems, fine-tune models, and ship AI-powered products. From vector knowledge bases to production agents processing thousands of queries daily.',
+  },
 ];
 
 export const SKILL_BARS: SkillBar[] = [

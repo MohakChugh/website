@@ -37,7 +37,7 @@ import { TiltDirective } from '../motion/tilt.directive';
     <a
       [routerLink]="['/projects', project().slug]"
       appTilt
-      class="tilt tilt-glow border-animate group relative block overflow-hidden rounded-2xl border border-border bg-card transition-[box-shadow,border-color] duration-300 hover:border-primary/40 hover:shadow-xl hover:shadow-primary/5"
+      class="tilt tilt-glow border-animate group relative block overflow-hidden rounded-2xl border border-border glass-card transition-[box-shadow,border-color] duration-300 hover:border-primary/40 hover:shadow-xl hover:shadow-primary/5"
     >
       <!-- gradient glow on hover -->
       <div

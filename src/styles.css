@@ -98,8 +98,8 @@
 
   /* Split filled/outline "ghost" headline word (Sawad pattern) */
   .text-ghost {
-    color: transparent;
-    -webkit-text-stroke: 1px oklch(1 0 0 / 0.14);
+    color: oklch(1 0 0 / 0.07);
+    -webkit-text-stroke: 1.5px oklch(1 0 0 / 0.32);
   }
 
   /* Glass surface for floating nav + cards */
@@ -107,6 +107,22 @@
     background: oklch(0.205 0 0 / 0.55);
     backdrop-filter: blur(12px) saturate(140%);
     border: 1px solid var(--color-border);
+  }
+
+  /* Frosted-glass card surface (macOS-terminal feel): translucent, heavy blur,
+     light passes through from the particles/aurora behind. */
+  .glass-card {
+    background: oklch(0.21 0.01 240 / 0.42);
+    backdrop-filter: blur(20px) saturate(150%);
+    -webkit-backdrop-filter: blur(20px) saturate(150%);
+  }
+
+  /* Giant background wordmark: outlined, fading toward the bottom */
+  .watermark {
+    color: transparent;
+    -webkit-text-stroke: 1px oklch(1 0 0 / 0.055);
+    mask-image: linear-gradient(to bottom, black 25%, transparent 92%);
+    -webkit-mask-image: linear-gradient(to bottom, black 25%, transparent 92%);
   }
 }
 
@@ -212,10 +228,10 @@
   /* Scroll word-by-word fill: each word dim by default, .lit when scrolled past */
   .fill-word {
     color: var(--color-muted-foreground);
-    opacity: 0.35;
+    opacity: 0.5;
     transition:
-      opacity 0.4s var(--ease-out-expo),
-      color 0.4s var(--ease-out-expo);
+      opacity 0.35s var(--ease-out-expo),
+      color 0.35s var(--ease-out-expo);
   }
   .fill-word.lit {
     opacity: 1;
@@ -250,6 +266,11 @@
   .border-animate:hover::after {
     opacity: 1;
     animation: border-spin 3s linear infinite;
+  }
+  /* Always-on variant for the CTA strip (not just on hover) */
+  .border-animate-on::after {
+    opacity: 0.7;
+    animation: border-spin 4s linear infinite;
   }
 
   /* Animated underline that wipes in from the left on hover/focus */
