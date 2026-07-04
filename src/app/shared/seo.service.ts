@@ -2,7 +2,7 @@ import { DOCUMENT, inject, Injectable } from '@angular/core';
 import { Meta, Title } from '@angular/platform-browser';
 
 /** Absolute site origin. Kept in one place so the domain cutover only edits here. */
-export const SITE_URL = 'https://mohakchugh.github.io/website';
+export const SITE_URL = 'https://mohakchugh.is-a.dev';
 
 export interface SeoData {
   title: string;

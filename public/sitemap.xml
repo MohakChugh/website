@@ -1,19 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url><loc>https://mohakchugh.github.io/website/</loc><priority>1.0</priority></url>
-  <url><loc>https://mohakchugh.github.io/website/projects</loc><priority>0.9</priority></url>
-  <url><loc>https://mohakchugh.github.io/website/cv</loc><priority>0.8</priority></url>
-  <url><loc>https://mohakchugh.github.io/website/contact</loc><priority>0.7</priority></url>
-  <url><loc>https://mohakchugh.github.io/website/projects/bridge</loc><priority>0.6</priority></url>
-  <url><loc>https://mohakchugh.github.io/website/projects/imessage-claude-bridge</loc><priority>0.6</priority></url>
-  <url><loc>https://mohakchugh.github.io/website/projects/recruiter-automation</loc><priority>0.6</priority></url>
-  <url><loc>https://mohakchugh.github.io/website/projects/fit-strong-90</loc><priority>0.6</priority></url>
-  <url><loc>https://mohakchugh.github.io/website/projects/connectus</loc><priority>0.6</priority></url>
-  <url><loc>https://mohakchugh.github.io/website/projects/flashread</loc><priority>0.6</priority></url>
-  <url><loc>https://mohakchugh.github.io/website/projects/agritech</loc><priority>0.6</priority></url>
-  <url><loc>https://mohakchugh.github.io/website/projects/drone-dash</loc><priority>0.6</priority></url>
-  <url><loc>https://mohakchugh.github.io/website/projects/citizens</loc><priority>0.6</priority></url>
-  <url><loc>https://mohakchugh.github.io/website/projects/content-collaborator</loc><priority>0.6</priority></url>
-  <url><loc>https://mohakchugh.github.io/website/projects/property-management</loc><priority>0.6</priority></url>
-  <url><loc>https://mohakchugh.github.io/website/projects/classifier-selector</loc><priority>0.6</priority></url>
+  <url><loc>https://mohakchugh.is-a.dev/</loc><priority>1.0</priority></url>
+  <url><loc>https://mohakchugh.is-a.dev/projects</loc><priority>0.9</priority></url>
+  <url><loc>https://mohakchugh.is-a.dev/cv</loc><priority>0.8</priority></url>
+  <url><loc>https://mohakchugh.is-a.dev/contact</loc><priority>0.7</priority></url>
+  <url><loc>https://mohakchugh.is-a.dev/projects/bridge</loc><priority>0.6</priority></url>
+  <url><loc>https://mohakchugh.is-a.dev/projects/imessage-claude-bridge</loc><priority>0.6</priority></url>
+  <url><loc>https://mohakchugh.is-a.dev/projects/recruiter-automation</loc><priority>0.6</priority></url>
+  <url><loc>https://mohakchugh.is-a.dev/projects/fit-strong-90</loc><priority>0.6</priority></url>
+  <url><loc>https://mohakchugh.is-a.dev/projects/connectus</loc><priority>0.6</priority></url>
+  <url><loc>https://mohakchugh.is-a.dev/projects/flashread</loc><priority>0.6</priority></url>
+  <url><loc>https://mohakchugh.is-a.dev/projects/agritech</loc><priority>0.6</priority></url>
+  <url><loc>https://mohakchugh.is-a.dev/projects/drone-dash</loc><priority>0.6</priority></url>
+  <url><loc>https://mohakchugh.is-a.dev/projects/citizens</loc><priority>0.6</priority></url>
+  <url><loc>https://mohakchugh.is-a.dev/projects/content-collaborator</loc><priority>0.6</priority></url>
+  <url><loc>https://mohakchugh.is-a.dev/projects/property-management</loc><priority>0.6</priority></url>
+  <url><loc>https://mohakchugh.is-a.dev/projects/classifier-selector</loc><priority>0.6</priority></url>
 </urlset>
