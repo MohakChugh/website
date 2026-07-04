@@ -1,6 +1,8 @@
 import { describe, expect, it } from 'vitest';
 import { litWordCount } from './scroll-fill.directive';
 import { easeOutCubic, formatCount } from './count-up.directive';
+import { parallaxOffset } from './parallax.directive';
+import { splitChars } from './char-reveal.directive';
 
 describe('litWordCount', () => {
   const VH = 1000;
@@ -45,5 +47,24 @@ describe('formatCount', () => {
   });
   it('keeps one decimal for fractional targets', () => {
     expect(formatCount(3.14159, 4.5)).toBe('3.1');
+  });
+});
+
+describe('parallaxOffset', () => {
+  it('returns 0 when scrollY is 0', () => {
+    expect(parallaxOffset(0, 0.2)).toBe(0);
+  });
+  it('scales linearly with speed', () => {
+    expect(parallaxOffset(100, 0.2)).toBe(20);
+    expect(parallaxOffset(100, -0.1)).toBe(-10);
+  });
+});
+
+describe('splitChars', () => {
+  it('splits into individual characters preserving spaces', () => {
+    expect(splitChars('Hi there')).toEqual(['H', 'i', ' ', 't', 'h', 'e', 'r', 'e']);
+  });
+  it('handles single word', () => {
+    expect(splitChars('Mohak').length).toBe(5);
   });
 });

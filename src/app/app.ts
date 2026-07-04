@@ -4,12 +4,13 @@ import { filter } from 'rxjs/operators';
 import { Navbar } from './shared/navbar/navbar';
 import { Footer } from './shared/footer/footer';
 import { Cursor } from './shared/motion/cursor';
+import { Particles } from './shared/motion/particles';
 import { SeoData, SeoService } from './shared/seo.service';
 
 @Component({
   selector: 'app-root',
   changeDetection: ChangeDetectionStrategy.OnPush,
-  imports: [RouterOutlet, Navbar, Footer, Cursor],
+  imports: [RouterOutlet, Navbar, Footer, Cursor, Particles],
   templateUrl: './app.html',
   styleUrl: './app.css',
 })

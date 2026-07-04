@@ -1,5 +1,12 @@
-<!-- Fixed animated canvas: dot-grid + drifting aurora + cursor spotlight, behind everything -->
-<div class="pointer-events-none fixed inset-0 -z-10 bg-dotgrid bg-aurora bg-spotlight"></div>
+<!-- Fixed animated canvas: particles + mesh + aurora + cursor spotlight -->
+<div class="pointer-events-none fixed inset-0 -z-10 bg-aurora bg-spotlight">
+  <!-- gradient-mesh orbs (lava-lamp drift, pure CSS) -->
+  <div class="mesh-orb mesh-orb-a"></div>
+  <div class="mesh-orb mesh-orb-b"></div>
+</div>
+
+<!-- particle constellation (canvas, desktop only, replaces dot-grid) -->
+<app-particles />
 
 <app-cursor />
 <app-navbar />

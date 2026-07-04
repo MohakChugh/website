@@ -129,6 +129,32 @@
     animation: aurora-drift 18s ease-in-out infinite alternate;
   }
 
+  /* Gradient-mesh orbs: two extra blobs that drift independently (lava-lamp).
+     Rendered as real children of the fixed background layer. */
+  .mesh-orb {
+    position: absolute;
+    border-radius: 9999px;
+    filter: blur(80px);
+    pointer-events: none;
+    will-change: transform;
+  }
+  .mesh-orb-a {
+    width: 34rem;
+    height: 34rem;
+    left: 55%;
+    top: 55%;
+    background: radial-gradient(circle, oklch(0.7 0.15 250 / 0.1), transparent 70%);
+    animation: mesh-drift-a 26s ease-in-out infinite alternate;
+  }
+  .mesh-orb-b {
+    width: 26rem;
+    height: 26rem;
+    left: 8%;
+    top: 65%;
+    background: radial-gradient(circle, oklch(0.75 0.12 180 / 0.09), transparent 70%);
+    animation: mesh-drift-b 34s ease-in-out infinite alternate;
+  }
+
   /* Cursor-following light pocket over the dot-grid (--mx/--my set by a directive,
      default centred). Lives on the fixed background layer. */
   .bg-spotlight::after {
@@ -225,6 +251,48 @@
     opacity: 1;
     animation: border-spin 3s linear infinite;
   }
+
+  /* Animated underline that wipes in from the left on hover/focus */
+  .link-wipe {
+    position: relative;
+  }
+  .link-wipe::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: -2px;
+    height: 1.5px;
+    background: linear-gradient(90deg, var(--grad-from), var(--grad-to));
+    transform: scaleX(0);
+    transform-origin: left center;
+    transition: transform 0.3s var(--ease-out-expo);
+  }
+  .link-wipe:hover::after,
+  .link-wipe:focus-visible::after {
+    transform: scaleX(1);
+  }
+
+  /* Per-character reveal: chars start below+hidden; .lit slides each up.
+     Stagger is applied inline by the directive via transition-delay. */
+  .char-reveal .char {
+    display: inline-block;
+    opacity: 0;
+    transform: translateY(0.6em) rotate(4deg);
+    transition:
+      opacity 0.5s var(--ease-out-expo),
+      transform 0.5s var(--ease-out-expo);
+    will-change: transform;
+  }
+  .char-reveal.lit .char {
+    opacity: 1;
+    transform: none;
+  }
+
+  /* One-time nav entrance on first load (choreography step 2) */
+  .nav-enter {
+    animation: nav-slide-down 0.6s var(--ease-out-expo) both;
+  }
 }
 
 /* Custom-property registration so the conic-gradient angle can animate */
@@ -245,6 +313,38 @@
 @keyframes border-spin {
   to {
     --angle: 360deg;
+  }
+}
+@keyframes mesh-drift-a {
+  0% {
+    transform: translate3d(0, 0, 0) scale(1);
+  }
+  50% {
+    transform: translate3d(-12%, -18%, 0) scale(1.15);
+  }
+  100% {
+    transform: translate3d(8%, -6%, 0) scale(0.92);
+  }
+}
+@keyframes mesh-drift-b {
+  0% {
+    transform: translate3d(0, 0, 0) scale(1);
+  }
+  50% {
+    transform: translate3d(16%, -10%, 0) scale(1.1);
+  }
+  100% {
+    transform: translate3d(-6%, 8%, 0) scale(1.02);
+  }
+}
+@keyframes nav-slide-down {
+  from {
+    opacity: 0;
+    transform: translateY(-1.5rem);
+  }
+  to {
+    opacity: 1;
+    transform: none;
   }
 }
 
@@ -326,5 +426,12 @@
   }
   .bg-aurora::before {
     animation: none;
+  }
+  .mesh-orb {
+    animation: none;
+  }
+  .char-reveal .char {
+    opacity: 1;
+    transform: none;
   }
 }

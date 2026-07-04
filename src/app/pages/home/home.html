@@ -2,9 +2,11 @@
 
 <!-- ── HERO ───────────────────────────────────────────────────────── -->
 <section class="relative mx-auto flex min-h-[92vh] max-w-5xl flex-col justify-center px-6 pt-28 pb-16">
-  <!-- giant faded watermark wordmark (Toukoum-style) -->
+  <!-- giant faded watermark wordmark (Toukoum-style) + parallax -->
   <span
     aria-hidden="true"
+    appParallax
+    [parallaxSpeed]="-0.12"
     class="pointer-events-none absolute inset-x-0 bottom-4 select-none text-center font-display text-[22vw] font-bold leading-none tracking-tighter text-foreground/[0.03]"
   >
     Mohak
@@ -92,13 +94,26 @@
     </div>
     <a
       [routerLink]="['/projects']"
-      class="hidden items-center gap-1 text-sm text-muted-foreground transition-colors hover:text-primary sm:flex"
+      class="link-wipe hidden items-center gap-1 text-sm text-muted-foreground transition-colors hover:text-primary sm:flex"
     >
       All projects <ng-icon name="lucideArrowRight" class="size-4" />
     </a>
   </div>
 
-  <div class="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+  <!-- horizontal-scroll showcase on lg+; grid on mobile/tablet -->
+  <div class="hidden gap-6 overflow-x-auto pb-4 lg:flex lg:snap-x lg:snap-mandatory lg:-mx-6 lg:px-6">
+    @for (project of featured; track project.slug; let i = $index) {
+      <div
+        class="reveal min-w-[350px] flex-shrink-0 snap-start lg:min-w-[380px]"
+        appReveal
+        [revealDelay]="i * 120"
+      >
+        <app-project-card [project]="project" />
+      </div>
+    }
+  </div>
+  <!-- Grid fallback for mobile/tablet -->
+  <div class="grid gap-6 sm:grid-cols-2 lg:hidden">
     @for (project of featured; track project.slug; let i = $index) {
       <div class="reveal" appReveal [revealDelay]="i * 100">
         <app-project-card [project]="project" />
@@ -144,7 +159,7 @@
     appReveal
   >
     <div class="bg-aurora absolute inset-0 -z-10 opacity-60"></div>
-    <h2 class="font-display text-3xl font-bold tracking-tight sm:text-4xl">Like what you see?</h2>
+    <h2 class="char-reveal font-display text-3xl font-bold tracking-tight sm:text-4xl" appCharReveal>Like what you see?</h2>
     <p class="mx-auto mt-3 max-w-md text-muted-foreground">
       I love building solutions that boost productivity, bring in business, and save time and money.
     </p>

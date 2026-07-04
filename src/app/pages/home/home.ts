@@ -30,6 +30,8 @@ import { TiltDirective } from '../../shared/motion/tilt.directive';
 import { MagneticDirective } from '../../shared/motion/magnetic.directive';
 import { ScrollFillDirective } from '../../shared/motion/scroll-fill.directive';
 import { ScrambleDirective } from '../../shared/motion/scramble.directive';
+import { ParallaxDirective } from '../../shared/motion/parallax.directive';
+import { CharRevealDirective } from '../../shared/motion/char-reveal.directive';
 
 @Component({
   selector: 'app-home',
@@ -45,6 +47,8 @@ import { ScrambleDirective } from '../../shared/motion/scramble.directive';
     MagneticDirective,
     ScrollFillDirective,
     ScrambleDirective,
+    ParallaxDirective,
+    CharRevealDirective,
   ],
   providers: [
     provideIcons({
