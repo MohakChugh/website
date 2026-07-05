@@ -24,6 +24,7 @@ jobs:
           node-version: 24
           cache: npm
       - run: npm ci
+      - run: npm run generate:blog
       - run: npm run test:unit
       - run: npm run build:ghpages
       - uses: actions/upload-pages-artifact@v5
