@@ -17,6 +17,7 @@ export class Footer {
   readonly links = [
     { label: 'Home', path: '/' },
     { label: 'Projects', path: '/projects' },
+    { label: 'Blog', path: '/blog' },
     { label: 'CV', path: '/cv' },
     { label: 'Contact', path: '/contact' },
   ];

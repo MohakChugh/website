@@ -32,6 +32,22 @@ export const routes: Routes = [
     // SEO for detail pages is set dynamically by the component from the project data.
   },
   {
+    path: 'blog',
+    loadComponent: () => import('./pages/blog/blog-list').then((m) => m.BlogList),
+    data: {
+      seo: {
+        title: 'Blog — Mohak Chugh · Engineering Notes',
+        description:
+          'Engineering notes, deep dives, and lessons from building at scale by Mohak Chugh (Amazon SDE 2). Backend, data systems, LLMs, and full-stack development.',
+        path: '/blog',
+      },
+    },
+  },
+  {
+    path: 'blog/:slug',
+    loadComponent: () => import('./pages/blog/blog-post').then((m) => m.BlogPostPage),
+  },
+  {
     path: 'cv',
     loadComponent: () => import('./pages/cv/cv').then((m) => m.Cv),
     data: {

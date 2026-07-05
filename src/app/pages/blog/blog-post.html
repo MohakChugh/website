@@ -1,0 +1,71 @@
+<!-- Scroll progress bar -->
+<div
+  appScrollProgress
+  class="fixed inset-x-0 top-0 z-[100] h-0.5 origin-left bg-gradient-to-r from-[var(--grad-from)] to-[var(--grad-to)]"
+></div>
+
+@if (post(); as p) {
+  <article class="mx-auto max-w-3xl px-6 pt-32 pb-16">
+    <a
+      [routerLink]="['/blog']"
+      class="link-wipe inline-flex items-center gap-2 text-sm text-muted-foreground transition-colors hover:text-foreground"
+    >
+      <ng-icon name="lucideArrowLeft" class="size-4" /> All posts
+    </a>
+
+    <header class="reveal mt-6" appReveal>
+      <h1 class="char-reveal font-display text-3xl font-bold tracking-tight sm:text-4xl lg:text-5xl" appCharReveal>
+        {{ p.title }}
+      </h1>
+      <div class="mt-4 flex flex-wrap items-center gap-3 text-sm text-muted-foreground">
+        <time>{{ p.date | date: 'mediumDate' }}</time>
+        <span class="flex items-center gap-1">
+          <ng-icon name="lucideClock" class="size-3" /> {{ p.readingMinutes }} min read
+        </span>
+        @for (tag of p.tags; track tag) {
+          <span hlmBadge variant="secondary" class="font-mono text-xs">{{ tag }}</span>
+        }
+      </div>
+    </header>
+
+    <!-- prose body (pre-rendered HTML with Shiki highlighting) -->
+    <div
+      class="prose mt-10"
+      [innerHTML]="p.html | trustHtml"
+    ></div>
+
+    <!-- prev/next navigation -->
+    <nav class="mt-16 grid gap-4 sm:grid-cols-2" aria-label="Post navigation">
+      @if (adjacent().prev; as prev) {
+        <a
+          [routerLink]="['/blog', prev.slug]"
+          class="glass-card group rounded-2xl border border-border p-5 transition-[border-color] hover:border-primary/40"
+        >
+          <p class="eyebrow">← Previous</p>
+          <p class="mt-1 font-display font-semibold">{{ prev.title }}</p>
+        </a>
+      } @else {
+        <div></div>
+      }
+      @if (adjacent().next; as next) {
+        <a
+          [routerLink]="['/blog', next.slug]"
+          class="glass-card group rounded-2xl border border-border p-5 text-right transition-[border-color] hover:border-primary/40"
+        >
+          <p class="eyebrow">Next →</p>
+          <p class="mt-1 font-display font-semibold">{{ next.title }}</p>
+        </a>
+      }
+    </nav>
+  </article>
+} @else {
+  <div class="mx-auto grid min-h-[70vh] max-w-3xl place-items-center px-6 text-center">
+    <div>
+      <h1 class="font-display text-5xl font-bold">404</h1>
+      <p class="mt-3 text-muted-foreground">That post doesn't exist.</p>
+      <a [routerLink]="['/blog']" class="link-wipe mt-6 inline-flex items-center gap-2 text-primary">
+        <ng-icon name="lucideArrowLeft" class="size-4" /> Back to blog
+      </a>
+    </div>
+  </div>
+}

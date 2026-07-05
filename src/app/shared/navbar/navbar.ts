@@ -4,6 +4,7 @@ import { NgIcon, provideIcons } from '@ng-icons/core';
 import {
   lucideHouse,
   lucideBriefcase,
+  lucideNotebookPen,
   lucideFileText,
   lucideMail,
   lucideMenu,
@@ -25,6 +26,7 @@ interface NavItem {
     provideIcons({
       lucideHouse,
       lucideBriefcase,
+      lucideNotebookPen,
       lucideFileText,
       lucideMail,
       lucideMenu,
@@ -36,6 +38,7 @@ export class Navbar {
   readonly items: NavItem[] = [
     { label: 'Home', path: '/', icon: 'lucideHouse' },
     { label: 'Projects', path: '/projects', icon: 'lucideBriefcase' },
+    { label: 'Blog', path: '/blog', icon: 'lucideNotebookPen' },
     { label: 'CV', path: '/cv', icon: 'lucideFileText' },
     { label: 'Contact', path: '/contact', icon: 'lucideMail' },
   ];

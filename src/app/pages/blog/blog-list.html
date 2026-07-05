@@ -1,0 +1,106 @@
+<section class="mx-auto max-w-5xl px-6 pt-32 pb-16">
+  <header class="reveal mb-12" appReveal>
+    <p class="eyebrow">03 · Writing</p>
+    <h1 class="mt-2 font-display text-4xl font-bold tracking-tight sm:text-5xl">
+      Recent <span class="text-ghost">Posts</span>
+    </h1>
+    <p class="mt-4 max-w-2xl text-lg" appScrollFill>
+      Engineering notes, deep dives, and lessons from building at scale.
+    </p>
+  </header>
+
+  <!-- tag filter chips -->
+  <div class="reveal mb-8 flex flex-wrap gap-2" appReveal>
+    <button
+      (click)="setTag(null)"
+      class="rounded-full border px-3 py-1 font-mono text-xs uppercase tracking-wider transition-colors"
+      [class.border-primary]="!activeTag()"
+      [class.text-primary]="!activeTag()"
+      [class.border-border]="activeTag()"
+      [class.text-muted-foreground]="activeTag()"
+    >
+      All
+    </button>
+    @for (t of allTags(); track t.tag) {
+      <button
+        (click)="setTag(t.tag)"
+        class="rounded-full border px-3 py-1 font-mono text-xs uppercase tracking-wider transition-colors"
+        [class.border-primary]="activeTag() === t.tag"
+        [class.text-primary]="activeTag() === t.tag"
+        [class.border-border]="activeTag() !== t.tag"
+        [class.text-muted-foreground]="activeTag() !== t.tag"
+      >
+        {{ t.tag }} <span class="ml-1 opacity-60">{{ t.count }}</span>
+      </button>
+    }
+  </div>
+
+  <!-- featured latest post (full-width hero card) -->
+  @if (featured(); as post) {
+    <a
+      [routerLink]="['/blog', post.slug]"
+      class="reveal tilt tilt-glow border-animate glass-card group mb-8 block rounded-2xl border border-border p-8 transition-[border-color] hover:border-primary/40"
+      appReveal
+      appTilt
+      [tiltMax]="3"
+    >
+      <div class="relative z-[2]">
+        <p class="eyebrow">{{ post.date | date: 'mediumDate' }}</p>
+        <h2 class="link-wipe mt-2 font-display text-2xl font-bold tracking-tight sm:text-3xl">
+          {{ post.title }}
+        </h2>
+        <p class="mt-3 text-muted-foreground line-clamp-3">{{ post.excerpt }}</p>
+        <div class="mt-4 flex flex-wrap items-center gap-3">
+          @for (tag of post.tags; track tag) {
+            <span hlmBadge variant="secondary" class="font-mono text-xs">{{ tag }}</span>
+          }
+          <span class="flex items-center gap-1 text-xs text-muted-foreground">
+            <ng-icon name="lucideClock" class="size-3" /> {{ post.readingMinutes }} min read
+          </span>
+        </div>
+      </div>
+    </a>
+  }
+
+  <!-- remaining posts grid -->
+  @if (remaining().length) {
+    <div class="grid gap-6 sm:grid-cols-2">
+      @for (post of remaining(); track post.slug; let i = $index) {
+        <a
+          [routerLink]="['/blog', post.slug]"
+          class="reveal tilt tilt-glow glass-card group rounded-2xl border border-border p-6 transition-[border-color] hover:border-primary/40"
+          appReveal
+          [revealDelay]="(i % 2) * 100"
+          appTilt
+          [tiltMax]="5"
+        >
+          <div class="relative z-[2]">
+            <p class="eyebrow">{{ post.date | date: 'mediumDate' }}</p>
+            <h3 class="link-wipe mt-2 font-display text-lg font-semibold tracking-tight">
+              {{ post.title }}
+            </h3>
+            <p class="mt-2 text-sm text-muted-foreground line-clamp-2">{{ post.excerpt }}</p>
+            <div class="mt-3 flex flex-wrap items-center gap-2">
+              @for (tag of post.tags; track tag) {
+                <span class="rounded-md bg-secondary/60 px-2 py-0.5 font-mono text-[11px] text-muted-foreground">
+                  {{ tag }}
+                </span>
+              }
+              <span class="ml-auto flex items-center gap-1 text-xs text-muted-foreground">
+                <ng-icon name="lucideClock" class="size-3" /> {{ post.readingMinutes }} min
+              </span>
+            </div>
+          </div>
+        </a>
+      }
+    </div>
+  }
+
+  <!-- empty state -->
+  @if (!posts().length) {
+    <div class="reveal py-16 text-center" appReveal>
+      <ng-icon name="lucideSparkles" class="mx-auto mb-3 size-8 text-muted-foreground" />
+      <p class="text-muted-foreground">No posts yet — check back soon.</p>
+    </div>
+  }
+</section>

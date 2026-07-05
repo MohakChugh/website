@@ -12,6 +12,9 @@
 .angular/
 **/.vite/
 
+# Blog generator output (derived from content/blog/*.md at build time)
+src/app/data/blog.generated.ts
+
 # dependencies
 /node_modules
 node_modules/

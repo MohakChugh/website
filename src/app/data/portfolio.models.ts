@@ -84,3 +84,15 @@ export interface AskEntry {
   route?: string;
   routeLabel?: string;
 }
+
+export interface BlogPost {
+  slug: string;
+  title: string;
+  /** ISO date string (yyyy-mm-dd) */
+  date: string;
+  tags: string[];
+  excerpt: string;
+  readingMinutes: number;
+  /** Pre-rendered, pre-highlighted HTML from the markdown body */
+  html: string;
+}

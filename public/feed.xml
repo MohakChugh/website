@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Mohak Chugh — Blog</title>
+    <link>https://mohakchugh.is-a.dev/blog</link>
+    <description>Engineering notes by Mohak Chugh, SDE 2 at Amazon.</description>
+    <language>en</language>
+    <atom:link href="https://mohakchugh.is-a.dev/feed.xml" rel="self" type="application/rss+xml"/>
+    <item>
+      <title>How I Built This Portfolio (and Its Blogging Engine) in Angular 22</title>
+      <link>https://mohakchugh.is-a.dev/blog/building-this-website</link>
+      <pubDate>Sun, 05 Jul 2026 00:00:00 GMT</pubDate>
+      <description>A technical walkthrough of rebuilding my portfolio from Angular 9 to Angular 22 with spartan-ng, Tailwind v4, SSG prerendering, a WOW animation system, and a zero-backend blogging engine powered by markdown files.</description>
+    </item>
+  </channel>
+</rss>
