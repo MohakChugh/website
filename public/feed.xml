@@ -12,5 +12,11 @@
       <pubDate>Sun, 05 Jul 2026 00:00:00 GMT</pubDate>
       <description>A technical walkthrough of rebuilding my portfolio from Angular 9 to Angular 22 with spartan-ng, Tailwind v4, SSG prerendering, a WOW animation system, and a zero-backend blogging engine powered by markdown files.</description>
     </item>
+    <item>
+      <title>Two Workloads in a Trench Coat: Prefill/Decode Disaggregation in LLM Serving</title>
+      <link>https://mohakchugh.is-a.dev/blog/prefill-decode-disaggregation-llm-serving</link>
+      <pubDate>Sun, 05 Jul 2026 00:00:00 GMT</pubDate>
+      <description>Prefill and decode have opposite hardware profiles, and serving them on the same GPUs wastes both. A practical tour of DistServe and Mooncake, the two papers behind the biggest architecture shift in LLM inference.</description>
+    </item>
   </channel>
 </rss>
