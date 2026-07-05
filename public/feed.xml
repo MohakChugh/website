@@ -13,6 +13,12 @@
       <description>A technical walkthrough of rebuilding my portfolio from Angular 9 to Angular 22 with spartan-ng, Tailwind v4, SSG prerendering, a WOW animation system, and a zero-backend blogging engine powered by markdown files.</description>
     </item>
     <item>
+      <title>Deterministic Simulation Testing: Finding Distributed Systems Bugs Before They Exist</title>
+      <link>https://mohakchugh.is-a.dev/blog/deterministic-simulation-testing</link>
+      <pubDate>Sun, 05 Jul 2026 00:00:00 GMT</pubDate>
+      <description>FoundationDB shipped a distributed database with essentially zero customer-reported bugs by running its entire cluster inside a single-threaded simulation driven by one random seed. TigerBeetle and Antithesis have since pushed the idea further. Here is how deterministic simulation testing works, why a seed is worth a thousand log files, and where the technique's real limits are.</description>
+    </item>
+    <item>
       <title>Two Workloads in a Trench Coat: Prefill/Decode Disaggregation in LLM Serving</title>
       <link>https://mohakchugh.is-a.dev/blog/prefill-decode-disaggregation-llm-serving</link>
       <pubDate>Sun, 05 Jul 2026 00:00:00 GMT</pubDate>
