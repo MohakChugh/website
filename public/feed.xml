@@ -18,5 +18,11 @@
       <pubDate>Sun, 05 Jul 2026 00:00:00 GMT</pubDate>
       <description>Prefill and decode have opposite hardware profiles, and serving them on the same GPUs wastes both. A practical tour of DistServe and Mooncake, the two papers behind the biggest architecture shift in LLM inference.</description>
     </item>
+    <item>
+      <title>SIEVE: The Cache Eviction Algorithm That Beats LRU by Doing Less</title>
+      <link>https://mohakchugh.is-a.dev/blog/sieve-cache-eviction-simpler-than-lru</link>
+      <pubDate>Sun, 05 Jul 2026 00:00:00 GMT</pubDate>
+      <description>A 2024 NSDI paper showed that a FIFO queue, one bit per object, and a lazy hand pointer can out-perform LRU, ARC, and friends on web workloads, while removing the lock that makes LRU a scalability bottleneck. Here is how SIEVE works and why its simplicity is the whole point.</description>
+    </item>
   </channel>
 </rss>
