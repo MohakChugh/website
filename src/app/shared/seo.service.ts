@@ -9,6 +9,10 @@ export interface SeoData {
   description: string;
   /** path relative to SITE_URL, e.g. '/cv' or '' for home */
   path: string;
+  /** Set to 'article' for blog posts (emits og:type=article + published_time) */
+  type?: 'website' | 'article';
+  /** ISO date for article:published_time (blog posts only) */
+  publishedTime?: string;
 }
 
 /**
@@ -28,10 +32,19 @@ export class SeoService {
     this.title.setTitle(data.title);
     this.meta.updateTag({ name: 'description', content: data.description });
 
-    // Open Graph + Twitter (title/description/url change per page; image stays global)
+    // Open Graph
+    this.meta.updateTag({ property: 'og:type', content: data.type ?? 'website' });
     this.meta.updateTag({ property: 'og:title', content: data.title });
     this.meta.updateTag({ property: 'og:description', content: data.description });
     this.meta.updateTag({ property: 'og:url', content: url });
+
+    // article-specific OG tags (blog posts)
+    if (data.type === 'article' && data.publishedTime) {
+      this.meta.updateTag({ property: 'article:published_time', content: data.publishedTime });
+      this.meta.updateTag({ property: 'article:author', content: 'Mohak Chugh' });
+    }
+
+    // Twitter
     this.meta.updateTag({ name: 'twitter:title', content: data.title });
     this.meta.updateTag({ name: 'twitter:description', content: data.description });
 

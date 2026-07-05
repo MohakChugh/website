@@ -43,6 +43,8 @@ export class BlogPostPage {
         title: `${p.title} — Mohak Chugh`,
         description: p.excerpt,
         path: `/blog/${p.slug}`,
+        type: 'article',
+        publishedTime: p.date,
       });
     });
   }
