@@ -56,12 +56,6 @@ export interface Publication {
   url: string;
 }
 
-export interface SkillBar {
-  label: string;
-  /** 0–100 */
-  level: number;
-}
-
 export interface SkillCard {
   title: string;
   body: string;

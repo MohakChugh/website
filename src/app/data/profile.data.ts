@@ -2,7 +2,6 @@ import {
   EducationItem,
   ExperienceItem,
   Publication,
-  SkillBar,
   SkillCard,
   SocialLink,
 } from './portfolio.models';
@@ -45,11 +44,25 @@ export const SKILL_CARDS: SkillCard[] = [
   },
 ];
 
-export const SKILL_BARS: SkillBar[] = [
-  { label: 'MEAN Stack', level: 100 },
-  { label: 'DevOps', level: 90 },
-  { label: 'Soft Skills', level: 85 },
-];
+/** Skill chips grouped by domain — named tools, no junior-style percentages. */
+export const SKILL_GROUPS = [
+  {
+    label: 'Backend & Data',
+    items: ['Java', 'Python', 'Spark', 'Airflow', 'Advanced SQL', 'DynamoDB', 'Redshift'],
+  },
+  {
+    label: 'AI / LLM',
+    items: ['RAG Architecture', 'Vector Knowledge Bases', 'Embeddings', 'Fine-tuning', 'NLP'],
+  },
+  {
+    label: 'Cloud & DevOps',
+    items: ['AWS (EMR, Lambda, Glue)', 'Docker', 'Kubernetes', 'CI/CD', 'AWS CDK'],
+  },
+  {
+    label: 'Full Stack',
+    items: ['Angular', 'React', 'Node.js', 'TypeScript'],
+  },
+] as const;
 
 /** Work experience & achievements. */
 export const EXPERIENCE: ExperienceItem[] = [

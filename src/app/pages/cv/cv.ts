@@ -17,7 +17,7 @@ import {
   EXPERIENCE,
   EDUCATION,
   PUBLICATION,
-  SKILL_BARS,
+  SKILL_GROUPS,
   AMCAT_URL,
 } from '../../data/profile.data';
 import { RevealDirective } from '../../shared/reveal.directive';
@@ -48,7 +48,7 @@ export class Cv {
   readonly experience = EXPERIENCE;
   readonly education = EDUCATION;
   readonly publication = PUBLICATION;
-  readonly skills = SKILL_BARS;
+  readonly skillGroups = SKILL_GROUPS;
   readonly amcatUrl = AMCAT_URL;
 
   /** URL of the hosted, professionally-formatted resume PDF. */

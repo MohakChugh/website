@@ -55,20 +55,19 @@
       </div>
 
       <div class="rounded-2xl border border-border glass-card p-6">
-        <h2 class="font-display text-lg font-semibold">Skills</h2>
+        <h2 class="font-display text-lg font-semibold">Core Skills</h2>
         <div class="mt-4 space-y-4">
-          @for (skill of skills; track skill.label) {
+          @for (group of skillGroups; track group.label) {
             <div>
-              <div class="flex justify-between text-sm">
-                <span>{{ skill.label }}</span>
-                <span class="font-mono text-muted-foreground">{{ skill.level }}%</span>
-              </div>
-              <div class="mt-1.5 h-1.5 overflow-hidden rounded-full bg-secondary">
-                <div
-                  class="h-full rounded-full"
-                  style="background: linear-gradient(90deg, var(--grad-from), var(--grad-to))"
-                  [style.width.%]="skill.level"
-                ></div>
+              <p class="eyebrow">{{ group.label }}</p>
+              <div class="mt-2 flex flex-wrap gap-1.5">
+                @for (item of group.items; track item) {
+                  <span
+                    class="rounded-md bg-secondary/60 px-2 py-0.5 font-mono text-[11px] text-muted-foreground"
+                  >
+                    {{ item }}
+                  </span>
+                }
               </div>
             </div>
           }
