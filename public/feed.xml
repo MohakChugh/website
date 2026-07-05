@@ -7,6 +7,12 @@
     <language>en</language>
     <atom:link href="https://mohakchugh.is-a.dev/feed.xml" rel="self" type="application/rss+xml"/>
     <item>
+      <title>EAGLE-3: Why the Best Draft Models Stopped Predicting Features</title>
+      <link>https://mohakchugh.is-a.dev/blog/eagle-3-speculative-decoding-training-time-test</link>
+      <pubDate>Mon, 06 Jul 2026 00:00:00 GMT</pubDate>
+      <description>EAGLE-3 gets up to 6.5x decoding speedup by abandoning the feature-prediction objective that defined its predecessors. The interesting part is why feature prediction became the bottleneck, and how a trick called training-time test fixes the train/inference mismatch it leaves behind.</description>
+    </item>
+    <item>
       <title>How I Built This Portfolio (and Its Blogging Engine) in Angular 22</title>
       <link>https://mohakchugh.is-a.dev/blog/building-this-website</link>
       <pubDate>Sun, 05 Jul 2026 00:00:00 GMT</pubDate>
