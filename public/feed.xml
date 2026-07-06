@@ -7,6 +7,12 @@
     <language>en</language>
     <atom:link href="https://mohakchugh.is-a.dev/feed.xml" rel="self" type="application/rss+xml"/>
     <item>
+      <title>Iceberg v3 Deletion Vectors: Fixing Merge-on-Read With One Bitmap Per File</title>
+      <link>https://mohakchugh.is-a.dev/blog/iceberg-v3-deletion-vectors</link>
+      <pubDate>Tue, 07 Jul 2026 00:00:00 GMT</pubDate>
+      <description>Apache Iceberg v2 made row-level deletes possible with position delete files, and large deployments have regretted the details ever since. Format version 3 deprecates them in favor of deletion vectors, Roaring bitmaps stored in Puffin files with a hard invariant of at most one vector per data file. Here is what was broken, how the new binary format works down to the byte level, and why the length field is big-endian on purpose.</description>
+    </item>
+    <item>
       <title>EAGLE-3: Why the Best Draft Models Stopped Predicting Features</title>
       <link>https://mohakchugh.is-a.dev/blog/eagle-3-speculative-decoding-training-time-test</link>
       <pubDate>Mon, 06 Jul 2026 00:00:00 GMT</pubDate>
