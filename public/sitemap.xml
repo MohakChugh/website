@@ -18,6 +18,7 @@
   <url><loc>https://mohakchugh.is-a.dev/projects/connectus</loc><priority>0.6</priority></url>
   <url><loc>https://mohakchugh.is-a.dev/projects/flashread</loc><priority>0.6</priority></url>
   <url><loc>https://mohakchugh.is-a.dev/blog/eagle-3-speculative-decoding-training-time-test</loc><priority>0.7</priority></url>
+  <url><loc>https://mohakchugh.is-a.dev/blog/rabitq-binary-quantization-vector-search</loc><priority>0.7</priority></url>
   <url><loc>https://mohakchugh.is-a.dev/blog/building-this-website</loc><priority>0.7</priority></url>
   <url><loc>https://mohakchugh.is-a.dev/blog/deterministic-simulation-testing</loc><priority>0.7</priority></url>
   <url><loc>https://mohakchugh.is-a.dev/blog/prefill-decode-disaggregation-llm-serving</loc><priority>0.7</priority></url>
