@@ -31,6 +31,16 @@ export ANTHROPIC_MODEL='us.anthropic.claude-fable-5'
 export DISABLE_PROMPT_CACHING=0
 export PATH="/opt/homebrew/opt/node@24/bin:/opt/homebrew/bin:$PATH"
 
+# GitHub auth: cron shells can't access macOS keyring, so inject token via env var.
+# gh auth token reads from keyring in interactive shells; for cron we cache it.
+GH_TOKEN_FILE="$HOME/.gh-token-cache"
+if [ -f "$GH_TOKEN_FILE" ]; then
+  export GH_TOKEN=$(cat "$GH_TOKEN_FILE")
+  # Set git to use gh as credential helper for this session
+  export GIT_ASKPASS="/opt/homebrew/bin/gh"
+  export GIT_TERMINAL_PROMPT=0
+fi
+
 cd "$REPO"
 
 # The prompt that drives the entire generation
