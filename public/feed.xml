@@ -13,6 +13,12 @@
       <description>EAGLE-3 gets up to 6.5x decoding speedup by abandoning the feature-prediction objective that defined its predecessors. The interesting part is why feature prediction became the bottleneck, and how a trick called training-time test fixes the train/inference mismatch it leaves behind.</description>
     </item>
     <item>
+      <title>Native Sparse Attention: Why Trainable Sparsity Beats Post-Hoc Pruning</title>
+      <link>https://mohakchugh.is-a.dev/blog/native-sparse-attention-hardware-aligned-long-context</link>
+      <pubDate>Mon, 06 Jul 2026 00:00:00 GMT</pubDate>
+      <description>DeepSeek's NSA makes attention sparsity a first-class citizen of pretraining instead of an inference-time hack, and pairs it with a kernel design that actually turns theoretical FLOP savings into wall-clock speedups. A close read of the architecture and why most sparse attention schemes before it failed to deliver.</description>
+    </item>
+    <item>
       <title>RaBitQ: 32x Vector Compression With an Error Bound You Can Actually Prove</title>
       <link>https://mohakchugh.is-a.dev/blog/rabitq-binary-quantization-vector-search</link>
       <pubDate>Mon, 06 Jul 2026 00:00:00 GMT</pubDate>
