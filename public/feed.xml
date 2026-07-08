@@ -19,6 +19,12 @@
       <description>How eBPF-based continuous profilers achieve always-on stack trace collection in production with sub-1% CPU overhead using frame pointer unwinding, BPF ring buffers, and adaptive sampling — replacing the traditional trade-off between observability and performance.</description>
     </item>
     <item>
+      <title>Hybrid Logical Clocks: Bridging Physical Time and Causality in Distributed Databases</title>
+      <link>https://mohakchugh.is-a.dev/blog/hybrid-logical-clocks-causality-physical-time-distributed-databases</link>
+      <pubDate>Thu, 09 Jul 2026 00:00:00 GMT</pubDate>
+      <description>How Hybrid Logical Clocks combine NTP-synchronized physical time with Lamport causality to provide globally meaningful timestamps without coordination, enabling snapshot isolation and serializable transactions across geo-distributed databases.</description>
+    </item>
+    <item>
       <title>Adaptive Radix Trees: How Modern Databases Achieve Sub-Microsecond Lookups</title>
       <link>https://mohakchugh.is-a.dev/blog/adaptive-radix-trees-art-cache-conscious-indexing</link>
       <pubDate>Wed, 08 Jul 2026 00:00:00 GMT</pubDate>
