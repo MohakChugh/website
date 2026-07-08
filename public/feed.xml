@@ -91,6 +91,12 @@
       <description>Linux 6.12 merged sched_ext, a framework that lets you write CPU scheduler policies as BPF programs, load them at runtime, and swap them without rebooting. Here's how it works, why it matters, and what Meta learned running it in production.</description>
     </item>
     <item>
+      <title>simdjson: Parsing Gigabytes of JSON Per Second with SIMD Vectorization</title>
+      <link>https://mohakchugh.is-a.dev/blog/simdjson-simd-json-parsing-gigabytes-per-second</link>
+      <pubDate>Wed, 08 Jul 2026 00:00:00 GMT</pubDate>
+      <description>How simdjson exploits branch-free SIMD instructions to parse JSON at hardware speeds, achieving multi-gigabyte throughput by treating structural character discovery as a bitwise parallel classification problem.</description>
+    </item>
+    <item>
       <title>Swiss Tables: How SIMD Rewrote the Rules of Hash Map Design</title>
       <link>https://mohakchugh.is-a.dev/blog/swiss-tables-and-simd-hash-maps</link>
       <pubDate>Wed, 08 Jul 2026 00:00:00 GMT</pubDate>

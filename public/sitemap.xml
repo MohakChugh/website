@@ -37,6 +37,7 @@
   <url><loc>https://mohakchugh.is-a.dev/blog/ring-attention-million-token-context-distributed-training</loc><priority>0.7</priority></url>
   <url><loc>https://mohakchugh.is-a.dev/blog/roaring-bitmaps-compressed-set-operations-at-scale</loc><priority>0.7</priority></url>
   <url><loc>https://mohakchugh.is-a.dev/blog/sched-ext-bpf-pluggable-cpu-schedulers-linux</loc><priority>0.7</priority></url>
+  <url><loc>https://mohakchugh.is-a.dev/blog/simdjson-simd-json-parsing-gigabytes-per-second</loc><priority>0.7</priority></url>
   <url><loc>https://mohakchugh.is-a.dev/blog/swiss-tables-and-simd-hash-maps</loc><priority>0.7</priority></url>
   <url><loc>https://mohakchugh.is-a.dev/blog/vectorized-query-execution-duckdb-billion-rows</loc><priority>0.7</priority></url>
   <url><loc>https://mohakchugh.is-a.dev/blog/iceberg-v3-deletion-vectors</loc><priority>0.7</priority></url>
