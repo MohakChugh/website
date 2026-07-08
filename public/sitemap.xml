@@ -33,6 +33,7 @@
   <url><loc>https://mohakchugh.is-a.dev/blog/j-space-global-workspace-language-models</loc><priority>0.7</priority></url>
   <url><loc>https://mohakchugh.is-a.dev/blog/mixture-of-depths-conditional-compute-transformer-inference</loc><priority>0.7</priority></url>
   <url><loc>https://mohakchugh.is-a.dev/blog/multi-gen-lru-linux-page-replacement</loc><priority>0.7</priority></url>
+  <url><loc>https://mohakchugh.is-a.dev/blog/mvcc-garbage-collection-version-chain-pruning-oltp</loc><priority>0.7</priority></url>
   <url><loc>https://mohakchugh.is-a.dev/blog/pgm-index-learned-indexes-logarithmic-point-queries</loc><priority>0.7</priority></url>
   <url><loc>https://mohakchugh.is-a.dev/blog/radix-attention-prefix-caching-efficient-llm-serving</loc><priority>0.7</priority></url>
   <url><loc>https://mohakchugh.is-a.dev/blog/ring-attention-million-token-context-distributed-training</loc><priority>0.7</priority></url>

@@ -67,6 +67,12 @@
       <description>Linux's legacy page reclaim scanned the entire active list to find cold pages. Multi-Gen LRU replaces that O(n) scan with generation-based aging — cutting memory-pressure stalls by 40% in real workloads.</description>
     </item>
     <item>
+      <title>MVCC Garbage Collection: Why Long Transactions Kill Throughput and How Modern Engines Fight Back</title>
+      <link>https://mohakchugh.is-a.dev/blog/mvcc-garbage-collection-version-chain-pruning-oltp</link>
+      <pubDate>Wed, 08 Jul 2026 00:00:00 GMT</pubDate>
+      <description>Multi-version concurrency control trades write amplification for read isolation, but version chain bloat from deferred garbage collection silently degrades scan performance by 10-100x. This post dissects the GC problem, examines PostgreSQL's vacuum pathology, and explores the epoch-based truncation and steam-cleaning techniques from LeanStore and Umbra that achieve O(1) amortized cleanup.</description>
+    </item>
+    <item>
       <title>PGM-Index: How Piecewise Linear Models Replace B-Trees with O(log log n) Lookups</title>
       <link>https://mohakchugh.is-a.dev/blog/pgm-index-learned-indexes-logarithmic-point-queries</link>
       <pubDate>Wed, 08 Jul 2026 00:00:00 GMT</pubDate>
