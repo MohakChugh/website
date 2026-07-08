@@ -7,6 +7,12 @@
     <language>en</language>
     <atom:link href="https://mohakchugh.is-a.dev/feed.xml" rel="self" type="application/rss+xml"/>
     <item>
+      <title>J-Space: Anthropic Discovered a Global Workspace Inside Claude</title>
+      <link>https://mohakchugh.is-a.dev/blog/j-space-global-workspace-language-models</link>
+      <pubDate>Wed, 08 Jul 2026 00:00:00 GMT</pubDate>
+      <description>Anthropic found that Claude has developed a privileged internal workspace, the J-space, where concepts light up silently during reasoning. It mirrors Global Workspace Theory from neuroscience, and it lets researchers read what the model is thinking but not saying.</description>
+    </item>
+    <item>
       <title>Swiss Tables: How SIMD Rewrote the Rules of Hash Map Design</title>
       <link>https://mohakchugh.is-a.dev/blog/swiss-tables-and-simd-hash-maps</link>
       <pubDate>Wed, 08 Jul 2026 00:00:00 GMT</pubDate>
