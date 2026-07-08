@@ -19,6 +19,12 @@
       <description>How bcachefs uses copy-on-write B-trees with six-point journal entries to achieve crash consistency without the write amplification of traditional journaling, and why this design changes the calculus for next-generation storage engines.</description>
     </item>
     <item>
+      <title>BitNet b1.58: Ternary Weight LLMs That Eliminate Matrix Multiplication</title>
+      <link>https://mohakchugh.is-a.dev/blog/bitnet-ternary-weights-1-bit-llms-without-multiplication</link>
+      <pubDate>Wed, 08 Jul 2026 00:00:00 GMT</pubDate>
+      <description>How Microsoft Research's 1.58-bit LLM architecture replaces floating-point matrix multiplications with integer additions, matching full-precision performance while fundamentally changing inference hardware requirements.</description>
+    </item>
+    <item>
       <title>Bw-Tree: Lock-Free B+ Trees for Multi-Core Database Scalability</title>
       <link>https://mohakchugh.is-a.dev/blog/bw-tree-lock-free-b-plus-trees-multicore-databases</link>
       <pubDate>Wed, 08 Jul 2026 00:00:00 GMT</pubDate>

@@ -25,6 +25,7 @@
   <url><loc>https://mohakchugh.is-a.dev/projects/flashread</loc><priority>0.6</priority></url>
   <url><loc>https://mohakchugh.is-a.dev/blog/adaptive-radix-trees-art-cache-conscious-indexing</loc><priority>0.7</priority></url>
   <url><loc>https://mohakchugh.is-a.dev/blog/bcachefs-cow-btrees-crash-consistent-filesystem-design</loc><priority>0.7</priority></url>
+  <url><loc>https://mohakchugh.is-a.dev/blog/bitnet-ternary-weights-1-bit-llms-without-multiplication</loc><priority>0.7</priority></url>
   <url><loc>https://mohakchugh.is-a.dev/blog/bw-tree-lock-free-b-plus-trees-multicore-databases</loc><priority>0.7</priority></url>
   <url><loc>https://mohakchugh.is-a.dev/blog/cxl-memory-pooling-disaggregated-datacenter-architecture</loc><priority>0.7</priority></url>
   <url><loc>https://mohakchugh.is-a.dev/blog/epoch-based-reclamation-lock-free-memory-safety</loc><priority>0.7</priority></url>
