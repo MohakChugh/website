@@ -85,6 +85,12 @@
       <description>The Piecewise Geometric Model index uses linear regression segments to predict key positions, achieving O(log log n) point queries with orders-of-magnitude less space than B-trees. Here's the theory, the recursive structure, and why production systems are starting to care.</description>
     </item>
     <item>
+      <title>Prolly Trees: Content-Addressed Structural Sharing for Version-Controlled Databases</title>
+      <link>https://mohakchugh.is-a.dev/blog/prolly-trees-content-addressed-structural-sharing-databases</link>
+      <pubDate>Wed, 08 Jul 2026 00:00:00 GMT</pubDate>
+      <description>How probabilistic B-trees use rolling hash chunk boundaries to enable O(log n) structural diffs between database snapshots, bringing Git-like branching and merging semantics to multi-gigabyte relational datasets with minimal storage overhead.</description>
+    </item>
+    <item>
       <title>RadixAttention: Prefix-Aware KV Cache Reuse for 10x LLM Serving Throughput</title>
       <link>https://mohakchugh.is-a.dev/blog/radix-attention-prefix-caching-efficient-llm-serving</link>
       <pubDate>Wed, 08 Jul 2026 00:00:00 GMT</pubDate>
