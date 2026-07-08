@@ -20,6 +20,7 @@
   <url><loc>https://mohakchugh.is-a.dev/blog/io-uring-submission-queue-polling-zero-syscall-io</loc><priority>0.7</priority></url>
   <url><loc>https://mohakchugh.is-a.dev/blog/j-space-global-workspace-language-models</loc><priority>0.7</priority></url>
   <url><loc>https://mohakchugh.is-a.dev/blog/multi-gen-lru-linux-page-replacement</loc><priority>0.7</priority></url>
+  <url><loc>https://mohakchugh.is-a.dev/blog/ring-attention-million-token-context-distributed-training</loc><priority>0.7</priority></url>
   <url><loc>https://mohakchugh.is-a.dev/blog/swiss-tables-and-simd-hash-maps</loc><priority>0.7</priority></url>
   <url><loc>https://mohakchugh.is-a.dev/blog/iceberg-v3-deletion-vectors</loc><priority>0.7</priority></url>
   <url><loc>https://mohakchugh.is-a.dev/blog/s3-conditional-writes-distributed-coordination</loc><priority>0.7</priority></url>
