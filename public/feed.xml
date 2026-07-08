@@ -7,6 +7,12 @@
     <language>en</language>
     <atom:link href="https://mohakchugh.is-a.dev/feed.xml" rel="self" type="application/rss+xml"/>
     <item>
+      <title>Aria: Deterministic Database Scheduling and the End of Two-Phase Locking</title>
+      <link>https://mohakchugh.is-a.dev/blog/aria-deterministic-database-scheduling-coordination-free-transactions</link>
+      <pubDate>Thu, 09 Jul 2026 00:00:00 GMT</pubDate>
+      <description>How deterministic database scheduling eliminates coordination overhead by pre-ordering transactions before execution, enabling coordination-free distributed commits without two-phase locking or two-phase commit.</description>
+    </item>
+    <item>
       <title>CALM Theorem: When Distributed Systems Can Skip Coordination Entirely</title>
       <link>https://mohakchugh.is-a.dev/blog/calm-theorem-monotone-coordination-free-distributed-computing</link>
       <pubDate>Thu, 09 Jul 2026 00:00:00 GMT</pubDate>
