@@ -35,6 +35,8 @@ export class BlogPostPage {
   readonly post = computed(() => this.blog.bySlug(this.slug()));
   readonly adjacent = computed(() => this.blog.adjacent(this.slug()));
 
+  readonly related = computed(() => this.blog.related(this.slug()));
+
   constructor() {
     effect(() => {
       const p = this.post();
@@ -45,6 +47,8 @@ export class BlogPostPage {
         path: `/blog/${p.slug}`,
         type: 'article',
         publishedTime: p.date,
+        blogPost: { title: p.title, date: p.date, excerpt: p.excerpt, slug: p.slug, readingMinutes: p.readingMinutes, tags: p.tags },
+        faq: p.faq,
       });
     });
   }

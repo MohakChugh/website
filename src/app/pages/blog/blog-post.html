@@ -34,6 +34,39 @@
       [innerHTML]="p.html | trustHtml"
     ></div>
 
+    <!-- FAQ section (SEO: FAQPage structured data + visible content for AI search) -->
+    @if (post()!.faq.length) {
+      <aside class="mt-14 rounded-2xl border border-border bg-secondary/20 p-6">
+        <h2 class="font-display text-lg font-semibold">Frequently Asked Questions</h2>
+        <dl class="mt-4 space-y-4">
+          @for (faq of post()!.faq; track faq.question) {
+            <div>
+              <dt class="font-medium text-foreground">{{ faq.question }}</dt>
+              <dd class="mt-1 text-sm text-muted-foreground">{{ faq.answer }}</dd>
+            </div>
+          }
+        </dl>
+      </aside>
+    }
+
+    <!-- Related posts (strengthens internal linking for SEO) -->
+    @if (related().length) {
+      <aside class="mt-16">
+        <h2 class="font-display text-lg font-semibold">Related Posts</h2>
+        <div class="mt-4 grid gap-3 sm:grid-cols-3">
+          @for (r of related(); track r.slug) {
+            <a
+              [routerLink]="['/blog', r.slug]"
+              class="glass-card group rounded-xl border border-border p-4 transition-[border-color] hover:border-primary/40"
+            >
+              <h3 class="font-display text-sm font-semibold leading-tight line-clamp-2">{{ r.title }}</h3>
+              <p class="mt-2 text-xs text-muted-foreground">{{ r.readingMinutes }} min read</p>
+            </a>
+          }
+        </div>
+      </aside>
+    }
+
     <!-- prev/next navigation -->
     <nav class="mt-16 grid gap-4 sm:grid-cols-2" aria-label="Post navigation">
       @if (adjacent().prev; as prev) {

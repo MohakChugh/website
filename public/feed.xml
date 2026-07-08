@@ -31,6 +31,12 @@
       <description>Anthropic found that Claude has developed a privileged internal workspace, the J-space, where concepts light up silently during reasoning. It mirrors Global Workspace Theory from neuroscience, and it lets researchers read what the model is thinking but not saying.</description>
     </item>
     <item>
+      <title>Mixture of Depths: Dynamic Token Routing for 50% Faster Transformer Inference</title>
+      <link>https://mohakchugh.is-a.dev/blog/mixture-of-depths-conditional-compute-transformer-inference</link>
+      <pubDate>Wed, 08 Jul 2026 00:00:00 GMT</pubDate>
+      <description>How Google DeepMind's Mixture of Depths achieves equivalent language model quality at a fraction of the FLOPs by learning which tokens can skip entire transformer layers, yielding up to 50% faster inference with a static computation graph.</description>
+    </item>
+    <item>
       <title>Multi-Gen LRU: How Linux Reinvented Page Replacement After Two Decades</title>
       <link>https://mohakchugh.is-a.dev/blog/multi-gen-lru-linux-page-replacement</link>
       <pubDate>Wed, 08 Jul 2026 00:00:00 GMT</pubDate>

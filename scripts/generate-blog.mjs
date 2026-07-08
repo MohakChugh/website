@@ -101,6 +101,22 @@ for (const file of files) {
   const wordCount = plainText.split(/\s+/).length;
   const readingMinutes = Math.max(1, Math.ceil(wordCount / 200));
 
+  // generate FAQ from ## headings (convert statement headings to questions)
+  const headings = [...content.matchAll(/^## (.+)$/gm)].map((m) => m[1].trim());
+  const faq = headings.slice(0, 5).map((h) => {
+    const question = h.endsWith('?') ? h : `What is ${h.toLowerCase().replace(/^the /, '')}?`;
+    // Extract the paragraph following this heading as the answer
+    const headingIdx = content.indexOf(`## ${h}`);
+    const afterHeading = content.slice(headingIdx + h.length + 4);
+    const nextSection = afterHeading.indexOf('\n## ');
+    const sectionText = (nextSection > 0 ? afterHeading.slice(0, nextSection) : afterHeading)
+      .replace(/[#*`\[\]()>_~|]/g, '')
+      .replace(/\n+/g, ' ')
+      .trim();
+    const answer = sectionText.slice(0, 200).replace(/\s\S*$/, '') + (sectionText.length > 200 ? '…' : '');
+    return { question, answer };
+  }).filter((f) => f.answer.length > 20);
+
   const date = new Date(fm.date).toISOString().slice(0, 10);
 
   posts.push({
@@ -111,6 +127,7 @@ for (const file of files) {
     excerpt,
     readingMinutes,
     html,
+    faq,
   });
 }
 
@@ -150,12 +167,17 @@ try {
   for (const m of slugMatches) projectSlugs.push(m[1]);
 } catch { /* ignore if file missing */ }
 
+// Topic hub keys for sitemap
+const topicKeys = ['ml-gpu', 'systems', 'data', 'distributed', 'frontend'];
+
 const sitemapUrls = [
   { loc: `${SITE_URL}/`, priority: '1.0' },
   { loc: `${SITE_URL}/projects`, priority: '0.9' },
   { loc: `${SITE_URL}/blog`, priority: '0.9' },
   { loc: `${SITE_URL}/cv`, priority: '0.8' },
+  { loc: `${SITE_URL}/stats`, priority: '0.5' },
   { loc: `${SITE_URL}/contact`, priority: '0.7' },
+  ...topicKeys.map((k) => ({ loc: `${SITE_URL}/topics/${k}`, priority: '0.8' })),
   ...projectSlugs.map((s) => ({ loc: `${SITE_URL}/projects/${s}`, priority: '0.6' })),
   ...posts.map((p) => ({ loc: `${SITE_URL}/blog/${p.slug}`, priority: '0.7' })),
 ];

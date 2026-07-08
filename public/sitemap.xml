@@ -4,7 +4,13 @@
   <url><loc>https://mohakchugh.is-a.dev/projects</loc><priority>0.9</priority></url>
   <url><loc>https://mohakchugh.is-a.dev/blog</loc><priority>0.9</priority></url>
   <url><loc>https://mohakchugh.is-a.dev/cv</loc><priority>0.8</priority></url>
+  <url><loc>https://mohakchugh.is-a.dev/stats</loc><priority>0.5</priority></url>
   <url><loc>https://mohakchugh.is-a.dev/contact</loc><priority>0.7</priority></url>
+  <url><loc>https://mohakchugh.is-a.dev/topics/ml-gpu</loc><priority>0.8</priority></url>
+  <url><loc>https://mohakchugh.is-a.dev/topics/systems</loc><priority>0.8</priority></url>
+  <url><loc>https://mohakchugh.is-a.dev/topics/data</loc><priority>0.8</priority></url>
+  <url><loc>https://mohakchugh.is-a.dev/topics/distributed</loc><priority>0.8</priority></url>
+  <url><loc>https://mohakchugh.is-a.dev/topics/frontend</loc><priority>0.8</priority></url>
   <url><loc>https://mohakchugh.is-a.dev/projects/agritech</loc><priority>0.6</priority></url>
   <url><loc>https://mohakchugh.is-a.dev/projects/citizens</loc><priority>0.6</priority></url>
   <url><loc>https://mohakchugh.is-a.dev/projects/content-collaborator</loc><priority>0.6</priority></url>
@@ -21,6 +27,7 @@
   <url><loc>https://mohakchugh.is-a.dev/blog/flash-attention-3-warp-specialization-hopper-gpu</loc><priority>0.7</priority></url>
   <url><loc>https://mohakchugh.is-a.dev/blog/io-uring-submission-queue-polling-zero-syscall-io</loc><priority>0.7</priority></url>
   <url><loc>https://mohakchugh.is-a.dev/blog/j-space-global-workspace-language-models</loc><priority>0.7</priority></url>
+  <url><loc>https://mohakchugh.is-a.dev/blog/mixture-of-depths-conditional-compute-transformer-inference</loc><priority>0.7</priority></url>
   <url><loc>https://mohakchugh.is-a.dev/blog/multi-gen-lru-linux-page-replacement</loc><priority>0.7</priority></url>
   <url><loc>https://mohakchugh.is-a.dev/blog/ring-attention-million-token-context-distributed-training</loc><priority>0.7</priority></url>
   <url><loc>https://mohakchugh.is-a.dev/blog/sched-ext-bpf-pluggable-cpu-schedulers-linux</loc><priority>0.7</priority></url>

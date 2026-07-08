@@ -1,0 +1,63 @@
+@if (category(); as cat) {
+  <section class="mx-auto max-w-5xl px-6 pt-32 pb-16">
+    <a
+      [routerLink]="['/blog']"
+      class="link-wipe inline-flex items-center gap-2 text-sm text-muted-foreground transition-colors hover:text-foreground"
+    >
+      <ng-icon name="lucideArrowLeft" class="size-4" /> All posts
+    </a>
+
+    <header class="reveal mt-6 mb-10" appReveal>
+      <p class="eyebrow">Topic</p>
+      <h1 class="mt-2 font-display text-4xl font-bold tracking-tight sm:text-5xl">
+        {{ cat.label }}
+      </h1>
+      <p class="mt-4 max-w-3xl text-lg text-muted-foreground">
+        {{ description() }}
+      </p>
+      <p class="mt-3 font-mono text-sm text-muted-foreground">
+        {{ posts().length }} posts · ~{{ totalMinutes() }} min of reading
+      </p>
+    </header>
+
+    <!-- All posts in this topic -->
+    <div class="grid gap-4 sm:grid-cols-2">
+      @for (post of posts(); track post.slug) {
+        <a
+          [routerLink]="['/blog', post.slug]"
+          class="tilt tilt-glow glass-card group relative rounded-2xl border border-border p-5 transition-[border-color] hover:border-primary/40"
+          appTilt
+          [tiltMax]="5"
+        >
+          <div class="relative z-[2]">
+            <p class="eyebrow">{{ post.date | date: 'mediumDate' }}</p>
+            <h2 class="link-wipe mt-2 font-display text-base font-semibold tracking-tight sm:text-lg">
+              {{ post.title }}
+            </h2>
+            <p class="mt-2 text-sm text-muted-foreground line-clamp-2">{{ post.excerpt }}</p>
+            <div class="mt-3 flex flex-wrap items-center gap-2">
+              @for (tag of post.tags.slice(0, 3); track tag) {
+                <span class="rounded-md bg-secondary/60 px-2 py-0.5 font-mono text-[11px] text-muted-foreground">
+                  {{ tag }}
+                </span>
+              }
+              <span class="ml-auto flex items-center gap-1 text-xs text-muted-foreground">
+                <ng-icon name="lucideClock" class="size-3" /> {{ post.readingMinutes }} min
+              </span>
+            </div>
+          </div>
+        </a>
+      }
+    </div>
+  </section>
+} @else {
+  <div class="mx-auto grid min-h-[70vh] max-w-3xl place-items-center px-6 text-center">
+    <div>
+      <h1 class="font-display text-5xl font-bold">404</h1>
+      <p class="mt-3 text-muted-foreground">Topic not found.</p>
+      <a [routerLink]="['/blog']" class="link-wipe mt-6 inline-flex items-center gap-2 text-primary">
+        <ng-icon name="lucideArrowLeft" class="size-4" /> Back to blog
+      </a>
+    </div>
+  </div>
+}

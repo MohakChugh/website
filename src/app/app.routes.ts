@@ -48,6 +48,10 @@ export const routes: Routes = [
     loadComponent: () => import('./pages/blog/blog-post').then((m) => m.BlogPostPage),
   },
   {
+    path: 'topics/:key',
+    loadComponent: () => import('./pages/topics/topic-hub').then((m) => m.TopicHub),
+  },
+  {
     path: 'cv',
     loadComponent: () => import('./pages/cv/cv').then((m) => m.Cv),
     data: {

@@ -85,6 +85,11 @@ export interface AskEntry {
   routeLabel?: string;
 }
 
+export interface BlogFaq {
+  question: string;
+  answer: string;
+}
+
 export interface BlogPost {
   slug: string;
   title: string;
@@ -95,4 +100,6 @@ export interface BlogPost {
   readingMinutes: number;
   /** Pre-rendered, pre-highlighted HTML from the markdown body */
   html: string;
+  /** Auto-generated FAQ from headings (for SEO + FAQPage JSON-LD) */
+  faq: BlogFaq[];
 }
