@@ -49,6 +49,12 @@
       <description>DeepSeek-V2 introduced Multi-head Latent Attention (MLA), which replaces per-head KV storage with a shared low-rank latent vector. By jointly compressing keys and values into a bottleneck representation and absorbing the up-projection into attention weights, MLA cuts KV cache memory by over 93% while matching or exceeding standard multi-head attention quality. Here is how the linear algebra works and why this changes the economics of long-context serving.</description>
     </item>
     <item>
+      <title>PagedAttention: Virtual Memory for LLM KV Caches</title>
+      <link>https://mohakchugh.is-a.dev/blog/paged-attention-virtual-memory-llm-kv-cache-management</link>
+      <pubDate>Thu, 09 Jul 2026 00:00:00 GMT</pubDate>
+      <description>How borrowing virtual memory concepts from operating systems, specifically non-contiguous paging and demand allocation, eliminated 60-80% memory waste in LLM inference and became the universal standard for production serving.</description>
+    </item>
+    <item>
       <title>QUIC Multipath: Simultaneous Network Paths via RFC 9443</title>
       <link>https://mohakchugh.is-a.dev/blog/quic-multipath-rfc9443-simultaneous-network-paths</link>
       <pubDate>Thu, 09 Jul 2026 00:00:00 GMT</pubDate>
