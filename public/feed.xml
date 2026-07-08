@@ -67,6 +67,12 @@
       <description>How Ring Attention eliminates the memory wall for long-context transformers by overlapping blockwise attention computation with KV-cache communication in a ring topology, enabling near-linear context scaling across devices.</description>
     </item>
     <item>
+      <title>Roaring Bitmaps: Compressed Set Operations in Constant Time Per Container</title>
+      <link>https://mohakchugh.is-a.dev/blog/roaring-bitmaps-compressed-set-operations-at-scale</link>
+      <pubDate>Wed, 08 Jul 2026 00:00:00 GMT</pubDate>
+      <description>How Roaring Bitmaps achieve intersection, union, and cardinality on billion-element sets in microseconds by partitioning integers into typed containers, each optimized for its density regime, and accelerated with SIMD vectorization.</description>
+    </item>
+    <item>
       <title>sched_ext: BPF-Pluggable CPU Schedulers and the End of One-Size-Fits-All Scheduling</title>
       <link>https://mohakchugh.is-a.dev/blog/sched-ext-bpf-pluggable-cpu-schedulers-linux</link>
       <pubDate>Wed, 08 Jul 2026 00:00:00 GMT</pubDate>
