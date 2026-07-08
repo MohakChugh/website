@@ -7,6 +7,12 @@
     <language>en</language>
     <atom:link href="https://mohakchugh.is-a.dev/feed.xml" rel="self" type="application/rss+xml"/>
     <item>
+      <title>eBPF Continuous Profiling: Always-On Production Observability at &lt;1% Overhead</title>
+      <link>https://mohakchugh.is-a.dev/blog/ebpf-continuous-profiling-zero-overhead-production-observability</link>
+      <pubDate>Thu, 09 Jul 2026 00:00:00 GMT</pubDate>
+      <description>How eBPF-based continuous profilers achieve always-on stack trace collection in production with sub-1% CPU overhead using frame pointer unwinding, BPF ring buffers, and adaptive sampling — replacing the traditional trade-off between observability and performance.</description>
+    </item>
+    <item>
       <title>Adaptive Radix Trees: How Modern Databases Achieve Sub-Microsecond Lookups</title>
       <link>https://mohakchugh.is-a.dev/blog/adaptive-radix-trees-art-cache-conscious-indexing</link>
       <pubDate>Wed, 08 Jul 2026 00:00:00 GMT</pubDate>
