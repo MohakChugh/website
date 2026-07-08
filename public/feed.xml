@@ -67,6 +67,12 @@
       <description>Project Loom promised millions of concurrent tasks on a handful of OS threads. Synchronized blocks broke that promise by pinning continuations to carriers. JEP 491 in Java 24 eliminates pinning entirely through object monitor reimplementation, closing the last major gap in virtual thread adoption.</description>
     </item>
     <item>
+      <title>Learned Cardinality Estimation: When Neural Networks Replace Histograms in Query Optimizers</title>
+      <link>https://mohakchugh.is-a.dev/blog/learned-cardinality-estimation-neural-query-optimization</link>
+      <pubDate>Thu, 09 Jul 2026 00:00:00 GMT</pubDate>
+      <description>How modern database systems replace decades-old histogram-based cardinality estimators with neural models — covering CardBench, MSCN, and NeuroCard architectures that reduce join order estimation errors from 1000x to under 3x.</description>
+    </item>
+    <item>
       <title>LSM-Tree Write Amplification: From Leveled Compaction to Key-Value Separation</title>
       <link>https://mohakchugh.is-a.dev/blog/lsm-tree-write-amplification-key-value-separation-compaction</link>
       <pubDate>Thu, 09 Jul 2026 00:00:00 GMT</pubDate>
