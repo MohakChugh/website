@@ -7,6 +7,12 @@
     <language>en</language>
     <atom:link href="https://mohakchugh.is-a.dev/feed.xml" rel="self" type="application/rss+xml"/>
     <item>
+      <title>CXL 3.1 Memory Pooling: Disaggregated Memory and the End of Stranded DRAM</title>
+      <link>https://mohakchugh.is-a.dev/blog/cxl-memory-pooling-disaggregated-datacenter-architecture</link>
+      <pubDate>Wed, 08 Jul 2026 00:00:00 GMT</pubDate>
+      <description>How CXL 3.1 fabric-attached memory eliminates stranded DRAM across server fleets, enabling dynamic memory composition with sub-200ns additional latency through hardware-coherent interconnects.</description>
+    </item>
+    <item>
       <title>FlashAttention-3: Warp Specialization and the 75% FLOPS Barrier on Hopper GPUs</title>
       <link>https://mohakchugh.is-a.dev/blog/flash-attention-3-warp-specialization-hopper-gpu</link>
       <pubDate>Wed, 08 Jul 2026 00:00:00 GMT</pubDate>
