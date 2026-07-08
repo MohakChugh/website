@@ -37,6 +37,12 @@
       <description>How eBPF-based continuous profilers achieve always-on stack trace collection in production with sub-1% CPU overhead using frame pointer unwinding, BPF ring buffers, and adaptive sampling — replacing the traditional trade-off between observability and performance.</description>
     </item>
     <item>
+      <title>GaLore: Training LLMs on Consumer GPUs via Gradient Low-Rank Projection</title>
+      <link>https://mohakchugh.is-a.dev/blog/galore-gradient-low-rank-projection-memory-efficient-llm-training</link>
+      <pubDate>Thu, 09 Jul 2026 00:00:00 GMT</pubDate>
+      <description>How GaLore achieves up to 65.5% memory reduction during LLM training by projecting gradients into a slowly-changing low-rank subspace, enabling LLaMA 7B pre-training on a single 24GB GPU without approximation trade-offs of LoRA.</description>
+    </item>
+    <item>
       <title>Hardware Transactional Memory: Intel TSX's Demise and ARM TME's Second Chance</title>
       <link>https://mohakchugh.is-a.dev/blog/hardware-transactional-memory-tsx-arm-tme-lock-elision</link>
       <pubDate>Thu, 09 Jul 2026 00:00:00 GMT</pubDate>
