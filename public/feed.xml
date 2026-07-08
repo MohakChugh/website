@@ -7,6 +7,12 @@
     <language>en</language>
     <atom:link href="https://mohakchugh.is-a.dev/feed.xml" rel="self" type="application/rss+xml"/>
     <item>
+      <title>FlashAttention-3: Warp Specialization and the 75% FLOPS Barrier on Hopper GPUs</title>
+      <link>https://mohakchugh.is-a.dev/blog/flash-attention-3-warp-specialization-hopper-gpu</link>
+      <pubDate>Wed, 08 Jul 2026 00:00:00 GMT</pubDate>
+      <description>How FlashAttention-3 exploits H100 warp specialization, asynchronous pipelines, and FP8 quantization to push attention throughput past 75% of peak Tensor Core FLOPS.</description>
+    </item>
+    <item>
       <title>io_uring and Submission Queue Polling: The Path to Zero-Syscall I/O</title>
       <link>https://mohakchugh.is-a.dev/blog/io-uring-submission-queue-polling-zero-syscall-io</link>
       <pubDate>Wed, 08 Jul 2026 00:00:00 GMT</pubDate>
