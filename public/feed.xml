@@ -121,6 +121,12 @@
       <description>RFC 9443 extends QUIC to use multiple network paths simultaneously within a single connection, enabling bandwidth aggregation, seamless WiFi/cellular handoff, and resilient mobile connectivity without application changes.</description>
     </item>
     <item>
+      <title>Shared Log Architecture: How Cloud-Native Databases Disaggregate Storage from Compute</title>
+      <link>https://mohakchugh.is-a.dev/blog/shared-log-disaggregated-storage-cloud-native-databases</link>
+      <pubDate>Thu, 09 Jul 2026 00:00:00 GMT</pubDate>
+      <description>The shared log pattern decouples compute from storage by treating a replicated, append-only log as the single source of truth. This deep dive explores how systems like Aurora DSQL, Neon, and FoundationDB leverage this architecture to achieve independent scaling, instant recovery, and strong consistency without distributed two-phase commit.</description>
+    </item>
+    <item>
       <title>Thread-Per-Core: Shared-Nothing Architecture for Predictable Microsecond Latency</title>
       <link>https://mohakchugh.is-a.dev/blog/thread-per-core-shared-nothing-predictable-microsecond-latency</link>
       <pubDate>Thu, 09 Jul 2026 00:00:00 GMT</pubDate>
