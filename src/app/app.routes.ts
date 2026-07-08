@@ -60,6 +60,18 @@ export const routes: Routes = [
     },
   },
   {
+    path: 'stats',
+    loadComponent: () => import('./pages/stats/stats').then((m) => m.Stats),
+    data: {
+      seo: {
+        title: 'Stats — Mohak Chugh · Live Site Analytics',
+        description:
+          'Live, real-time analytics for mohakchugh.is-a.dev. Page views, visitors, referrers, devices, and more. Fully transparent, privacy-first, no cookies.',
+        path: '/stats',
+      },
+    },
+  },
+  {
     path: 'contact',
     loadComponent: () => import('./pages/contact/contact').then((m) => m.Contact),
     data: {

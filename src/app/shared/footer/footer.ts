@@ -19,6 +19,7 @@ export class Footer {
     { label: 'Projects', path: '/projects' },
     { label: 'Blog', path: '/blog' },
     { label: 'CV', path: '/cv' },
+    { label: 'Stats', path: '/stats' },
     { label: 'Contact', path: '/contact' },
   ];
   readonly socials = [
