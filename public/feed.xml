@@ -13,6 +13,12 @@
       <description>Dissecting ART (Adaptive Radix Tree), the cache-conscious indexing structure that outperforms B-trees for in-memory workloads by collapsing node sizes, eliminating key comparisons, and exploiting CPU cache hierarchies.</description>
     </item>
     <item>
+      <title>Bw-Tree: Lock-Free B+ Trees for Multi-Core Database Scalability</title>
+      <link>https://mohakchugh.is-a.dev/blog/bw-tree-lock-free-b-plus-trees-multicore-databases</link>
+      <pubDate>Wed, 08 Jul 2026 00:00:00 GMT</pubDate>
+      <description>How the Bw-Tree achieves latch-free concurrent access to B+ tree indexes through delta chains, an indirection mapping table, and epoch-based garbage collection, enabling linear scalability on modern many-core hardware.</description>
+    </item>
+    <item>
       <title>CXL 3.1 Memory Pooling: Disaggregated Memory and the End of Stranded DRAM</title>
       <link>https://mohakchugh.is-a.dev/blog/cxl-memory-pooling-disaggregated-datacenter-architecture</link>
       <pubDate>Wed, 08 Jul 2026 00:00:00 GMT</pubDate>
