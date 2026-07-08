@@ -2,16 +2,7 @@
 # auto-blog.sh — Automated blog post generation every 4 hours.
 # Runs Claude Code headlessly to research + write + push a new blog post.
 #
-# Scheduled via crontab: 0 */4 * * * /Users/chumohak/website/scripts/auto-blog.sh
-#
-# What it does:
-# 1. Invokes Claude Code with a prompt that:
-#    - Picks a novel, deeply technical topic (recent papers, state-of-the-art techniques)
-#    - Writes a complete blog post in markdown with frontmatter
-#    - Saves it to content/blog/
-#    - Runs the generator
-#    - Commits and pushes
-# 2. Logs output to ~/auto-blog.log
+# Scheduled via crontab: 17 */4 * * * /Users/chumohak/website/scripts/auto-blog.sh
 #
 # Safety: no Amazon-internal info; only generic engineering concepts.
 
@@ -23,27 +14,63 @@ TIMESTAMP=$(date '+%Y-%m-%d %H:%M')
 
 echo "[$TIMESTAMP] auto-blog starting" >> "$LOG"
 
-# Environment for Claude Code (Bedrock)
+# ─── PATH ─────────────────────────────────────────────────────────────────────
+# Include ALL paths that might contain: node, claude, gh, git, aws
+# This is the permanent fix for "command not found" in cron (which starts with
+# PATH=/usr/bin:/bin only). We hardcode every known location.
+export PATH="$HOME/.toolbox/bin:/opt/homebrew/opt/node@24/bin:/opt/homebrew/bin:/usr/local/bin:/usr/bin:/bin:$PATH"
+
+# Verify critical binaries are reachable; abort early with clear error if not
+for cmd in claude node git gh; do
+  if ! command -v "$cmd" &>/dev/null; then
+    echo "[$TIMESTAMP] FATAL: '$cmd' not found in PATH=$PATH" >> "$LOG"
+    echo "---" >> "$LOG"
+    exit 1
+  fi
+done
+
+# ─── AWS credentials (Bedrock) ────────────────────────────────────────────────
 export CLAUDE_CODE_USE_BEDROCK=1
 export AWS_REGION=us-east-1
 export AWS_PROFILE=aki
 export ANTHROPIC_MODEL='us.anthropic.claude-fable-5'
 export DISABLE_PROMPT_CACHING=0
-export PATH="/opt/homebrew/opt/node@24/bin:/opt/homebrew/bin:$PATH"
 
-# GitHub auth: cron shells can't access macOS keyring, so inject token via env var.
-# gh auth token reads from keyring in interactive shells; for cron we cache it.
+# Pre-flight: verify AWS creds are valid. If expired, attempt a refresh via ada.
+# If ada isn't available or refresh fails, abort with a clear message rather than
+# wasting 3 minutes on a doomed claude invocation.
+if ! aws sts get-caller-identity --profile aki &>/dev/null; then
+  echo "[$TIMESTAMP] AWS creds expired for profile 'aki'. Attempting ada refresh..." >> "$LOG"
+  if command -v ada &>/dev/null; then
+    ada credentials update --account 820765098072 --profile aki --provider conduit --role IibsAdminAccess-DO-NOT-DELETE --once 2>>"$LOG" || true
+  fi
+  # Re-check after refresh attempt
+  if ! aws sts get-caller-identity --profile aki &>/dev/null; then
+    echo "[$TIMESTAMP] FATAL: AWS creds still invalid after refresh. Run: ada credentials update --account 820765098072 --profile aki --provider conduit --role IibsAdminAccess-DO-NOT-DELETE --once" >> "$LOG"
+    echo "---" >> "$LOG"
+    exit 1
+  fi
+  echo "[$TIMESTAMP] AWS creds refreshed successfully" >> "$LOG"
+fi
+
+# ─── GitHub auth ──────────────────────────────────────────────────────────────
+# Cron shells can't access macOS keyring. Use cached token + gh credential helper.
 GH_TOKEN_FILE="$HOME/.gh-token-cache"
 if [ -f "$GH_TOKEN_FILE" ]; then
   export GH_TOKEN=$(cat "$GH_TOKEN_FILE")
-  # Set git to use gh as credential helper for this session
   export GIT_ASKPASS="/opt/homebrew/bin/gh"
   export GIT_TERMINAL_PROMPT=0
 fi
 
+# Pre-flight: verify git push will work
 cd "$REPO"
+if ! git ls-remote origin HEAD &>/dev/null; then
+  echo "[$TIMESTAMP] FATAL: git cannot reach origin (GH auth broken). Run: gh auth token > ~/.gh-token-cache && chmod 600 ~/.gh-token-cache" >> "$LOG"
+  echo "---" >> "$LOG"
+  exit 1
+fi
 
-# The prompt that drives the entire generation
+# ─── Claude Code invocation ───────────────────────────────────────────────────
 PROMPT='You are an automated blog post generator for mohakchugh.is-a.dev (an Angular 22 portfolio).
 
 Your task: write ONE new, novel, deeply technical blog post and publish it.
@@ -69,7 +96,6 @@ STEPS (execute ALL of them):
 
 Do all steps now. Do not ask questions.'
 
-# Run Claude Code headlessly (non-interactive, skip permissions, auto-accept)
 claude --dangerously-skip-permissions \
   --effort high \
   -p "$PROMPT" \
