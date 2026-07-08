@@ -31,6 +31,7 @@
   <url><loc>https://mohakchugh.is-a.dev/blog/flash-attention-3-warp-specialization-hopper-gpu</loc><priority>0.7</priority></url>
   <url><loc>https://mohakchugh.is-a.dev/blog/io-uring-submission-queue-polling-zero-syscall-io</loc><priority>0.7</priority></url>
   <url><loc>https://mohakchugh.is-a.dev/blog/j-space-global-workspace-language-models</loc><priority>0.7</priority></url>
+  <url><loc>https://mohakchugh.is-a.dev/blog/mamba-2-state-space-models-linear-time-sequence-modeling</loc><priority>0.7</priority></url>
   <url><loc>https://mohakchugh.is-a.dev/blog/mixture-of-depths-conditional-compute-transformer-inference</loc><priority>0.7</priority></url>
   <url><loc>https://mohakchugh.is-a.dev/blog/multi-gen-lru-linux-page-replacement</loc><priority>0.7</priority></url>
   <url><loc>https://mohakchugh.is-a.dev/blog/mvcc-garbage-collection-version-chain-pruning-oltp</loc><priority>0.7</priority></url>

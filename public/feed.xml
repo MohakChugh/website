@@ -55,6 +55,12 @@
       <description>Anthropic found that Claude has developed a privileged internal workspace, the J-space, where concepts light up silently during reasoning. It mirrors Global Workspace Theory from neuroscience, and it lets researchers read what the model is thinking but not saying.</description>
     </item>
     <item>
+      <title>Mamba-2: State Space Models and Linear-Time Sequence Modeling Without Attention</title>
+      <link>https://mohakchugh.is-a.dev/blog/mamba-2-state-space-models-linear-time-sequence-modeling</link>
+      <pubDate>Wed, 08 Jul 2026 00:00:00 GMT</pubDate>
+      <description>How Mamba-2's structured state space duality (SSD) framework unifies SSMs with attention, achieving Transformer-quality language modeling at linear time complexity through hardware-aware block decomposition on modern GPUs.</description>
+    </item>
+    <item>
       <title>Mixture of Depths: Dynamic Token Routing for 50% Faster Transformer Inference</title>
       <link>https://mohakchugh.is-a.dev/blog/mixture-of-depths-conditional-compute-transformer-inference</link>
       <pubDate>Wed, 08 Jul 2026 00:00:00 GMT</pubDate>
