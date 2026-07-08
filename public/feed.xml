@@ -7,6 +7,12 @@
     <language>en</language>
     <atom:link href="https://mohakchugh.is-a.dev/feed.xml" rel="self" type="application/rss+xml"/>
     <item>
+      <title>Swiss Tables: How SIMD Rewrote the Rules of Hash Map Design</title>
+      <link>https://mohakchugh.is-a.dev/blog/swiss-tables-and-simd-hash-maps</link>
+      <pubDate>Wed, 08 Jul 2026 00:00:00 GMT</pubDate>
+      <description>Flat hash maps based on Swiss Table design now dominate C++, Rust, Go, and Zig standard libraries. The key insight is not a better hash function or collision strategy, it is using SIMD to probe 16 slots in a single instruction, turning the control byte array into a hardware-accelerated Bloom filter.</description>
+    </item>
+    <item>
       <title>Iceberg v3 Deletion Vectors: Fixing Merge-on-Read With One Bitmap Per File</title>
       <link>https://mohakchugh.is-a.dev/blog/iceberg-v3-deletion-vectors</link>
       <pubDate>Tue, 07 Jul 2026 00:00:00 GMT</pubDate>
