@@ -37,6 +37,12 @@
       <description>DeepSeek-V2 introduced Multi-head Latent Attention (MLA), which replaces per-head KV storage with a shared low-rank latent vector. By jointly compressing keys and values into a bottleneck representation and absorbing the up-projection into attention weights, MLA cuts KV cache memory by over 93% while matching or exceeding standard multi-head attention quality. Here is how the linear algebra works and why this changes the economics of long-context serving.</description>
     </item>
     <item>
+      <title>QUIC Multipath: Simultaneous Network Paths via RFC 9443</title>
+      <link>https://mohakchugh.is-a.dev/blog/quic-multipath-rfc9443-simultaneous-network-paths</link>
+      <pubDate>Thu, 09 Jul 2026 00:00:00 GMT</pubDate>
+      <description>RFC 9443 extends QUIC to use multiple network paths simultaneously within a single connection, enabling bandwidth aggregation, seamless WiFi/cellular handoff, and resilient mobile connectivity without application changes.</description>
+    </item>
+    <item>
       <title>Adaptive Radix Trees: How Modern Databases Achieve Sub-Microsecond Lookups</title>
       <link>https://mohakchugh.is-a.dev/blog/adaptive-radix-trees-art-cache-conscious-indexing</link>
       <pubDate>Wed, 08 Jul 2026 00:00:00 GMT</pubDate>
