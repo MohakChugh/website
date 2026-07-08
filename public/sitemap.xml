@@ -26,6 +26,7 @@
   <url><loc>https://mohakchugh.is-a.dev/blog/crdts-automerge-columnar-encoding-collaborative-editing</loc><priority>0.7</priority></url>
   <url><loc>https://mohakchugh.is-a.dev/blog/ebpf-continuous-profiling-zero-overhead-production-observability</loc><priority>0.7</priority></url>
   <url><loc>https://mohakchugh.is-a.dev/blog/hybrid-logical-clocks-causality-physical-time-distributed-databases</loc><priority>0.7</priority></url>
+  <url><loc>https://mohakchugh.is-a.dev/blog/memory-tagging-extensions-hardware-memory-safety-arm</loc><priority>0.7</priority></url>
   <url><loc>https://mohakchugh.is-a.dev/blog/adaptive-radix-trees-art-cache-conscious-indexing</loc><priority>0.7</priority></url>
   <url><loc>https://mohakchugh.is-a.dev/blog/bcachefs-cow-btrees-crash-consistent-filesystem-design</loc><priority>0.7</priority></url>
   <url><loc>https://mohakchugh.is-a.dev/blog/bitnet-ternary-weights-1-bit-llms-without-multiplication</loc><priority>0.7</priority></url>

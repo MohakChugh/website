@@ -25,6 +25,12 @@
       <description>How Hybrid Logical Clocks combine NTP-synchronized physical time with Lamport causality to provide globally meaningful timestamps without coordination, enabling snapshot isolation and serializable transactions across geo-distributed databases.</description>
     </item>
     <item>
+      <title>Memory Tagging Extensions: Hardware-Assisted Memory Safety Without the Performance Tax</title>
+      <link>https://mohakchugh.is-a.dev/blog/memory-tagging-extensions-hardware-memory-safety-arm</link>
+      <pubDate>Thu, 09 Jul 2026 00:00:00 GMT</pubDate>
+      <description>ARM's Memory Tagging Extensions (MTE) catch use-after-free and buffer overflows in hardware with 3-5% overhead, compared to 100%+ for software sanitizers. How tag coloring, lock-and-key validation, and probabilistic detection achieve what decades of software-only approaches could not.</description>
+    </item>
+    <item>
       <title>Adaptive Radix Trees: How Modern Databases Achieve Sub-Microsecond Lookups</title>
       <link>https://mohakchugh.is-a.dev/blog/adaptive-radix-trees-art-cache-conscious-indexing</link>
       <pubDate>Wed, 08 Jul 2026 00:00:00 GMT</pubDate>
