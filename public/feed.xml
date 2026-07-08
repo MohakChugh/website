@@ -37,6 +37,12 @@
       <description>How Hybrid Logical Clocks combine NTP-synchronized physical time with Lamport causality to provide globally meaningful timestamps without coordination, enabling snapshot isolation and serializable transactions across geo-distributed databases.</description>
     </item>
     <item>
+      <title>Intel AMX: Hardware Matrix Multiplication on CPUs and the Death of GPU-Only Inference</title>
+      <link>https://mohakchugh.is-a.dev/blog/intel-amx-cpu-matrix-acceleration-inference-without-gpus</link>
+      <pubDate>Thu, 09 Jul 2026 00:00:00 GMT</pubDate>
+      <description>Intel's Advanced Matrix Extensions (AMX) bring dedicated matrix multiply-accumulate hardware to server CPUs, enabling BFloat16 and INT8 inference workloads at throughputs that challenge discrete accelerators for small-batch serving.</description>
+    </item>
+    <item>
       <title>Virtual Thread Pinning: How JEP 491 Finally Solved Java's Last Concurrency Bottleneck</title>
       <link>https://mohakchugh.is-a.dev/blog/java-virtual-threads-pinning-jep491-continuation-stealing</link>
       <pubDate>Thu, 09 Jul 2026 00:00:00 GMT</pubDate>

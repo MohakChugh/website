@@ -28,6 +28,7 @@
   <url><loc>https://mohakchugh.is-a.dev/blog/ebpf-continuous-profiling-zero-overhead-production-observability</loc><priority>0.7</priority></url>
   <url><loc>https://mohakchugh.is-a.dev/blog/hardware-transactional-memory-tsx-arm-tme-lock-elision</loc><priority>0.7</priority></url>
   <url><loc>https://mohakchugh.is-a.dev/blog/hybrid-logical-clocks-causality-physical-time-distributed-databases</loc><priority>0.7</priority></url>
+  <url><loc>https://mohakchugh.is-a.dev/blog/intel-amx-cpu-matrix-acceleration-inference-without-gpus</loc><priority>0.7</priority></url>
   <url><loc>https://mohakchugh.is-a.dev/blog/java-virtual-threads-pinning-jep491-continuation-stealing</loc><priority>0.7</priority></url>
   <url><loc>https://mohakchugh.is-a.dev/blog/memory-tagging-extensions-hardware-memory-safety-arm</loc><priority>0.7</priority></url>
   <url><loc>https://mohakchugh.is-a.dev/blog/multi-head-latent-attention-kv-cache-compression</loc><priority>0.7</priority></url>
