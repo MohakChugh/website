@@ -55,6 +55,12 @@
       <description>ARM's Memory Tagging Extensions (MTE) catch use-after-free and buffer overflows in hardware with 3-5% overhead, compared to 100%+ for software sanitizers. How tag coloring, lock-and-key validation, and probabilistic detection achieve what decades of software-only approaches could not.</description>
     </item>
     <item>
+      <title>Memory-Mapped I/O Considered Harmful: Why Modern Databases Avoid mmap for Buffer Management</title>
+      <link>https://mohakchugh.is-a.dev/blog/mmap-considered-harmful-database-buffer-management</link>
+      <pubDate>Thu, 09 Jul 2026 00:00:00 GMT</pubDate>
+      <description>mmap() seems like the perfect database buffer pool: let the OS handle page caching, avoid copies, and get a simple pointer interface. In practice, it introduces catastrophic stalls, uncontrollable eviction, and subtle corruption. Here is why every serious DBMS builds its own buffer manager, and the systems-level reasons mmap fails at scale.</description>
+    </item>
+    <item>
       <title>Multi-Head Latent Attention: Compressing KV Cache by 93% Without Losing Quality</title>
       <link>https://mohakchugh.is-a.dev/blog/multi-head-latent-attention-kv-cache-compression</link>
       <pubDate>Thu, 09 Jul 2026 00:00:00 GMT</pubDate>
