@@ -7,6 +7,12 @@
     <language>en</language>
     <atom:link href="https://mohakchugh.is-a.dev/feed.xml" rel="self" type="application/rss+xml"/>
     <item>
+      <title>io_uring and Submission Queue Polling: The Path to Zero-Syscall I/O</title>
+      <link>https://mohakchugh.is-a.dev/blog/io-uring-submission-queue-polling-zero-syscall-io</link>
+      <pubDate>Wed, 08 Jul 2026 00:00:00 GMT</pubDate>
+      <description>How io_uring eliminated the system call overhead that plagued Linux I/O for decades, and why submission queue polling lets the kernel do I/O without ever context-switching.</description>
+    </item>
+    <item>
       <title>J-Space: Anthropic Discovered a Global Workspace Inside Claude</title>
       <link>https://mohakchugh.is-a.dev/blog/j-space-global-workspace-language-models</link>
       <pubDate>Wed, 08 Jul 2026 00:00:00 GMT</pubDate>
