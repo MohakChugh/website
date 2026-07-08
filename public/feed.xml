@@ -61,6 +61,12 @@
       <description>RFC 9443 extends QUIC to use multiple network paths simultaneously within a single connection, enabling bandwidth aggregation, seamless WiFi/cellular handoff, and resilient mobile connectivity without application changes.</description>
     </item>
     <item>
+      <title>Thread-Per-Core: Shared-Nothing Architecture for Predictable Microsecond Latency</title>
+      <link>https://mohakchugh.is-a.dev/blog/thread-per-core-shared-nothing-predictable-microsecond-latency</link>
+      <pubDate>Thu, 09 Jul 2026 00:00:00 GMT</pubDate>
+      <description>Modern databases like ScyllaDB and Redpanda abandon thread pools entirely, pinning one thread to each CPU core with zero shared mutable state between them. The result is predictable tail latency at microsecond scale, but the programming model demands rethinking everything from memory allocation to request routing.</description>
+    </item>
+    <item>
       <title>Adaptive Radix Trees: How Modern Databases Achieve Sub-Microsecond Lookups</title>
       <link>https://mohakchugh.is-a.dev/blog/adaptive-radix-trees-art-cache-conscious-indexing</link>
       <pubDate>Wed, 08 Jul 2026 00:00:00 GMT</pubDate>
