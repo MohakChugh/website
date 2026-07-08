@@ -153,12 +153,20 @@ export const EDUCATION: EducationItem[] = [
   },
 ];
 
-export const PUBLICATION: Publication = {
-  title: 'Benchmarking geospatial database on Kubernetes cluster',
-  doi: '10.1186/s13634-021-00754-2',
-  year: '2021',
-  url: 'https://ui.adsabs.harvard.edu/abs/2021EJASP2021...43S/abstract',
-};
+export const PUBLICATIONS: Publication[] = [
+  {
+    title: 'How Amazon Finance Automation built a generative AI Q&A chat assistant using Amazon Bedrock',
+    doi: '',
+    year: '2024',
+    url: 'https://aws.amazon.com/blogs/machine-learning/how-amazon-finance-automation-built-a-generative-ai-qa-chat-assistant-using-amazon-bedrock/',
+  },
+  {
+    title: 'Benchmarking geospatial database on Kubernetes cluster',
+    doi: '10.1186/s13634-021-00754-2',
+    year: '2021',
+    url: 'https://ui.adsabs.harvard.edu/abs/2021EJASP2021...43S/abstract',
+  },
+];
 
 export const SOCIALS: SocialLink[] = [
   {

@@ -16,7 +16,7 @@ import {
   PROFILE,
   EXPERIENCE,
   EDUCATION,
-  PUBLICATION,
+  PUBLICATIONS,
   SKILL_GROUPS,
   AMCAT_URL,
 } from '../../data/profile.data';
@@ -47,7 +47,7 @@ export class Cv {
   readonly profile = PROFILE;
   readonly experience = EXPERIENCE;
   readonly education = EDUCATION;
-  readonly publication = PUBLICATION;
+  readonly publications = PUBLICATIONS;
   readonly skillGroups = SKILL_GROUPS;
   readonly amcatUrl = AMCAT_URL;
 
