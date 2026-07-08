@@ -13,6 +13,12 @@
       <description>Anthropic found that Claude has developed a privileged internal workspace, the J-space, where concepts light up silently during reasoning. It mirrors Global Workspace Theory from neuroscience, and it lets researchers read what the model is thinking but not saying.</description>
     </item>
     <item>
+      <title>Multi-Gen LRU: How Linux Reinvented Page Replacement After Two Decades</title>
+      <link>https://mohakchugh.is-a.dev/blog/multi-gen-lru-linux-page-replacement</link>
+      <pubDate>Wed, 08 Jul 2026 00:00:00 GMT</pubDate>
+      <description>Linux's legacy page reclaim scanned the entire active list to find cold pages. Multi-Gen LRU replaces that O(n) scan with generation-based aging — cutting memory-pressure stalls by 40% in real workloads.</description>
+    </item>
+    <item>
       <title>Swiss Tables: How SIMD Rewrote the Rules of Hash Map Design</title>
       <link>https://mohakchugh.is-a.dev/blog/swiss-tables-and-simd-hash-maps</link>
       <pubDate>Wed, 08 Jul 2026 00:00:00 GMT</pubDate>
