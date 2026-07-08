@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 import { BlogPost } from '../data/portfolio.models';
 import { BLOG_POSTS } from '../data/blog.generated';
+import { BLOG_CATEGORIES, BlogCategory, TAG_TO_CATEGORY } from '../data/blog-categories';
 
 /**
  * Blog data access — pure, synchronous, unit-tested.
@@ -37,6 +38,44 @@ export class BlogService {
     return this.posts.filter((p) => p.tags.includes(tag));
   }
 
+  /** Categories with post counts (used by the category pill bar). */
+  categories(): (BlogCategory & { count: number })[] {
+    return BLOG_CATEGORIES.map((c) => ({
+      ...c,
+      count: this.posts.filter((p) => p.tags.some((t) => c.tags.includes(t))).length,
+    })).filter((c) => c.count > 0);
+  }
+
+  /** Filter posts by category key (null = all). */
+  filterByCategory(categoryKey: string | null): BlogPost[] {
+    if (!categoryKey) return this.posts;
+    const cat = BLOG_CATEGORIES.find((c) => c.key === categoryKey);
+    if (!cat) return this.posts;
+    return this.posts.filter((p) => p.tags.some((t) => cat.tags.includes(t)));
+  }
+
+  /** Related posts by shared-tag overlap (excludes the source post). */
+  related(slug: string, limit = 3): BlogPost[] {
+    const source = this.bySlug(slug);
+    if (!source) return [];
+    return this.posts
+      .filter((p) => p.slug !== slug)
+      .map((p) => ({ p, score: p.tags.filter((t) => source.tags.includes(t)).length }))
+      .filter((r) => r.score > 0)
+      .sort((a, b) => b.score - a.score)
+      .slice(0, limit)
+      .map((r) => r.p);
+  }
+
+  /** Get the category key for a post (from its first matching tag). */
+  categoryOf(post: BlogPost): string | null {
+    for (const t of post.tags) {
+      const key = TAG_TO_CATEGORY.get(t);
+      if (key) return key;
+    }
+    return null;
+  }
+
   /** Previous and next posts relative to a slug (for prev/next nav). */
   adjacent(slug: string): { prev: BlogPost | null; next: BlogPost | null } {
     const idx = this.posts.findIndex((p) => p.slug === slug);
@@ -45,6 +84,16 @@ export class BlogService {
       prev: this.posts[idx + 1] ?? null,
       next: this.posts[idx - 1] ?? null,
     };
+  }
+
+  /** Total reading minutes across all posts (or a filtered subset). */
+  totalReadingMinutes(posts?: BlogPost[]): number {
+    return (posts ?? this.posts).reduce((sum, p) => sum + p.readingMinutes, 0);
+  }
+
+  /** Max reading time across all posts (for spectrum bar normalization). */
+  maxReadingMinutes(): number {
+    return Math.max(...this.posts.map((p) => p.readingMinutes), 1);
   }
 
   /** Keyword search over title/tags/excerpt — same tokenizer as AskService. */

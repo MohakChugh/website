@@ -18,8 +18,9 @@ import {
   lucideX,
 } from '@ng-icons/lucide';
 import { AskService } from '../ask.service';
+import { BlogService } from '../blog.service';
 import { ASK_CHIPS } from '../../data/ask.data';
-import { AskEntry, Project } from '../../data/portfolio.models';
+import { AskEntry, BlogPost, Project } from '../../data/portfolio.models';
 import { ProjectCard } from '../project-card/project-card';
 
 /**
@@ -44,6 +45,7 @@ import { ProjectCard } from '../project-card/project-card';
 })
 export class AskPalette {
   private readonly ask = inject(AskService);
+  private readonly blog = inject(BlogService);
   private readonly router = inject(Router);
 
   readonly open = signal(false);
@@ -55,6 +57,8 @@ export class AskPalette {
   readonly results = computed<AskEntry[]>(() => this.ask.search(this.query()));
   /** Real project cards matching the query, shown inline above the answers. */
   readonly projectResults = computed<Project[]>(() => this.ask.searchProjects(this.query()));
+  /** Blog posts matching the query (top 5). */
+  readonly blogResults = computed<BlogPost[]>(() => this.blog.search(this.query()).slice(0, 5));
 
   @HostListener('document:keydown', ['$event'])
   onKeydown(e: KeyboardEvent): void {
@@ -94,6 +98,12 @@ export class AskPalette {
     } else {
       this.router.navigateByUrl(entry.route);
     }
+  }
+
+  /** Navigate to a blog post from the palette. */
+  gotoBlog(post: BlogPost): void {
+    this.close();
+    this.router.navigate(['/blog', post.slug]);
   }
 
   /** Close the palette when a project card inside it is clicked. */

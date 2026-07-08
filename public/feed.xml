@@ -43,6 +43,12 @@
       <description>How Ring Attention eliminates the memory wall for long-context transformers by overlapping blockwise attention computation with KV-cache communication in a ring topology, enabling near-linear context scaling across devices.</description>
     </item>
     <item>
+      <title>sched_ext: BPF-Pluggable CPU Schedulers and the End of One-Size-Fits-All Scheduling</title>
+      <link>https://mohakchugh.is-a.dev/blog/sched-ext-bpf-pluggable-cpu-schedulers-linux</link>
+      <pubDate>Wed, 08 Jul 2026 00:00:00 GMT</pubDate>
+      <description>Linux 6.12 merged sched_ext, a framework that lets you write CPU scheduler policies as BPF programs, load them at runtime, and swap them without rebooting. Here's how it works, why it matters, and what Meta learned running it in production.</description>
+    </item>
+    <item>
       <title>Swiss Tables: How SIMD Rewrote the Rules of Hash Map Design</title>
       <link>https://mohakchugh.is-a.dev/blog/swiss-tables-and-simd-hash-maps</link>
       <pubDate>Wed, 08 Jul 2026 00:00:00 GMT</pubDate>

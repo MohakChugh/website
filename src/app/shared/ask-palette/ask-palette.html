@@ -64,6 +64,24 @@
           </div>
         }
 
+        <!-- inline matching blog posts -->
+        @if (blogResults().length) {
+          <div class="px-1 pb-2 pt-1">
+            <p class="eyebrow mb-2 px-2">Blog posts</p>
+            <ul class="space-y-1">
+              @for (post of blogResults(); track post.slug) {
+                <li
+                  class="group flex cursor-pointer items-center justify-between rounded-lg px-3 py-2 transition-colors hover:bg-secondary/60"
+                  (click)="gotoBlog(post)"
+                >
+                  <span class="text-sm font-medium">{{ post.title }}</span>
+                  <span class="shrink-0 text-xs text-muted-foreground">{{ post.readingMinutes }} min</span>
+                </li>
+              }
+            </ul>
+          </div>
+        }
+
         <ul>
         @for (entry of results(); track entry.question) {
           <li

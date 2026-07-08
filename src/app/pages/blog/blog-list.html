@@ -1,49 +1,183 @@
 <section class="mx-auto max-w-5xl px-6 pt-32 pb-16">
-  <header class="reveal mb-12" appReveal>
+  <!-- Header -->
+  <header class="reveal mb-8" appReveal>
     <p class="eyebrow">03 · Writing</p>
-    <h1 class="mt-2 font-display text-4xl font-bold tracking-tight sm:text-5xl">
-      Recent <span class="text-ghost">Posts</span>
-    </h1>
+    <div class="mt-2 flex items-baseline justify-between gap-4">
+      <h1 class="font-display text-4xl font-bold tracking-tight sm:text-5xl">
+        Engineering <span class="text-ghost">Notes</span>
+      </h1>
+      <span class="hidden text-sm text-muted-foreground sm:block">
+        ~{{ totalReadingTime() }} min of reading
+      </span>
+    </div>
     <p class="mt-4 max-w-2xl text-lg" appScrollFill>
-      Engineering notes, deep dives, and lessons from building at scale.
+      Deep dives into systems, ML, and data engineering. Search, filter, or browse.
     </p>
   </header>
 
-  <!-- tag filter chips -->
-  <div class="reveal mb-8 flex flex-wrap gap-2" appReveal>
+  <!-- Search bar -->
+  <div class="reveal relative mb-6" appReveal>
+    <div class="glass-card flex items-center gap-3 rounded-xl border border-border px-4 py-3 transition-[border-color] focus-within:border-primary/50">
+      <ng-icon name="lucideSearch" class="size-4 shrink-0 text-muted-foreground" />
+      <input
+        #searchInput
+        type="text"
+        placeholder="Search posts..."
+        [value]="searchQuery()"
+        (input)="onSearch($event)"
+        class="w-full bg-transparent text-sm text-foreground placeholder:text-muted-foreground focus:outline-none"
+      />
+      @if (searchQuery()) {
+        <button (click)="clearSearch()" class="shrink-0 text-muted-foreground transition-colors hover:text-foreground">
+          <ng-icon name="lucideX" class="size-4" />
+        </button>
+      }
+      <kbd class="hidden shrink-0 rounded border border-border px-1.5 py-0.5 font-mono text-[10px] text-muted-foreground sm:inline">
+        /
+      </kbd>
+    </div>
+  </div>
+
+  <!-- Category pills -->
+  <div class="reveal mb-6 flex flex-wrap gap-2" appReveal>
     <button
-      (click)="setTag(null)"
-      class="rounded-full border px-3 py-1 font-mono text-xs uppercase tracking-wider transition-colors"
-      [class.border-primary]="!activeTag()"
-      [class.text-primary]="!activeTag()"
-      [class.border-border]="activeTag()"
-      [class.text-muted-foreground]="activeTag()"
+      (click)="setCategory(null)"
+      class="rounded-full border px-3 py-1.5 font-mono text-xs uppercase tracking-wider transition-all"
+      [class.border-primary]="!activeCategory() && !activeTag()"
+      [class.bg-primary/10]="!activeCategory() && !activeTag()"
+      [class.text-primary]="!activeCategory() && !activeTag()"
+      [class.border-border]="activeCategory() || activeTag()"
+      [class.text-muted-foreground]="activeCategory() || activeTag()"
     >
-      All
+      All <span class="ml-1 opacity-60">{{ totalPosts() }}</span>
     </button>
-    @for (t of allTags(); track t.tag) {
+    @for (cat of categories(); track cat.key) {
       <button
-        (click)="setTag(t.tag)"
-        class="rounded-full border px-3 py-1 font-mono text-xs uppercase tracking-wider transition-colors"
-        [class.border-primary]="activeTag() === t.tag"
-        [class.text-primary]="activeTag() === t.tag"
-        [class.border-border]="activeTag() !== t.tag"
-        [class.text-muted-foreground]="activeTag() !== t.tag"
+        (click)="setCategory(cat.key)"
+        class="rounded-full border px-3 py-1.5 font-mono text-xs uppercase tracking-wider transition-all"
+        [class.border-primary]="activeCategory() === cat.key"
+        [class.bg-primary/10]="activeCategory() === cat.key"
+        [class.text-primary]="activeCategory() === cat.key"
+        [class.border-border]="activeCategory() !== cat.key"
+        [class.text-muted-foreground]="activeCategory() !== cat.key"
       >
-        {{ t.tag }} <span class="ml-1 opacity-60">{{ t.count }}</span>
+        {{ cat.label }} <span class="ml-1 opacity-60">{{ cat.count }}</span>
       </button>
     }
   </div>
 
-  <!-- featured latest post (full-width hero card) -->
+  <!-- Active tag sub-filter bar -->
+  @if (activeTag()) {
+    <div class="mb-6 flex items-center gap-2 text-sm text-muted-foreground">
+      <span>Filtering by:</span>
+      <span class="inline-flex items-center gap-1 rounded-full border border-primary/40 bg-primary/10 px-2.5 py-0.5 font-mono text-xs text-primary">
+        {{ activeTag() }}
+        <button (click)="clearTag()" class="ml-0.5 transition-colors hover:text-foreground">
+          <ng-icon name="lucideX" class="size-3" />
+        </button>
+      </span>
+    </div>
+  }
+
+  <!-- Discovery sections (only when browsing without filter/search) -->
+  @if (showDiscovery()) {
+    <!-- Deep Dives — most thorough/in-depth posts -->
+    <div class="reveal mb-10" appReveal>
+      <div class="mb-4 flex items-center gap-3">
+        <h2 class="font-display text-lg font-semibold">Deep Dives</h2>
+        <span class="font-mono text-xs text-muted-foreground">longest reads</span>
+        <div class="h-px flex-1 bg-border/50"></div>
+      </div>
+      <div class="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
+        @for (post of deepDives(); track post.slug) {
+          <a
+            [routerLink]="['/blog', post.slug]"
+            class="tilt tilt-glow glass-card group relative rounded-xl border border-border p-4 transition-[border-color] hover:border-primary/40"
+            appTilt
+            [tiltMax]="6"
+          >
+            <div class="absolute inset-x-0 top-0 h-[3px] overflow-hidden rounded-t-xl">
+              <div
+                class="h-full bg-gradient-to-r from-[var(--grad-from)] to-[var(--grad-to)]"
+                [style.width.%]="readingSpectrum(post)"
+              ></div>
+            </div>
+            <div class="relative z-[2]">
+              <h3 class="link-wipe font-display text-sm font-semibold leading-tight line-clamp-2">
+                {{ post.title }}
+              </h3>
+              <div class="mt-2 flex items-center gap-2 text-xs text-muted-foreground">
+                <ng-icon name="lucideClock" class="size-3" />
+                <span>{{ post.readingMinutes }} min</span>
+              </div>
+            </div>
+          </a>
+        }
+      </div>
+    </div>
+
+    <!-- Latest posts -->
+    <div class="reveal mb-10" appReveal>
+      <div class="mb-4 flex items-center gap-3">
+        <h2 class="font-display text-lg font-semibold">Latest</h2>
+        <span class="font-mono text-xs text-muted-foreground">newest first</span>
+        <div class="h-px flex-1 bg-border/50"></div>
+      </div>
+      <div class="grid gap-4 sm:grid-cols-2">
+        @for (post of latestPosts(); track post.slug) {
+          <a
+            [routerLink]="['/blog', post.slug]"
+            class="tilt tilt-glow glass-card group relative rounded-xl border border-border p-5 transition-[border-color] hover:border-primary/40"
+            appTilt
+            [tiltMax]="5"
+          >
+            <div class="absolute inset-x-0 top-0 h-[3px] overflow-hidden rounded-t-xl">
+              <div
+                class="h-full bg-gradient-to-r from-[var(--grad-from)] to-[var(--grad-to)] opacity-60"
+                [style.width.%]="readingSpectrum(post)"
+              ></div>
+            </div>
+            <div class="relative z-[2]">
+              <p class="eyebrow">{{ post.date | date: 'mediumDate' }}</p>
+              <h3 class="link-wipe mt-1 font-display text-base font-semibold tracking-tight line-clamp-2">
+                {{ post.title }}
+              </h3>
+              <p class="mt-1.5 text-sm text-muted-foreground line-clamp-2">{{ post.excerpt }}</p>
+              <div class="mt-2 flex items-center gap-1 text-xs text-muted-foreground">
+                <ng-icon name="lucideClock" class="size-3" /> {{ post.readingMinutes }} min
+              </div>
+            </div>
+          </a>
+        }
+      </div>
+    </div>
+
+    <!-- All posts section header -->
+    <div class="mb-4 flex items-center gap-3">
+      <h2 class="font-display text-lg font-semibold">All Posts</h2>
+      <span class="font-mono text-xs text-muted-foreground">by date</span>
+      <div class="h-px flex-1 bg-border/50"></div>
+    </div>
+  }
+
+  <!-- Featured hero card (hidden during search) -->
   @if (featured(); as post) {
     <a
       [routerLink]="['/blog', post.slug]"
-      class="reveal tilt tilt-glow border-animate glass-card group mb-8 block rounded-2xl border border-border p-8 transition-[border-color] hover:border-primary/40"
+      class="reveal tilt tilt-glow border-animate-on glass-card group mb-8 block rounded-2xl border border-border p-8 transition-[border-color] hover:border-primary/40"
+      [class.ring-1]="focusedIndex() === 0"
+      [class.ring-primary/40]="focusedIndex() === 0"
       appReveal
       appTilt
       [tiltMax]="3"
     >
+      <!-- Reading time spectrum bar -->
+      <div class="absolute inset-x-0 top-0 h-[3px] overflow-hidden rounded-t-2xl">
+        <div
+          class="h-full bg-gradient-to-r from-[var(--grad-from)] to-[var(--grad-to)] transition-all"
+          [style.width.%]="readingSpectrum(post)"
+        ></div>
+      </div>
       <div class="relative z-[2]">
         <p class="eyebrow">{{ post.date | date: 'mediumDate' }}</p>
         <h2 class="link-wipe mt-2 font-display text-2xl font-bold tracking-tight sm:text-3xl">
@@ -51,8 +185,15 @@
         </h2>
         <p class="mt-3 text-muted-foreground line-clamp-3">{{ post.excerpt }}</p>
         <div class="mt-4 flex flex-wrap items-center gap-3">
-          @for (tag of post.tags; track tag) {
-            <span hlmBadge variant="secondary" class="font-mono text-xs">{{ tag }}</span>
+          @for (tag of post.tags.slice(0, 4); track tag) {
+            <button
+              (click)="setTag(tag); $event.preventDefault(); $event.stopPropagation()"
+              hlmBadge
+              variant="secondary"
+              class="cursor-pointer font-mono text-xs transition-colors hover:text-primary"
+            >
+              {{ tag }}
+            </button>
           }
           <span class="flex items-center gap-1 text-xs text-muted-foreground">
             <ng-icon name="lucideClock" class="size-3" /> {{ post.readingMinutes }} min read
@@ -62,45 +203,79 @@
     </a>
   }
 
-  <!-- remaining posts grid -->
-  @if (remaining().length) {
-    <div class="grid gap-6 sm:grid-cols-2">
-      @for (post of remaining(); track post.slug; let i = $index) {
-        <a
-          [routerLink]="['/blog', post.slug]"
-          class="reveal tilt tilt-glow glass-card group rounded-2xl border border-border p-6 transition-[border-color] hover:border-primary/40"
-          appReveal
-          [revealDelay]="(i % 2) * 100"
-          appTilt
-          [tiltMax]="5"
-        >
-          <div class="relative z-[2]">
-            <p class="eyebrow">{{ post.date | date: 'mediumDate' }}</p>
-            <h3 class="link-wipe mt-2 font-display text-lg font-semibold tracking-tight">
-              {{ post.title }}
-            </h3>
-            <p class="mt-2 text-sm text-muted-foreground line-clamp-2">{{ post.excerpt }}</p>
-            <div class="mt-3 flex flex-wrap items-center gap-2">
-              @for (tag of post.tags; track tag) {
-                <span class="rounded-md bg-secondary/60 px-2 py-0.5 font-mono text-[11px] text-muted-foreground">
-                  {{ tag }}
-                </span>
-              }
-              <span class="ml-auto flex items-center gap-1 text-xs text-muted-foreground">
-                <ng-icon name="lucideClock" class="size-3" /> {{ post.readingMinutes }} min
-              </span>
+  <!-- Date-grouped timeline -->
+  @for (group of dateGroups(); track group.label) {
+    <div class="mb-6">
+      <div class="mb-3 flex items-center gap-3">
+        <span class="font-mono text-xs text-muted-foreground">{{ group.label }}</span>
+        <div class="h-px flex-1 bg-border/50"></div>
+      </div>
+      <div class="grid gap-4 sm:grid-cols-2">
+        @for (post of group.posts; track post.slug; let i = $index) {
+          <a
+            [routerLink]="['/blog', post.slug]"
+            class="tilt tilt-glow glass-card group relative rounded-2xl border border-border p-5 transition-[border-color,box-shadow] hover:border-primary/40"
+            [class.ring-1]="focusedIndex() === flatIndexOf(post)"
+            [class.ring-primary/40]="focusedIndex() === flatIndexOf(post)"
+            appTilt
+            [tiltMax]="5"
+          >
+            <!-- Reading time spectrum bar -->
+            <div class="absolute inset-x-0 top-0 h-[3px] overflow-hidden rounded-t-2xl">
+              <div
+                class="h-full bg-gradient-to-r from-[var(--grad-from)] to-[var(--grad-to)] opacity-60 transition-all"
+                [style.width.%]="readingSpectrum(post)"
+              ></div>
             </div>
-          </div>
-        </a>
-      }
+            <div class="relative z-[2]">
+              <div class="flex items-center gap-2">
+                <p class="eyebrow">{{ post.date | date: 'mediumDate' }}</p>
+              </div>
+              <h3 class="link-wipe mt-2 font-display text-base font-semibold tracking-tight sm:text-lg">
+                {{ post.title }}
+              </h3>
+              <p class="mt-2 text-sm text-muted-foreground line-clamp-2">{{ post.excerpt }}</p>
+              <div class="mt-3 flex flex-wrap items-center gap-2">
+                @for (tag of post.tags.slice(0, 3); track tag) {
+                  <button
+                    (click)="setTag(tag); $event.preventDefault(); $event.stopPropagation()"
+                    class="cursor-pointer rounded-md bg-secondary/60 px-2 py-0.5 font-mono text-[11px] text-muted-foreground transition-colors hover:text-primary"
+                  >
+                    {{ tag }}
+                  </button>
+                }
+                <span class="ml-auto flex items-center gap-1 text-xs text-muted-foreground">
+                  <ng-icon name="lucideClock" class="size-3" /> {{ post.readingMinutes }} min
+                </span>
+              </div>
+            </div>
+          </a>
+        }
+      </div>
     </div>
   }
 
-  <!-- empty state -->
-  @if (!posts().length) {
+  <!-- Load more button -->
+  @if (hasMore()) {
+    <div class="mt-8 flex justify-center">
+      <button
+        (click)="showMore()"
+        class="glass-card border-animate rounded-xl border border-border px-6 py-3 font-mono text-sm text-muted-foreground transition-[border-color,color] hover:border-primary/40 hover:text-foreground"
+      >
+        Show more posts
+      </button>
+    </div>
+  }
+
+  <!-- Empty state -->
+  @if (!filteredPosts().length) {
     <div class="reveal py-16 text-center" appReveal>
       <ng-icon name="lucideSparkles" class="mx-auto mb-3 size-8 text-muted-foreground" />
-      <p class="text-muted-foreground">No posts yet — check back soon.</p>
+      @if (isSearching()) {
+        <p class="text-muted-foreground">No posts matching "{{ searchQuery() }}"</p>
+      } @else {
+        <p class="text-muted-foreground">No posts yet — check back soon.</p>
+      }
     </div>
   }
 </section>
