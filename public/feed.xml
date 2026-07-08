@@ -97,6 +97,12 @@
       <description>How borrowing virtual memory concepts from operating systems, specifically non-contiguous paging and demand allocation, eliminated 60-80% memory waste in LLM inference and became the universal standard for production serving.</description>
     </item>
     <item>
+      <title>Query Compilation: The Produce/Consume Model and LLVM Code Generation</title>
+      <link>https://mohakchugh.is-a.dev/blog/query-compilation-produce-consume-llvm-code-generation</link>
+      <pubDate>Thu, 09 Jul 2026 00:00:00 GMT</pubDate>
+      <description>How modern analytical databases eliminate interpretation overhead by compiling SQL queries into tight native code loops using the produce/consume pipeline model and LLVM IR, achieving order-of-magnitude speedups over traditional Volcano-style iterators.</description>
+    </item>
+    <item>
       <title>QUIC Multipath: Simultaneous Network Paths via RFC 9443</title>
       <link>https://mohakchugh.is-a.dev/blog/quic-multipath-rfc9443-simultaneous-network-paths</link>
       <pubDate>Thu, 09 Jul 2026 00:00:00 GMT</pubDate>
