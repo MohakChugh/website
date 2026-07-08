@@ -19,6 +19,12 @@
       <description>The CALM theorem proves that monotone programs never need coordination for consistency, giving us a compiler-verifiable criterion for when distributed systems can safely avoid locks, consensus, and barriers.</description>
     </item>
     <item>
+      <title>Contextual Sparsity: Activation-Aware LLM Inference and the Deja Vu Paradigm</title>
+      <link>https://mohakchugh.is-a.dev/blog/contextual-sparsity-activation-aware-llm-inference-deja-vu</link>
+      <pubDate>Thu, 09 Jul 2026 00:00:00 GMT</pubDate>
+      <description>Modern LLMs waste 95% of computation on neurons that produce near-zero activations. Contextual sparsity exploits input-dependent activation patterns to skip irrelevant neurons at inference time, achieving 2-6x speedups with negligible quality loss.</description>
+    </item>
+    <item>
       <title>CRDTs and Automerge 2.0: How Columnar Encoding Achieves 1000x Compression for Conflict-Free Collaboration</title>
       <link>https://mohakchugh.is-a.dev/blog/crdts-automerge-columnar-encoding-collaborative-editing</link>
       <pubDate>Thu, 09 Jul 2026 00:00:00 GMT</pubDate>
