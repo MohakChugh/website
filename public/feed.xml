@@ -7,6 +7,12 @@
     <language>en</language>
     <atom:link href="https://mohakchugh.is-a.dev/feed.xml" rel="self" type="application/rss+xml"/>
     <item>
+      <title>Adaptive Radix Trees: How Modern Databases Achieve Sub-Microsecond Lookups</title>
+      <link>https://mohakchugh.is-a.dev/blog/adaptive-radix-trees-art-cache-conscious-indexing</link>
+      <pubDate>Wed, 08 Jul 2026 00:00:00 GMT</pubDate>
+      <description>Dissecting ART (Adaptive Radix Tree), the cache-conscious indexing structure that outperforms B-trees for in-memory workloads by collapsing node sizes, eliminating key comparisons, and exploiting CPU cache hierarchies.</description>
+    </item>
+    <item>
       <title>CXL 3.1 Memory Pooling: Disaggregated Memory and the End of Stranded DRAM</title>
       <link>https://mohakchugh.is-a.dev/blog/cxl-memory-pooling-disaggregated-datacenter-architecture</link>
       <pubDate>Wed, 08 Jul 2026 00:00:00 GMT</pubDate>
