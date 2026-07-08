@@ -7,6 +7,12 @@
     <language>en</language>
     <atom:link href="https://mohakchugh.is-a.dev/feed.xml" rel="self" type="application/rss+xml"/>
     <item>
+      <title>CRDTs and Automerge 2.0: How Columnar Encoding Achieves 1000x Compression for Conflict-Free Collaboration</title>
+      <link>https://mohakchugh.is-a.dev/blog/crdts-automerge-columnar-encoding-collaborative-editing</link>
+      <pubDate>Thu, 09 Jul 2026 00:00:00 GMT</pubDate>
+      <description>Conflict-Free Replicated Data Types promise coordination-free merging, but naive implementations explode in memory. Automerge 2.0's columnar encoding compresses operation histories by three orders of magnitude, making CRDTs practical for real-time collaborative editing at scale.</description>
+    </item>
+    <item>
       <title>eBPF Continuous Profiling: Always-On Production Observability at &lt;1% Overhead</title>
       <link>https://mohakchugh.is-a.dev/blog/ebpf-continuous-profiling-zero-overhead-production-observability</link>
       <pubDate>Thu, 09 Jul 2026 00:00:00 GMT</pubDate>
