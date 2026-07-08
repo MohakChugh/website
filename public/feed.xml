@@ -61,6 +61,12 @@
       <description>mmap() seems like the perfect database buffer pool: let the OS handle page caching, avoid copies, and get a simple pointer interface. In practice, it introduces catastrophic stalls, uncontrollable eviction, and subtle corruption. Here is why every serious DBMS builds its own buffer manager, and the systems-level reasons mmap fails at scale.</description>
     </item>
     <item>
+      <title>Morsel-Driven Parallelism: How Modern Query Engines Achieve Linear Scalability on Many-Core NUMA Systems</title>
+      <link>https://mohakchugh.is-a.dev/blog/morsel-driven-parallelism-numa-aware-query-execution</link>
+      <pubDate>Thu, 09 Jul 2026 00:00:00 GMT</pubDate>
+      <description>The morsel-driven execution model replaces the traditional Volcano exchange operator with fine-grained, NUMA-aware task scheduling that achieves near-linear scalability on 100+ core machines, powering systems like DuckDB, Umbra, and DataFusion.</description>
+    </item>
+    <item>
       <title>Multi-Head Latent Attention: Compressing KV Cache by 93% Without Losing Quality</title>
       <link>https://mohakchugh.is-a.dev/blog/multi-head-latent-attention-kv-cache-compression</link>
       <pubDate>Thu, 09 Jul 2026 00:00:00 GMT</pubDate>
