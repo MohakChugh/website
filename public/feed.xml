@@ -31,6 +31,12 @@
       <description>ARM's Memory Tagging Extensions (MTE) catch use-after-free and buffer overflows in hardware with 3-5% overhead, compared to 100%+ for software sanitizers. How tag coloring, lock-and-key validation, and probabilistic detection achieve what decades of software-only approaches could not.</description>
     </item>
     <item>
+      <title>Multi-Head Latent Attention: Compressing KV Cache by 93% Without Losing Quality</title>
+      <link>https://mohakchugh.is-a.dev/blog/multi-head-latent-attention-kv-cache-compression</link>
+      <pubDate>Thu, 09 Jul 2026 00:00:00 GMT</pubDate>
+      <description>DeepSeek-V2 introduced Multi-head Latent Attention (MLA), which replaces per-head KV storage with a shared low-rank latent vector. By jointly compressing keys and values into a bottleneck representation and absorbing the up-projection into attention weights, MLA cuts KV cache memory by over 93% while matching or exceeding standard multi-head attention quality. Here is how the linear algebra works and why this changes the economics of long-context serving.</description>
+    </item>
+    <item>
       <title>Adaptive Radix Trees: How Modern Databases Achieve Sub-Microsecond Lookups</title>
       <link>https://mohakchugh.is-a.dev/blog/adaptive-radix-trees-art-cache-conscious-indexing</link>
       <pubDate>Wed, 08 Jul 2026 00:00:00 GMT</pubDate>
