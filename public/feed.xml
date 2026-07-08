@@ -55,6 +55,12 @@
       <description>Project Loom promised millions of concurrent tasks on a handful of OS threads. Synchronized blocks broke that promise by pinning continuations to carriers. JEP 491 in Java 24 eliminates pinning entirely through object monitor reimplementation, closing the last major gap in virtual thread adoption.</description>
     </item>
     <item>
+      <title>LSM-Tree Write Amplification: From Leveled Compaction to Key-Value Separation</title>
+      <link>https://mohakchugh.is-a.dev/blog/lsm-tree-write-amplification-key-value-separation-compaction</link>
+      <pubDate>Thu, 09 Jul 2026 00:00:00 GMT</pubDate>
+      <description>Why LSM-trees suffer from 10-50x write amplification, how leveled and tiered compaction trade space for bandwidth, and how WiscKey's key-value separation eliminates the problem at the cost of scan performance.</description>
+    </item>
+    <item>
       <title>Memory Tagging Extensions: Hardware-Assisted Memory Safety Without the Performance Tax</title>
       <link>https://mohakchugh.is-a.dev/blog/memory-tagging-extensions-hardware-memory-safety-arm</link>
       <pubDate>Thu, 09 Jul 2026 00:00:00 GMT</pubDate>
