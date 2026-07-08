@@ -139,6 +139,12 @@
       <description>Push-based pipelines, morsel-driven parallelism, and selection vectors: the three architectural bets that let an in-process database saturate modern hardware without a cluster.</description>
     </item>
     <item>
+      <title>Zero-Copy Deserialization: How rkyv, FlatBuffers, and Cap'n Proto Eliminate Parsing Overhead</title>
+      <link>https://mohakchugh.is-a.dev/blog/zero-copy-deserialization-rkyv-flatbuffers-memory-mapped-data</link>
+      <pubDate>Wed, 08 Jul 2026 00:00:00 GMT</pubDate>
+      <description>Traditional deserialization copies bytes into heap-allocated objects, burning CPU and memory bandwidth. Zero-copy formats flip this model: the serialized bytes ARE the in-memory data structure, accessed directly through pointer arithmetic and alignment guarantees.</description>
+    </item>
+    <item>
       <title>Iceberg v3 Deletion Vectors: Fixing Merge-on-Read With One Bitmap Per File</title>
       <link>https://mohakchugh.is-a.dev/blog/iceberg-v3-deletion-vectors</link>
       <pubDate>Tue, 07 Jul 2026 00:00:00 GMT</pubDate>
