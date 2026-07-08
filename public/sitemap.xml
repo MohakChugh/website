@@ -36,6 +36,7 @@
   <url><loc>https://mohakchugh.is-a.dev/blog/mvcc-garbage-collection-version-chain-pruning-oltp</loc><priority>0.7</priority></url>
   <url><loc>https://mohakchugh.is-a.dev/blog/pgm-index-learned-indexes-logarithmic-point-queries</loc><priority>0.7</priority></url>
   <url><loc>https://mohakchugh.is-a.dev/blog/radix-attention-prefix-caching-efficient-llm-serving</loc><priority>0.7</priority></url>
+  <url><loc>https://mohakchugh.is-a.dev/blog/ribbon-filters-space-optimal-static-filters-rocksdb</loc><priority>0.7</priority></url>
   <url><loc>https://mohakchugh.is-a.dev/blog/ring-attention-million-token-context-distributed-training</loc><priority>0.7</priority></url>
   <url><loc>https://mohakchugh.is-a.dev/blog/roaring-bitmaps-compressed-set-operations-at-scale</loc><priority>0.7</priority></url>
   <url><loc>https://mohakchugh.is-a.dev/blog/sched-ext-bpf-pluggable-cpu-schedulers-linux</loc><priority>0.7</priority></url>
