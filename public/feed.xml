@@ -181,6 +181,12 @@
       <description>How Treeline from CMU redesigns update-in-place storage for modern NVMe SSDs, using page grouping to exploit device parallelism and insert forecasting to minimize write amplification — achieving 2x throughput over RocksDB on write-heavy workloads.</description>
     </item>
     <item>
+      <title>Triton: Block-Level GPU Programming Without CUDA</title>
+      <link>https://mohakchugh.is-a.dev/blog/triton-gpu-kernel-programming-block-level-parallelism</link>
+      <pubDate>Thu, 09 Jul 2026 00:00:00 GMT</pubDate>
+      <description>How OpenAI's Triton compiler enables writing fused GPU kernels through block-level programming, automatic memory coalescing, and tile-based execution, eliminating CUDA boilerplate while matching hand-tuned performance.</description>
+    </item>
+    <item>
       <title>Zone Maps and Data Skipping: How Columnar Databases Eliminate 99% of I/O</title>
       <link>https://mohakchugh.is-a.dev/blog/zone-maps-data-skipping-columnar-scan-elimination</link>
       <pubDate>Thu, 09 Jul 2026 00:00:00 GMT</pubDate>

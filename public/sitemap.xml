@@ -52,6 +52,7 @@
   <url><loc>https://mohakchugh.is-a.dev/blog/tcp-bbr-congestion-control-bandwidth-estimation-pacing</loc><priority>0.7</priority></url>
   <url><loc>https://mohakchugh.is-a.dev/blog/thread-per-core-shared-nothing-predictable-microsecond-latency</loc><priority>0.7</priority></url>
   <url><loc>https://mohakchugh.is-a.dev/blog/treeline-update-in-place-key-value-store-nvme-ssd-page-grouping</loc><priority>0.7</priority></url>
+  <url><loc>https://mohakchugh.is-a.dev/blog/triton-gpu-kernel-programming-block-level-parallelism</loc><priority>0.7</priority></url>
   <url><loc>https://mohakchugh.is-a.dev/blog/zone-maps-data-skipping-columnar-scan-elimination</loc><priority>0.7</priority></url>
   <url><loc>https://mohakchugh.is-a.dev/blog/adaptive-radix-trees-art-cache-conscious-indexing</loc><priority>0.7</priority></url>
   <url><loc>https://mohakchugh.is-a.dev/blog/bcachefs-cow-btrees-crash-consistent-filesystem-design</loc><priority>0.7</priority></url>
