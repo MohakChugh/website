@@ -97,6 +97,12 @@
       <description>How modern database systems replace decades-old histogram-based cardinality estimators with neural models — covering CardBench, MSCN, and NeuroCard architectures that reduce join order estimation errors from 1000x to under 3x.</description>
     </item>
     <item>
+      <title>LLM Routing and Cascade Inference: Cost-Quality Optimization at Serving Time</title>
+      <link>https://mohakchugh.is-a.dev/blog/llm-routing-cascade-inference-cost-quality-optimization</link>
+      <pubDate>Thu, 09 Jul 2026 00:00:00 GMT</pubDate>
+      <description>How learned routers and cascade architectures reduce LLM serving costs 2-10x by dynamically selecting the cheapest model capable of handling each query, using techniques from RouteLLM, FrugalGPT, and hybrid serving systems.</description>
+    </item>
+    <item>
       <title>LSM-Tree Write Amplification: From Leveled Compaction to Key-Value Separation</title>
       <link>https://mohakchugh.is-a.dev/blog/lsm-tree-write-amplification-key-value-separation-compaction</link>
       <pubDate>Thu, 09 Jul 2026 00:00:00 GMT</pubDate>

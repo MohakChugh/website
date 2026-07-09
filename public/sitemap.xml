@@ -38,6 +38,7 @@
   <url><loc>https://mohakchugh.is-a.dev/blog/intel-amx-cpu-matrix-acceleration-inference-without-gpus</loc><priority>0.7</priority></url>
   <url><loc>https://mohakchugh.is-a.dev/blog/java-virtual-threads-pinning-jep491-continuation-stealing</loc><priority>0.7</priority></url>
   <url><loc>https://mohakchugh.is-a.dev/blog/learned-cardinality-estimation-neural-query-optimization</loc><priority>0.7</priority></url>
+  <url><loc>https://mohakchugh.is-a.dev/blog/llm-routing-cascade-inference-cost-quality-optimization</loc><priority>0.7</priority></url>
   <url><loc>https://mohakchugh.is-a.dev/blog/lsm-tree-write-amplification-key-value-separation-compaction</loc><priority>0.7</priority></url>
   <url><loc>https://mohakchugh.is-a.dev/blog/memory-allocator-design-jemalloc-mimalloc-scudo-lock-free</loc><priority>0.7</priority></url>
   <url><loc>https://mohakchugh.is-a.dev/blog/memory-tagging-extensions-hardware-memory-safety-arm</loc><priority>0.7</priority></url>
