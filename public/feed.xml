@@ -127,6 +127,12 @@
       <description>ARM's Memory Tagging Extensions (MTE) catch use-after-free and buffer overflows in hardware with 3-5% overhead, compared to 100%+ for software sanitizers. How tag coloring, lock-and-key validation, and probabilistic detection achieve what decades of software-only approaches could not.</description>
     </item>
     <item>
+      <title>Mixture-of-Experts: Expert Parallelism, All-to-All Routing, and Auxiliary-Loss-Free Load Balancing</title>
+      <link>https://mohakchugh.is-a.dev/blog/mixture-of-experts-routing-expert-parallelism-load-balancing</link>
+      <pubDate>Thu, 09 Jul 2026 00:00:00 GMT</pubDate>
+      <description>How MoE models like Mixtral and DeepSeek-V3 route tokens to sparse expert networks across GPU clusters, and why auxiliary-loss-free routing solves the capacity collapse problem without degrading model quality.</description>
+    </item>
+    <item>
       <title>Memory-Mapped I/O Considered Harmful: Why Modern Databases Avoid mmap for Buffer Management</title>
       <link>https://mohakchugh.is-a.dev/blog/mmap-considered-harmful-database-buffer-management</link>
       <pubDate>Thu, 09 Jul 2026 00:00:00 GMT</pubDate>
