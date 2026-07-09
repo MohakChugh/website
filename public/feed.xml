@@ -19,6 +19,12 @@
       <description>The CALM theorem proves that monotone programs never need coordination for consistency, giving us a compiler-verifiable criterion for when distributed systems can safely avoid locks, consensus, and barriers.</description>
     </item>
     <item>
+      <title>ColBERT and PLAID: Late Interaction Models That Make Neural Search Actually Fast</title>
+      <link>https://mohakchugh.is-a.dev/blog/colbert-plaid-late-interaction-token-level-neural-retrieval</link>
+      <pubDate>Thu, 09 Jul 2026 00:00:00 GMT</pubDate>
+      <description>How ColBERT v2's late interaction paradigm and the PLAID engine achieve sub-millisecond neural retrieval by decomposing document semantics into compressed token-level representations, enabling quality that rivals cross-encoders at speeds approaching BM25.</description>
+    </item>
+    <item>
       <title>Contextual Sparsity: Activation-Aware LLM Inference and the Deja Vu Paradigm</title>
       <link>https://mohakchugh.is-a.dev/blog/contextual-sparsity-activation-aware-llm-inference-deja-vu</link>
       <pubDate>Thu, 09 Jul 2026 00:00:00 GMT</pubDate>
