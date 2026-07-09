@@ -87,4 +87,5 @@
   <url><loc>https://mohakchugh.is-a.dev/blog/deterministic-simulation-testing</loc><priority>0.7</priority></url>
   <url><loc>https://mohakchugh.is-a.dev/blog/prefill-decode-disaggregation-llm-serving</loc><priority>0.7</priority></url>
   <url><loc>https://mohakchugh.is-a.dev/blog/sieve-cache-eviction-simpler-than-lru</loc><priority>0.7</priority></url>
+  <url><loc>https://mohakchugh.is-a.dev/blog/test-time-compute-scaling-search-verification-reasoning-llms</loc><priority>0.7</priority></url>
 </urlset>

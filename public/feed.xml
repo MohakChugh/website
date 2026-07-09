@@ -390,5 +390,11 @@
       <pubDate>Sun, 05 Jul 2026 00:00:00 GMT</pubDate>
       <description>A 2024 NSDI paper showed that a FIFO queue, one bit per object, and a lazy hand pointer can out-perform LRU, ARC, and friends on web workloads, while removing the lock that makes LRU a scalability bottleneck. Here is how SIEVE works and why its simplicity is the whole point.</description>
     </item>
+    <item>
+      <title>Test-Time Compute Scaling: Search, Verification, and the Reasoning Frontier</title>
+      <link>https://mohakchugh.is-a.dev/blog/test-time-compute-scaling-search-verification-reasoning-llms</link>
+      <pubDate>Wed, 09 Jul 2025 00:00:00 GMT</pubDate>
+      <description>Why spending more compute at inference time, through process reward models, beam search over chains-of-thought, and Monte Carlo tree search, can outperform simply scaling model parameters. The architectural patterns behind o1, DeepSeek-R1, and compute-optimal reasoning.</description>
+    </item>
   </channel>
 </rss>
