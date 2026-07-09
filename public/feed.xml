@@ -25,6 +25,12 @@
       <description>Modern LLMs waste 95% of computation on neurons that produce near-zero activations. Contextual sparsity exploits input-dependent activation patterns to skip irrelevant neurons at inference time, achieving 2-6x speedups with negligible quality loss.</description>
     </item>
     <item>
+      <title>Coroutine Interleaving: How Database Engines Use Stackless Coroutines to Hide Storage Latency</title>
+      <link>https://mohakchugh.is-a.dev/blog/coroutine-interleaving-database-io-latency-hiding</link>
+      <pubDate>Thu, 09 Jul 2026 00:00:00 GMT</pubDate>
+      <description>Modern analytical databases lose 40-60% of query time waiting on storage I/O. Coroutine interleaving transforms synchronous buffer pool accesses into cooperative multitasking, letting the CPU process other tuples while pages load from SSD. We explore the LeanStore and Umbra approaches, C++20 coroutine mechanics, and why this outperforms both blocking I/O and pure async callback models.</description>
+    </item>
+    <item>
       <title>CRDTs and Automerge 2.0: How Columnar Encoding Achieves 1000x Compression for Conflict-Free Collaboration</title>
       <link>https://mohakchugh.is-a.dev/blog/crdts-automerge-columnar-encoding-collaborative-editing</link>
       <pubDate>Thu, 09 Jul 2026 00:00:00 GMT</pubDate>
