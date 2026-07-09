@@ -151,6 +151,12 @@
       <description>How Treeline from CMU redesigns update-in-place storage for modern NVMe SSDs, using page grouping to exploit device parallelism and insert forecasting to minimize write amplification — achieving 2x throughput over RocksDB on write-heavy workloads.</description>
     </item>
     <item>
+      <title>Zone Maps and Data Skipping: How Columnar Databases Eliminate 99% of I/O</title>
+      <link>https://mohakchugh.is-a.dev/blog/zone-maps-data-skipping-columnar-scan-elimination</link>
+      <pubDate>Thu, 09 Jul 2026 00:00:00 GMT</pubDate>
+      <description>How modern analytical databases use lightweight per-chunk metadata (min/max zone maps, bloom filters, and learned skip indexes) to prune terabytes of data without reading a single row, achieving orders-of-magnitude scan elimination in practice.</description>
+    </item>
+    <item>
       <title>Adaptive Radix Trees: How Modern Databases Achieve Sub-Microsecond Lookups</title>
       <link>https://mohakchugh.is-a.dev/blog/adaptive-radix-trees-art-cache-conscious-indexing</link>
       <pubDate>Wed, 08 Jul 2026 00:00:00 GMT</pubDate>
