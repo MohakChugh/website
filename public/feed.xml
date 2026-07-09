@@ -163,6 +163,12 @@
       <description>RFC 9443 extends QUIC to use multiple network paths simultaneously within a single connection, enabling bandwidth aggregation, seamless WiFi/cellular handoff, and resilient mobile connectivity without application changes.</description>
     </item>
     <item>
+      <title>RDMA Consensus: One-Sided Reads and Sub-Microsecond Replication</title>
+      <link>https://mohakchugh.is-a.dev/blog/rdma-consensus-one-sided-reads-sub-microsecond-replication</link>
+      <pubDate>Thu, 09 Jul 2026 00:00:00 GMT</pubDate>
+      <description>How DARE, Hermes, and Mu exploit one-sided RDMA verbs to achieve consensus in under 2 microseconds, eliminating CPU involvement on followers and redefining the latency floor for replicated state machines.</description>
+    </item>
+    <item>
       <title>Shared Log Architecture: How Cloud-Native Databases Disaggregate Storage from Compute</title>
       <link>https://mohakchugh.is-a.dev/blog/shared-log-disaggregated-storage-cloud-native-databases</link>
       <pubDate>Thu, 09 Jul 2026 00:00:00 GMT</pubDate>

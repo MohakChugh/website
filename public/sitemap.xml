@@ -49,6 +49,7 @@
   <url><loc>https://mohakchugh.is-a.dev/blog/paged-attention-virtual-memory-llm-kv-cache-management</loc><priority>0.7</priority></url>
   <url><loc>https://mohakchugh.is-a.dev/blog/query-compilation-produce-consume-llvm-code-generation</loc><priority>0.7</priority></url>
   <url><loc>https://mohakchugh.is-a.dev/blog/quic-multipath-rfc9443-simultaneous-network-paths</loc><priority>0.7</priority></url>
+  <url><loc>https://mohakchugh.is-a.dev/blog/rdma-consensus-one-sided-reads-sub-microsecond-replication</loc><priority>0.7</priority></url>
   <url><loc>https://mohakchugh.is-a.dev/blog/shared-log-disaggregated-storage-cloud-native-databases</loc><priority>0.7</priority></url>
   <url><loc>https://mohakchugh.is-a.dev/blog/tcp-bbr-congestion-control-bandwidth-estimation-pacing</loc><priority>0.7</priority></url>
   <url><loc>https://mohakchugh.is-a.dev/blog/thread-per-core-shared-nothing-predictable-microsecond-latency</loc><priority>0.7</priority></url>
