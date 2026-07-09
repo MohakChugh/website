@@ -103,6 +103,12 @@
       <description>Why LSM-trees suffer from 10-50x write amplification, how leveled and tiered compaction trade space for bandwidth, and how WiscKey's key-value separation eliminates the problem at the cost of scan performance.</description>
     </item>
     <item>
+      <title>Memory Allocator Design: How jemalloc, mimalloc, and Scudo Achieve Lock-Free Allocation at Scale</title>
+      <link>https://mohakchugh.is-a.dev/blog/memory-allocator-design-jemalloc-mimalloc-scudo-lock-free</link>
+      <pubDate>Thu, 09 Jul 2026 00:00:00 GMT</pubDate>
+      <description>The default malloc implementation in glibc uses a single arena with coarse-grained locking that collapses under thread contention. Modern allocators like jemalloc, mimalloc, and Scudo achieve nanosecond-scale allocation through thread-local free lists, size-class sharding, and virtual memory tricks that eliminate fragmentation without sacrificing throughput.</description>
+    </item>
+    <item>
       <title>Memory Tagging Extensions: Hardware-Assisted Memory Safety Without the Performance Tax</title>
       <link>https://mohakchugh.is-a.dev/blog/memory-tagging-extensions-hardware-memory-safety-arm</link>
       <pubDate>Thu, 09 Jul 2026 00:00:00 GMT</pubDate>
