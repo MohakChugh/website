@@ -28,6 +28,7 @@
   <url><loc>https://mohakchugh.is-a.dev/blog/contextual-sparsity-activation-aware-llm-inference-deja-vu</loc><priority>0.7</priority></url>
   <url><loc>https://mohakchugh.is-a.dev/blog/crdts-automerge-columnar-encoding-collaborative-editing</loc><priority>0.7</priority></url>
   <url><loc>https://mohakchugh.is-a.dev/blog/diskann-vamana-graph-billion-scale-vector-search-ssd</loc><priority>0.7</priority></url>
+  <url><loc>https://mohakchugh.is-a.dev/blog/dpdk-kernel-bypass-userspace-networking-ultra-low-latency</loc><priority>0.7</priority></url>
   <url><loc>https://mohakchugh.is-a.dev/blog/ebpf-continuous-profiling-zero-overhead-production-observability</loc><priority>0.7</priority></url>
   <url><loc>https://mohakchugh.is-a.dev/blog/galore-gradient-low-rank-projection-memory-efficient-llm-training</loc><priority>0.7</priority></url>
   <url><loc>https://mohakchugh.is-a.dev/blog/hardware-transactional-memory-tsx-arm-tme-lock-elision</loc><priority>0.7</priority></url>
