@@ -61,6 +61,12 @@
       <description>How eBPF-based continuous profilers achieve always-on stack trace collection in production with sub-1% CPU overhead using frame pointer unwinding, BPF ring buffers, and adaptive sampling — replacing the traditional trade-off between observability and performance.</description>
     </item>
     <item>
+      <title>Erasure Coding: Reed-Solomon, LRC, and the Math Behind Cloud Storage Durability</title>
+      <link>https://mohakchugh.is-a.dev/blog/erasure-coding-reed-solomon-lrc-distributed-storage-durability</link>
+      <pubDate>Thu, 09 Jul 2026 00:00:00 GMT</pubDate>
+      <description>How modern distributed storage systems achieve 11 nines of durability without 3x replication overhead, from Galois field arithmetic to Local Reconstruction Codes that minimize cross-rack repair bandwidth.</description>
+    </item>
+    <item>
       <title>GaLore: Training LLMs on Consumer GPUs via Gradient Low-Rank Projection</title>
       <link>https://mohakchugh.is-a.dev/blog/galore-gradient-low-rank-projection-memory-efficient-llm-training</link>
       <pubDate>Thu, 09 Jul 2026 00:00:00 GMT</pubDate>

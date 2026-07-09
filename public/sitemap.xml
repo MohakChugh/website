@@ -32,6 +32,7 @@
   <url><loc>https://mohakchugh.is-a.dev/blog/diskann-vamana-graph-billion-scale-vector-search-ssd</loc><priority>0.7</priority></url>
   <url><loc>https://mohakchugh.is-a.dev/blog/dpdk-kernel-bypass-userspace-networking-ultra-low-latency</loc><priority>0.7</priority></url>
   <url><loc>https://mohakchugh.is-a.dev/blog/ebpf-continuous-profiling-zero-overhead-production-observability</loc><priority>0.7</priority></url>
+  <url><loc>https://mohakchugh.is-a.dev/blog/erasure-coding-reed-solomon-lrc-distributed-storage-durability</loc><priority>0.7</priority></url>
   <url><loc>https://mohakchugh.is-a.dev/blog/galore-gradient-low-rank-projection-memory-efficient-llm-training</loc><priority>0.7</priority></url>
   <url><loc>https://mohakchugh.is-a.dev/blog/hardware-transactional-memory-tsx-arm-tme-lock-elision</loc><priority>0.7</priority></url>
   <url><loc>https://mohakchugh.is-a.dev/blog/hybrid-logical-clocks-causality-physical-time-distributed-databases</loc><priority>0.7</priority></url>
