@@ -139,6 +139,12 @@
       <description>Modern databases like ScyllaDB and Redpanda abandon thread pools entirely, pinning one thread to each CPU core with zero shared mutable state between them. The result is predictable tail latency at microsecond scale, but the programming model demands rethinking everything from memory allocation to request routing.</description>
     </item>
     <item>
+      <title>Treeline: Rethinking Key-Value Stores for NVMe SSDs with Page Grouping and Insert Forecasting</title>
+      <link>https://mohakchugh.is-a.dev/blog/treeline-update-in-place-key-value-store-nvme-ssd-page-grouping</link>
+      <pubDate>Thu, 09 Jul 2026 00:00:00 GMT</pubDate>
+      <description>How Treeline from CMU redesigns update-in-place storage for modern NVMe SSDs, using page grouping to exploit device parallelism and insert forecasting to minimize write amplification — achieving 2x throughput over RocksDB on write-heavy workloads.</description>
+    </item>
+    <item>
       <title>Adaptive Radix Trees: How Modern Databases Achieve Sub-Microsecond Lookups</title>
       <link>https://mohakchugh.is-a.dev/blog/adaptive-radix-trees-art-cache-conscious-indexing</link>
       <pubDate>Wed, 08 Jul 2026 00:00:00 GMT</pubDate>
