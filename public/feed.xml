@@ -151,6 +151,12 @@
       <description>The shared log pattern decouples compute from storage by treating a replicated, append-only log as the single source of truth. This deep dive explores how systems like Aurora DSQL, Neon, and FoundationDB leverage this architecture to achieve independent scaling, instant recovery, and strong consistency without distributed two-phase commit.</description>
     </item>
     <item>
+      <title>TCP BBR: How Google's Congestion Control Algorithm Replaced 30 Years of Loss-Based Assumptions</title>
+      <link>https://mohakchugh.is-a.dev/blog/tcp-bbr-congestion-control-bandwidth-estimation-pacing</link>
+      <pubDate>Thu, 09 Jul 2026 00:00:00 GMT</pubDate>
+      <description>Loss-based TCP congestion control conflates packet loss with congestion, destroying throughput on modern networks. BBR (Bottleneck Bandwidth and Round-trip propagation time) measures the actual network path to achieve near-optimal throughput, representing the most significant change to TCP in three decades.</description>
+    </item>
+    <item>
       <title>Thread-Per-Core: Shared-Nothing Architecture for Predictable Microsecond Latency</title>
       <link>https://mohakchugh.is-a.dev/blog/thread-per-core-shared-nothing-predictable-microsecond-latency</link>
       <pubDate>Thu, 09 Jul 2026 00:00:00 GMT</pubDate>
