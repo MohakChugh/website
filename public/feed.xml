@@ -7,6 +7,12 @@
     <language>en</language>
     <atom:link href="https://mohakchugh.is-a.dev/feed.xml" rel="self" type="application/rss+xml"/>
     <item>
+      <title>Firecracker microVM Snapshot-Restore: Eliminating Serverless Cold Starts at Microsecond Granularity</title>
+      <link>https://mohakchugh.is-a.dev/blog/firecracker-microvm-snapshot-restore-serverless-cold-start</link>
+      <pubDate>Fri, 10 Jul 2026 00:00:00 GMT</pubDate>
+      <description>How Firecracker's snapshot-restore mechanism uses memory-mapped dirty page tracking and incremental state serialization to achieve sub-5ms function restore times, enabling near-zero cold starts for serverless workloads at scale.</description>
+    </item>
+    <item>
       <title>Aria: Deterministic Database Scheduling and the End of Two-Phase Locking</title>
       <link>https://mohakchugh.is-a.dev/blog/aria-deterministic-database-scheduling-coordination-free-transactions</link>
       <pubDate>Thu, 09 Jul 2026 00:00:00 GMT</pubDate>
