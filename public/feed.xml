@@ -7,6 +7,12 @@
     <language>en</language>
     <atom:link href="https://mohakchugh.is-a.dev/feed.xml" rel="self" type="application/rss+xml"/>
     <item>
+      <title>WebAssembly UDFs: Sandboxed Extensibility in Modern Database Engines</title>
+      <link>https://mohakchugh.is-a.dev/blog/wasm-udfs-sandboxed-extensibility-database-engines</link>
+      <pubDate>Sat, 11 Jul 2026 00:00:00 GMT</pubDate>
+      <description>How database engines use WebAssembly to run user-defined functions with near-native speed while maintaining memory safety, deterministic execution, and zero-trust isolation within the query pipeline.</description>
+    </item>
+    <item>
       <title>Firecracker microVM Snapshot-Restore: Eliminating Serverless Cold Starts at Microsecond Granularity</title>
       <link>https://mohakchugh.is-a.dev/blog/firecracker-microvm-snapshot-restore-serverless-cold-start</link>
       <pubDate>Fri, 10 Jul 2026 00:00:00 GMT</pubDate>
