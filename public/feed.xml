@@ -13,6 +13,12 @@
       <description>DBSP is a small, complete algebra that mechanically converts any relational query into an incremental one that updates materialized views in time proportional to the change, not the data. Here is how the circuit model, Z-sets, and the differentiation identity make it work.</description>
     </item>
     <item>
+      <title>Muon: Orthogonalized Momentum and Why It Trains LLMs 2x Cheaper</title>
+      <link>https://mohakchugh.is-a.dev/blog/muon-optimizer-newton-schulz-orthogonalized-momentum</link>
+      <pubDate>Sun, 12 Jul 2026 00:00:00 GMT</pubDate>
+      <description>AdamW treats every weight as a bag of scalars. Muon treats a weight matrix as a matrix, orthogonalizing the momentum update with a bf16 Newton-Schulz iteration. The result: roughly 2x the compute efficiency at scale, proven on a 16B-parameter MoE trained on 5.7T tokens.</description>
+    </item>
+    <item>
       <title>WebAssembly UDFs: Sandboxed Extensibility in Modern Database Engines</title>
       <link>https://mohakchugh.is-a.dev/blog/wasm-udfs-sandboxed-extensibility-database-engines</link>
       <pubDate>Sat, 11 Jul 2026 00:00:00 GMT</pubDate>
