@@ -7,6 +7,12 @@
     <language>en</language>
     <atom:link href="https://mohakchugh.is-a.dev/feed.xml" rel="self" type="application/rss+xml"/>
     <item>
+      <title>Homa: Why Datacenter RPC Doesn't Need TCP, Connections, or Packet Ordering</title>
+      <link>https://mohakchugh.is-a.dev/blog/homa-transport-receiver-driven-srpt-datacenter-rpc</link>
+      <pubDate>Mon, 13 Jul 2026 00:00:00 GMT</pubDate>
+      <description>TCP was designed for the wide-area internet, yet it carries the overwhelming majority of datacenter RPC traffic, where its byte-stream abstraction, connection state, and loss-based recovery actively destroy tail latency. Homa is a message-based, connectionless transport that uses receiver-driven flow control and shortest-remaining-processing-time scheduling to cut 99th-percentile latency by an order of magnitude, and it is now being upstreamed into the Linux kernel.</description>
+    </item>
+    <item>
       <title>DBSP: Turning Any SQL Query Into an Incremental Stream Processor</title>
       <link>https://mohakchugh.is-a.dev/blog/dbsp-incremental-view-maintenance-z-sets-streaming</link>
       <pubDate>Sun, 12 Jul 2026 00:00:00 GMT</pubDate>
