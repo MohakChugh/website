@@ -7,6 +7,12 @@
     <language>en</language>
     <atom:link href="https://mohakchugh.is-a.dev/feed.xml" rel="self" type="application/rss+xml"/>
     <item>
+      <title>ALP: How to Compress Floating-Point Data Twice as Well and Decode It 2-4x Faster</title>
+      <link>https://mohakchugh.is-a.dev/blog/alp-adaptive-lossless-floating-point-compression</link>
+      <pubDate>Tue, 14 Jul 2026 00:00:00 GMT</pubDate>
+      <description>Floating-point columns are the last frontier of columnar compression: general-purpose byte compressors barely dent them, and bit-level predictors like Gorilla trade speed for ratio. ALP wins on both axes by recognizing that most 'doubles' in the wild are actually decimals in disguise, and encoding them as small integers a vectorized bit-packer can crush.</description>
+    </item>
+    <item>
       <title>Homa: Why Datacenter RPC Doesn't Need TCP, Connections, or Packet Ordering</title>
       <link>https://mohakchugh.is-a.dev/blog/homa-transport-receiver-driven-srpt-datacenter-rpc</link>
       <pubDate>Mon, 13 Jul 2026 00:00:00 GMT</pubDate>
