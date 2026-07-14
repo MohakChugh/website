@@ -13,6 +13,12 @@
       <description>Floating-point columns are the last frontier of columnar compression: general-purpose byte compressors barely dent them, and bit-level predictors like Gorilla trade speed for ratio. ALP wins on both axes by recognizing that most 'doubles' in the wild are actually decimals in disguise, and encoding them as small integers a vectorized bit-packer can crush.</description>
     </item>
     <item>
+      <title>Zero Bubble Pipeline Parallelism: Splitting the Backward Pass to Fill the Gaps</title>
+      <link>https://mohakchugh.is-a.dev/blog/zero-bubble-pipeline-parallelism-splitting-backward-pass</link>
+      <pubDate>Tue, 14 Jul 2026 00:00:00 GMT</pubDate>
+      <description>Pipeline parallelism wastes GPU time in bubbles, idle gaps at the warmup and cooldown of every training step. By splitting the backward pass into its input-gradient and weight-gradient halves and deferring the optimizer's sync, ZB-H1/H2 schedules drive the bubble toward zero, buying up to 31% more throughput under synchronous semantics.</description>
+    </item>
+    <item>
       <title>Homa: Why Datacenter RPC Doesn't Need TCP, Connections, or Packet Ordering</title>
       <link>https://mohakchugh.is-a.dev/blog/homa-transport-receiver-driven-srpt-datacenter-rpc</link>
       <pubDate>Mon, 13 Jul 2026 00:00:00 GMT</pubDate>
