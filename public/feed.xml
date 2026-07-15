@@ -7,6 +7,12 @@
     <language>en</language>
     <atom:link href="https://mohakchugh.is-a.dev/feed.xml" rel="self" type="application/rss+xml"/>
     <item>
+      <title>Accord: Leaderless Strict-Serializable Transactions in One Round Trip</title>
+      <link>https://mohakchugh.is-a.dev/blog/accord-leaderless-strict-serializable-transactions-reorder-buffer</link>
+      <pubDate>Wed, 15 Jul 2026 00:00:00 GMT</pubDate>
+      <description>Every distributed transaction protocol you have used pays a latency tax: either a leader that funnels all writes through one node, or two round trips to order operations. Accord, the protocol behind Apache Cassandra's general-purpose transactions, delivers strict serializability with no leader and one wide-area round trip on the happy path. The trick is a reorder buffer that turns bounded clock skew into a consensus guarantee.</description>
+    </item>
+    <item>
       <title>ALP: How to Compress Floating-Point Data Twice as Well and Decode It 2-4x Faster</title>
       <link>https://mohakchugh.is-a.dev/blog/alp-adaptive-lossless-floating-point-compression</link>
       <pubDate>Tue, 14 Jul 2026 00:00:00 GMT</pubDate>
