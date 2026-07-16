@@ -7,6 +7,12 @@
     <language>en</language>
     <atom:link href="https://mohakchugh.is-a.dev/feed.xml" rel="self" type="application/rss+xml"/>
     <item>
+      <title>Constrained Decoding: How to Force an LLM to Speak Valid JSON Without Slowing It Down</title>
+      <link>https://mohakchugh.is-a.dev/blog/constrained-decoding-fsm-grammar-guided-llm-structured-output</link>
+      <pubDate>Fri, 17 Jul 2026 00:00:00 GMT</pubDate>
+      <description>Prompting a model to 'return valid JSON' is a wish, not a guarantee. Constrained decoding turns it into an invariant by masking logits against a finite-state machine or pushdown automaton. The hard part is doing it without adding latency to every single token, which is where compiled indices and context-token classification come in.</description>
+    </item>
+    <item>
       <title>Accord: Leaderless Strict-Serializable Transactions in One Round Trip</title>
       <link>https://mohakchugh.is-a.dev/blog/accord-leaderless-strict-serializable-transactions-reorder-buffer</link>
       <pubDate>Wed, 15 Jul 2026 00:00:00 GMT</pubDate>
