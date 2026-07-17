@@ -7,6 +7,12 @@
     <language>en</language>
     <atom:link href="https://mohakchugh.is-a.dev/feed.xml" rel="self" type="application/rss+xml"/>
     <item>
+      <title>The Byte Latent Transformer: Deleting the Tokenizer and Spending Compute Where Entropy Lives</title>
+      <link>https://mohakchugh.is-a.dev/blog/byte-latent-transformer-tokenizer-free-entropy-patching</link>
+      <pubDate>Fri, 17 Jul 2026 00:00:00 GMT</pubDate>
+      <description>Every LLM you use starts by chopping text into a fixed vocabulary of BPE tokens, a brittle preprocessing step that has nothing to do with learning. Meta's Byte Latent Transformer throws it away, feeds raw bytes to the model, and dynamically groups them into patches sized by next-byte entropy so that compute flows to the hard parts of the stream. It matches Llama 3 at 8B parameters and 4T bytes while cutting inference FLOPs up to 50%.</description>
+    </item>
+    <item>
       <title>Constrained Decoding: How to Force an LLM to Speak Valid JSON Without Slowing It Down</title>
       <link>https://mohakchugh.is-a.dev/blog/constrained-decoding-fsm-grammar-guided-llm-structured-output</link>
       <pubDate>Fri, 17 Jul 2026 00:00:00 GMT</pubDate>
