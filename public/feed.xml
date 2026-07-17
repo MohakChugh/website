@@ -7,6 +7,12 @@
     <language>en</language>
     <atom:link href="https://mohakchugh.is-a.dev/feed.xml" rel="self" type="application/rss+xml"/>
     <item>
+      <title>Differential Transformer: Noise-Canceling Attention by Subtraction</title>
+      <link>https://mohakchugh.is-a.dev/blog/differential-transformer-noise-canceling-attention</link>
+      <pubDate>Sat, 18 Jul 2026 00:00:00 GMT</pubDate>
+      <description>Softmax attention leaks probability mass onto irrelevant tokens, a floor of noise that grows with context length. The Differential Transformer borrows a trick from analog electronics — subtract two attention maps to cancel the common-mode noise — and matches a standard Transformer using roughly a third fewer parameters.</description>
+    </item>
+    <item>
       <title>The Byte Latent Transformer: Deleting the Tokenizer and Spending Compute Where Entropy Lives</title>
       <link>https://mohakchugh.is-a.dev/blog/byte-latent-transformer-tokenizer-free-entropy-patching</link>
       <pubDate>Fri, 17 Jul 2026 00:00:00 GMT</pubDate>
