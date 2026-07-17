@@ -19,6 +19,12 @@
       <description>Prompting a model to 'return valid JSON' is a wish, not a guarantee. Constrained decoding turns it into an invariant by masking logits against a finite-state machine or pushdown automaton. The hard part is doing it without adding latency to every single token, which is where compiled indices and context-token classification come in.</description>
     </item>
     <item>
+      <title>GRPO: Critic-Free Reinforcement Learning for Reasoning Models</title>
+      <link>https://mohakchugh.is-a.dev/blog/grpo-group-relative-policy-optimization-critic-free-reasoning-rl</link>
+      <pubDate>Fri, 17 Jul 2026 00:00:00 GMT</pubDate>
+      <description>Group Relative Policy Optimization deletes PPO's value network and estimates the advantage baseline from a group of sampled completions. This is the algorithm behind DeepSeek-R1's reasoning. Here is the math, the memory argument, and the sharp edges.</description>
+    </item>
+    <item>
       <title>Accord: Leaderless Strict-Serializable Transactions in One Round Trip</title>
       <link>https://mohakchugh.is-a.dev/blog/accord-leaderless-strict-serializable-transactions-reorder-buffer</link>
       <pubDate>Wed, 15 Jul 2026 00:00:00 GMT</pubDate>
