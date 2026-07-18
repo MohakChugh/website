@@ -13,6 +13,12 @@
       <description>Softmax attention leaks probability mass onto irrelevant tokens, a floor of noise that grows with context length. The Differential Transformer borrows a trick from analog electronics — subtract two attention maps to cancel the common-mode noise — and matches a standard Transformer using roughly a third fewer parameters.</description>
     </item>
     <item>
+      <title>QuaRot: Rotating Away the Outliers That Make 4-Bit LLMs Impossible</title>
+      <link>https://mohakchugh.is-a.dev/blog/quarot-rotation-quantization-hadamard-outlier-free-4bit-llm</link>
+      <pubDate>Sat, 18 Jul 2026 00:00:00 GMT</pubDate>
+      <description>The reason you cannot naively quantize an LLM to 4 bits is a handful of activation channels with values 100x larger than the rest. QuaRot (2024) makes those outliers disappear by multiplying the network with random orthogonal rotations that leave the output identical but flatten the value distribution. Here is why an orthogonal matrix is free, why Hadamard matrices make it fast, and how the whole forward pass ends up in INT4.</description>
+    </item>
+    <item>
       <title>The Byte Latent Transformer: Deleting the Tokenizer and Spending Compute Where Entropy Lives</title>
       <link>https://mohakchugh.is-a.dev/blog/byte-latent-transformer-tokenizer-free-entropy-patching</link>
       <pubDate>Fri, 17 Jul 2026 00:00:00 GMT</pubDate>
