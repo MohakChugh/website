@@ -13,6 +13,12 @@
       <description>Every large language model you have used generates one token at a time, left to right. LLaDA throws that away: it masks a whole sequence, then denoises it in parallel over a handful of steps — a diffusion process over discrete tokens that matches LLaMA3 8B, beats it on math, and quietly solves the reversal curse GPT-4o still fails.</description>
     </item>
     <item>
+      <title>Multi-Token Prediction: Training LLMs to See Further Than One Token</title>
+      <link>https://mohakchugh.is-a.dev/blog/multi-token-prediction-training-objective-self-speculative-decoding</link>
+      <pubDate>Mon, 20 Jul 2026 00:00:00 GMT</pubDate>
+      <description>Next-token prediction is a strangely myopic objective: at every position the model is graded on exactly one token and told nothing about the future it is steering toward. Multi-token prediction asks the model to forecast several tokens at once. It costs almost nothing at training time, makes larger models measurably better at code and reasoning, and hands you a 3x inference speedup for free through self-speculative decoding — which is why DeepSeek-V3 bakes it into pretraining.</description>
+    </item>
+    <item>
       <title>Titans: Neural Memory That Learns to Memorize at Test Time</title>
       <link>https://mohakchugh.is-a.dev/blog/titans-neural-memory-test-time-learning-to-memorize</link>
       <pubDate>Sun, 19 Jul 2026 00:00:00 GMT</pubDate>
