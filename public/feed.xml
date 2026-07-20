@@ -7,6 +7,12 @@
     <language>en</language>
     <atom:link href="https://mohakchugh.is-a.dev/feed.xml" rel="self" type="application/rss+xml"/>
     <item>
+      <title>Diffusion Language Models: Generating Text Without Left-to-Right</title>
+      <link>https://mohakchugh.is-a.dev/blog/llada-diffusion-language-models-masked-denoising-autoregressive</link>
+      <pubDate>Mon, 20 Jul 2026 00:00:00 GMT</pubDate>
+      <description>Every large language model you have used generates one token at a time, left to right. LLaDA throws that away: it masks a whole sequence, then denoises it in parallel over a handful of steps — a diffusion process over discrete tokens that matches LLaMA3 8B, beats it on math, and quietly solves the reversal curse GPT-4o still fails.</description>
+    </item>
+    <item>
       <title>Titans: Neural Memory That Learns to Memorize at Test Time</title>
       <link>https://mohakchugh.is-a.dev/blog/titans-neural-memory-test-time-learning-to-memorize</link>
       <pubDate>Sun, 19 Jul 2026 00:00:00 GMT</pubDate>
