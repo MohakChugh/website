@@ -7,6 +7,12 @@
     <language>en</language>
     <atom:link href="https://mohakchugh.is-a.dev/feed.xml" rel="self" type="application/rss+xml"/>
     <item>
+      <title>DiLoCo: Training LLMs Across Slow Links With 500x Less Communication</title>
+      <link>https://mohakchugh.is-a.dev/blog/diloco-streaming-low-communication-distributed-llm-training</link>
+      <pubDate>Thu, 23 Jul 2026 00:00:00 GMT</pubDate>
+      <description>Data-parallel training assumes a fat, low-latency fabric between every GPU. DiLoCo throws that assumption out: workers train independently for hundreds of steps, then exchange a single pseudo-gradient through an outer optimizer. Streaming DiLoCo pushes it further, cutting peak bandwidth another two orders of magnitude so you can train a frontier model over ordinary internet links.</description>
+    </item>
+    <item>
       <title>Diffusion Language Models: Generating Text Without Left-to-Right</title>
       <link>https://mohakchugh.is-a.dev/blog/llada-diffusion-language-models-masked-denoising-autoregressive</link>
       <pubDate>Mon, 20 Jul 2026 00:00:00 GMT</pubDate>
