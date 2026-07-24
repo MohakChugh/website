@@ -7,6 +7,12 @@
     <language>en</language>
     <atom:link href="https://mohakchugh.is-a.dev/feed.xml" rel="self" type="application/rss+xml"/>
     <item>
+      <title>Lookahead Decoding: Breaking the Sequential Barrier Without a Draft Model</title>
+      <link>https://mohakchugh.is-a.dev/blog/lookahead-decoding-jacobi-iteration-parallel-llm-inference</link>
+      <pubDate>Fri, 24 Jul 2026 00:00:00 GMT</pubDate>
+      <description>Autoregressive decoding forces one token per forward pass, leaving GPUs starved for work. Lookahead decoding reframes greedy generation as solving a nonlinear system by Jacobi iteration, mining n-grams from the iteration trajectory to collapse many steps into one, with no draft model and no training.</description>
+    </item>
+    <item>
       <title>Microscaling Formats: Why One Shared Exponent per 32 Numbers Changes 4-Bit Training</title>
       <link>https://mohakchugh.is-a.dev/blog/microscaling-mx-formats-block-scaled-fp4-fp8-blackwell</link>
       <pubDate>Fri, 24 Jul 2026 00:00:00 GMT</pubDate>
