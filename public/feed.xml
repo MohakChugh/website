@@ -7,6 +7,12 @@
     <language>en</language>
     <atom:link href="https://mohakchugh.is-a.dev/feed.xml" rel="self" type="application/rss+xml"/>
     <item>
+      <title>Microscaling Formats: Why One Shared Exponent per 32 Numbers Changes 4-Bit Training</title>
+      <link>https://mohakchugh.is-a.dev/blog/microscaling-mx-formats-block-scaled-fp4-fp8-blackwell</link>
+      <pubDate>Fri, 24 Jul 2026 00:00:00 GMT</pubDate>
+      <description>A single FP32 scale per tensor cannot survive 4-bit quantization, and a scale per element costs as much as the data. Microscaling (MX) formats split the difference — 32 elements share one 8-bit power-of-2 exponent — and that is now silicon in NVIDIA Blackwell tensor cores. The subtle part is not the format. It is that rounding the shared exponent the obvious way silently diverges an 8-billion-parameter pre-training run, and the fix is one direction of a rounding rule.</description>
+    </item>
+    <item>
       <title>DiLoCo: Training LLMs Across Slow Links With 500x Less Communication</title>
       <link>https://mohakchugh.is-a.dev/blog/diloco-streaming-low-communication-distributed-llm-training</link>
       <pubDate>Thu, 23 Jul 2026 00:00:00 GMT</pubDate>
