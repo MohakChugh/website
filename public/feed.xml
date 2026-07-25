@@ -7,6 +7,12 @@
     <language>en</language>
     <atom:link href="https://mohakchugh.is-a.dev/feed.xml" rel="self" type="application/rss+xml"/>
     <item>
+      <title>NanoFlow: LLM Serving Is Compute Bound, and Your GPU Is Half Idle</title>
+      <link>https://mohakchugh.is-a.dev/blog/nanoflow-intra-device-parallelism-nano-batching-llm-serving</link>
+      <pubDate>Sun, 26 Jul 2026 00:00:00 GMT</pubDate>
+      <description>Everyone repeats that LLM inference is memory bound. Run the arithmetic on a batched 70B serving workload and the opposite falls out: compute is the binding constraint, and yet aggregate GPU utilization sits near 40 percent. The gap is not kernel quality, it is that compute, memory, and NVLink operations execute one after another inside a single device. NanoFlow splits each batch into nano-batches so those three resources run at once, and lands 1.91x over TensorRT-LLM.</description>
+    </item>
+    <item>
       <title>Gated DeltaNet: Householder Transitions and the Arithmetic of Forgetting</title>
       <link>https://mohakchugh.is-a.dev/blog/gated-delta-networks-householder-transitions-linear-attention</link>
       <pubDate>Sat, 25 Jul 2026 00:00:00 GMT</pubDate>
