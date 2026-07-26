@@ -13,6 +13,12 @@
       <description>Parquet's fatal architectural choice is the opaque second compression layer. Once ZSTD touches a page, you cannot read one value without decompressing all of them, and you certainly cannot evaluate a predicate against the bytes as they sit. Vortex removes that layer and pushes comparisons into the encoded domain instead: compare an ALP-encoded float column as bit-packed integers, run a LIKE against FSST codes via a DFA over compressed symbols. The mechanism is genuinely elegant. The '100x faster random access' claim built on top of it does not survive reading the benchmark harness.</description>
     </item>
     <item>
+      <title>Megakernels: Deleting the Kernel Boundary to Win Back Microseconds</title>
+      <link>https://mohakchugh.is-a.dev/blog/megakernels-single-launch-llm-inference-eliminating-kernel-boundaries</link>
+      <pubDate>Sun, 26 Jul 2026 00:00:00 GMT</pubDate>
+      <description>A single-token forward pass through a 1B parameter model should take 740 microseconds on an H100. Production engines take two to three times that, and the reason is not arithmetic, not memory bandwidth, and not the model. It is the roughly one hundred kernel launches per forward pass, each of which drains the memory pipeline dry. Two 2025 projects independently arrived at the same fix: collapse the entire model into one kernel launch and build a scheduler inside it.</description>
+    </item>
+    <item>
       <title>NanoFlow: LLM Serving Is Compute Bound, and Your GPU Is Half Idle</title>
       <link>https://mohakchugh.is-a.dev/blog/nanoflow-intra-device-parallelism-nano-batching-llm-serving</link>
       <pubDate>Sun, 26 Jul 2026 00:00:00 GMT</pubDate>
