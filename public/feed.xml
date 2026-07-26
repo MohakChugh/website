@@ -7,6 +7,12 @@
     <language>en</language>
     <atom:link href="https://mohakchugh.is-a.dev/feed.xml" rel="self" type="application/rss+xml"/>
     <item>
+      <title>Compute on Compressed Data: What Vortex Gets Right, and What Its Benchmarks Don't</title>
+      <link>https://mohakchugh.is-a.dev/blog/compute-pushdown-compressed-data-vortex-columnar-format</link>
+      <pubDate>Sun, 26 Jul 2026 00:00:00 GMT</pubDate>
+      <description>Parquet's fatal architectural choice is the opaque second compression layer. Once ZSTD touches a page, you cannot read one value without decompressing all of them, and you certainly cannot evaluate a predicate against the bytes as they sit. Vortex removes that layer and pushes comparisons into the encoded domain instead: compare an ALP-encoded float column as bit-packed integers, run a LIKE against FSST codes via a DFA over compressed symbols. The mechanism is genuinely elegant. The '100x faster random access' claim built on top of it does not survive reading the benchmark harness.</description>
+    </item>
+    <item>
       <title>NanoFlow: LLM Serving Is Compute Bound, and Your GPU Is Half Idle</title>
       <link>https://mohakchugh.is-a.dev/blog/nanoflow-intra-device-parallelism-nano-batching-llm-serving</link>
       <pubDate>Sun, 26 Jul 2026 00:00:00 GMT</pubDate>
