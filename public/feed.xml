@@ -7,6 +7,12 @@
     <language>en</language>
     <atom:link href="https://mohakchugh.is-a.dev/feed.xml" rel="self" type="application/rss+xml"/>
     <item>
+      <title>Helix Parallelism: Why Tensor Parallelism Hits a Wall at Million-Token Context</title>
+      <link>https://mohakchugh.is-a.dev/blog/helix-parallelism-kv-sharding-million-token-decode</link>
+      <pubDate>Mon, 27 Jul 2026 00:00:00 GMT</pubDate>
+      <description>Tensor parallelism has a hard ceiling that most people never hit, because you only hit it when your KV cache is measured in millions of tokens. Once TP width exceeds the number of KV heads, adding GPUs stops reducing per-GPU KV traffic entirely, and the arithmetic says so plainly. Helix Parallelism breaks the ceiling by using a different sharding strategy for attention than for the FFN, in the same layer, on the same GPUs, microseconds apart.</description>
+    </item>
+    <item>
       <title>Compute on Compressed Data: What Vortex Gets Right, and What Its Benchmarks Don't</title>
       <link>https://mohakchugh.is-a.dev/blog/compute-pushdown-compressed-data-vortex-columnar-format</link>
       <pubDate>Sun, 26 Jul 2026 00:00:00 GMT</pubDate>
