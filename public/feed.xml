@@ -19,6 +19,12 @@
       <description>Everyone repeats that LLM inference is memory bound. Run the arithmetic on a batched 70B serving workload and the opposite falls out: compute is the binding constraint, and yet aggregate GPU utilization sits near 40 percent. The gap is not kernel quality, it is that compute, memory, and NVLink operations execute one after another inside a single device. NanoFlow splits each batch into nano-batches so those three resources run at once, and lands 1.91x over TensorRT-LLM.</description>
     </item>
     <item>
+      <title>NVMe Flexible Data Placement: Why WAF 1.0 Is a Best Effort, Not a Guarantee</title>
+      <link>https://mohakchugh.is-a.dev/blog/nvme-flexible-data-placement-fdp-reclaim-unit-handles-write-amplification</link>
+      <pubDate>Sun, 26 Jul 2026 00:00:00 GMT</pubDate>
+      <description>FDP gives the host eight tags to steer writes into physically separate NAND regions, and the pitch is write amplification approaching 1.0 with no application rewrite. The FAST '26 characterization of two shipping FDP drives found the same workload hitting 1.03 on one device and 3.12 on another, both advertising FDP support. The failures are structural: a noisy handle propagates GC pressure to its neighbors, long sequential streams get reclaimed prematurely, and F2FS tags 99% of user data with a single hint that collapses the whole interface back to a conventional SSD.</description>
+    </item>
+    <item>
       <title>Gated DeltaNet: Householder Transitions and the Arithmetic of Forgetting</title>
       <link>https://mohakchugh.is-a.dev/blog/gated-delta-networks-householder-transitions-linear-attention</link>
       <pubDate>Sat, 25 Jul 2026 00:00:00 GMT</pubDate>
