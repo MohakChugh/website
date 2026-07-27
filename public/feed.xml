@@ -7,6 +7,12 @@
     <language>en</language>
     <atom:link href="https://mohakchugh.is-a.dev/feed.xml" rel="self" type="application/rss+xml"/>
     <item>
+      <title>ACORN: Why Filtered Vector Search Breaks HNSW, and the Two-Hop Fix</title>
+      <link>https://mohakchugh.is-a.dev/blog/acorn-predicate-agnostic-filtered-vector-search-hnsw</link>
+      <pubDate>Mon, 27 Jul 2026 00:00:00 GMT</pubDate>
+      <description>Every production vector search is really a filtered vector search: find similar documents, but only for this tenant, only from last quarter, only in these languages. HNSW handles this badly, and not for the reason most people assume. The problem is that HNSW's edge pruning rule is provably wrong once you restrict the graph to a subset of nodes. ACORN fixes it by making pruning predicate-agnostic and recovering the deleted edges at query time through two-hop expansion, reaching 2x to 1,000x higher throughput at fixed recall.</description>
+    </item>
+    <item>
       <title>Helix Parallelism: Why Tensor Parallelism Hits a Wall at Million-Token Context</title>
       <link>https://mohakchugh.is-a.dev/blog/helix-parallelism-kv-sharding-million-token-decode</link>
       <pubDate>Mon, 27 Jul 2026 00:00:00 GMT</pubDate>
