@@ -19,6 +19,12 @@
       <description>Tensor parallelism has a hard ceiling that most people never hit, because you only hit it when your KV cache is measured in millions of tokens. Once TP width exceeds the number of KV heads, adding GPUs stops reducing per-GPU KV traffic entirely, and the arithmetic says so plainly. Helix Parallelism breaks the ceiling by using a different sharding strategy for attention than for the FFN, in the same layer, on the same GPUs, microseconds apart.</description>
     </item>
     <item>
+      <title>Predicate Transfer: Yannakakis's 1981 Algorithm, Rebuilt Out of Bloom Filters</title>
+      <link>https://mohakchugh.is-a.dev/blog/predicate-transfer-bloom-semijoin-reduction-robust-joins</link>
+      <pubDate>Mon, 27 Jul 2026 00:00:00 GMT</pubDate>
+      <description>There is a 1981 algorithm that provably evaluates any acyclic join in time proportional to input plus output, and essentially no production database uses it, because its constant factor makes queries 2.4x slower on average. Predicate transfer resurrects it by replacing exact semi-joins with Bloom filters, and the 2025 follow-up work shows that the interesting part was never the filters, it was the schedule.</description>
+    </item>
+    <item>
       <title>Compute on Compressed Data: What Vortex Gets Right, and What Its Benchmarks Don't</title>
       <link>https://mohakchugh.is-a.dev/blog/compute-pushdown-compressed-data-vortex-columnar-format</link>
       <pubDate>Sun, 26 Jul 2026 00:00:00 GMT</pubDate>
