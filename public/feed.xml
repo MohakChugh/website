@@ -7,6 +7,12 @@
     <language>en</language>
     <atom:link href="https://mohakchugh.is-a.dev/feed.xml" rel="self" type="application/rss+xml"/>
     <item>
+      <title>GPU Confidential Computing: Why the Same Hardware Costs 7% or 41x</title>
+      <link>https://mohakchugh.is-a.dev/blog/gpu-confidential-computing-bounce-buffers-arithmetic-intensity</link>
+      <pubDate>Tue, 28 Jul 2026 00:00:00 GMT</pubDate>
+      <description>Two measurement studies on Hopper-class GPU TEEs report overheads of under 7% and up to 41.6x. Both are correct. The entire gap is explained by one number in NVIDIA's own documentation: the encrypted CPU-GPU path moves about 4 GB/s, against a device that does roughly 990 TFLOP/s. That ratio gives you a break-even arithmetic intensity, and it tells you in advance which workloads survive encryption and which ones fall off a cliff.</description>
+    </item>
+    <item>
       <title>ACORN: Why Filtered Vector Search Breaks HNSW, and the Two-Hop Fix</title>
       <link>https://mohakchugh.is-a.dev/blog/acorn-predicate-agnostic-filtered-vector-search-hnsw</link>
       <pubDate>Mon, 27 Jul 2026 00:00:00 GMT</pubDate>
