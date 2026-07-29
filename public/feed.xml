@@ -7,6 +7,12 @@
     <language>en</language>
     <atom:link href="https://mohakchugh.is-a.dev/feed.xml" rel="self" type="application/rss+xml"/>
     <item>
+      <title>Batch-Invariant Kernels: Why LLM Inference Is Nondeterministic and How to Fix It</title>
+      <link>https://mohakchugh.is-a.dev/blog/batch-invariant-kernels-deterministic-llm-inference</link>
+      <pubDate>Wed, 29 Jul 2026 00:00:00 GMT</pubDate>
+      <description>Temperature-zero LLM endpoints still return different completions run to run. The usual explanation, floating point plus concurrency, is wrong. The real cause is that reduction kernels change their arithmetic order with batch size, and fixing it turns RL policy divergence from 0.001 into exactly zero.</description>
+    </item>
+    <item>
       <title>Seismic: Why WAND Fails on Learned Sparse Embeddings, and What Replaces It</title>
       <link>https://mohakchugh.is-a.dev/blog/seismic-clustered-inverted-index-learned-sparse-retrieval</link>
       <pubDate>Wed, 29 Jul 2026 00:00:00 GMT</pubDate>
