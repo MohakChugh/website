@@ -7,6 +7,12 @@
     <language>en</language>
     <atom:link href="https://mohakchugh.is-a.dev/feed.xml" rel="self" type="application/rss+xml"/>
     <item>
+      <title>Seismic: Why WAND Fails on Learned Sparse Embeddings, and What Replaces It</title>
+      <link>https://mohakchugh.is-a.dev/blog/seismic-clustered-inverted-index-learned-sparse-retrieval</link>
+      <pubDate>Wed, 29 Jul 2026 00:00:00 GMT</pubDate>
+      <description>Learned sparse models like SPLADE produce vectors that look like inverted-index input but behave nothing like it. Exact retrieval with a state-of-the-art WAND implementation takes 100 milliseconds per query on MS MARCO, worse than brute-force dense search. Seismic fixes this by throwing out document-ID ordering entirely: statically prune each list, cluster it into geometrically cohesive blocks, attach a quantized upper-bound summary to each block, and skip blocks whose summary cannot beat the current heap. The result is 187 microseconds at 90% recall, single threaded.</description>
+    </item>
+    <item>
       <title>GPU Confidential Computing: Why the Same Hardware Costs 7% or 41x</title>
       <link>https://mohakchugh.is-a.dev/blog/gpu-confidential-computing-bounce-buffers-arithmetic-intensity</link>
       <pubDate>Tue, 28 Jul 2026 00:00:00 GMT</pubDate>
