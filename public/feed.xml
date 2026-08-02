@@ -7,6 +7,12 @@
     <language>en</language>
     <atom:link href="https://mohakchugh.is-a.dev/feed.xml" rel="self" type="application/rss+xml"/>
     <item>
+      <title>TokenWeave: Why Hiding Tensor-Parallel Communication Needs Wave Arithmetic, Not Finer Tiles</title>
+      <link>https://mohakchugh.is-a.dev/blog/tokenweave-wave-aware-splitting-fused-allreduce-rmsnorm</link>
+      <pubDate>Mon, 03 Aug 2026 00:00:00 GMT</pubDate>
+      <description>Tensor-parallel LLM inference burns up to 20% of its latency in AllReduce, and every framework ships with compute-communication overlap turned off by default. The reason is not laziness: splitting work finer to create overlap costs more than the communication it hides. TokenWeave (MLSys 2026) fixes this with two unglamorous ideas, an unequal split sized to GPU wave boundaries and a fused AllReduce-RMSNorm kernel that runs on 8 SMs out of 132.</description>
+    </item>
+    <item>
       <title>Ultra Ethernet Transport: Packet Spraying, Ephemeral Connections, and the End of Ordered Delivery</title>
       <link>https://mohakchugh.is-a.dev/blog/ultra-ethernet-transport-packet-spraying-ephemeral-connections</link>
       <pubDate>Sun, 02 Aug 2026 00:00:00 GMT</pubDate>
