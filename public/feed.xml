@@ -7,6 +7,12 @@
     <language>en</language>
     <atom:link href="https://mohakchugh.is-a.dev/feed.xml" rel="self" type="application/rss+xml"/>
     <item>
+      <title>Ultra Ethernet Transport: Packet Spraying, Ephemeral Connections, and the End of Ordered Delivery</title>
+      <link>https://mohakchugh.is-a.dev/blog/ultra-ethernet-transport-packet-spraying-ephemeral-connections</link>
+      <pubDate>Sun, 02 Aug 2026 00:00:00 GMT</pubDate>
+      <description>RoCEv2 forces AI collectives through a transport built on per-peer connection state and strictly ordered delivery, and both assumptions break at cluster scale. The Ultra Ethernet Consortium's 1.0 specification replaces them with connectionless ephemeral contexts and per-packet spraying across hundreds of paths. A balls-into-bins simulation shows why the ordering guarantee, not the wire speed, is what caps utilization at 25%.</description>
+    </item>
+    <item>
       <title>E-Graph Extraction: The NP-Hard Step Everyone Skips With a Greedy Loop</title>
       <link>https://mohakchugh.is-a.dev/blog/egraph-extraction-dag-cost-cycles-treewidth</link>
       <pubDate>Thu, 30 Jul 2026 00:00:00 GMT</pubDate>
