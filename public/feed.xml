@@ -7,6 +7,12 @@
     <language>en</language>
     <atom:link href="https://mohakchugh.is-a.dev/feed.xml" rel="self" type="application/rss+xml"/>
     <item>
+      <title>Prequal: The Load Balancer That Wins by Not Balancing Load</title>
+      <link>https://mohakchugh.is-a.dev/blog/prequal-probe-based-load-balancing-latency-not-load</link>
+      <pubDate>Mon, 03 Aug 2026 00:00:00 GMT</pubDate>
+      <description>Weighted round-robin can hold every replica's CPU inside its allocation on a one minute chart and still time out a quarter of your queries. Prequal (NSDI '24) replaces load equalization with a probe pool and a two signal lexicographic rule, cutting YouTube tail latency 2x and driving errors at 1.74x allocation from 25 percent to exactly zero. The interesting part is why the near perfect load balancer is the loser.</description>
+    </item>
+    <item>
       <title>TokenWeave: Why Hiding Tensor-Parallel Communication Needs Wave Arithmetic, Not Finer Tiles</title>
       <link>https://mohakchugh.is-a.dev/blog/tokenweave-wave-aware-splitting-fused-allreduce-rmsnorm</link>
       <pubDate>Mon, 03 Aug 2026 00:00:00 GMT</pubDate>
