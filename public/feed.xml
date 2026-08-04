@@ -7,6 +7,12 @@
     <language>en</language>
     <atom:link href="https://mohakchugh.is-a.dev/feed.xml" rel="self" type="application/rss+xml"/>
     <item>
+      <title>German Strings: Why Arrow's StringView Never Saves Memory, and Wins Anyway</title>
+      <link>https://mohakchugh.is-a.dev/blog/german-strings-arrow-stringview-inline-prefix-layout</link>
+      <pubDate>Tue, 04 Aug 2026 00:00:00 GMT</pubDate>
+      <description>Arrow's Utf8View layout, lifted from TU Munich's Umbra, replaces offsets with a 16-byte struct that inlines short strings and a 4-byte prefix. The pitch is usually framed as saving memory. Do the algebra and the memory delta is 12n minus the inlined bytes, which is non-negative for every possible dataset. The real wins are elsewhere: one memory access instead of two, prefix-decisive comparisons at 99.97 percent on a real corpus, and a filter that copies pointers instead of bytes. The cost is a garbage collector you now own.</description>
+    </item>
+    <item>
       <title>Prequal: The Load Balancer That Wins by Not Balancing Load</title>
       <link>https://mohakchugh.is-a.dev/blog/prequal-probe-based-load-balancing-latency-not-load</link>
       <pubDate>Mon, 03 Aug 2026 00:00:00 GMT</pubDate>
