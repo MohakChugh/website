@@ -7,6 +7,12 @@
     <language>en</language>
     <atom:link href="https://mohakchugh.is-a.dev/feed.xml" rel="self" type="application/rss+xml"/>
     <item>
+      <title>PRAC: DRAM Finally Counts Every Activation, and the Counting Is the Attack Surface</title>
+      <link>https://mohakchugh.is-a.dev/blog/prac-per-row-activation-counting-ddr5-rowhammer-alert-backoff</link>
+      <pubDate>Wed, 05 Aug 2026 00:00:00 GMT</pubDate>
+      <description>DDR5's Per-Row Activation Counting gives every DRAM row an exact activation counter, ending two decades of probabilistic RowHammer guessing. Then the mitigation became the vulnerability: an availability attack that eats 94 percent of DRAM throughput, a timing channel that leaks AES keys through the back-off protocol, and a model-checked counter-reset flaw that consumes all but one activation of MOAT's safety margin.</description>
+    </item>
+    <item>
       <title>Asynchronous RL for Reasoning Models: How Decoupling Rollout from Training Breaks PPO's Math</title>
       <link>https://mohakchugh.is-a.dev/blog/asynchronous-rl-llm-training-staleness-decoupled-ppo</link>
       <pubDate>Tue, 04 Aug 2026 00:00:00 GMT</pubDate>
