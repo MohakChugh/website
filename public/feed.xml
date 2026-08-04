@@ -7,6 +7,12 @@
     <language>en</language>
     <atom:link href="https://mohakchugh.is-a.dev/feed.xml" rel="self" type="application/rss+xml"/>
     <item>
+      <title>Asynchronous RL for Reasoning Models: How Decoupling Rollout from Training Breaks PPO's Math</title>
+      <link>https://mohakchugh.is-a.dev/blog/asynchronous-rl-llm-training-staleness-decoupled-ppo</link>
+      <pubDate>Tue, 04 Aug 2026 00:00:00 GMT</pubDate>
+      <description>Synchronous RL post-training wastes most of its inference fleet waiting on the single longest reasoning trace in each batch. Decoupling generation from training recovers that idle time, but it quietly invalidates the assumption PPO's importance ratio is built on, and naive async training drops AIME24 accuracy from 42.0 to 23.3. AReaL fixes the schedule and the objective together.</description>
+    </item>
+    <item>
       <title>German Strings: Why Arrow's StringView Never Saves Memory, and Wins Anyway</title>
       <link>https://mohakchugh.is-a.dev/blog/german-strings-arrow-stringview-inline-prefix-layout</link>
       <pubDate>Tue, 04 Aug 2026 00:00:00 GMT</pubDate>

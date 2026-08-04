@@ -23,6 +23,7 @@
   <url><loc>https://mohakchugh.is-a.dev/projects/fit-strong-90</loc><priority>0.6</priority></url>
   <url><loc>https://mohakchugh.is-a.dev/projects/connectus</loc><priority>0.6</priority></url>
   <url><loc>https://mohakchugh.is-a.dev/projects/flashread</loc><priority>0.6</priority></url>
+  <url><loc>https://mohakchugh.is-a.dev/blog/asynchronous-rl-llm-training-staleness-decoupled-ppo</loc><priority>0.7</priority></url>
   <url><loc>https://mohakchugh.is-a.dev/blog/german-strings-arrow-stringview-inline-prefix-layout</loc><priority>0.7</priority></url>
   <url><loc>https://mohakchugh.is-a.dev/blog/prequal-probe-based-load-balancing-latency-not-load</loc><priority>0.7</priority></url>
   <url><loc>https://mohakchugh.is-a.dev/blog/tokenweave-wave-aware-splitting-fused-allreduce-rmsnorm</loc><priority>0.7</priority></url>
