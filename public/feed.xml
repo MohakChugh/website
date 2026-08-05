@@ -7,6 +7,12 @@
     <language>en</language>
     <atom:link href="https://mohakchugh.is-a.dev/feed.xml" rel="self" type="application/rss+xml"/>
     <item>
+      <title>CacheBlend: Reusing KV Caches When Your Text Isn't a Prefix</title>
+      <link>https://mohakchugh.is-a.dev/blog/cacheblend-non-prefix-kv-cache-reuse-selective-recompute</link>
+      <pubDate>Wed, 05 Aug 2026 00:00:00 GMT</pubDate>
+      <description>Prefix caching only works when reused text sits at position zero. CacheBlend reuses KV caches from arbitrary positions and repairs the missing cross-attention by recomputing just 15% of tokens, chosen by a layer-cascading greedy filter.</description>
+    </item>
+    <item>
       <title>PRAC: DRAM Finally Counts Every Activation, and the Counting Is the Attack Surface</title>
       <link>https://mohakchugh.is-a.dev/blog/prac-per-row-activation-counting-ddr5-rowhammer-alert-backoff</link>
       <pubDate>Wed, 05 Aug 2026 00:00:00 GMT</pubDate>
