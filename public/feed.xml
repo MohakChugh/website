@@ -19,6 +19,12 @@
       <description>DRAM-PIM puts MAC units inside every bank, so attention decode should stop being memory-bound. Measured MAC utilization at a head dimension of 128 is 14.7 percent. PIMphony (HPCA 2026) shows all three causes live in the control path, not the datapath: head-first channel partitioning that starves channels, static command scheduling that serializes I/O against compute, and physical addresses baked into precompiled instructions that force worst-case KV allocation. Fixing them costs under 5 percent area and yields up to 11.3x.</description>
     </item>
     <item>
+      <title>Styx: Serializable Stateful Functions Without a Single Two-Phase Commit</title>
+      <link>https://mohakchugh.is-a.dev/blog/styx-deterministic-transactional-stateful-functions-dataflow</link>
+      <pubDate>Thu, 06 Aug 2026 00:00:00 GMT</pubDate>
+      <description>Every serializable stateful-FaaS runtime pays for 2PC: a coordinator log flush, a prepare round trip, and a rollback path. Styx (SIGMOD 2025) deletes all three by making the runtime deterministic, then bills the ack protocol in fractions instead of floats. I recomputed its runtime breakdown, simulated its two-phase commit split, and found the paper's stated reason for using fractions is provably wrong even though the decision is right.</description>
+    </item>
+    <item>
       <title>CacheBlend: Reusing KV Caches When Your Text Isn't a Prefix</title>
       <link>https://mohakchugh.is-a.dev/blog/cacheblend-non-prefix-kv-cache-reuse-selective-recompute</link>
       <pubDate>Wed, 05 Aug 2026 00:00:00 GMT</pubDate>
