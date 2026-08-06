@@ -13,6 +13,12 @@
       <description>Linux 6.12 and 6.15 shipped two features that look unrelated: TCP receive directly into GPU memory, and io_uring zero-copy receive into userspace pages. Both rest on one abstraction that inverts a thirty-year assumption in the network stack, that a packet buffer is a struct page the kernel can dereference. The consequence is a receive path where the payload is unreadable to the kernel that routes it, and header/data split stops being an optimization and becomes a correctness requirement.</description>
     </item>
     <item>
+      <title>Processing-in-Memory Has the Bandwidth. It Was Wasting 85 Percent of It on Command Stalls</title>
+      <link>https://mohakchugh.is-a.dev/blog/pim-attention-decode-command-scheduling-channel-partitioning</link>
+      <pubDate>Thu, 06 Aug 2026 00:00:00 GMT</pubDate>
+      <description>DRAM-PIM puts MAC units inside every bank, so attention decode should stop being memory-bound. Measured MAC utilization at a head dimension of 128 is 14.7 percent. PIMphony (HPCA 2026) shows all three causes live in the control path, not the datapath: head-first channel partitioning that starves channels, static command scheduling that serializes I/O against compute, and physical addresses baked into precompiled instructions that force worst-case KV allocation. Fixing them costs under 5 percent area and yields up to 11.3x.</description>
+    </item>
+    <item>
       <title>CacheBlend: Reusing KV Caches When Your Text Isn't a Prefix</title>
       <link>https://mohakchugh.is-a.dev/blog/cacheblend-non-prefix-kv-cache-reuse-selective-recompute</link>
       <pubDate>Wed, 05 Aug 2026 00:00:00 GMT</pubDate>
