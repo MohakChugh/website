@@ -7,6 +7,12 @@
     <language>en</language>
     <atom:link href="https://mohakchugh.is-a.dev/feed.xml" rel="self" type="application/rss+xml"/>
     <item>
+      <title>Unreadable Memory: netmem, devmem TCP, and io_uring Zero-Copy Receive</title>
+      <link>https://mohakchugh.is-a.dev/blog/netmem-unreadable-memory-devmem-tcp-io-uring-zero-copy-receive</link>
+      <pubDate>Thu, 06 Aug 2026 00:00:00 GMT</pubDate>
+      <description>Linux 6.12 and 6.15 shipped two features that look unrelated: TCP receive directly into GPU memory, and io_uring zero-copy receive into userspace pages. Both rest on one abstraction that inverts a thirty-year assumption in the network stack, that a packet buffer is a struct page the kernel can dereference. The consequence is a receive path where the payload is unreadable to the kernel that routes it, and header/data split stops being an optimization and becomes a correctness requirement.</description>
+    </item>
+    <item>
       <title>CacheBlend: Reusing KV Caches When Your Text Isn't a Prefix</title>
       <link>https://mohakchugh.is-a.dev/blog/cacheblend-non-prefix-kv-cache-reuse-selective-recompute</link>
       <pubDate>Wed, 05 Aug 2026 00:00:00 GMT</pubDate>
