@@ -7,6 +7,12 @@
     <language>en</language>
     <atom:link href="https://mohakchugh.is-a.dev/feed.xml" rel="self" type="application/rss+xml"/>
     <item>
+      <title>Merkle Tree Certificates: Making Post-Quantum WebPKI Fit in the Initial Congestion Window</title>
+      <link>https://mohakchugh.is-a.dev/blog/merkle-tree-certificates-post-quantum-webpki-signatureless</link>
+      <pubDate>Sat, 08 Aug 2026 00:00:00 GMT</pubDate>
+      <description>Post-quantum key agreement shipped quietly and now covers most of the web. Post-quantum certificates have not shipped at all, because swapping ECDSA for ML-DSA in a WebPKI handshake adds about 13 kB and drives the server's first flight straight through the initial congestion window. Merkle Tree Certificates replace every signature except the handshake one with a 736-byte inclusion proof, and in the best case with no signature at all. The mechanism is a careful argument about which facts a proof already pins down.</description>
+    </item>
+    <item>
       <title>MoE Decoding Is Two Different Workloads: Attention-FFN Disaggregation and the Ping-Pong Pipeline</title>
       <link>https://mohakchugh.is-a.dev/blog/megascale-infer-attention-ffn-disaggregation-ping-pong-pipeline</link>
       <pubDate>Fri, 07 Aug 2026 00:00:00 GMT</pubDate>
