@@ -13,6 +13,12 @@
       <description>Sparse activation turns MoE feed-forward layers from compute-bound into memory-bound, and no amount of batching fixes it while attention and FFN share a GPU. MegaScale-Infer splits them onto separate nodes and shuttles micro-batches between them. I re-derived its roofline math, built my own balance model, and found the paper's heterogeneous hardware choice is provable from the price sheet alone, while one sentence in its ablation contradicts its own constraint.</description>
     </item>
     <item>
+      <title>Uncertified DAGs: How Mysticeti Cut BFT Consensus Latency by Deleting the Certificates</title>
+      <link>https://mohakchugh.is-a.dev/blog/mysticeti-uncertified-dag-bft-implicit-certificates</link>
+      <pubDate>Fri, 07 Aug 2026 00:00:00 GMT</pubDate>
+      <description>DAG-based Byzantine consensus bought throughput by paying for it in latency: every block gets explicitly certified by a supermajority before it can even be considered for ordering, which costs three message delays before the three-delay consensus starts. Mysticeti removes the certification round entirely and recovers the same guarantee by reading patterns in the DAG structure. The result went to production on a 106-validator network and cut median latency 4.75x.</description>
+    </item>
+    <item>
       <title>Unreadable Memory: netmem, devmem TCP, and io_uring Zero-Copy Receive</title>
       <link>https://mohakchugh.is-a.dev/blog/netmem-unreadable-memory-devmem-tcp-io-uring-zero-copy-receive</link>
       <pubDate>Thu, 06 Aug 2026 00:00:00 GMT</pubDate>
