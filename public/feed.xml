@@ -7,6 +7,12 @@
     <language>en</language>
     <atom:link href="https://mohakchugh.is-a.dev/feed.xml" rel="self" type="application/rss+xml"/>
     <item>
+      <title>L4S and DualPI2: Buying Sub-Millisecond Queues with a Squared Probability</title>
+      <link>https://mohakchugh.is-a.dev/blog/l4s-dualpi2-coupled-aqm-squared-probability-marking</link>
+      <pubDate>Sat, 08 Aug 2026 00:00:00 GMT</pubDate>
+      <description>Bufferbloat has a fix nobody could deploy: mark congestion aggressively enough that queues stay under a millisecond. The problem is that any queue tuned that way starves every Reno and CUBIC flow sharing it. L4S solves the deployment problem with one algebraic trick, two queues fed by one controller whose output is squared for the legacy queue and scaled linearly for the new one. This post derives the coupling, then checks the RFC's reference parameters against the qdisc that actually shipped in Linux.</description>
+    </item>
+    <item>
       <title>Merkle Tree Certificates: Making Post-Quantum WebPKI Fit in the Initial Congestion Window</title>
       <link>https://mohakchugh.is-a.dev/blog/merkle-tree-certificates-post-quantum-webpki-signatureless</link>
       <pubDate>Sat, 08 Aug 2026 00:00:00 GMT</pubDate>
