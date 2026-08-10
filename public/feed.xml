@@ -7,6 +7,12 @@
     <language>en</language>
     <atom:link href="https://mohakchugh.is-a.dev/feed.xml" rel="self" type="application/rss+xml"/>
     <item>
+      <title>Kernel-Initiated RDMA: Why Large-Scale MoE Decode Broke the CPU Proxy</title>
+      <link>https://mohakchugh.is-a.dev/blog/ibgda-kernel-initiated-rdma-moe-expert-parallel-dispatch</link>
+      <pubDate>Mon, 10 Aug 2026 00:00:00 GMT</pubDate>
+      <description>Every GPU that sends a network message has to get a work request into a NIC queue, and for years a CPU thread did that on the GPU's behalf. Large-scale expert parallelism broke that arrangement, but not for the reason usually given. The proxy round trip is only 2.3% of a decode layer's budget. This post derives the number that actually matters, checks DeepEP's published latency table against its own bandwidth column, and finds that one of the DeepSeek-V3 hardware paper's design justifications compares against a baseline that never occurs.</description>
+    </item>
+    <item>
       <title>L4S and DualPI2: Buying Sub-Millisecond Queues with a Squared Probability</title>
       <link>https://mohakchugh.is-a.dev/blog/l4s-dualpi2-coupled-aqm-squared-probability-marking</link>
       <pubDate>Sat, 08 Aug 2026 00:00:00 GMT</pubDate>
