@@ -7,6 +7,12 @@
     <language>en</language>
     <atom:link href="https://mohakchugh.is-a.dev/feed.xml" rel="self" type="application/rss+xml"/>
     <item>
+      <title>Disaggregated State in Flink 2.0: Making 23ms Object Storage Behave Like a 68µs Disk</title>
+      <link>https://mohakchugh.is-a.dev/blog/flink-disaggregated-state-forst-async-execution</link>
+      <pubDate>Mon, 10 Aug 2026 00:00:00 GMT</pubDate>
+      <description>Streaming engines have kept state on local disk because remote storage is two orders of magnitude slower. Flink 2.0 moves state to DFS anyway, and the trick that makes it work is not caching, it is Little's Law.</description>
+    </item>
+    <item>
       <title>Kernel-Initiated RDMA: Why Large-Scale MoE Decode Broke the CPU Proxy</title>
       <link>https://mohakchugh.is-a.dev/blog/ibgda-kernel-initiated-rdma-moe-expert-parallel-dispatch</link>
       <pubDate>Mon, 10 Aug 2026 00:00:00 GMT</pubDate>
