@@ -23,6 +23,7 @@
   <url><loc>https://mohakchugh.is-a.dev/projects/fit-strong-90</loc><priority>0.6</priority></url>
   <url><loc>https://mohakchugh.is-a.dev/projects/connectus</loc><priority>0.6</priority></url>
   <url><loc>https://mohakchugh.is-a.dev/projects/flashread</loc><priority>0.6</priority></url>
+  <url><loc>https://mohakchugh.is-a.dev/blog/tree-borrows-rust-aliasing-model-frozen-state-read-reordering</loc><priority>0.7</priority></url>
   <url><loc>https://mohakchugh.is-a.dev/blog/flink-disaggregated-state-forst-async-execution</loc><priority>0.7</priority></url>
   <url><loc>https://mohakchugh.is-a.dev/blog/ibgda-kernel-initiated-rdma-moe-expert-parallel-dispatch</loc><priority>0.7</priority></url>
   <url><loc>https://mohakchugh.is-a.dev/blog/l4s-dualpi2-coupled-aqm-squared-probability-marking</loc><priority>0.7</priority></url>

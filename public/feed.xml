@@ -7,6 +7,12 @@
     <language>en</language>
     <atom:link href="https://mohakchugh.is-a.dev/feed.xml" rel="self" type="application/rss+xml"/>
     <item>
+      <title>Tree Borrows: How Adding a State Made Rust's Aliasing Model Both Weaker and Stronger</title>
+      <link>https://mohakchugh.is-a.dev/blog/tree-borrows-rust-aliasing-model-frozen-state-read-reordering</link>
+      <pubDate>Tue, 11 Aug 2026 00:00:00 GMT</pubDate>
+      <description>Rust's old aliasing model rejected half the unsafe code people actually write, and it silently forbade reordering two adjacent reads. Tree Borrows fixes both at once, which should be impossible: less undefined behavior normally means fewer optimizations.</description>
+    </item>
+    <item>
       <title>Disaggregated State in Flink 2.0: Making 23ms Object Storage Behave Like a 68µs Disk</title>
       <link>https://mohakchugh.is-a.dev/blog/flink-disaggregated-state-forst-async-execution</link>
       <pubDate>Mon, 10 Aug 2026 00:00:00 GMT</pubDate>
