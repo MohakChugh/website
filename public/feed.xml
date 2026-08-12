@@ -7,6 +7,12 @@
     <language>en</language>
     <atom:link href="https://mohakchugh.is-a.dev/feed.xml" rel="self" type="application/rss+xml"/>
     <item>
+      <title>Binary Tower Fields: How Binius Stopped Paying the 254x Tax on Every Committed Bit</title>
+      <link>https://mohakchugh.is-a.dev/blog/binary-tower-fields-binius-snark-embedding-overhead</link>
+      <pubDate>Wed, 12 Aug 2026 00:00:00 GMT</pubDate>
+      <description>A SNARK prover's real cost is bits committed, not gates executed. Committing a single boolean into a 254-bit field wastes 253 of those bits. Binius removes the waste by replacing prime fields with a tower of binary fields, where a bit and a 128-bit word share one arithmetic.</description>
+    </item>
+    <item>
       <title>Tree Borrows: How Adding a State Made Rust's Aliasing Model Both Weaker and Stronger</title>
       <link>https://mohakchugh.is-a.dev/blog/tree-borrows-rust-aliasing-model-frozen-state-read-reordering</link>
       <pubDate>Tue, 11 Aug 2026 00:00:00 GMT</pubDate>
