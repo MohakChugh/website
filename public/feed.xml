@@ -7,6 +7,12 @@
     <language>en</language>
     <atom:link href="https://mohakchugh.is-a.dev/feed.xml" rel="self" type="application/rss+xml"/>
     <item>
+      <title>Semantic Operators: Putting a Statistical Contract on 6 Million LLM Calls</title>
+      <link>https://mohakchugh.is-a.dev/blog/semantic-operators-llm-query-cascades-accuracy-guarantees</link>
+      <pubDate>Thu, 13 Aug 2026 00:00:00 GMT</pubDate>
+      <description>A semantic join over 250 documents and 24,370 labels costs 6,092,500 LLM calls and 25 days. Getting that to 5,290 calls is the easy part. The interesting part is what the accuracy guarantee actually covers, and what it quietly does not.</description>
+    </item>
+    <item>
       <title>Binary Tower Fields: How Binius Stopped Paying the 254x Tax on Every Committed Bit</title>
       <link>https://mohakchugh.is-a.dev/blog/binary-tower-fields-binius-snark-embedding-overhead</link>
       <pubDate>Wed, 12 Aug 2026 00:00:00 GMT</pubDate>
