@@ -7,6 +7,12 @@
     <language>en</language>
     <atom:link href="https://mohakchugh.is-a.dev/feed.xml" rel="self" type="application/rss+xml"/>
     <item>
+      <title>Copy-and-Patch Compilation: Machine Code at 2 Nanoseconds per Instruction</title>
+      <link>https://mohakchugh.is-a.dev/blog/copy-and-patch-compilation-stencils-cpython-jit</link>
+      <pubDate>Sat, 15 Aug 2026 00:00:00 GMT</pubDate>
+      <description>A JIT that emits code faster than it can parse its own input sounds like cheating. Copy-and-patch gets there by refusing to compile at all: it precompiles every operation with holes in it at build time, then memcpy's the pieces together and patches the holes. It is the whole reason CPython now ships a JIT, and I measured it at 2.2 nanoseconds per micro-op.</description>
+    </item>
+    <item>
       <title>Running TPC-H on NCCL: The Broadcast That Refuses to Scale</title>
       <link>https://mohakchugh.is-a.dev/blog/nccl-collectives-distributed-gpu-sql-broadcast-scaling</link>
       <pubDate>Fri, 14 Aug 2026 00:00:00 GMT</pubDate>
