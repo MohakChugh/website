@@ -7,6 +7,12 @@
     <language>en</language>
     <atom:link href="https://mohakchugh.is-a.dev/feed.xml" rel="self" type="application/rss+xml"/>
     <item>
+      <title>Running TPC-H on NCCL: The Broadcast That Refuses to Scale</title>
+      <link>https://mohakchugh.is-a.dev/blog/nccl-collectives-distributed-gpu-sql-broadcast-scaling</link>
+      <pubDate>Fri, 14 Aug 2026 00:00:00 GMT</pubDate>
+      <description>A distributed SQL engine built on the collective communication library used for ML training runs all 22 TPC-H queries at 1TB in 0.53 seconds on 40 H100s. The abstract leads with that. Their own breakdown figure leads somewhere else: 8 GPUs in one machine do it in 1.13 seconds, so 5x the hardware bought 2.13x. This post derives why, verifies the paper's shuffle-vs-broadcast crossover condition, finds a non-monotonicity in it the paper doesn't mention, and computes the cost-per-query that makes scaling out the worse deal.</description>
+    </item>
+    <item>
       <title>Semantic Operators: Putting a Statistical Contract on 6 Million LLM Calls</title>
       <link>https://mohakchugh.is-a.dev/blog/semantic-operators-llm-query-cascades-accuracy-guarantees</link>
       <pubDate>Thu, 13 Aug 2026 00:00:00 GMT</pubDate>
