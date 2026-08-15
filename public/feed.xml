@@ -13,6 +13,12 @@
       <description>A JIT that emits code faster than it can parse its own input sounds like cheating. Copy-and-patch gets there by refusing to compile at all: it precompiles every operation with holes in it at build time, then memcpy's the pieces together and patches the holes. It is the whole reason CPython now ships a JIT, and I measured it at 2.2 nanoseconds per micro-op.</description>
     </item>
     <item>
+      <title>vAttention: Dynamic KV Cache Allocation Without Breaking Virtual Contiguity</title>
+      <link>https://mohakchugh.is-a.dev/blog/vattention-cuda-virtual-memory-kv-cache-dynamic-allocation</link>
+      <pubDate>Sat, 15 Aug 2026 00:00:00 GMT</pubDate>
+      <description>PagedAttention solved KV cache fragmentation by making the cache non-contiguous in virtual memory, and every attention kernel since has paid for that decision in rewrites, register spills, and block-table bookkeeping. vAttention points out that the fragmentation was always a physical-memory problem, and fixes it with CUDA's virtual memory APIs instead. I re-derived the paper's page-size tables and its batch-size result from first principles; both hold, and the arithmetic reveals why they had to patch NVIDIA's driver to ship it.</description>
+    </item>
+    <item>
       <title>Running TPC-H on NCCL: The Broadcast That Refuses to Scale</title>
       <link>https://mohakchugh.is-a.dev/blog/nccl-collectives-distributed-gpu-sql-broadcast-scaling</link>
       <pubDate>Fri, 14 Aug 2026 00:00:00 GMT</pubDate>

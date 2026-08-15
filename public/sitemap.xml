@@ -24,6 +24,7 @@
   <url><loc>https://mohakchugh.is-a.dev/projects/connectus</loc><priority>0.6</priority></url>
   <url><loc>https://mohakchugh.is-a.dev/projects/flashread</loc><priority>0.6</priority></url>
   <url><loc>https://mohakchugh.is-a.dev/blog/copy-and-patch-compilation-stencils-cpython-jit</loc><priority>0.7</priority></url>
+  <url><loc>https://mohakchugh.is-a.dev/blog/vattention-cuda-virtual-memory-kv-cache-dynamic-allocation</loc><priority>0.7</priority></url>
   <url><loc>https://mohakchugh.is-a.dev/blog/nccl-collectives-distributed-gpu-sql-broadcast-scaling</loc><priority>0.7</priority></url>
   <url><loc>https://mohakchugh.is-a.dev/blog/semantic-operators-llm-query-cascades-accuracy-guarantees</loc><priority>0.7</priority></url>
   <url><loc>https://mohakchugh.is-a.dev/blog/binary-tower-fields-binius-snark-embedding-overhead</loc><priority>0.7</priority></url>
