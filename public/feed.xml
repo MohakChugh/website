@@ -7,6 +7,12 @@
     <language>en</language>
     <atom:link href="https://mohakchugh.is-a.dev/feed.xml" rel="self" type="application/rss+xml"/>
     <item>
+      <title>The Hint Was the Problem: Silent Preprocessing in Single-Server PIR</title>
+      <link>https://mohakchugh.is-a.dev/blog/ypir-single-server-pir-silent-preprocessing-memory-bandwidth</link>
+      <pubDate>Sun, 16 Aug 2026 00:00:00 GMT</pubDate>
+      <description>SimplePIR made private database queries fast by turning the database itself into an LWE matrix, then charged every client a 400 MB download for the privilege. YPIR deletes that download entirely. I re-derived the hint arithmetic, then benchmarked the online kernel and found the memory-bandwidth story only holds on wide-vector cores.</description>
+    </item>
+    <item>
       <title>Copy-and-Patch Compilation: Machine Code at 2 Nanoseconds per Instruction</title>
       <link>https://mohakchugh.is-a.dev/blog/copy-and-patch-compilation-stencils-cpython-jit</link>
       <pubDate>Sat, 15 Aug 2026 00:00:00 GMT</pubDate>
