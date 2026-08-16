@@ -7,6 +7,12 @@
     <language>en</language>
     <atom:link href="https://mohakchugh.is-a.dev/feed.xml" rel="self" type="application/rss+xml"/>
     <item>
+      <title>One Multiplication Per Cycle: How Twist and Shout Rebuilt zkVM Memory Checking</title>
+      <link>https://mohakchugh.is-a.dev/blog/twist-shout-one-hot-memory-checking-zkvm-sumcheck</link>
+      <pubDate>Mon, 17 Aug 2026 00:00:00 GMT</pubDate>
+      <description>Every zkVM has to prove that its reads return the last thing written. For a decade that meant permutation checks and grand products. Twist and Shout replace both with one-hot addresses and increments. I implemented the core sum-checks, counted the prover's multiplications, and found the locality optimization pays off in RAM, not registers.</description>
+    </item>
+    <item>
       <title>Tensor Memory: Why Blackwell's MMA Is Issued by One Thread</title>
       <link>https://mohakchugh.is-a.dev/blog/tcgen05-tensor-memory-blackwell-single-thread-mma</link>
       <pubDate>Sun, 16 Aug 2026 00:00:00 GMT</pubDate>
