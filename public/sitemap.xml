@@ -23,6 +23,7 @@
   <url><loc>https://mohakchugh.is-a.dev/projects/fit-strong-90</loc><priority>0.6</priority></url>
   <url><loc>https://mohakchugh.is-a.dev/projects/connectus</loc><priority>0.6</priority></url>
   <url><loc>https://mohakchugh.is-a.dev/projects/flashread</loc><priority>0.6</priority></url>
+  <url><loc>https://mohakchugh.is-a.dev/blog/tcgen05-tensor-memory-blackwell-single-thread-mma</loc><priority>0.7</priority></url>
   <url><loc>https://mohakchugh.is-a.dev/blog/ypir-single-server-pir-silent-preprocessing-memory-bandwidth</loc><priority>0.7</priority></url>
   <url><loc>https://mohakchugh.is-a.dev/blog/copy-and-patch-compilation-stencils-cpython-jit</loc><priority>0.7</priority></url>
   <url><loc>https://mohakchugh.is-a.dev/blog/vattention-cuda-virtual-memory-kv-cache-dynamic-allocation</loc><priority>0.7</priority></url>

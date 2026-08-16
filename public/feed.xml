@@ -7,6 +7,12 @@
     <language>en</language>
     <atom:link href="https://mohakchugh.is-a.dev/feed.xml" rel="self" type="application/rss+xml"/>
     <item>
+      <title>Tensor Memory: Why Blackwell's MMA Is Issued by One Thread</title>
+      <link>https://mohakchugh.is-a.dev/blog/tcgen05-tensor-memory-blackwell-single-thread-mma</link>
+      <pubDate>Sun, 16 Aug 2026 00:00:00 GMT</pubDate>
+      <description>Blackwell's tcgen05 instructions break two rules that every GPU matrix-multiply kernel has been built around: accumulators no longer live in registers, and the MMA is no longer collective. I worked through the PTX ISA's Tensor Memory chapter and derived the arithmetic that forced both changes — accumulator traffic per FLOP scales as K/4, and every new tcgen05 kind lands at exactly 2x Hopper's per-SM accumulator bandwidth. That number is the whole design.</description>
+    </item>
+    <item>
       <title>The Hint Was the Problem: Silent Preprocessing in Single-Server PIR</title>
       <link>https://mohakchugh.is-a.dev/blog/ypir-single-server-pir-silent-preprocessing-memory-bandwidth</link>
       <pubDate>Sun, 16 Aug 2026 00:00:00 GMT</pubDate>
