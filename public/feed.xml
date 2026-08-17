@@ -7,6 +7,12 @@
     <language>en</language>
     <atom:link href="https://mohakchugh.is-a.dev/feed.xml" rel="self" type="application/rss+xml"/>
     <item>
+      <title>Breaking Yao's Conjecture: Elastic and Funnel Hashing at 99.98% Load</title>
+      <link>https://mohakchugh.is-a.dev/blog/elastic-funnel-hashing-open-addressing-yao-conjecture</link>
+      <pubDate>Mon, 17 Aug 2026 00:00:00 GMT</pubDate>
+      <description>Uniform probing was proven optimal for open addressing in 1985, and conjectured optimal in the worst case too. A 2025 paper broke the conjecture with two constructions that never move an element after inserting it. I implemented both against uniform probing and found where the crossover actually is: 99.9% load, not sooner.</description>
+    </item>
+    <item>
       <title>One Multiplication Per Cycle: How Twist and Shout Rebuilt zkVM Memory Checking</title>
       <link>https://mohakchugh.is-a.dev/blog/twist-shout-one-hot-memory-checking-zkvm-sumcheck</link>
       <pubDate>Mon, 17 Aug 2026 00:00:00 GMT</pubDate>
