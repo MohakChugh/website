@@ -7,6 +7,12 @@
     <language>en</language>
     <atom:link href="https://mohakchugh.is-a.dev/feed.xml" rel="self" type="application/rss+xml"/>
     <item>
+      <title>Worst-Case Optimal Joins on a GPU: Flattening Skew Into a Prefix Sum</title>
+      <link>https://mohakchugh.is-a.dev/blog/gpu-worst-case-optimal-joins-histogram-flattened-skew</link>
+      <pubDate>Tue, 18 Aug 2026 00:00:00 GMT</pubDate>
+      <description>Worst-case optimal joins fix the asymptotic blowup that kills binary join plans on cyclic queries, but their attribute-at-a-time intersections are a disaster on SIMT hardware: one high-degree hub key and a single warp holds up the whole device. SRDatalog's answer is to stop scheduling keys and start scheduling work units, flattening a skewed multi-level search space into a prefix-summed 1-D array that thread blocks slice at kernel launch. I re-derived the AGM bounds behind their rule rewriting and simulated their scheduler, and the numbers say the residual bottleneck is not where the paper says it is.</description>
+    </item>
+    <item>
       <title>Breaking Yao's Conjecture: Elastic and Funnel Hashing at 99.98% Load</title>
       <link>https://mohakchugh.is-a.dev/blog/elastic-funnel-hashing-open-addressing-yao-conjecture</link>
       <pubDate>Mon, 17 Aug 2026 00:00:00 GMT</pubDate>
