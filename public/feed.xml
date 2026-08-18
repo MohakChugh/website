@@ -7,6 +7,12 @@
     <language>en</language>
     <atom:link href="https://mohakchugh.is-a.dev/feed.xml" rel="self" type="application/rss+xml"/>
     <item>
+      <title>DAMON: Monitoring Terabytes of Memory for the Price of 1,000 PTE Checks</title>
+      <link>https://mohakchugh.is-a.dev/blog/damon-region-based-access-sampling-adaptive-memory-monitoring</link>
+      <pubDate>Tue, 18 Aug 2026 00:00:00 GMT</pubDate>
+      <description>Linux's DAMON answers 'which memory is cold and for how long' at an overhead set by a region count, not by memory size. I simulated its adaptive region sampler and found the case where its own auto-tuner reports healthy while the access map is noise.</description>
+    </item>
+    <item>
       <title>Worst-Case Optimal Joins on a GPU: Flattening Skew Into a Prefix Sum</title>
       <link>https://mohakchugh.is-a.dev/blog/gpu-worst-case-optimal-joins-histogram-flattened-skew</link>
       <pubDate>Tue, 18 Aug 2026 00:00:00 GMT</pubDate>
