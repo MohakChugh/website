@@ -7,6 +7,12 @@
     <language>en</language>
     <atom:link href="https://mohakchugh.is-a.dev/feed.xml" rel="self" type="application/rss+xml"/>
     <item>
+      <title>Fitting 192 Bits of Bounds Into 128: CHERI Concentrate and the 0.39% Tax It Charges Your Allocator</title>
+      <link>https://mohakchugh.is-a.dev/blog/cheri-concentrate-compressed-capability-bounds-allocator-alignment</link>
+      <pubDate>Wed, 19 Aug 2026 00:00:00 GMT</pubDate>
+      <description>A CHERI capability needs a base, a top, and an address, but only gets 128 bits. I reimplemented the CHERI Concentrate encoder from the ISAv9 spec, derived the exact worst-case padding a malloc pays (1/256), and found where the ratifying RISC-V spec quietly moved a constant that changes how far out-of-bounds your pointers may legally roam.</description>
+    </item>
+    <item>
       <title>DAMON: Monitoring Terabytes of Memory for the Price of 1,000 PTE Checks</title>
       <link>https://mohakchugh.is-a.dev/blog/damon-region-based-access-sampling-adaptive-memory-monitoring</link>
       <pubDate>Tue, 18 Aug 2026 00:00:00 GMT</pubDate>
