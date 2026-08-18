@@ -19,6 +19,12 @@
       <description>Worst-case optimal joins fix the asymptotic blowup that kills binary join plans on cyclic queries, but their attribute-at-a-time intersections are a disaster on SIMT hardware: one high-degree hub key and a single warp holds up the whole device. SRDatalog's answer is to stop scheduling keys and start scheduling work units, flattening a skewed multi-level search space into a prefix-summed 1-D array that thread blocks slice at kernel launch. I re-derived the AGM bounds behind their rule rewriting and simulated their scheduler, and the numbers say the residual bottleneck is not where the paper says it is.</description>
     </item>
     <item>
+      <title>Rational Levels: The Quantization Tax Hiding in Every RNS-CKKS Modulus Chain</title>
+      <link>https://mohakchugh.is-a.dev/blog/rational-levels-rns-ckks-modulus-chain-quantization</link>
+      <pubDate>Tue, 18 Aug 2026 00:00:00 GMT</pubDate>
+      <description>In RNS-CKKS the scarce resource is modulus bits, and a rescale spends a whole prime whether or not the operation needed one. I built the key-switch cost model, reproduced Grafting's measured 1.83x speedup from pure limb counting, and found the case where finer-grained levels make things 4x worse.</description>
+    </item>
+    <item>
       <title>Breaking Yao's Conjecture: Elastic and Funnel Hashing at 99.98% Load</title>
       <link>https://mohakchugh.is-a.dev/blog/elastic-funnel-hashing-open-addressing-yao-conjecture</link>
       <pubDate>Mon, 17 Aug 2026 00:00:00 GMT</pubDate>
