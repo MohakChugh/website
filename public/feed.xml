@@ -19,6 +19,12 @@
       <description>Sparse autoencoders give you a dictionary of features but no mechanism. Cross-layer transcoders plus frozen attention collapse a transformer into a network with exactly one nonlinearity left, which makes a circuit an exact linear decomposition rather than a gradient approximation. I rebuilt the construction in numpy, confirmed the decomposition is exact to 1e-15, and localized where its faithfulness actually breaks.</description>
     </item>
     <item>
+      <title>Reusable Subrings: Scheduling Collectives When Rewiring Costs Milliseconds</title>
+      <link>https://mohakchugh.is-a.dev/blog/reusable-subrings-optical-reconfiguration-collective-schedules</link>
+      <pubDate>Wed, 19 Aug 2026 00:00:00 GMT</pubDate>
+      <description>Optical circuit switches let you rewire a cluster mid-collective, but a 3D MEMS crossbar takes 15 ms to settle — a lifetime next to a 1.7 µs step. I worked through Bridge (arXiv:2605.12766), verified its subring structure in Python, and derived the closed-form condition it never states: the optimal number of reconfigurations depends on exactly two things, ln n and the dimensionless ratio δ/c. Solve (x−1)e^x + 1 = δ/c and you have it.</description>
+    </item>
+    <item>
       <title>DAMON: Monitoring Terabytes of Memory for the Price of 1,000 PTE Checks</title>
       <link>https://mohakchugh.is-a.dev/blog/damon-region-based-access-sampling-adaptive-memory-monitoring</link>
       <pubDate>Tue, 18 Aug 2026 00:00:00 GMT</pubDate>
