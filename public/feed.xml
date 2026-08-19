@@ -19,6 +19,12 @@
       <description>Sparse autoencoders give you a dictionary of features but no mechanism. Cross-layer transcoders plus frozen attention collapse a transformer into a network with exactly one nonlinearity left, which makes a circuit an exact linear decomposition rather than a gradient approximation. I rebuilt the construction in numpy, confirmed the decomposition is exact to 1e-15, and localized where its faithfulness actually breaks.</description>
     </item>
     <item>
+      <title>Shredding the Variant: Columnar Statistics for Schemaless JSON</title>
+      <link>https://mohakchugh.is-a.dev/blog/parquet-variant-shredding-typed-columns-semi-structured-data</link>
+      <pubDate>Wed, 19 Aug 2026 00:00:00 GMT</pubDate>
+      <description>Storing JSON in a data lake has always meant choosing between a rigid schema and an opaque blob. Parquet's Variant type plus its shredding spec promise both: self-describing values that still get typed columns, page statistics, and partial projection. I reimplemented the encoding and shredding rules from scratch, and found that the size win is modest, the projection win is enormous, and the data-skipping win has a cliff so sharp that one bad producer in 3,000 rows destroys it entirely.</description>
+    </item>
+    <item>
       <title>Reusable Subrings: Scheduling Collectives When Rewiring Costs Milliseconds</title>
       <link>https://mohakchugh.is-a.dev/blog/reusable-subrings-optical-reconfiguration-collective-schedules</link>
       <pubDate>Wed, 19 Aug 2026 00:00:00 GMT</pubDate>
