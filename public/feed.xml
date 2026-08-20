@@ -7,6 +7,12 @@
     <language>en</language>
     <atom:link href="https://mohakchugh.is-a.dev/feed.xml" rel="self" type="application/rss+xml"/>
     <item>
+      <title>Average Velocity: How MeanFlow Collapses Sampling to One Step</title>
+      <link>https://mohakchugh.is-a.dev/blog/meanflow-average-velocity-one-step-generative-models</link>
+      <pubDate>Fri, 21 Aug 2026 00:00:00 GMT</pubDate>
+      <description>Flow matching learns instantaneous velocity, so sampling needs an ODE solver and dozens of network calls. MeanFlow learns average velocity instead and closes the loop with a differential identity trainable by a single JVP, reaching FID 3.43 at one function evaluation. I derived the gradient-variance law behind its two strangest hyperparameters and measured it: the noise amplification factor is exactly the flow-map Jacobian, and on bimodal data 1% of samples carry 91% of the variance.</description>
+    </item>
+    <item>
       <title>Two Slots and a Square Root: Optimal Weak Isolation Testing</title>
       <link>https://mohakchugh.is-a.dev/blog/awdit-optimal-weak-isolation-testing-commit-order-saturation</link>
       <pubDate>Thu, 20 Aug 2026 00:00:00 GMT</pubDate>
