@@ -7,6 +7,12 @@
     <language>en</language>
     <atom:link href="https://mohakchugh.is-a.dev/feed.xml" rel="self" type="application/rss+xml"/>
     <item>
+      <title>Two Slots and a Square Root: Optimal Weak Isolation Testing</title>
+      <link>https://mohakchugh.is-a.dev/blog/awdit-optimal-weak-isolation-testing-commit-order-saturation</link>
+      <pubDate>Thu, 20 Aug 2026 00:00:00 GMT</pubDate>
+      <description>Checking whether a database actually delivered Read Committed is polynomial time, which sounds like the end of the story until you notice the state of the art was degree six. AWDIT (PLDI 2025) gets Read Committed and Read Atomic to n^1.5 and Causal Consistency to n*k, and proves you cannot do better without fast matrix multiplication. I reimplemented the core pass and fuzzed 20,000 histories to find out where the cleverness actually lives.</description>
+    </item>
+    <item>
       <title>Fitting 192 Bits of Bounds Into 128: CHERI Concentrate and the 0.39% Tax It Charges Your Allocator</title>
       <link>https://mohakchugh.is-a.dev/blog/cheri-concentrate-compressed-capability-bounds-allocator-alignment</link>
       <pubDate>Wed, 19 Aug 2026 00:00:00 GMT</pubDate>
