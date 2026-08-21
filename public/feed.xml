@@ -7,6 +7,12 @@
     <language>en</language>
     <atom:link href="https://mohakchugh.is-a.dev/feed.xml" rel="self" type="application/rss+xml"/>
     <item>
+      <title>The Smallest Seed That Works Is the Wrong Seed to Store</title>
+      <link>https://mohakchugh.is-a.dev/blog/consensus-seed-encoding-space-optimal-minimal-perfect-hashing</link>
+      <pubDate>Sat, 22 Aug 2026 00:00:00 GMT</pubDate>
+      <description>Every randomised data structure that retries until it succeeds stores the index of the first attempt that worked. A 2025 result shows that convention is provably wasteful. I computed the exact waste — log2(e) = 1.4427 bits per seed, 44% more than the paper's own bound — and derived why that single constant is what kept minimal perfect hash functions stuck above 1.5 bits per key.</description>
+    </item>
+    <item>
       <title>Average Velocity: How MeanFlow Collapses Sampling to One Step</title>
       <link>https://mohakchugh.is-a.dev/blog/meanflow-average-velocity-one-step-generative-models</link>
       <pubDate>Fri, 21 Aug 2026 00:00:00 GMT</pubDate>
