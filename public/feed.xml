@@ -19,6 +19,12 @@
       <description>CUTLASS turns tiling, swizzling and thread assignment into a single algebraic operation on shape/stride tuples. I implemented the algebra from scratch to check it, and found the interesting part is where it breaks: composition is a partial operation, and I measured how partial. For a 4x4 row-major layout only 76% of candidate composands are legal — which is exactly why these conditions are static_asserts.</description>
     </item>
     <item>
+      <title>Rateless IBLTs: Set Reconciliation Without Knowing the Difference Size</title>
+      <link>https://mohakchugh.is-a.dev/blog/rateless-iblt-set-reconciliation-without-knowing-difference-size</link>
+      <pubDate>Sat, 22 Aug 2026 00:00:00 GMT</pubDate>
+      <description>Every set reconciliation scheme in production makes you guess the answer before you compute it. Invertible Bloom Lookup Tables need the difference size up front; guess low and decoding fails outright, guess high and you burn bandwidth. Rateless IBLTs (SIGCOMM 2024) remove the guess entirely by turning the sketch into an infinite stream of coded symbols with a 1/(1+αi) mapping density. I re-derived the closed-form index generator and simulated the peeling decoder to check the 1.35x overhead claim.</description>
+    </item>
+    <item>
       <title>Average Velocity: How MeanFlow Collapses Sampling to One Step</title>
       <link>https://mohakchugh.is-a.dev/blog/meanflow-average-velocity-one-step-generative-models</link>
       <pubDate>Fri, 21 Aug 2026 00:00:00 GMT</pubDate>
