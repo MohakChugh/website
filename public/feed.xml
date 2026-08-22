@@ -25,6 +25,12 @@
       <description>Every set reconciliation scheme in production makes you guess the answer before you compute it. Invertible Bloom Lookup Tables need the difference size up front; guess low and decoding fails outright, guess high and you burn bandwidth. Rateless IBLTs (SIGCOMM 2024) remove the guess entirely by turning the sketch into an infinite stream of coded symbols with a 1/(1+αi) mapping density. I re-derived the closed-form index generator and simulated the peeling decoder to check the 1.35x overhead claim.</description>
     </item>
     <item>
+      <title>Your p99.9 Has an Error Bar the Width of the Entire Tail</title>
+      <link>https://mohakchugh.is-a.dev/blog/relative-error-quantile-sketches-tail-latency-elastic-compactors</link>
+      <pubDate>Sat, 22 Aug 2026 00:00:00 GMT</pubDate>
+      <description>Every metrics pipeline stores a quantile sketch with an additive rank guarantee of ±εn, then asks it for p99.9 — where only εn·(1/ε(1-q)) items even exist. I measured the resulting value error at 52%, derived why the fix needs a different guarantee shape, and traced the space bound from ReqSketch's log^1.5 down to the SODA 2025 elastic-compactor result.</description>
+    </item>
+    <item>
       <title>Average Velocity: How MeanFlow Collapses Sampling to One Step</title>
       <link>https://mohakchugh.is-a.dev/blog/meanflow-average-velocity-one-step-generative-models</link>
       <pubDate>Fri, 21 Aug 2026 00:00:00 GMT</pubDate>
