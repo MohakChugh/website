@@ -13,6 +13,12 @@
       <description>Every randomised data structure that retries until it succeeds stores the index of the first attempt that worked. A 2025 result shows that convention is provably wasteful. I computed the exact waste — log2(e) = 1.4427 bits per seed, 44% more than the paper's own bound — and derived why that single constant is what kept minimal perfect hash functions stuck above 1.5 bits per key.</description>
     </item>
     <item>
+      <title>Tiling Is Function Composition: The Partial Algebra Behind Every Tensor Core Kernel</title>
+      <link>https://mohakchugh.is-a.dev/blog/cute-layout-algebra-composition-divisibility-gpu-tensor-tiling</link>
+      <pubDate>Sat, 22 Aug 2026 00:00:00 GMT</pubDate>
+      <description>CUTLASS turns tiling, swizzling and thread assignment into a single algebraic operation on shape/stride tuples. I implemented the algebra from scratch to check it, and found the interesting part is where it breaks: composition is a partial operation, and I measured how partial. For a 4x4 row-major layout only 76% of candidate composands are legal — which is exactly why these conditions are static_asserts.</description>
+    </item>
+    <item>
       <title>Average Velocity: How MeanFlow Collapses Sampling to One Step</title>
       <link>https://mohakchugh.is-a.dev/blog/meanflow-average-velocity-one-step-generative-models</link>
       <pubDate>Fri, 21 Aug 2026 00:00:00 GMT</pubDate>
