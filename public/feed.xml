@@ -7,6 +7,12 @@
     <language>en</language>
     <atom:link href="https://mohakchugh.is-a.dev/feed.xml" rel="self" type="application/rss+xml"/>
     <item>
+      <title>Linear Ghost Types: How Verus Proves Raw-Pointer Rust Without Drowning the Solver</title>
+      <link>https://mohakchugh.is-a.dev/blog/linear-ghost-types-verus-smt-verification-low-level-rust</link>
+      <pubDate>Tue, 25 Aug 2026 00:00:00 GMT</pubDate>
+      <description>Verifying pointer-manipulating systems code means proving two very different things: that aliasing is sound, and that the arithmetic is right. Verus's central design bet is to refuse to send the first problem to the SMT solver at all — aliasing is discharged by a linear type checker, leaving Z3 a purely functional program to reason about. That split is why a verified hypervisor security module and a verified concurrent page-table subsystem now exist, and why the remaining engineering cost has moved somewhere surprising: quantifier triggers.</description>
+    </item>
+    <item>
       <title>Green Tea GC: Why Go's Collector Stopped Chasing Pointers</title>
       <link>https://mohakchugh.is-a.dev/blog/green-tea-garbage-collector-span-based-marking-memory-locality</link>
       <pubDate>Mon, 24 Aug 2026 00:00:00 GMT</pubDate>
