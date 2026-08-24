@@ -7,6 +7,12 @@
     <language>en</language>
     <atom:link href="https://mohakchugh.is-a.dev/feed.xml" rel="self" type="application/rss+xml"/>
     <item>
+      <title>Why Your Learning Rate Doesn't Transfer: μP, Unit Scaling, and the abc-Symmetry</title>
+      <link>https://mohakchugh.is-a.dev/blog/mup-unit-scaling-hyperparameter-transfer-fp8-training</link>
+      <pubDate>Mon, 24 Aug 2026 00:00:00 GMT</pubDate>
+      <description>Every time you widen a transformer, your tuned learning rate becomes wrong. Not slightly wrong: the optimum drifts as 1/width, which is why teams re-sweep hyperparameters at every scale and burn compute discovering the same curve shifted left. The Maximal Update Parametrization fixes this, and a 2024 refinement called u-μP fixes μP's own residual problem: the constants are all wrong for FP8.</description>
+    </item>
+    <item>
       <title>Microscaling FP4 Attention: Why the Softmax Operand Needs Two Scale Factors</title>
       <link>https://mohakchugh.is-a.dev/blog/nvfp4-attention-two-level-softmax-scaling-blackwell</link>
       <pubDate>Sun, 23 Aug 2026 00:00:00 GMT</pubDate>
