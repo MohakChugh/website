@@ -7,6 +7,12 @@
     <language>en</language>
     <atom:link href="https://mohakchugh.is-a.dev/feed.xml" rel="self" type="application/rss+xml"/>
     <item>
+      <title>Green Tea GC: Why Go's Collector Stopped Chasing Pointers</title>
+      <link>https://mohakchugh.is-a.dev/blog/green-tea-garbage-collector-span-based-marking-memory-locality</link>
+      <pubDate>Mon, 24 Aug 2026 00:00:00 GMT</pubDate>
+      <description>Tricolor mark-sweep is a graph flood, and a graph flood is a microarchitectural disaster: Go's collector spent over a third of its marking cycles stalled on memory it could not predict. Green Tea, default in Go 1.26, changes the unit of work from the object to the 8 KiB span. The entire performance case rests on one empirical bet about queue discipline, and it is possible to measure whether that bet pays off.</description>
+    </item>
+    <item>
       <title>Why Your Learning Rate Doesn't Transfer: μP, Unit Scaling, and the abc-Symmetry</title>
       <link>https://mohakchugh.is-a.dev/blog/mup-unit-scaling-hyperparameter-transfer-fp8-training</link>
       <pubDate>Mon, 24 Aug 2026 00:00:00 GMT</pubDate>
