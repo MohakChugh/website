@@ -7,6 +7,12 @@
     <language>en</language>
     <atom:link href="https://mohakchugh.is-a.dev/feed.xml" rel="self" type="application/rss+xml"/>
     <item>
+      <title>Fil-C: Memory-Safe C With 64-Bit Pointers and a Concurrent GC</title>
+      <link>https://mohakchugh.is-a.dev/blog/fil-c-invisicaps-memory-safe-c-concurrent-garbage-collection</link>
+      <pubDate>Tue, 25 Aug 2026 00:00:00 GMT</pubDate>
+      <description>Every serious attempt at memory-safe C has broken the ABI: fat pointers grow to 128 or 256 bits, structs change layout, and nothing links against anything. Fil-C keeps pointers at 64 bits by storing the capability in an invisible parallel allocation the C program cannot address, then pays for the resulting dangling-capability problem with a concurrent on-the-fly garbage collector. The result compiles CPython, OpenSSH, and Emacs unmodified at roughly 1.5x to 4x native speed.</description>
+    </item>
+    <item>
       <title>Linear Ghost Types: How Verus Proves Raw-Pointer Rust Without Drowning the Solver</title>
       <link>https://mohakchugh.is-a.dev/blog/linear-ghost-types-verus-smt-verification-low-level-rust</link>
       <pubDate>Tue, 25 Aug 2026 00:00:00 GMT</pubDate>
