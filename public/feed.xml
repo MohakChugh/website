@@ -7,6 +7,12 @@
     <language>en</language>
     <atom:link href="https://mohakchugh.is-a.dev/feed.xml" rel="self" type="application/rss+xml"/>
     <item>
+      <title>Multi-Size THP: Escaping the 4K-or-2M Cliff in Linux Memory Management</title>
+      <link>https://mohakchugh.is-a.dev/blog/multi-size-thp-arm64-contiguous-ptes-folio-granularity</link>
+      <pubDate>Wed, 26 Aug 2026 00:00:00 GMT</pubDate>
+      <description>For twenty years Linux gave you two page sizes: 4K, or a 2M hugepage that inflates a lightly-touched heap by up to 100x. Multi-size THP fills in the orders between them — and on arm64, the contiguous PTE bit turns 16 page table entries into one TLB entry. The interesting engineering is in the access/dirty bits.</description>
+    </item>
+    <item>
       <title>Fil-C: Memory-Safe C With 64-Bit Pointers and a Concurrent GC</title>
       <link>https://mohakchugh.is-a.dev/blog/fil-c-invisicaps-memory-safe-c-concurrent-garbage-collection</link>
       <pubDate>Tue, 25 Aug 2026 00:00:00 GMT</pubDate>
