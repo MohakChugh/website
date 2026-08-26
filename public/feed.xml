@@ -19,6 +19,12 @@
       <description>The eBPF verifier tracks your registers bit by bit in a domain called tnums. Multiplication in that domain was replaced upstream in August 2025, and the commit message quietly admits the new version is sometimes less precise. I enumerated all 43 million 8-bit operand pairs to find out where.</description>
     </item>
     <item>
+      <title>What Comes After HyperLogLog: Registers That Stop Throwing Information Away</title>
+      <link>https://mohakchugh.is-a.dev/blog/ultraloglog-exaloglog-memory-variance-product-distinct-counting</link>
+      <pubDate>Wed, 26 Aug 2026 00:00:00 GMT</pubDate>
+      <description>HyperLogLog's 6-bit register keeps one number and discards everything else the hash told you. UltraLogLog spends two more bits per register to remember what it used to forget, and ExaLogLog generalizes the base to fractional leading-zero resolution. I re-derived both papers' space-efficiency numbers from the closed form to check the 43% claim.</description>
+    </item>
+    <item>
       <title>Fil-C: Memory-Safe C With 64-Bit Pointers and a Concurrent GC</title>
       <link>https://mohakchugh.is-a.dev/blog/fil-c-invisicaps-memory-safe-c-concurrent-garbage-collection</link>
       <pubDate>Tue, 25 Aug 2026 00:00:00 GMT</pubDate>
