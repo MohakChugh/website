@@ -7,6 +7,12 @@
     <language>en</language>
     <atom:link href="https://mohakchugh.is-a.dev/feed.xml" rel="self" type="application/rss+xml"/>
     <item>
+      <title>mold: What It Takes to Parallelize a Linker (and Why Nobody Did)</title>
+      <link>https://mohakchugh.is-a.dev/blog/mold-parallel-linker-archive-semantics-liveness-walk</link>
+      <pubDate>Thu, 27 Aug 2026 00:00:00 GMT</pubDate>
+      <description>Linking is the last stage of the build that refuses to use your machine. lld sits on roughly one core for four of the five seconds it takes to link Firefox. The reason is not that the work is inherently sequential — it is that archive semantics are defined as a left-to-right scan, so parallelizing symbol resolution changes which object files end up in your binary. mold's answer is to replace the scan with a reachability walk, and I reproduced both the win and the corner-case divergence it causes.</description>
+    </item>
+    <item>
       <title>Multi-Size THP: Escaping the 4K-or-2M Cliff in Linux Memory Management</title>
       <link>https://mohakchugh.is-a.dev/blog/multi-size-thp-arm64-contiguous-ptes-folio-granularity</link>
       <pubDate>Wed, 26 Aug 2026 00:00:00 GMT</pubDate>
