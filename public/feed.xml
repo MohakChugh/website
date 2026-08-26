@@ -13,6 +13,12 @@
       <description>For twenty years Linux gave you two page sizes: 4K, or a 2M hugepage that inflates a lightly-touched heap by up to 100x. Multi-size THP fills in the orders between them — and on arm64, the contiguous PTE bit turns 16 page table entries into one TLB entry. The interesting engineering is in the access/dirty bits.</description>
     </item>
     <item>
+      <title>Polonius Alpha: Location-Sensitive Borrow Checking and the Loan-Reachability Graph</title>
+      <link>https://mohakchugh.is-a.dev/blog/polonius-alpha-location-sensitive-borrow-checking-loan-reachability</link>
+      <pubDate>Wed, 26 Aug 2026 00:00:00 GMT</pubDate>
+      <description>Rust's borrow checker rejects a whole class of programs that are obviously sound, and it has done so since 2018 by design. The reason is not the ownership rules; it is that NLL's constraint graph forgets where each constraint came from. Polonius alpha puts that coordinate back by making loan liveness a reachability question over a combined subset-plus-CFG graph — and it is now on nightly with a stabilization goal for 2026.</description>
+    </item>
+    <item>
       <title>Tristate Numbers: The Abstract Domain That Decides Whether Your eBPF Program Loads</title>
       <link>https://mohakchugh.is-a.dev/blog/tristate-numbers-ebpf-verifier-abstract-domain-tnum-multiplication</link>
       <pubDate>Wed, 26 Aug 2026 00:00:00 GMT</pubDate>
