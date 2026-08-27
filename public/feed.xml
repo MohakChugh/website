@@ -19,6 +19,12 @@
       <description>Linking is the last stage of the build that refuses to use your machine. lld sits on roughly one core for four of the five seconds it takes to link Firefox. The reason is not that the work is inherently sequential — it is that archive semantics are defined as a left-to-right scan, so parallelizing symbol resolution changes which object files end up in your binary. mold's answer is to replace the scan with a reachability walk, and I reproduced both the win and the corner-case divergence it causes.</description>
     </item>
     <item>
+      <title>The Move Structure: What Actually Makes a BWT-Runs Index Fast</title>
+      <link>https://mohakchugh.is-a.dev/blog/move-structure-bwt-runs-lf-mapping-cache-efficient-text-index</link>
+      <pubDate>Thu, 27 Aug 2026 00:00:00 GMT</pubDate>
+      <description>Nishimoto and Tabei's move structure turns LF mapping on a run-length BWT from a predecessor search into a pointer dereference plus a short local scan, and the theory is about bounding that scan. I built the whole thing and measured it: the balancing that bounds the scan cost 4.5% more intervals and improved throughput by nothing. The pointer is the entire win — 1.05 cache lines per LF step versus 4.01 and climbing.</description>
+    </item>
+    <item>
       <title>Multi-Size THP: Escaping the 4K-or-2M Cliff in Linux Memory Management</title>
       <link>https://mohakchugh.is-a.dev/blog/multi-size-thp-arm64-contiguous-ptes-folio-granularity</link>
       <pubDate>Wed, 26 Aug 2026 00:00:00 GMT</pubDate>
