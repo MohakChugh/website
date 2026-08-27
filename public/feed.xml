@@ -7,6 +7,12 @@
     <language>en</language>
     <atom:link href="https://mohakchugh.is-a.dev/feed.xml" rel="self" type="application/rss+xml"/>
     <item>
+      <title>EEVDF: Linux Turned Latency Into a Scheduling Parameter</title>
+      <link>https://mohakchugh.is-a.dev/blog/eevdf-linux-scheduler-lag-eligibility-virtual-deadline</link>
+      <pubDate>Fri, 28 Aug 2026 00:00:00 GMT</pubDate>
+      <description>CFS could tell you how much CPU a task got, never how soon. EEVDF splits those into two orthogonal knobs — weight sets the share, request size sets the deadline. I simulated it: dropping one task's request from 700us to 100us cut its worst-case wait 4x while its share moved 0.20 percentage points.</description>
+    </item>
+    <item>
       <title>Fair Queueing for LLM Serving: Why the Virtual Token Counter Needs a Lift Rule</title>
       <link>https://mohakchugh.is-a.dev/blog/fair-queueing-llm-serving-virtual-token-counter</link>
       <pubDate>Thu, 27 Aug 2026 00:00:00 GMT</pubDate>

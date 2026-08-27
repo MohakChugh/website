@@ -24,7 +24,7 @@ const SLUG_RE = /^[a-z0-9]+(-[a-z0-9]+)*\.md$/;
 // ── Shiki setup ──────────────────────────────────────────────────────────────
 const highlighter = await createHighlighter({
   themes: ['github-dark-default'],
-  langs: ['typescript', 'javascript', 'html', 'css', 'json', 'bash', 'python', 'java', 'markdown', 'yaml', 'sql'],
+  langs: ['typescript', 'javascript', 'html', 'css', 'json', 'bash', 'python', 'java', 'markdown', 'yaml', 'sql', 'c', 'rust'],
 });
 
 function highlightCode(code, lang) {
