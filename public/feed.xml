@@ -7,6 +7,12 @@
     <language>en</language>
     <atom:link href="https://mohakchugh.is-a.dev/feed.xml" rel="self" type="application/rss+xml"/>
     <item>
+      <title>Fair Queueing for LLM Serving: Why the Virtual Token Counter Needs a Lift Rule</title>
+      <link>https://mohakchugh.is-a.dev/blog/fair-queueing-llm-serving-virtual-token-counter</link>
+      <pubDate>Thu, 27 Aug 2026 00:00:00 GMT</pubDate>
+      <description>Requests-per-minute limits are the industry's fairness mechanism, and they are terrible: to get a tighter fairness gap than a proper fair scheduler, my simulation had to throw away 78% of the GPU. VTC (OSDI '24) ports weighted fair queueing to continuous batching, and the part that matters is not the counter — it is the one line that erases a returning client's banked credit. Without it, an idle client comes back and takes 83.5% of the machine.</description>
+    </item>
+    <item>
       <title>mold: What It Takes to Parallelize a Linker (and Why Nobody Did)</title>
       <link>https://mohakchugh.is-a.dev/blog/mold-parallel-linker-archive-semantics-liveness-walk</link>
       <pubDate>Thu, 27 Aug 2026 00:00:00 GMT</pubDate>

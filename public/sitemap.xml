@@ -23,6 +23,7 @@
   <url><loc>https://mohakchugh.is-a.dev/projects/fit-strong-90</loc><priority>0.6</priority></url>
   <url><loc>https://mohakchugh.is-a.dev/projects/connectus</loc><priority>0.6</priority></url>
   <url><loc>https://mohakchugh.is-a.dev/projects/flashread</loc><priority>0.6</priority></url>
+  <url><loc>https://mohakchugh.is-a.dev/blog/fair-queueing-llm-serving-virtual-token-counter</loc><priority>0.7</priority></url>
   <url><loc>https://mohakchugh.is-a.dev/blog/mold-parallel-linker-archive-semantics-liveness-walk</loc><priority>0.7</priority></url>
   <url><loc>https://mohakchugh.is-a.dev/blog/multi-size-thp-arm64-contiguous-ptes-folio-granularity</loc><priority>0.7</priority></url>
   <url><loc>https://mohakchugh.is-a.dev/blog/polonius-alpha-location-sensitive-borrow-checking-loan-reachability</loc><priority>0.7</priority></url>
