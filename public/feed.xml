@@ -25,6 +25,12 @@
       <description>Nishimoto and Tabei's move structure turns LF mapping on a run-length BWT from a predecessor search into a pointer dereference plus a short local scan, and the theory is about bounding that scan. I built the whole thing and measured it: the balancing that bounds the scan cost 4.5% more intervals and improved throughput by nothing. The pointer is the entire win — 1.05 cache lines per LF step versus 4.01 and climbing.</description>
     </item>
     <item>
+      <title>Software-Defined Prefetching: Steering the Hardware Prefetcher With One PTE Bit</title>
+      <link>https://mohakchugh.is-a.dev/blog/software-defined-hardware-prefetching-page-table-hints</link>
+      <pubDate>Thu, 27 Aug 2026 00:00:00 GMT</pubDate>
+      <description>On datacenter workloads, hardware prefetchers run at 24% accuracy — the useless prefetches are 44% of all DRAM traffic. Themis fixes this not with a smarter predictor but with a page-table bit: profile which 4KB pages are prefetch-hostile, mark them in the PTE, and let the prefetcher read the hint off the TLB. I checked the paper's arithmetic, derived where its magic constant comes from, and found the failure mode it never mentions — huge pages.</description>
+    </item>
+    <item>
       <title>Multi-Size THP: Escaping the 4K-or-2M Cliff in Linux Memory Management</title>
       <link>https://mohakchugh.is-a.dev/blog/multi-size-thp-arm64-contiguous-ptes-folio-granularity</link>
       <pubDate>Wed, 26 Aug 2026 00:00:00 GMT</pubDate>

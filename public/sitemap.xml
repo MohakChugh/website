@@ -26,6 +26,7 @@
   <url><loc>https://mohakchugh.is-a.dev/blog/fair-queueing-llm-serving-virtual-token-counter</loc><priority>0.7</priority></url>
   <url><loc>https://mohakchugh.is-a.dev/blog/mold-parallel-linker-archive-semantics-liveness-walk</loc><priority>0.7</priority></url>
   <url><loc>https://mohakchugh.is-a.dev/blog/move-structure-bwt-runs-lf-mapping-cache-efficient-text-index</loc><priority>0.7</priority></url>
+  <url><loc>https://mohakchugh.is-a.dev/blog/software-defined-hardware-prefetching-page-table-hints</loc><priority>0.7</priority></url>
   <url><loc>https://mohakchugh.is-a.dev/blog/multi-size-thp-arm64-contiguous-ptes-folio-granularity</loc><priority>0.7</priority></url>
   <url><loc>https://mohakchugh.is-a.dev/blog/polonius-alpha-location-sensitive-borrow-checking-loan-reachability</loc><priority>0.7</priority></url>
   <url><loc>https://mohakchugh.is-a.dev/blog/tristate-numbers-ebpf-verifier-abstract-domain-tnum-multiplication</loc><priority>0.7</priority></url>
