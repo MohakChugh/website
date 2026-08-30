@@ -7,6 +7,12 @@
     <language>en</language>
     <atom:link href="https://mohakchugh.is-a.dev/feed.xml" rel="self" type="application/rss+xml"/>
     <item>
+      <title>OpenZL: Shipping the Compressor Inside the Compressed File</title>
+      <link>https://mohakchugh.is-a.dev/blog/openzl-self-describing-compression-graphs-universal-decoder</link>
+      <pubDate>Sun, 30 Aug 2026 00:00:00 GMT</pubDate>
+      <description>Format-aware compressors win big and then rot, because every reader needs the matching decoder. OpenZL embeds the resolved transform graph in each frame so one universal decoder handles all of them. I rebuilt its core thesis on a 10MB record table: structure-aware transforms at zstd -3 hit 2.84x, beating xz -9 on the raw bytes (2.35x) at roughly 60x the throughput — and once the structure is exposed, the entropy backend stops mattering.</description>
+    </item>
+    <item>
       <title>EEVDF: Linux Turned Latency Into a Scheduling Parameter</title>
       <link>https://mohakchugh.is-a.dev/blog/eevdf-linux-scheduler-lag-eligibility-virtual-deadline</link>
       <pubDate>Fri, 28 Aug 2026 00:00:00 GMT</pubDate>
