@@ -7,6 +7,12 @@
     <language>en</language>
     <atom:link href="https://mohakchugh.is-a.dev/feed.xml" rel="self" type="application/rss+xml"/>
     <item>
+      <title>Turboshaft: V8 Walked Away From the Sea of Nodes</title>
+      <link>https://mohakchugh.is-a.dev/blog/turboshaft-v8-leaving-sea-of-nodes-reducer-stack</link>
+      <pubDate>Mon, 31 Aug 2026 00:00:00 GMT</pubDate>
+      <description>For twenty years the sea of nodes was the received wisdom for optimizing compilers. V8 finished replacing it with a CFG-based IR and halved compile time. I tried to reproduce the two mechanical arguments — traversal order and memory locality — and only one of them survives in isolation.</description>
+    </item>
+    <item>
       <title>OpenZL: Shipping the Compressor Inside the Compressed File</title>
       <link>https://mohakchugh.is-a.dev/blog/openzl-self-describing-compression-graphs-universal-decoder</link>
       <pubDate>Sun, 30 Aug 2026 00:00:00 GMT</pubDate>
