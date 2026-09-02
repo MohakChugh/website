@@ -7,6 +7,12 @@
     <language>en</language>
     <atom:link href="https://mohakchugh.is-a.dev/feed.xml" rel="self" type="application/rss+xml"/>
     <item>
+      <title>Range as a Key: Why Cloud Block Store Indexes Are a Memory Problem</title>
+      <link>https://mohakchugh.is-a.dev/blog/range-as-a-key-block-store-index-log-structured-leaf</link>
+      <pubDate>Wed, 02 Sep 2026 00:00:00 GMT</pubDate>
+      <description>A cloud block store has to answer one question on every I/O: where does logical block N physically live? Answering it per-block costs gigabytes of DRAM per terabyte of attached capacity, and that DRAM is the real cost center of the storage fleet. RASK argues the fix is to stop indexing blocks and index ranges instead, which sounds trivial until you hit overlapping writes and fragmentation. Here is the design, plus my own simulation of where the memory actually goes.</description>
+    </item>
+    <item>
       <title>Prism: Symbolic Superoptimization, or How to Not Decide Things Yet</title>
       <link>https://mohakchugh.is-a.dev/blog/prism-symbolic-superoptimization-sgraph-deferred-mappings</link>
       <pubDate>Tue, 01 Sep 2026 00:00:00 GMT</pubDate>
