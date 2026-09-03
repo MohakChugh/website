@@ -7,6 +7,12 @@
     <language>en</language>
     <atom:link href="https://mohakchugh.is-a.dev/feed.xml" rel="self" type="application/rss+xml"/>
     <item>
+      <title>Who Ran While You Waited? Culprit-Attributed CPU Contention on Stock Kernels</title>
+      <link>https://mohakchugh.is-a.dev/blog/schedblame-culprit-attributed-cpu-contention-ebpf</link>
+      <pubDate>Thu, 03 Sep 2026 00:00:00 GMT</pubDate>
+      <description>Every CPU contention signal Linux exposes is victim-side: PSI, schedstat wait_sum, runqlat. They tell you a container waited; none of them names who it waited for. SchedBlame inverts the accounting and squeezes an entire row of a competitor x victim blame matrix into one 16-byte record. I checked its arithmetic, then simulated the one approximation it accepts — and the error is not symmetric the way the paper argues.</description>
+    </item>
+    <item>
       <title>Range as a Key: Why Cloud Block Store Indexes Are a Memory Problem</title>
       <link>https://mohakchugh.is-a.dev/blog/range-as-a-key-block-store-index-log-structured-leaf</link>
       <pubDate>Wed, 02 Sep 2026 00:00:00 GMT</pubDate>
