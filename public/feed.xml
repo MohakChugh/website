@@ -7,6 +7,12 @@
     <language>en</language>
     <atom:link href="https://mohakchugh.is-a.dev/feed.xml" rel="self" type="application/rss+xml"/>
     <item>
+      <title>Nobody Should Hand-Write Page Table Code: Synthesizing MMU Configuration From a Hardware Spec</title>
+      <link>https://mohakchugh.is-a.dev/blog/velosiraptor-synthesizing-mmu-configuration-code-smt</link>
+      <pubDate>Fri, 04 Sep 2026 00:00:00 GMT</pubDate>
+      <description>Every OS port re-implements the same thing: the bit patterns that program the MMU. Velosiraptor generates that code from a behavioral spec of the hardware, verified against it with Z3. I rebuilt its synthesizer for an x86_64 page-directory entry — it recovers the paper's generated code from a 10^15.6 candidate space in 14 checks — then derived the closed form the paper's search-space argument is missing, and found the spec weakening that silently makes read-only mappings writable.</description>
+    </item>
+    <item>
       <title>Who Ran While You Waited? Culprit-Attributed CPU Contention on Stock Kernels</title>
       <link>https://mohakchugh.is-a.dev/blog/schedblame-culprit-attributed-cpu-contention-ebpf</link>
       <pubDate>Thu, 03 Sep 2026 00:00:00 GMT</pubDate>
