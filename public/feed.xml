@@ -7,6 +7,12 @@
     <language>en</language>
     <atom:link href="https://mohakchugh.is-a.dev/feed.xml" rel="self" type="application/rss+xml"/>
     <item>
+      <title>The 04261537 Order: FastLanes and the Layout That Makes Decoding Data-Parallel</title>
+      <link>https://mohakchugh.is-a.dev/blog/fastlanes-unified-transposed-layout-interleaved-bit-unpacking</link>
+      <pubDate>Mon, 07 Sep 2026 00:00:00 GMT</pubDate>
+      <description>Bit-packing decoders are slow not because the arithmetic is hard but because the layout serializes it. FastLanes reorders values against a virtual 1024-bit register so that plain scalar C auto-vectorizes into something fast. I brute-forced its uniqueness proof (the paper has a typo), then measured it on an M3 Pro: 22-26x over a conventional bit-unpacker, and the compiler beating my hand-written quasi-SIMD by 2.2x.</description>
+    </item>
+    <item>
       <title>Nobody Should Hand-Write Page Table Code: Synthesizing MMU Configuration From a Hardware Spec</title>
       <link>https://mohakchugh.is-a.dev/blog/velosiraptor-synthesizing-mmu-configuration-code-smt</link>
       <pubDate>Fri, 04 Sep 2026 00:00:00 GMT</pubDate>
