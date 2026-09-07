@@ -13,6 +13,12 @@
       <description>Bit-packing decoders are slow not because the arithmetic is hard but because the layout serializes it. FastLanes reorders values against a virtual 1024-bit register so that plain scalar C auto-vectorizes into something fast. I brute-forced its uniqueness proof (the paper has a typo), then measured it on an M3 Pro: 22-26x over a conventional bit-unpacker, and the compiler beating my hand-written quasi-SIMD by 2.2x.</description>
     </item>
     <item>
+      <title>Diskless Kafka: What Happens When the Log's Replication Protocol Becomes a PUT</title>
+      <link>https://mohakchugh.is-a.dev/blog/kafka-diskless-topics-leaderless-object-storage-log</link>
+      <pubDate>Mon, 07 Sep 2026 00:00:00 GMT</pubDate>
+      <description>KIP-1150 and KIP-1163 propose a leaderless Kafka topic type where any broker accepts produces, batches from many partitions share one WAL object, and a batch coordinator assigns offsets after upload. I worked through the design and ran the cost model: the cross-AZ advantage converges to ~41x on AWS, and the KIP's own P50 latency target carries ~2x headroom over the sum of its stated components.</description>
+    </item>
+    <item>
       <title>Nobody Should Hand-Write Page Table Code: Synthesizing MMU Configuration From a Hardware Spec</title>
       <link>https://mohakchugh.is-a.dev/blog/velosiraptor-synthesizing-mmu-configuration-code-smt</link>
       <pubDate>Fri, 04 Sep 2026 00:00:00 GMT</pubDate>
