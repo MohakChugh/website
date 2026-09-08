@@ -7,6 +7,12 @@
     <language>en</language>
     <atom:link href="https://mohakchugh.is-a.dev/feed.xml" rel="self" type="application/rss+xml"/>
     <item>
+      <title>Colloid: Why Tiered Memory Should Balance Latencies, Not Chase Hot Pages</title>
+      <link>https://mohakchugh.is-a.dev/blog/colloid-tiered-memory-balancing-loaded-access-latency</link>
+      <pubDate>Tue, 08 Sep 2026 00:00:00 GMT</pubDate>
+      <description>Every tiered-memory system packs the hottest pages into the fastest tier. Colloid (SOSP 2024) shows this is wrong under contention: loaded latency on the 'fast' tier can exceed the slow tier's, and the fix is a binary search that balances per-tier latencies measured with Little's Law. My own queueing model reproduces the effect — placement gains nothing until the default tier congests, then latency balancing wins up to 2.16x.</description>
+    </item>
+    <item>
       <title>The 04261537 Order: FastLanes and the Layout That Makes Decoding Data-Parallel</title>
       <link>https://mohakchugh.is-a.dev/blog/fastlanes-unified-transposed-layout-interleaved-bit-unpacking</link>
       <pubDate>Mon, 07 Sep 2026 00:00:00 GMT</pubDate>
