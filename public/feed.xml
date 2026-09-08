@@ -7,6 +7,12 @@
     <language>en</language>
     <atom:link href="https://mohakchugh.is-a.dev/feed.xml" rel="self" type="application/rss+xml"/>
     <item>
+      <title>Lance: Random Access in Columnar Storage Without Giving Up Scans</title>
+      <link>https://mohakchugh.is-a.dev/blog/lance-adaptive-structural-encodings-random-access-columnar</link>
+      <pubDate>Wed, 09 Sep 2026 00:00:00 GMT</pubDate>
+      <description>Columnar formats are supposedly bad at point lookups. Lance (arXiv 2504.15247) shows the real culprit is how formats encode structure — validity and repetition — not columnar layout itself. Two adaptive encodings, mini-block and full-zip, cap any random access at 2 IOPS regardless of nesting depth. The numbers check out: default Parquet manages ~5.5K rows/sec where tuned layouts hit 350K, a 63.6x gap my own arithmetic reproduces.</description>
+    </item>
+    <item>
       <title>Colloid: Why Tiered Memory Should Balance Latencies, Not Chase Hot Pages</title>
       <link>https://mohakchugh.is-a.dev/blog/colloid-tiered-memory-balancing-loaded-access-latency</link>
       <pubDate>Tue, 08 Sep 2026 00:00:00 GMT</pubDate>
