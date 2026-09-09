@@ -7,6 +7,12 @@
     <language>en</language>
     <atom:link href="https://mohakchugh.is-a.dev/feed.xml" rel="self" type="application/rss+xml"/>
     <item>
+      <title>Marconi: Prefix Caching When Your Model Can't Roll Back Its Own State</title>
+      <link>https://mohakchugh.is-a.dev/blog/marconi-prefix-caching-hybrid-ssm-attention-flop-aware-eviction</link>
+      <pubDate>Thu, 10 Sep 2026 00:00:00 GMT</pubDate>
+      <description>Hybrid SSM/attention models break the core assumption of prefix caching: recurrent states update in place, so a cached state for tokens 1..q is useless for a request that shares only 1..p. Marconi (MLSys 2025 Best Paper) fixes this with speculative radix-tree admission and FLOP-aware eviction, lifting token hit rates up to 34.4x over per-block checkpointing. My own eviction sim reproduces the win on an agentic trace (+10 hit-rate points) — and shows the same policy halving the hit rate on a chat trace, which is exactly why Marconi auto-tunes its eviction knob.</description>
+    </item>
+    <item>
       <title>Lance: Random Access in Columnar Storage Without Giving Up Scans</title>
       <link>https://mohakchugh.is-a.dev/blog/lance-adaptive-structural-encodings-random-access-columnar</link>
       <pubDate>Wed, 09 Sep 2026 00:00:00 GMT</pubDate>
