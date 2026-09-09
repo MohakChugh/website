@@ -13,6 +13,12 @@
       <description>Columnar formats are supposedly bad at point lookups. Lance (arXiv 2504.15247) shows the real culprit is how formats encode structure — validity and repetition — not columnar layout itself. Two adaptive encodings, mini-block and full-zip, cap any random access at 2 IOPS regardless of nesting depth. The numbers check out: default Parquet manages ~5.5K rows/sec where tuned layouts hit 350K, a 63.6x gap my own arithmetic reproduces.</description>
     </item>
     <item>
+      <title>Skyloft: Preemptive Scheduling Every 5 Microseconds, Entirely in User Space</title>
+      <link>https://mohakchugh.is-a.dev/blog/skyloft-user-interrupts-microsecond-preemptive-scheduling</link>
+      <pubDate>Wed, 09 Sep 2026 00:00:00 GMT</pubDate>
+      <description>Skyloft (SOSP 2024) uses Intel's user interrupts to build a user-space scheduler that preempts tasks every 5µs — a quantum 200x finer than a Linux tick. I pulled the paper's raw result files from the artifact repo and recomputed the headline: 5µs preemption lifts RocksDB goodput at a fixed tail-latency SLO from 20.1 to 37.4 kRPS, and a cross-thread POSIX signal on my own machine costs 5.4µs median — more than the entire quantum.</description>
+    </item>
+    <item>
       <title>Colloid: Why Tiered Memory Should Balance Latencies, Not Chase Hot Pages</title>
       <link>https://mohakchugh.is-a.dev/blog/colloid-tiered-memory-balancing-loaded-access-latency</link>
       <pubDate>Tue, 08 Sep 2026 00:00:00 GMT</pubDate>
