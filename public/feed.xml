@@ -13,6 +13,12 @@
       <description>DeepSeek's Fire-Flyer File System hits 6.6 TiB/s aggregate reads from 180 storage nodes — 81% of NIC line rate by my arithmetic — by combining CRAQ chain replication with a version-status twist that removes the tail's read involvement, RDMA-Read data pulls that make writes receiver-paced, and chunk placement solved as a balanced incomplete block design. My own placement sim shows why that last part matters: spreading chain membership rebuilds a failed SSD ~37x faster than fixed triples.</description>
     </item>
     <item>
+      <title>Junction: Kernel Bypass at 3,500 Instances Per Machine, No Porting Required</title>
+      <link>https://mohakchugh.is-a.dev/blog/junction-kernel-bypass-density-linux-compatibility-cloud</link>
+      <pubDate>Thu, 10 Sep 2026 00:00:00 GMT</pubDate>
+      <description>Kernel bypass has always bought its order-of-magnitude latency wins with two things clouds can't afford: dedicated spinning cores and rewritten applications. Junction (NSDI '24) drops both — running unmodified Linux binaries, including Go, Java, Node, and Python runtimes, behind an 11-syscall host interface, and packing 3,500 active instances on one 128GB machine. The trick is a library OS built almost entirely out of NIC and CPU hardware features. The paper's 19–62x density claim reconciles exactly: 3500/180 against Caladan's scheduler ceiling, 3500/56 against one-core-per-instance designs.</description>
+    </item>
+    <item>
       <title>Marconi: Prefix Caching When Your Model Can't Roll Back Its Own State</title>
       <link>https://mohakchugh.is-a.dev/blog/marconi-prefix-caching-hybrid-ssm-attention-flop-aware-eviction</link>
       <pubDate>Thu, 10 Sep 2026 00:00:00 GMT</pubDate>
