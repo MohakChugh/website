@@ -7,6 +7,12 @@
     <language>en</language>
     <atom:link href="https://mohakchugh.is-a.dev/feed.xml" rel="self" type="application/rss+xml"/>
     <item>
+      <title>Falcon: Moving the Transport State Machine into Hardware Without Making Ethernet Lossless</title>
+      <link>https://mohakchugh.is-a.dev/blog/falcon-hardware-transport-delay-based-congestion-control-lossy-ethernet</link>
+      <pubDate>Sun, 13 Sep 2026 00:00:00 GMT</pubDate>
+      <description>RoCE bought hardware-speed RDMA by demanding a lossless fabric, and a decade of PFC storms, deadlocks, and head-of-line blocking followed. Falcon — Google's hardware transport, contributed to the Open Compute Project and first shipping in Intel's IPU E2000 — takes the opposite bet: keep Ethernet lossy, and move RTT measurement, Swift-style delay-based congestion control, per-flow pacing, and retransmission into the NIC. My 32-flow simulation of the core mechanism shows why the delay target matters: loss-based AIMD pins the bottleneck queue at the full 50µs buffer, while a Swift-style target holds it at 6µs average, 8.8µs p99 — an 8x cut from the congestion-control algorithm alone, before any hardware assist.</description>
+    </item>
+    <item>
       <title>AutoUVM: Tensor-Level Prefetching When Your LLM Doesn't Fit in GPU Memory</title>
       <link>https://mohakchugh.is-a.dev/blog/autouvm-tensor-level-uvm-prefetching-llm-oversubscription</link>
       <pubDate>Fri, 11 Sep 2026 00:00:00 GMT</pubDate>
