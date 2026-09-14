@@ -13,6 +13,12 @@
       <description>LazyLog (SOSP '24) observes that shared-log applications need linearizable total order at read time, not append time. By binding records to global positions lazily — after acknowledging appends but before reads arrive — its Erwin implementations cut append latency 3.8x versus Corfu and two orders of magnitude versus Scalog, while keeping reads on a fast path whenever readers lag writers by even one ordering interval.</description>
     </item>
     <item>
+      <title>Ozaki Scheme II: Emulating FP64 Matrix Multiply with Residue Arithmetic on Integer Tensor Cores</title>
+      <link>https://mohakchugh.is-a.dev/blog/ozaki-scheme-ii-crt-residue-fp64-emulation-integer-tensor-cores</link>
+      <pubDate>Mon, 14 Sep 2026 00:00:00 GMT</pubDate>
+      <description>GPUs are quietly abandoning native FP64, and the replacement is number theory. Ozaki Scheme II (IJHPCA 2026) emulates double-precision GEMM by mapping scaled integers into a residue number system, running one exact INT8 tensor-core GEMM per modulus, and reconstructing via the Chinese Remainder Theorem — linear GEMM count where classic mantissa slicing is quadratic. My numpy prototype reproduces the mechanics: 8 residue GEMMs recover a 2^56-magnitude integer product bit-exactly, and the accuracy dial is just the modulus count.</description>
+    </item>
+    <item>
       <title>Falcon: Moving the Transport State Machine into Hardware Without Making Ethernet Lossless</title>
       <link>https://mohakchugh.is-a.dev/blog/falcon-hardware-transport-delay-based-congestion-control-lossy-ethernet</link>
       <pubDate>Sun, 13 Sep 2026 00:00:00 GMT</pubDate>
