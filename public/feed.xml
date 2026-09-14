@@ -7,6 +7,12 @@
     <language>en</language>
     <atom:link href="https://mohakchugh.is-a.dev/feed.xml" rel="self" type="application/rss+xml"/>
     <item>
+      <title>How CPython Actually Removed the GIL: Biased Reference Counting, Deferred RC, and QSBR</title>
+      <link>https://mohakchugh.is-a.dev/blog/free-threaded-cpython-biased-reference-counting-qsbr</link>
+      <pubDate>Tue, 15 Sep 2026 00:00:00 GMT</pubDate>
+      <description>Free-threaded CPython went from an experiment with ~40% single-threaded overhead in 3.13 to officially supported (PEP 779) at 5-10% in 3.14. The interesting part is how: a split local/shared refcount that keeps the owner thread's path non-atomic, deferred counting for hot shared objects, mimalloc as a GC substrate, and a FreeBSD GUS-style quiescent-state scheme that makes lock-free dict and list reads safe.</description>
+    </item>
+    <item>
       <title>LazyLog: Deferring Total Order to Read Time for 1-RTT Shared Log Appends</title>
       <link>https://mohakchugh.is-a.dev/blog/lazylog-lazy-ordering-shared-log-1rtt-appends</link>
       <pubDate>Mon, 14 Sep 2026 00:00:00 GMT</pubDate>
