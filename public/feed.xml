@@ -7,6 +7,12 @@
     <language>en</language>
     <atom:link href="https://mohakchugh.is-a.dev/feed.xml" rel="self" type="application/rss+xml"/>
     <item>
+      <title>LazyLog: Deferring Total Order to Read Time for 1-RTT Shared Log Appends</title>
+      <link>https://mohakchugh.is-a.dev/blog/lazylog-lazy-ordering-shared-log-1rtt-appends</link>
+      <pubDate>Mon, 14 Sep 2026 00:00:00 GMT</pubDate>
+      <description>LazyLog (SOSP '24) observes that shared-log applications need linearizable total order at read time, not append time. By binding records to global positions lazily — after acknowledging appends but before reads arrive — its Erwin implementations cut append latency 3.8x versus Corfu and two orders of magnitude versus Scalog, while keeping reads on a fast path whenever readers lag writers by even one ordering interval.</description>
+    </item>
+    <item>
       <title>Falcon: Moving the Transport State Machine into Hardware Without Making Ethernet Lossless</title>
       <link>https://mohakchugh.is-a.dev/blog/falcon-hardware-transport-delay-based-congestion-control-lossy-ethernet</link>
       <pubDate>Sun, 13 Sep 2026 00:00:00 GMT</pubDate>
