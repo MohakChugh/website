@@ -7,6 +7,12 @@
     <language>en</language>
     <atom:link href="https://mohakchugh.is-a.dev/feed.xml" rel="self" type="application/rss+xml"/>
     <item>
+      <title>Aegaeon: Token-Level Auto-Scaling for GPU Pooling Across Many LLMs</title>
+      <link>https://mohakchugh.is-a.dev/blog/aegaeon-token-level-autoscaling-gpu-pooling-multi-llm-serving</link>
+      <pubDate>Tue, 15 Sep 2026 00:00:00 GMT</pubDate>
+      <description>Aegaeon (SOSP '25) preempts models between decode steps instead of between requests, packing up to seven LLMs per GPU. A queueing argument shows why request-level auto-scaling caps out below three models per GPU, and a full-stack teardown of engine re-initialization — component reuse, bump-allocated VRAM, slab-allocated KV caches, CUDA-event-synchronized swaps — cuts preemptive scaling from 26.9 seconds to under one. Production deployment dropped a serving fleet from 1,192 GPUs to 213.</description>
+    </item>
+    <item>
       <title>How CPython Actually Removed the GIL: Biased Reference Counting, Deferred RC, and QSBR</title>
       <link>https://mohakchugh.is-a.dev/blog/free-threaded-cpython-biased-reference-counting-qsbr</link>
       <pubDate>Tue, 15 Sep 2026 00:00:00 GMT</pubDate>
