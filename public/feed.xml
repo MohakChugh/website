@@ -7,6 +7,12 @@
     <language>en</language>
     <atom:link href="https://mohakchugh.is-a.dev/feed.xml" rel="self" type="application/rss+xml"/>
     <item>
+      <title>Grafite: Range Filters That Survive Adversarial Queries</title>
+      <link>https://mohakchugh.is-a.dev/blog/grafite-optimal-range-filters-adversarial-queries-elias-fano</link>
+      <pubDate>Thu, 17 Sep 2026 00:00:00 GMT</pubDate>
+      <description>Range filters answer 'does any key fall in [a,b]?' with one-sided error — and almost every practical design (SuRF, SNARF, Proteus) collapses to a 100% false-positive rate when queries land near keys. Grafite (SIGMOD '24) fixes this with a locality-preserving hash into a reduced universe plus an Elias-Fano predecessor structure: log(L/ε)+2 bits per key, O(1) queries, and an FPR bound of ℓ/2^(B−2) that holds for any workload. A from-scratch reimplementation reproduces the paper's worked example, confirms the bound within sampling noise, and shows the true FPR is 1−e^(−ℓ/2^(B−2)) — the union bound's saturation at 1.0 hides a measurable 0.632.</description>
+    </item>
+    <item>
       <title>Aegaeon: Token-Level Auto-Scaling for GPU Pooling Across Many LLMs</title>
       <link>https://mohakchugh.is-a.dev/blog/aegaeon-token-level-autoscaling-gpu-pooling-multi-llm-serving</link>
       <pubDate>Tue, 15 Sep 2026 00:00:00 GMT</pubDate>
