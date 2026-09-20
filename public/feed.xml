@@ -7,6 +7,12 @@
     <language>en</language>
     <atom:link href="https://mohakchugh.is-a.dev/feed.xml" rel="self" type="application/rss+xml"/>
     <item>
+      <title>DuckLake: What Happens When Lakehouse Metadata Stops Pretending It Isn't a Database</title>
+      <link>https://mohakchugh.is-a.dev/blog/ducklake-lakehouse-metadata-sql-database-catalog</link>
+      <pubDate>Mon, 21 Sep 2026 00:00:00 GMT</pubDate>
+      <description>Iceberg and Delta were designed so table metadata could live as files on object storage — then both quietly bolted a database-backed catalog on top to get atomic commits. DuckLake (DuckDB Labs, 2025) follows that concession to its logical end: put ALL metadata — snapshots, schemas, file lists, statistics — in ordinary SQL tables, keep only Parquet data and delete files on the object store. Query planning collapses from a chain of sequential S3 GETs over JSON and Avro manifests into one SQL query; commits become row inserts in an ACID transaction, which makes multi-table transactions and million-snapshot histories free.</description>
+    </item>
+    <item>
       <title>TernFS: An Exabyte Filesystem Built on 256 Shards That Never Talk to Each Other</title>
       <link>https://mohakchugh.is-a.dev/blog/ternfs-exabyte-immutable-filesystem-sharded-metadata-logsdb</link>
       <pubDate>Sun, 20 Sep 2026 00:00:00 GMT</pubDate>
