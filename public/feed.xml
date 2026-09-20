@@ -7,6 +7,12 @@
     <language>en</language>
     <atom:link href="https://mohakchugh.is-a.dev/feed.xml" rel="self" type="application/rss+xml"/>
     <item>
+      <title>TernFS: An Exabyte Filesystem Built on 256 Shards That Never Talk to Each Other</title>
+      <link>https://mohakchugh.is-a.dev/blog/ternfs-exabyte-immutable-filesystem-sharded-metadata-logsdb</link>
+      <pubDate>Sun, 20 Sep 2026 00:00:00 GMT</pubDate>
+      <description>XTX Markets open-sourced TernFS in September 2025: a distributed filesystem running at 500+ PB across 30,000 disks with zero bytes lost. Its core bet is aggressive simplification — files are immutable, metadata lives in 256 RocksDB shards that never communicate, cross-directory renames funnel through a single serial coordinator, and durability comes from Reed-Solomon (10,4) with 4 KiB CRC32-C interleaving. The math behind the design holds up: 1.4× storage overhead vs 3× for mirroring, per-source reads of ~0.67 GB to evacuate a 20 TB drive, and CRC linearity over XOR that lets checksums compose with parity.</description>
+    </item>
+    <item>
       <title>Grafite: Range Filters That Survive Adversarial Queries</title>
       <link>https://mohakchugh.is-a.dev/blog/grafite-optimal-range-filters-adversarial-queries-elias-fano</link>
       <pubDate>Thu, 17 Sep 2026 00:00:00 GMT</pubDate>
