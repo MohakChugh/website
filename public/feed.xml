@@ -13,6 +13,12 @@
       <description>Iceberg and Delta were designed so table metadata could live as files on object storage — then both quietly bolted a database-backed catalog on top to get atomic commits. DuckLake (DuckDB Labs, 2025) follows that concession to its logical end: put ALL metadata — snapshots, schemas, file lists, statistics — in ordinary SQL tables, keep only Parquet data and delete files on the object store. Query planning collapses from a chain of sequential S3 GETs over JSON and Avro manifests into one SQL query; commits become row inserts in an ACID transaction, which makes multi-table transactions and million-snapshot histories free.</description>
     </item>
     <item>
+      <title>Untorn Writes: How RWF_ATOMIC Lets Databases Finally Delete the Doublewrite Buffer</title>
+      <link>https://mohakchugh.is-a.dev/blog/linux-untorn-writes-rwf-atomic-doublewrite-elimination</link>
+      <pubDate>Mon, 21 Sep 2026 00:00:00 GMT</pubDate>
+      <description>Every serious database pays a tax for one hardware lie: a 16 KB page write can tear in the middle of a power failure, so InnoDB writes every page twice and PostgreSQL stuffs full page images into its WAL. Between Linux 6.11 and 6.16, the kernel grew a real answer — RWF_ATOMIC, a per-write torn-write guarantee negotiated through statx, backed by NVMe/SCSI atomicity limits, XFS forced extent alignment, ext4 bigalloc, and a copy-on-write software fallback when the hardware can't promise enough. This is how the whole stack fits together, and why the constraints (power-of-two, naturally aligned, direct I/O) are exactly what they are.</description>
+    </item>
+    <item>
       <title>TernFS: An Exabyte Filesystem Built on 256 Shards That Never Talk to Each Other</title>
       <link>https://mohakchugh.is-a.dev/blog/ternfs-exabyte-immutable-filesystem-sharded-metadata-logsdb</link>
       <pubDate>Sun, 20 Sep 2026 00:00:00 GMT</pubDate>

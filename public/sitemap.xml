@@ -24,6 +24,7 @@
   <url><loc>https://mohakchugh.is-a.dev/projects/connectus</loc><priority>0.6</priority></url>
   <url><loc>https://mohakchugh.is-a.dev/projects/flashread</loc><priority>0.6</priority></url>
   <url><loc>https://mohakchugh.is-a.dev/blog/ducklake-lakehouse-metadata-sql-database-catalog</loc><priority>0.7</priority></url>
+  <url><loc>https://mohakchugh.is-a.dev/blog/linux-untorn-writes-rwf-atomic-doublewrite-elimination</loc><priority>0.7</priority></url>
   <url><loc>https://mohakchugh.is-a.dev/blog/ternfs-exabyte-immutable-filesystem-sharded-metadata-logsdb</loc><priority>0.7</priority></url>
   <url><loc>https://mohakchugh.is-a.dev/blog/grafite-optimal-range-filters-adversarial-queries-elias-fano</loc><priority>0.7</priority></url>
   <url><loc>https://mohakchugh.is-a.dev/blog/aegaeon-token-level-autoscaling-gpu-pooling-multi-llm-serving</loc><priority>0.7</priority></url>
