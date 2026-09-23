@@ -7,6 +7,12 @@
     <language>en</language>
     <atom:link href="https://mohakchugh.is-a.dev/feed.xml" rel="self" type="application/rss+xml"/>
     <item>
+      <title>MUVERA: Collapsing Multi-Vector Retrieval into One MIPS Query</title>
+      <link>https://mohakchugh.is-a.dev/blog/muvera-fixed-dimensional-encodings-multi-vector-retrieval-single-mips</link>
+      <pubDate>Wed, 23 Sep 2026 00:00:00 GMT</pubDate>
+      <description>ColBERT-style late interaction scores a query against a document with Chamfer similarity over token embeddings — a sum of maxes that no off-the-shelf vector index can serve. MUVERA (Google, NeurIPS 2024) compresses each token set into one Fixed Dimensional Encoding whose plain inner product ε-approximates Chamfer, turning the whole problem into standard single-vector MIPS: 10% higher recall than PLAID at 90% lower latency, with a provable guarantee. A from-scratch reimplementation shows why it works — the estimator is heavily biased (−0.21) but almost uniformly so (σ=0.02), and the asymmetric sum/average construction plus fill_empty_clusters carry the ranking.</description>
+    </item>
+    <item>
       <title>DuckLake: What Happens When Lakehouse Metadata Stops Pretending It Isn't a Database</title>
       <link>https://mohakchugh.is-a.dev/blog/ducklake-lakehouse-metadata-sql-database-catalog</link>
       <pubDate>Mon, 21 Sep 2026 00:00:00 GMT</pubDate>
