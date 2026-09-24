@@ -7,6 +7,12 @@
     <language>en</language>
     <atom:link href="https://mohakchugh.is-a.dev/feed.xml" rel="self" type="application/rss+xml"/>
     <item>
+      <title>PostgreSQL 18's Async I/O: Completion Callbacks That Live in Shared Memory</title>
+      <link>https://mohakchugh.is-a.dev/blog/postgres-18-async-io-shared-memory-completion-callbacks</link>
+      <pubDate>Thu, 24 Sep 2026 00:00:00 GMT</pubDate>
+      <description>PostgreSQL 18 shipped the largest storage-layer change in decades: reads now go through a real asynchronous I/O subsystem instead of posix_fadvise hints and kernel readahead. The interesting part isn't the io_uring integration — it's the design constraints. Any backend must be able to complete any other backend's I/O (to avoid a distributed deadlock through shared buffers), so completion callbacks live in shared memory, are addressed by one-byte IDs instead of function pointers, and are forbidden from raising errors. Cold-cache sequential scans get 2–3x faster, and EXPLAIN ANALYZE starts lying to you in a new way.</description>
+    </item>
+    <item>
       <title>MUVERA: Collapsing Multi-Vector Retrieval into One MIPS Query</title>
       <link>https://mohakchugh.is-a.dev/blog/muvera-fixed-dimensional-encodings-multi-vector-retrieval-single-mips</link>
       <pubDate>Wed, 23 Sep 2026 00:00:00 GMT</pubDate>
