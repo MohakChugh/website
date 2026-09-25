@@ -7,6 +7,12 @@
     <language>en</language>
     <atom:link href="https://mohakchugh.is-a.dev/feed.xml" rel="self" type="application/rss+xml"/>
     <item>
+      <title>Per-VMA Locks, Take Two: Replacing a Semaphore With a Refcount and Letting VMAs Be Reused Under RCU</title>
+      <link>https://mohakchugh.is-a.dev/blog/per-vma-locks-vm-refcnt-slab-typesafe-rcu-page-faults</link>
+      <pubDate>Fri, 25 Sep 2026 00:00:00 GMT</pubDate>
+      <description>Linux 6.4 broke mmap_lock's stranglehold on page faults with per-VMA locks built on rw_semaphores and sequence counts. Linux 6.15 threw the semaphore away. Because VMA readers never block and only one writer can exist, the lock collapses into a single atomic refcount with a writer bit — and marking the VMA slab SLAB_TYPESAFE_BY_RCU lets freed VMAs be reused before the grace period ends, turning the fault path into a lock-free lookup plus two atomic ops. Fault throughput at 21 threads improved 14.76%.</description>
+    </item>
+    <item>
       <title>PostgreSQL 18's Async I/O: Completion Callbacks That Live in Shared Memory</title>
       <link>https://mohakchugh.is-a.dev/blog/postgres-18-async-io-shared-memory-completion-callbacks</link>
       <pubDate>Thu, 24 Sep 2026 00:00:00 GMT</pubDate>
