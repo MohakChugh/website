@@ -7,6 +7,12 @@
     <language>en</language>
     <atom:link href="https://mohakchugh.is-a.dev/feed.xml" rel="self" type="application/rss+xml"/>
     <item>
+      <title>Intel APX: 32 Registers, Three-Operand Integer Ops, and the Quiet Re-Encoding of x86</title>
+      <link>https://mohakchugh.is-a.dev/blog/intel-apx-32-gprs-ndd-flag-suppression-x86-reencoding</link>
+      <pubDate>Sun, 27 Sep 2026 00:00:00 GMT</pubDate>
+      <description>APX doubles x86's general-purpose registers to 32, turns two-operand integer instructions into three-operand ones via EVEX, lets compilers suppress flag writes, and adds ARM64-style conditional compares — all without a new mode. Intel's SPEC CPU 2017 simulations claim ~10% fewer loads and &gt;20% fewer stores from recompilation alone. The interesting part is why architectural registers still matter when the hardware already has hundreds, and what the encoding tax costs.</description>
+    </item>
+    <item>
       <title>Per-VMA Locks, Take Two: Replacing a Semaphore With a Refcount and Letting VMAs Be Reused Under RCU</title>
       <link>https://mohakchugh.is-a.dev/blog/per-vma-locks-vm-refcnt-slab-typesafe-rcu-page-faults</link>
       <pubDate>Fri, 25 Sep 2026 00:00:00 GMT</pubDate>

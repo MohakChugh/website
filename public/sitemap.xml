@@ -23,6 +23,7 @@
   <url><loc>https://mohakchugh.is-a.dev/projects/fit-strong-90</loc><priority>0.6</priority></url>
   <url><loc>https://mohakchugh.is-a.dev/projects/connectus</loc><priority>0.6</priority></url>
   <url><loc>https://mohakchugh.is-a.dev/projects/flashread</loc><priority>0.6</priority></url>
+  <url><loc>https://mohakchugh.is-a.dev/blog/intel-apx-32-gprs-ndd-flag-suppression-x86-reencoding</loc><priority>0.7</priority></url>
   <url><loc>https://mohakchugh.is-a.dev/blog/per-vma-locks-vm-refcnt-slab-typesafe-rcu-page-faults</loc><priority>0.7</priority></url>
   <url><loc>https://mohakchugh.is-a.dev/blog/postgres-18-async-io-shared-memory-completion-callbacks</loc><priority>0.7</priority></url>
   <url><loc>https://mohakchugh.is-a.dev/blog/muvera-fixed-dimensional-encodings-multi-vector-retrieval-single-mips</loc><priority>0.7</priority></url>
