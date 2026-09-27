@@ -26,6 +26,7 @@
   <url><loc>https://mohakchugh.is-a.dev/blog/autobahn-seamless-bft-lanes-proofs-of-availability</loc><priority>0.7</priority></url>
   <url><loc>https://mohakchugh.is-a.dev/blog/deepseek-sparse-attention-lightning-indexer-fine-grained-top-k</loc><priority>0.7</priority></url>
   <url><loc>https://mohakchugh.is-a.dev/blog/intel-apx-32-gprs-ndd-flag-suppression-x86-reencoding</loc><priority>0.7</priority></url>
+  <url><loc>https://mohakchugh.is-a.dev/blog/orioledb-undo-log-mvcc-dual-pointers-eliminating-vacuum</loc><priority>0.7</priority></url>
   <url><loc>https://mohakchugh.is-a.dev/blog/per-vma-locks-vm-refcnt-slab-typesafe-rcu-page-faults</loc><priority>0.7</priority></url>
   <url><loc>https://mohakchugh.is-a.dev/blog/postgres-18-async-io-shared-memory-completion-callbacks</loc><priority>0.7</priority></url>
   <url><loc>https://mohakchugh.is-a.dev/blog/muvera-fixed-dimensional-encodings-multi-vector-retrieval-single-mips</loc><priority>0.7</priority></url>
