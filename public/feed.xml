@@ -7,6 +7,12 @@
     <language>en</language>
     <atom:link href="https://mohakchugh.is-a.dev/feed.xml" rel="self" type="application/rss+xml"/>
     <item>
+      <title>Autobahn: Seamless BFT — Lanes, f+1 Proofs of Availability, and Committing a Whole Backlog in One Cut</title>
+      <link>https://mohakchugh.is-a.dev/blog/autobahn-seamless-bft-lanes-proofs-of-availability</link>
+      <pubDate>Sun, 27 Sep 2026 00:00:00 GMT</pubDate>
+      <description>Autobahn (SOSP '24) attacks the failure mode nobody benchmarks: what happens *after* the network blip ends. View-based BFT protocols like HotStuff suffer 'hangovers' that outlast the disruption; DAG-based protocols recover gracefully but pay ~2× latency every day. Autobahn separates dissemination into per-replica lanes certified by just f+1 votes, then has consensus order a 'cut' of lane tips — so one post-blip slot commits the entire accumulated backlog. Same throughput as Bullshark, half the latency.</description>
+    </item>
+    <item>
       <title>Intel APX: 32 Registers, Three-Operand Integer Ops, and the Quiet Re-Encoding of x86</title>
       <link>https://mohakchugh.is-a.dev/blog/intel-apx-32-gprs-ndd-flag-suppression-x86-reencoding</link>
       <pubDate>Sun, 27 Sep 2026 00:00:00 GMT</pubDate>
