@@ -7,6 +7,12 @@
     <language>en</language>
     <atom:link href="https://mohakchugh.is-a.dev/feed.xml" rel="self" type="application/rss+xml"/>
     <item>
+      <title>ThunderKittens: 16x16 Tiles, the Load-Compute-Store-Finish Template, and Why 40 Lines Can Match cuBLAS</title>
+      <link>https://mohakchugh.is-a.dev/blog/thunderkittens-tile-abstractions-lcsf-template-gpu-kernels</link>
+      <pubDate>Mon, 28 Sep 2026 00:00:00 GMT</pubDate>
+      <description>ThunderKittens (Spector et al., arXiv 2410.20399) bets that three abstractions — 16x16 register/shared tiles with compile-time swizzled layouts, a producer-consumer thread-block template, and a persistent grid with cache-aware block ordering — cover almost everything an H100 AI kernel needs. The receipts: a 40-line GEMM that matches cuBLAS, attention backward 10-40% faster than FlashAttention-3, and 8-14x speedups on linear attention and SSMs. I re-derived the bank-conflict claim at the center of its layout system with a 30-line simulator: naive row-major really is 8-way conflicted, and the 128-byte XOR swizzle really is conflict-free.</description>
+    </item>
+    <item>
       <title>WaferLLM: The PLMR Model, Interleaved Cannon Shifts, and LLM Inference on 850,000 Cores</title>
       <link>https://mohakchugh.is-a.dev/blog/waferllm-plmr-meshgemm-wafer-scale-llm-inference</link>
       <pubDate>Mon, 28 Sep 2026 00:00:00 GMT</pubDate>
