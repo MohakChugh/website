@@ -7,6 +7,12 @@
     <language>en</language>
     <atom:link href="https://mohakchugh.is-a.dev/feed.xml" rel="self" type="application/rss+xml"/>
     <item>
+      <title>WaferLLM: The PLMR Model, Interleaved Cannon Shifts, and LLM Inference on 850,000 Cores</title>
+      <link>https://mohakchugh.is-a.dev/blog/waferllm-plmr-meshgemm-wafer-scale-llm-inference</link>
+      <pubDate>Mon, 28 Sep 2026 00:00:00 GMT</pubDate>
+      <description>WaferLLM (OSDI '25) is the first LLM inference system built for wafer-scale chips like the Cerebras WSE-2: 850,000 cores, 48 KB of SRAM each, arranged in a 2D mesh with no shared memory. The paper's PLMR device model explains why GPU-style allgather, SUMMA, and even Cannon's algorithm all break on this hardware, and the fixes — an interleaved cyclic shift that bounds every communication step to two physical hops, a K-tree allreduce for GEMV, and shift-based KV cache placement — deliver 606x faster GEMV than an A100 and 10-20x end-to-end speedups over multi-GPU SGLang. The constraints are as interesting as the wins.</description>
+    </item>
+    <item>
       <title>Autobahn: Seamless BFT — Lanes, f+1 Proofs of Availability, and Committing a Whole Backlog in One Cut</title>
       <link>https://mohakchugh.is-a.dev/blog/autobahn-seamless-bft-lanes-proofs-of-availability</link>
       <pubDate>Sun, 27 Sep 2026 00:00:00 GMT</pubDate>
