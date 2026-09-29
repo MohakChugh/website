@@ -13,6 +13,12 @@
       <description>Eg-walker (Gentle &amp; Kleppmann, EuroSys 2025 best paper, arXiv 2409.14252) stores collaborative text edits as an immutable event graph and builds CRDT state only transiently, during merges — then throws it away. The result: OT-style steady-state memory (just the text), CRDT-style merge complexity O((k+m) log(k+m)), and a trace where OT needs an hour and eg-walker needs 24 ms. I built a miniature walker with prepare/effect versions and retreat/advance, and verified convergence over every valid replay order — after my first, naive concurrency tie-break diverged, which is itself the lesson: the walker's inner ordering logic must be a real CRDT.</description>
     </item>
     <item>
+      <title>FlexAttention: Ending the Attention Software Lottery with Compiler-Generated Kernels</title>
+      <link>https://mohakchugh.is-a.dev/blog/flexattention-compiler-generated-attention-kernels-blockmask</link>
+      <pubDate>Tue, 29 Sep 2026 00:00:00 GMT</pubDate>
+      <description>FlexAttention (Dong, Feng, Guessous, Liang &amp; He, arXiv 2412.05496) turns attention variants from a kernel-engineering problem into a four-argument Python function: torch.compile inlines a user-written score_mod/mask_mod into handwritten Triton templates and derives block sparsity from a BlockMask. The result covers alibi, sliding window, PagedAttention and their combinations at 0.68x–1.43x of FlashAttention-2 — and 5.37x faster where FlashAttention's fallback loses the lottery. I reproduced the BlockMask classification locally: causal at 4k computes 528/1024 blocks, 93.9% of them mask-free, and the mask shrinks from 16 MiB dense to 4.1 KiB.</description>
+    </item>
+    <item>
       <title>ThunderKittens: 16x16 Tiles, the Load-Compute-Store-Finish Template, and Why 40 Lines Can Match cuBLAS</title>
       <link>https://mohakchugh.is-a.dev/blog/thunderkittens-tile-abstractions-lcsf-template-gpu-kernels</link>
       <pubDate>Mon, 28 Sep 2026 00:00:00 GMT</pubDate>
