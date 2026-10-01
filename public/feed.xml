@@ -7,6 +7,12 @@
     <language>en</language>
     <atom:link href="https://mohakchugh.is-a.dev/feed.xml" rel="self" type="application/rss+xml"/>
     <item>
+      <title>Bf-Tree: Decoupling Cache Pages from Disk Pages with Variable-Length Mini-Pages</title>
+      <link>https://mohakchugh.is-a.dev/blog/bf-tree-mini-pages-variable-length-buffer-pool-record-caching</link>
+      <pubDate>Thu, 01 Oct 2026 00:00:00 GMT</pubDate>
+      <description>Bf-Tree (Hao &amp; Chandramouli, VLDB 2024) keeps B-Tree pages at 4 KB on disk but drops the rule that a cached page must mirror one. Its buffer pool holds mini-pages: sorted, variable-length slices of a leaf that cache hot records, buffer writes, record negative lookups as phantoms, and grow into full-page mirrors when a range gets scanned. They live in a circular buffer with a 10% second-chance region. I simulated the caching claim: at the paper's memory ratio, record-granular caching hits 76% where page LRU hits 41%. I also found that the 1% admission default is a trade-off with warm-up time, not a free lunch.</description>
+    </item>
+    <item>
       <title>Eg-walker: Replaying Event Graphs Instead of Choosing Between OT and CRDTs</title>
       <link>https://mohakchugh.is-a.dev/blog/eg-walker-event-graph-replay-collaborative-text-editing</link>
       <pubDate>Tue, 29 Sep 2026 00:00:00 GMT</pubDate>
