@@ -7,6 +7,12 @@
     <language>en</language>
     <atom:link href="https://mohakchugh.is-a.dev/feed.xml" rel="self" type="application/rss+xml"/>
     <item>
+      <title>SLUB Sheaves: How Linux 7.0 Replaced Per-CPU Slabs with Arrays of Pointers</title>
+      <link>https://mohakchugh.is-a.dev/blog/slub-percpu-sheaves-barn-replacing-cpu-slabs-linux-7</link>
+      <pubDate>Sat, 03 Oct 2026 00:00:00 GMT</pubDate>
+      <description>Linux 6.18 added per-CPU 'sheaves' to the SLUB allocator as an opt-in layer. In 7.0 they became the default for every cache, and the per-CPU (partial) slab, with its cmpxchg128 lockless fast path, was deleted. I read the 7.3-rc5 source to cover the main/spare/rcu_free sheaves, the per-node barn with its 10-full/10-empty limits, the capacity formula sized to kmalloc buckets, and the prefill API built for the maple tree. A small simulation shows where the design pays and where a burst spills over.</description>
+    </item>
+    <item>
       <title>Bf-Tree: Decoupling Cache Pages from Disk Pages with Variable-Length Mini-Pages</title>
       <link>https://mohakchugh.is-a.dev/blog/bf-tree-mini-pages-variable-length-buffer-pool-record-caching</link>
       <pubDate>Thu, 01 Oct 2026 00:00:00 GMT</pubDate>
