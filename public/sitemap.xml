@@ -24,6 +24,7 @@
   <url><loc>https://mohakchugh.is-a.dev/projects/connectus</loc><priority>0.6</priority></url>
   <url><loc>https://mohakchugh.is-a.dev/projects/flashread</loc><priority>0.6</priority></url>
   <url><loc>https://mohakchugh.is-a.dev/blog/slub-percpu-sheaves-barn-replacing-cpu-slabs-linux-7</loc><priority>0.7</priority></url>
+  <url><loc>https://mohakchugh.is-a.dev/blog/x25519mlkem768-hybrid-post-quantum-tls-key-exchange-rfc-10024</loc><priority>0.7</priority></url>
   <url><loc>https://mohakchugh.is-a.dev/blog/bf-tree-mini-pages-variable-length-buffer-pool-record-caching</loc><priority>0.7</priority></url>
   <url><loc>https://mohakchugh.is-a.dev/blog/eg-walker-event-graph-replay-collaborative-text-editing</loc><priority>0.7</priority></url>
   <url><loc>https://mohakchugh.is-a.dev/blog/flexattention-compiler-generated-attention-kernels-blockmask</loc><priority>0.7</priority></url>

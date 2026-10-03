@@ -13,6 +13,12 @@
       <description>Linux 6.18 added per-CPU 'sheaves' to the SLUB allocator as an opt-in layer. In 7.0 they became the default for every cache, and the per-CPU (partial) slab, with its cmpxchg128 lockless fast path, was deleted. I read the 7.3-rc5 source to cover the main/spare/rcu_free sheaves, the per-node barn with its 10-full/10-empty limits, the capacity formula sized to kmalloc buckets, and the prefill API built for the maple tree. A small simulation shows where the design pays and where a burst spills over.</description>
     </item>
     <item>
+      <title>X25519MLKEM768: What Hybrid Post-Quantum Key Exchange Actually Puts on the Wire</title>
+      <link>https://mohakchugh.is-a.dev/blog/x25519mlkem768-hybrid-post-quantum-tls-key-exchange-rfc-10024</link>
+      <pubDate>Sat, 03 Oct 2026 00:00:00 GMT</pubDate>
+      <description>RFC 10024 standardizes the hybrid group most TLS 1.3 traffic already negotiates. I ran OpenSSL 3.6 locally to measure the 279→1457-byte ClientHello, test the FIPS 203 encapsulation-key check at its exact q boundary, watch implicit rejection return a valid-looking wrong secret, and confirm the 'reversed' share order with a parser that needs no private key.</description>
+    </item>
+    <item>
       <title>Bf-Tree: Decoupling Cache Pages from Disk Pages with Variable-Length Mini-Pages</title>
       <link>https://mohakchugh.is-a.dev/blog/bf-tree-mini-pages-variable-length-buffer-pool-record-caching</link>
       <pubDate>Thu, 01 Oct 2026 00:00:00 GMT</pubDate>
