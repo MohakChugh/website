@@ -7,6 +7,12 @@
     <language>en</language>
     <atom:link href="https://mohakchugh.is-a.dev/feed.xml" rel="self" type="application/rss+xml"/>
     <item>
+      <title>Proxy Execution: How Linux Lets a Blocked Task Lend Its CPU Time to the Lock Owner</title>
+      <link>https://mohakchugh.is-a.dev/blog/proxy-execution-linux-scheduler-donor-context-mutex-priority-inversion</link>
+      <pubDate>Sun, 04 Oct 2026 00:00:00 GMT</pubDate>
+      <description>Kernel mutexes have no priority inheritance, so a high-priority waiter can stall behind a nice-19 lock holder for hundreds of milliseconds. Proxy execution fixes this by splitting the scheduler's idea of 'current' into a donor (whose priority and budget get used) and an execution context (whose code actually runs). I went through the v6.17, v7.1 and v7.2 sources to follow it from same-CPU proxying to cross-CPU donor migration to donor-directed mutex handoff, and wrote a small simulator. With four nice-0 hogs, the waiter's latency drops from ~469 ms to ~6 ms.</description>
+    </item>
+    <item>
       <title>SLUB Sheaves: How Linux 7.0 Replaced Per-CPU Slabs with Arrays of Pointers</title>
       <link>https://mohakchugh.is-a.dev/blog/slub-percpu-sheaves-barn-replacing-cpu-slabs-linux-7</link>
       <pubDate>Sat, 03 Oct 2026 00:00:00 GMT</pubDate>
