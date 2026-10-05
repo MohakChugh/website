@@ -7,6 +7,12 @@
     <language>en</language>
     <atom:link href="https://mohakchugh.is-a.dev/feed.xml" rel="self" type="application/rss+xml"/>
     <item>
+      <title>TurboQuant: Random Rotation, Lloyd-Max Codebooks, and the QJL Residual Trick for KV-Cache Quantization</title>
+      <link>https://mohakchugh.is-a.dev/blog/turboquant-random-rotation-lloyd-max-qjl-kv-cache-quantization</link>
+      <pubDate>Mon, 05 Oct 2026 00:00:00 GMT</pubDate>
+      <description>TurboQuant (Google Research, arXiv:2504.19874) quantizes vectors online with no calibration: rotate randomly, then apply one fixed Lloyd-Max scalar codebook to every coordinate. Its MSE comes within 1.44–2.7× of the Shannon lower bound. I reimplemented it at head dimension 128. The MSE numbers reproduce exactly. The b=4 inner-product constant in Theorem 2 is understated by 12%. And the paper's unbiased 'prod' variant loses to a simpler fix, multiplying by one scalar, at every bit width I tested. In a needle-in-softmax test it had up to 2× the attention-output error.</description>
+    </item>
+    <item>
       <title>Gated Attention: A Sigmoid After SDPA, the Low-Rank W_V·W_O Bottleneck, and Attention-Sink-Free LLMs</title>
       <link>https://mohakchugh.is-a.dev/blog/gated-attention-sdpa-output-sigmoid-gate-attention-sink-free</link>
       <pubDate>Sun, 04 Oct 2026 00:00:00 GMT</pubDate>
