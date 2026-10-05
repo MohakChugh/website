@@ -7,6 +7,12 @@
     <language>en</language>
     <atom:link href="https://mohakchugh.is-a.dev/feed.xml" rel="self" type="application/rss+xml"/>
     <item>
+      <title>JumpBackHash: Constant-Time Consistent Hashing by Walking Active Indices Backwards</title>
+      <link>https://mohakchugh.is-a.dev/blog/jumpbackhash-constant-time-consistent-hashing-active-indices-bit-sharing</link>
+      <pubDate>Mon, 05 Oct 2026 00:00:00 GMT</pubDate>
+      <description>JumpBackHash (Ertl, arXiv:2403.18682) replaces JumpHash's O(log n) floating-point loop with an integer-only walk over power-of-two intervals, consuming under 5/3 PRG outputs on average. I ported it and every formula reproduced. On an M3 Pro (n ≥ 100) it runs at 7.5–20 ns versus JumpHash's 59–221 ns. But its bit-sharing optimizations break something the paper never tests: on multi-node resizes, each departing shard's keys spread to survivors with χ²/dof up to 1035, versus 1.0 for JumpHash.</description>
+    </item>
+    <item>
       <title>TurboQuant: Random Rotation, Lloyd-Max Codebooks, and the QJL Residual Trick for KV-Cache Quantization</title>
       <link>https://mohakchugh.is-a.dev/blog/turboquant-random-rotation-lloyd-max-qjl-kv-cache-quantization</link>
       <pubDate>Mon, 05 Oct 2026 00:00:00 GMT</pubDate>
