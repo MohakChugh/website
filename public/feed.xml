@@ -7,6 +7,12 @@
     <language>en</language>
     <atom:link href="https://mohakchugh.is-a.dev/feed.xml" rel="self" type="application/rss+xml"/>
     <item>
+      <title>Compact Object Headers in JDK 25: 22-Bit Class Pointers, a Monitor Table, and the 39% of Classes That Save Nothing</title>
+      <link>https://mohakchugh.is-a.dev/blog/compact-object-headers-jdk-25-22-bit-class-pointers-alignment-parity</link>
+      <pubDate>Wed, 07 Oct 2026 00:00:00 GMT</pubDate>
+      <description>JEP 519 made compact object headers a product feature in JDK 25. They fold a 22-bit class pointer into the mark word and shrink headers from 12 bytes to 8. I read the header bits directly on JDK 25.0.4. HashMap&lt;Long,Long&gt; drops from 96.8 to 72.8 bytes per entry and runs 8.9% faster with 19% fewer GCs. ArrayList&lt;Integer&gt; saves exactly nothing, and 39% of java.base classes don't shrink at all. A parity rule on field payload predicts which ones.</description>
+    </item>
+    <item>
       <title>JumpBackHash: Constant-Time Consistent Hashing by Walking Active Indices Backwards</title>
       <link>https://mohakchugh.is-a.dev/blog/jumpbackhash-constant-time-consistent-hashing-active-indices-bit-sharing</link>
       <pubDate>Mon, 05 Oct 2026 00:00:00 GMT</pubDate>
