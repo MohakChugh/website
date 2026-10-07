@@ -19,6 +19,12 @@
       <description>DeepSeek's mHC widens the residual stream to n=4 lanes and projects each lane-mixing matrix onto the Birkhoff polytope with 20 Sinkhorn iterations. The paper reports a peak composite gain of 3000 under plain HC, and 1.6 under mHC. I simulated the projection. Because row normalization runs last, the forward gain is exact to 1e-15 and all the leftover error goes to the backward (column) side. Independent random layers only drift to 1.14. Layers with shared structure reproduce the paper's 1.50 / 0.41 column sums. The paper's max-only metric hides the 0.41.</description>
     </item>
     <item>
+      <title>Schedule-Free Optimization: The Uniform Average Is a Linear-Decay Schedule in Disguise, and Why the Learning Rate Still Knows Your Horizon</title>
+      <link>https://mohakchugh.is-a.dev/blog/schedule-free-optimization-interpolated-momentum-implicit-linear-decay</link>
+      <pubDate>Wed, 07 Oct 2026 00:00:00 GMT</pubDate>
+      <description>Schedule-Free SGD/AdamW (Defazio et al., NeurIPS 2024) won the AlgoPerf self-tuning track with no learning-rate schedule. I prove in four lines, and check numerically to 4e-15, that its averaged iterate is exactly a linear-decay-to-zero run whose gradients are sampled at an interpolated point. That reframes β as 'where on the decay curve you take gradients'. My sims: on a noisy quadratic, β=0 is the only setting whose tuned LR is the same at every horizon. On a nonconvex MLP, β=0.9 beats Polyak averaging but a tuned linear decay still wins by about 10%, and every method's best LR shrinks about 4x per 4x more steps.</description>
+    </item>
+    <item>
       <title>JumpBackHash: Constant-Time Consistent Hashing by Walking Active Indices Backwards</title>
       <link>https://mohakchugh.is-a.dev/blog/jumpbackhash-constant-time-consistent-hashing-active-indices-bit-sharing</link>
       <pubDate>Mon, 05 Oct 2026 00:00:00 GMT</pubDate>
