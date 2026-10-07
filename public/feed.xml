@@ -13,6 +13,12 @@
       <description>JEP 519 made compact object headers a product feature in JDK 25. They fold a 22-bit class pointer into the mark word and shrink headers from 12 bytes to 8. I read the header bits directly on JDK 25.0.4. HashMap&lt;Long,Long&gt; drops from 96.8 to 72.8 bytes per entry and runs 8.9% faster with 19% fewer GCs. ArrayList&lt;Integer&gt; saves exactly nothing, and 39% of java.base classes don't shrink at all. A parity rule on field payload predicts which ones.</description>
     </item>
     <item>
+      <title>mHC: Sinkhorn-Projected Residual Streams, Where the 20-Iteration Error Actually Lands, and Why Fig. 8's 1.50 Column Sum Is a Correlation Effect</title>
+      <link>https://mohakchugh.is-a.dev/blog/mhc-manifold-constrained-hyper-connections-sinkhorn-birkhoff-residual-streams</link>
+      <pubDate>Wed, 07 Oct 2026 00:00:00 GMT</pubDate>
+      <description>DeepSeek's mHC widens the residual stream to n=4 lanes and projects each lane-mixing matrix onto the Birkhoff polytope with 20 Sinkhorn iterations. The paper reports a peak composite gain of 3000 under plain HC, and 1.6 under mHC. I simulated the projection. Because row normalization runs last, the forward gain is exact to 1e-15 and all the leftover error goes to the backward (column) side. Independent random layers only drift to 1.14. Layers with shared structure reproduce the paper's 1.50 / 0.41 column sums. The paper's max-only metric hides the 0.41.</description>
+    </item>
+    <item>
       <title>JumpBackHash: Constant-Time Consistent Hashing by Walking Active Indices Backwards</title>
       <link>https://mohakchugh.is-a.dev/blog/jumpbackhash-constant-time-consistent-hashing-active-indices-bit-sharing</link>
       <pubDate>Mon, 05 Oct 2026 00:00:00 GMT</pubDate>
