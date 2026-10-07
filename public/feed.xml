@@ -7,6 +7,12 @@
     <language>en</language>
     <atom:link href="https://mohakchugh.is-a.dev/feed.xml" rel="self" type="application/rss+xml"/>
     <item>
+      <title>FlashAttention-4's Softmax Tricks: A Degree-3 exp2 on the FMA Pipe, and a Lagging Max That Saturated FP8</title>
+      <link>https://mohakchugh.is-a.dev/blog/flashattention-4-software-exp2-conditional-rescaling-fp8-saturation</link>
+      <pubDate>Thu, 08 Oct 2026 00:00:00 GMT</pubDate>
+      <description>On a B200 the tensor cores do 8192 FLOPs per clock per SM, while the exp2 unit does 16. FlashAttention-4 (arXiv:2603.05451) shifts some exponentials onto FMA units with a degree-3 polynomial, and skips output rescaling unless the row max grows by more than 2⁸. I rebuilt both in NumPy. The polynomial matches the paper's Table 2 to three digits. It is bit-identical to correctly rounded bf16 on 99.0% of inputs and within 1 ULP on 100%. Without the threshold, 6–95% of row-blocks rescale in my runs; with it, 0–16% do. But its exactness argument assumes P can hold up to 2⁸ without loss. An FP8 E4M3 P can't, and FA4's own issue #2716 hit exactly that.</description>
+    </item>
+    <item>
       <title>Circle STARKs: Getting a 2³¹-Point FFT Out of a Field Whose Multiplicative Group Has 2-Adicity 1</title>
       <link>https://mohakchugh.is-a.dev/blog/circle-starks-mersenne-31-circle-fft-canonic-coset-fri-folding</link>
       <pubDate>Wed, 07 Oct 2026 00:00:00 GMT</pubDate>
