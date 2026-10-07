@@ -7,6 +7,12 @@
     <language>en</language>
     <atom:link href="https://mohakchugh.is-a.dev/feed.xml" rel="self" type="application/rss+xml"/>
     <item>
+      <title>Circle STARKs: Getting a 2³¹-Point FFT Out of a Field Whose Multiplicative Group Has 2-Adicity 1</title>
+      <link>https://mohakchugh.is-a.dev/blog/circle-starks-mersenne-31-circle-fft-canonic-coset-fri-folding</link>
+      <pubDate>Wed, 07 Oct 2026 00:00:00 GMT</pubDate>
+      <description>The Mersenne prime 2³¹−1 has the cheapest reduction of any 31-bit field, but p−1 has exactly one factor of 2, so radix-2 NTTs are impossible. Circle STARKs (Haböck, Levit, Papini, 2024) use the circle x²+y²=1 instead, whose group has order p+1 = 2³¹. I built the circle FFT, its vanishing polynomial and circle FRI in Python. All checks pass: the FFT round-trips at 8–256 points, the evaluation map on N points has rank N out of N+1, a subgroup domain breaks the first fold at y=0, and one corrupted symbol fails FRI. I also benchmarked M31 against BabyBear multiplication on arm64: 1.23× scalar throughput, 1.61× latency, and 3.2× once the compiler vectorizes.</description>
+    </item>
+    <item>
       <title>Compact Object Headers in JDK 25: 22-Bit Class Pointers, a Monitor Table, and the 39% of Classes That Save Nothing</title>
       <link>https://mohakchugh.is-a.dev/blog/compact-object-headers-jdk-25-22-bit-class-pointers-alignment-parity</link>
       <pubDate>Wed, 07 Oct 2026 00:00:00 GMT</pubDate>
