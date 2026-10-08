@@ -19,6 +19,12 @@
       <description>On a B200 the tensor cores do 8192 FLOPs per clock per SM, while the exp2 unit does 16. FlashAttention-4 (arXiv:2603.05451) shifts some exponentials onto FMA units with a degree-3 polynomial, and skips output rescaling unless the row max grows by more than 2⁸. I rebuilt both in NumPy. The polynomial matches the paper's Table 2 to three digits. It is bit-identical to correctly rounded bf16 on 99.0% of inputs and within 1 ULP on 100%. Without the threshold, 6–95% of row-blocks rescale in my runs; with it, 0–16% do. But its exactness argument assumes P can hold up to 2⁸ without loss. An FP8 E4M3 P can't, and FA4's own issue #2716 hit exactly that.</description>
     </item>
     <item>
+      <title>SLH-DSA Under Overuse: Security Falls 1 Bit per Doubling, Then k Bits, and Retuning Gets Signatures Down to 3.4 KB</title>
+      <link>https://mohakchugh.is-a.dev/blog/slh-dsa-overuse-fors-collision-security-slope-smaller-sphincs-parameter-sets</link>
+      <pubDate>Thu, 08 Oct 2026 00:00:00 GMT</pubDate>
+      <description>FIPS 205 sizes SLH-DSA for 2^64 signatures per key, which is why its smallest signature is 7,856 bytes. Fluhrer and Dang (ePrint 2024/018) retune SPHINCS+ for 2^20–2^50 signatures. I reimplemented their security formula and hash-count model. It reproduces all six FIPS sizes and signing costs and every overuse figure I checked; one verify count, 192f, is off by 30 hashes. The new result is the slope: each doubling of the signature count costs about g*−λ bits, where g* is the reuse count of the attacker's best-case FORS instance. That rises from 1 bit per doubling to k bits, and the hypertree height decides which regime you are in.</description>
+    </item>
+    <item>
       <title>Circle STARKs: Getting a 2³¹-Point FFT Out of a Field Whose Multiplicative Group Has 2-Adicity 1</title>
       <link>https://mohakchugh.is-a.dev/blog/circle-starks-mersenne-31-circle-fft-canonic-coset-fri-folding</link>
       <pubDate>Wed, 07 Oct 2026 00:00:00 GMT</pubDate>
