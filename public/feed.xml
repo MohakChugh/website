@@ -19,6 +19,12 @@
       <description>On a B200 the tensor cores do 8192 FLOPs per clock per SM, while the exp2 unit does 16. FlashAttention-4 (arXiv:2603.05451) shifts some exponentials onto FMA units with a degree-3 polynomial, and skips output rescaling unless the row max grows by more than 2⁸. I rebuilt both in NumPy. The polynomial matches the paper's Table 2 to three digits. It is bit-identical to correctly rounded bf16 on 99.0% of inputs and within 1 ULP on 100%. Without the threshold, 6–95% of row-blocks rescale in my runs; with it, 0–16% do. But its exactness argument assumes P can hold up to 2⁸ without loss. An FP8 E4M3 P can't, and FA4's own issue #2716 hit exactly that.</description>
     </item>
     <item>
+      <title>QTIP: Trellis-Coded Quantization Puts 2-Bit LLM Weights 10% Above the Rate-Distortion Bound, and a Monotone Codebook Loses to Scalar Rounding</title>
+      <link>https://mohakchugh.is-a.dev/blog/qtip-trellis-coded-quantization-bitshift-trellis-computed-gaussian-codes</link>
+      <pubDate>Thu, 08 Oct 2026 00:00:00 GMT</pubDate>
+      <description>Vector quantizers for LLM weights stop at 8 dimensions because the codebook has to fit in cache. QTIP (NeurIPS 2024) uses trellis-coded quantization instead: a 256-dimensional quantizer whose decoder is a bit shift plus three ALU instructions. I wrote a bitshift-trellis Viterbi quantizer from scratch. It reproduces the paper's 2-bit Gaussian MSEs to within 0.001 (0.0697 vs 0.069, and 0.0723 vs 0.0733 for the tail-biting table). It also shows the failure the paper only plots: a codebook that is monotone in the state index gets 0.143 MSE, worse than the 0.118 of a plain 4-level scalar quantizer, at every trellis size.</description>
+    </item>
+    <item>
       <title>SLH-DSA Under Overuse: Security Falls 1 Bit per Doubling, Then k Bits, and Retuning Gets Signatures Down to 3.4 KB</title>
       <link>https://mohakchugh.is-a.dev/blog/slh-dsa-overuse-fors-collision-security-slope-smaller-sphincs-parameter-sets</link>
       <pubDate>Thu, 08 Oct 2026 00:00:00 GMT</pubDate>
