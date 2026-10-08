@@ -7,6 +7,12 @@
     <language>en</language>
     <atom:link href="https://mohakchugh.is-a.dev/feed.xml" rel="self" type="application/rss+xml"/>
     <item>
+      <title>Cut Cross-Entropy: Training Loss Without the Logit Matrix, and Why 0.1% Element Sparsity Becomes 50% Block Sparsity</title>
+      <link>https://mohakchugh.is-a.dev/blog/cut-cross-entropy-blockwise-lse-gradient-filtering-large-vocab</link>
+      <pubDate>Thu, 08 Oct 2026 00:00:00 GMT</pubDate>
+      <description>Cut Cross-Entropy (Apple, ICLR 2025) computes the LM loss and its gradient without ever writing the N×|V| logit matrix to HBM, cutting Gemma 2 2B's loss memory from 24 GB to 1 MB. Its 1,161 MB 'lower bound' row is exactly the size of the bf16 gradients for C and E. The speed comes from skipping softmax blocks below 2⁻¹². I measured that on Qwen2.5-0.5B: 0.125% of softmax entries clear the threshold, yet 49% of 128×128 blocks still have to be computed (99% under a random vocab order). At the paper's sparsity level my model keeps 21% of blocks, which matches the ~20% implied by the paper's own timings. Filtering also zeroes the classifier gradient for 10% of the vocabulary, which is why pretraining needs the FullC variant.</description>
+    </item>
+    <item>
       <title>FlashAttention-4's Softmax Tricks: A Degree-3 exp2 on the FMA Pipe, and a Lagging Max That Saturated FP8</title>
       <link>https://mohakchugh.is-a.dev/blog/flashattention-4-software-exp2-conditional-rescaling-fp8-saturation</link>
       <pubDate>Thu, 08 Oct 2026 00:00:00 GMT</pubDate>
