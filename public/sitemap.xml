@@ -24,6 +24,7 @@
   <url><loc>https://mohakchugh.is-a.dev/projects/connectus</loc><priority>0.6</priority></url>
   <url><loc>https://mohakchugh.is-a.dev/projects/flashread</loc><priority>0.6</priority></url>
   <url><loc>https://mohakchugh.is-a.dev/blog/driftsort-rust-stable-sort-powersort-sqrt-n-run-threshold</loc><priority>0.7</priority></url>
+  <url><loc>https://mohakchugh.is-a.dev/blog/unchained-hash-tables-join-processing-bloom-tags-crc-linearity</loc><priority>0.7</priority></url>
   <url><loc>https://mohakchugh.is-a.dev/blog/cut-cross-entropy-blockwise-lse-gradient-filtering-large-vocab</loc><priority>0.7</priority></url>
   <url><loc>https://mohakchugh.is-a.dev/blog/flashattention-4-software-exp2-conditional-rescaling-fp8-saturation</loc><priority>0.7</priority></url>
   <url><loc>https://mohakchugh.is-a.dev/blog/qtip-trellis-coded-quantization-bitshift-trellis-computed-gaussian-codes</loc><priority>0.7</priority></url>
