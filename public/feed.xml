@@ -7,6 +7,12 @@
     <language>en</language>
     <atom:link href="https://mohakchugh.is-a.dev/feed.xml" rel="self" type="application/rss+xml"/>
     <item>
+      <title>Driftsort: Rust's Stable Sort Ignores Runs Shorter Than √n, and Gets 45% Slower Just Above It</title>
+      <link>https://mohakchugh.is-a.dev/blog/driftsort-rust-stable-sort-powersort-sqrt-n-run-threshold</link>
+      <pubDate>Sat, 10 Oct 2026 00:00:00 GMT</pubDate>
+      <description>Since Rust 1.81, slice::sort is driftsort: powersort's merge policy, glidesort's lazy runs, and a branchless stable quicksort, with a √n entry threshold for pre-sorted runs. I ported its top-level loop to Python and measured the real std sort on an M3 Pro. Comparison counts match the port exactly (10.00, 9.00, 7.00 per element). But at n = 2^18, input made of sorted runs of 512 elements takes 31.0 ns/element, while runs of 511 take 21.3. Detecting the runs halves the comparisons and adds 45% to the time. I also found a counterexample to the source comment claiming its integer merge-depth trick reproduces the exact powersort tree for n &lt; 2^30.</description>
+    </item>
+    <item>
       <title>Cut Cross-Entropy: Training Loss Without the Logit Matrix, and Why 0.1% Element Sparsity Becomes 50% Block Sparsity</title>
       <link>https://mohakchugh.is-a.dev/blog/cut-cross-entropy-blockwise-lse-gradient-filtering-large-vocab</link>
       <pubDate>Thu, 08 Oct 2026 00:00:00 GMT</pubDate>
