@@ -7,6 +7,12 @@
     <language>en</language>
     <atom:link href="https://mohakchugh.is-a.dev/feed.xml" rel="self" type="application/rss+xml"/>
     <item>
+      <title>Aleph Filter: Growing a Quotient Filter Forever in O(1), and the Generation-Zero Term Its FPR Bounds Miss</title>
+      <link>https://mohakchugh.is-a.dev/blog/aleph-filter-expandable-quotient-filter-void-duplicates-predictive-regime</link>
+      <pubDate>Sun, 11 Oct 2026 00:00:00 GMT</pubDate>
+      <description>Aleph Filter (VLDB 2024) lets a quotient filter double indefinitely without the original keys and keeps every query to one hash table by duplicating fingerprints that have run out of bits. I rebuilt its expansion logic as an exact bucket simulator. The fixed-width FPR matches Eq. 2 to two decimals. The widening and predictive bounds come in 1.3× and 1.4–1.7× too optimistic because the initial generation is twice as large as the model assumes and three generations around the target size get the same fingerprint length. One extra bit fixes the first. The longest-match delete rule holds: 0 false negatives against 536 for the shortest-match rule.</description>
+    </item>
+    <item>
       <title>Driftsort: Rust's Stable Sort Ignores Runs Shorter Than √n, and Gets 45% Slower Just Above It</title>
       <link>https://mohakchugh.is-a.dev/blog/driftsort-rust-stable-sort-powersort-sqrt-n-run-threshold</link>
       <pubDate>Sat, 10 Oct 2026 00:00:00 GMT</pubDate>
