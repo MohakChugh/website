@@ -13,6 +13,12 @@
       <description>Aleph Filter (VLDB 2024) lets a quotient filter double indefinitely without the original keys and keeps every query to one hash table by duplicating fingerprints that have run out of bits. I rebuilt its expansion logic as an exact bucket simulator. The fixed-width FPR matches Eq. 2 to two decimals. The widening and predictive bounds come in 1.3× and 1.4–1.7× too optimistic because the initial generation is twice as large as the model assumes and three generations around the target size get the same fingerprint length. One extra bit fixes the first. The longest-match delete rule holds: 0 false negatives against 536 for the shortest-match rule.</description>
     </item>
     <item>
+      <title>Breaking the Sorting Barrier for SSSP: A Working BMSSP, Pivots That Almost Never Fire, and the Tie-Break That Prevents a Livelock</title>
+      <link>https://mohakchugh.is-a.dev/blog/breaking-sorting-barrier-sssp-bmssp-frontier-pivots-tie-breaking</link>
+      <pubDate>Sun, 11 Oct 2026 00:00:00 GMT</pubDate>
+      <description>Duan, Mao, Mao, Shu and Yin's O(m log^(2/3) n) directed SSSP algorithm (STOC 2025 best paper) is the first to beat Dijkstra in the comparison-addition model. I implemented it in Python and checked it against Dijkstra. It gets every distance right on graphs up to 384k vertices, using 6.6× Dijkstra's edge relaxations. FindPivots took its early exit in 849 of 850 calls on random graphs and in all 1,263 on grids. Removing FindPivots entirely cuts relaxations by 21% without any wrong answers. Dropping the paper's tie-breaking order livelocks the algorithm on the zero-weight cycles that its own constant-degree transform creates.</description>
+    </item>
+    <item>
       <title>Driftsort: Rust's Stable Sort Ignores Runs Shorter Than √n, and Gets 45% Slower Just Above It</title>
       <link>https://mohakchugh.is-a.dev/blog/driftsort-rust-stable-sort-powersort-sqrt-n-run-threshold</link>
       <pubDate>Sat, 10 Oct 2026 00:00:00 GMT</pubDate>
