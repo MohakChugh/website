@@ -7,6 +7,12 @@
     <language>en</language>
     <atom:link href="https://mohakchugh.is-a.dev/feed.xml" rel="self" type="application/rss+xml"/>
     <item>
+      <title>SuperBPE on a 1.3 MB Corpus: Superword Tokens Cut 21% of Tokens In-Domain, Half That Out of Domain, and My Section Headings Became Vocabulary</title>
+      <link>https://mohakchugh.is-a.dev/blog/superbpe-superword-tokenization-transition-point-domain-shift</link>
+      <pubDate>Mon, 12 Oct 2026 00:00:00 GMT</pubDate>
+      <description>SuperBPE (COLM 2025) trains BPE in two stages: subwords first, then merges that are allowed to cross whitespace. I reimplemented it and trained it on this blog's own posts. At a 16k vocabulary it needs 20.9% fewer tokens than BPE on held-out posts, but only 10.9% fewer on npm READMEs. The transition point that is best in-domain is close to the worst out of domain. The paper's 4-word cap had no effect on encoding efficiency, and it also failed to stop the tokenizer from learning my post template ('.\n\n## What the') and markdown table rules as tokens.</description>
+    </item>
+    <item>
       <title>Aleph Filter: Growing a Quotient Filter Forever in O(1), and the Generation-Zero Term Its FPR Bounds Miss</title>
       <link>https://mohakchugh.is-a.dev/blog/aleph-filter-expandable-quotient-filter-void-duplicates-predictive-regime</link>
       <pubDate>Sun, 11 Oct 2026 00:00:00 GMT</pubDate>
