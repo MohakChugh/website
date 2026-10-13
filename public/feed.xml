@@ -7,6 +7,12 @@
     <language>en</language>
     <atom:link href="https://mohakchugh.is-a.dev/feed.xml" rel="self" type="application/rss+xml"/>
     <item>
+      <title>SOAP: Adam in Shampoo's Eigenbasis — Rebuilt, Measured, and One Redundant Rotation Per Step</title>
+      <link>https://mohakchugh.is-a.dev/blog/soap-shampoo-adam-eigenbasis-preconditioning-frequency-projection-overhead</link>
+      <pubDate>Wed, 14 Oct 2026 00:00:00 GMT</pubDate>
+      <description>SOAP (ICLR 2025) runs Adam inside the eigenbasis of Shampoo's Kronecker preconditioner. I rebuilt it in NumPy and PyTorch. The paper's Shampoo/Adafactor equivalence checks out to 1.2e-12. On a rotated quadratic, Adam's loss gets 7.6× worse and SOAP recovers almost all of it. On a char-level LM trained on this blog, SOAP beats Adam by 0.07 nats but sits within seed noise of grafted Shampoo, and neither degrades from f=1 to f=100. The paper's per-step overhead formula charges m³ where the work is m²n. The reference code rotates the first moment out of the eigenbasis and back every step, which is 2 of its 5 per-step matmul blocks; skipping that makes the optimizer step 1.65× faster.</description>
+    </item>
+    <item>
       <title>RE#: Intersection and Complement in a Linear-Time Regex Engine, Rebuilt From Brzozowski Derivatives</title>
       <link>https://mohakchugh.is-a.dev/blog/re-sharp-derivative-regex-intersection-complement-leftmost-longest</link>
       <pubDate>Tue, 13 Oct 2026 00:00:00 GMT</pubDate>
