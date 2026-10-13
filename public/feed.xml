@@ -7,6 +7,12 @@
     <language>en</language>
     <atom:link href="https://mohakchugh.is-a.dev/feed.xml" rel="self" type="application/rss+xml"/>
     <item>
+      <title>RE#: Intersection and Complement in a Linear-Time Regex Engine, Rebuilt From Brzozowski Derivatives</title>
+      <link>https://mohakchugh.is-a.dev/blog/re-sharp-derivative-regex-intersection-complement-leftmost-longest</link>
+      <pubDate>Tue, 13 Oct 2026 00:00:00 GMT</pubDate>
+      <description>RE# (POPL 2025) adds &amp; and ~ to a non-backtracking regex engine and still comes first on the rebar benchmark suite. I rebuilt its core in about 200 lines of Python and checked it against an independent span-semantics oracle (9,000/9,000 agree). Three things stood out. Encoding a password filter as a union of permutations gives exactly the same 2^k+1 DFA states as encoding it with intersection, but each state is up to 190× larger. Without the loop-subsumption rewrite, the automaton grows exponentially. And all-matches search still costs n²/2 steps on a three-character regex.</description>
+    </item>
+    <item>
       <title>Do You Need the 'H' in HNSW? Flat Graphs, Hub Highways, and Where the Distance Computations Actually Go</title>
       <link>https://mohakchugh.is-a.dev/blog/hnsw-hierarchy-hub-highway-hypothesis-flat-graph-routing-cost</link>
       <pubDate>Mon, 12 Oct 2026 00:00:00 GMT</pubDate>
