@@ -7,6 +7,12 @@
     <language>en</language>
     <atom:link href="https://mohakchugh.is-a.dev/feed.xml" rel="self" type="application/rss+xml"/>
     <item>
+      <title>CPython's Tail-Call Interpreter on an M3 Pro: Collapsing 212 Dispatch Branches to 8 Costs Nothing, and preserve_none Only Shows Up on the Slow Path</title>
+      <link>https://mohakchugh.is-a.dev/blog/cpython-tail-call-interpreter-dispatch-duplication-preserve-none-slow-path</link>
+      <pubDate>Wed, 14 Oct 2026 00:00:00 GMT</pubDate>
+      <description>Python 3.14 added an interpreter built from tail-calling C functions. The first benchmarks claimed 10-15%. Later work traced most of that to an LLVM 19 regression that merged computed-goto dispatch, which put the real gain at 1-5%. I built a 214-opcode toy VM in three dispatch styles and ran it on an Apple M3 Pro. Forcing the dispatch from 212 indirect branches down to 8 changed nothing, while switch dispatch lost about one cycle per opcode. preserve_none left the fast path byte-for-byte identical and only made the slow path cheaper.</description>
+    </item>
+    <item>
       <title>Infini-gram on 360k Tokens: The ∞-gram Ties the 5-gram Exactly, Long Matches Are a Symptom Rather Than a Cause, and Backoff Costs 1.95 Counts per Token</title>
       <link>https://mohakchugh.is-a.dev/blog/infini-gram-unbounded-n-gram-suffix-array-effective-n-scale</link>
       <pubDate>Wed, 14 Oct 2026 00:00:00 GMT</pubDate>
