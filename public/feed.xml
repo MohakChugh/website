@@ -7,6 +7,12 @@
     <language>en</language>
     <atom:link href="https://mohakchugh.is-a.dev/feed.xml" rel="self" type="application/rss+xml"/>
     <item>
+      <title>Infini-gram on 360k Tokens: The ∞-gram Ties the 5-gram Exactly, Long Matches Are a Symptom Rather Than a Cause, and Backoff Costs 1.95 Counts per Token</title>
+      <link>https://mohakchugh.is-a.dev/blog/infini-gram-unbounded-n-gram-suffix-array-effective-n-scale</link>
+      <pubDate>Wed, 14 Oct 2026 00:00:00 GMT</pubDate>
+      <description>Infini-gram (COLM 2024) turns a suffix array into an n-gram LM with unbounded n. On trillion-token corpora it agrees with human text on 47% of tokens, against 29% for a 5-gram. I rebuilt it from scratch on this blog's own posts. At 360k tokens the ∞-gram and the 5-gram score exactly the same 16.9%, because the effective n is at most 5 for 91.5% of tokens. Even where long matches exist, the 5-gram is right just as often. The incremental backoff costs a measured 1.95 counts per token, and a two-line argument bounds it at 2.</description>
+    </item>
+    <item>
       <title>SOAP: Adam in Shampoo's Eigenbasis — Rebuilt, Measured, and One Redundant Rotation Per Step</title>
       <link>https://mohakchugh.is-a.dev/blog/soap-shampoo-adam-eigenbasis-preconditioning-frequency-projection-overhead</link>
       <pubDate>Wed, 14 Oct 2026 00:00:00 GMT</pubDate>
