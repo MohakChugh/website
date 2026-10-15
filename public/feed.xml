@@ -7,6 +7,12 @@
     <language>en</language>
     <atom:link href="https://mohakchugh.is-a.dev/feed.xml" rel="self" type="application/rss+xml"/>
     <item>
+      <title>AE Chunking, Solved Exactly: A 256-State Recursion, e^γ Instead of e−1, and Why Real Text Overshoots by 16%</title>
+      <link>https://mohakchugh.is-a.dev/blog/ae-content-defined-chunking-horizon-exact-markov-chain-euler-gamma</link>
+      <pubDate>Fri, 16 Oct 2026 00:00:00 GMT</pubDate>
+      <description>A new ICDE 2027 benchmark of content-defined chunking finds that the standard horizon formula for Asymmetric Extremum (AE), h = µ/(e−1), produces chunks 13–39% smaller than intended. The authors call exact analysis impractical and calibrate by simulation. I show a 256-state backward recursion that gives the exact mean in microseconds and reproduces their simulated horizons (348 and 793). Its continuum limit says the formula is wrong even on continuous values: the constant is e^γ ≈ 1.781, not e−1. On this blog's own markdown, AE overshoots by 16% for a reason the byte histogram cannot explain.</description>
+    </item>
+    <item>
       <title>PostgreSQL 18 Skip Scan, Measured: Skip Arrays, a Missing Increment That Doubles Descents, and Two Cliffs at One Value per Leaf Page</title>
       <link>https://mohakchugh.is-a.dev/blog/postgres-18-btree-skip-scan-skip-arrays-one-value-per-leaf-cliff</link>
       <pubDate>Thu, 15 Oct 2026 00:00:00 GMT</pubDate>
