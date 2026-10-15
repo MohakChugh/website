@@ -7,6 +7,12 @@
     <language>en</language>
     <atom:link href="https://mohakchugh.is-a.dev/feed.xml" rel="self" type="application/rss+xml"/>
     <item>
+      <title>PostgreSQL 18 Skip Scan, Measured: Skip Arrays, a Missing Increment That Doubles Descents, and Two Cliffs at One Value per Leaf Page</title>
+      <link>https://mohakchugh.is-a.dev/blog/postgres-18-btree-skip-scan-skip-arrays-one-value-per-leaf-cliff</link>
+      <pubDate>Thu, 15 Oct 2026 00:00:00 GMT</pubDate>
+      <description>PostgreSQL 18 lets a B-tree on (a, b) answer WHERE b = 7700 by skipping through every distinct a. I read the nbtree source and measured PG 18.6 on 4M-row tables across 10 to 1M distinct leading values. Descents come out at exactly ndistinct + 2. Types without skip support pay 2·ndistinct + 1. The planner and the executor both give up at about one distinct value per leaf page. At that point a skip scan that kept descending would still have been 1.7× faster.</description>
+    </item>
+    <item>
       <title>CPython's Tail-Call Interpreter on an M3 Pro: Collapsing 212 Dispatch Branches to 8 Costs Nothing, and preserve_none Only Shows Up on the Slow Path</title>
       <link>https://mohakchugh.is-a.dev/blog/cpython-tail-call-interpreter-dispatch-duplication-preserve-none-slow-path</link>
       <pubDate>Wed, 14 Oct 2026 00:00:00 GMT</pubDate>
