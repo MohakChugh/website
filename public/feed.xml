@@ -7,6 +7,12 @@
     <language>en</language>
     <atom:link href="https://mohakchugh.is-a.dev/feed.xml" rel="self" type="application/rss+xml"/>
     <item>
+      <title>DFloat11, Audited: The 2.6-Bit Exponent Is a Gaussian Constant, and the Parallel-Decode Index Costs 6× the Huffman Loss</title>
+      <link>https://mohakchugh.is-a.dev/blog/dfloat11-lossless-bf16-huffman-exponent-gaussian-entropy-gap-array</link>
+      <pubDate>Wed, 21 Oct 2026 00:00:00 GMT</pubDate>
+      <description>DFloat11 (NeurIPS '25) Huffman-codes the exponent of BF16 weights and decompresses on the GPU, giving bit-identical outputs at ~70% of the size. I reproduce its compression ratio on Qwen2.5-0.5B to within a few hundredths of a bit (10.87 bits/weight). The '2.6 bits of exponent entropy' turns out to be a property of the Gaussian, 2.54 bits at any scale, which is why every model lands at 68%. Of the 0.32 bits that separate DF11 from the memoryless floor, 0.21 are the gap array that makes parallel decoding possible. At batch 1 the format is 2.2× slower than BF16 when the model fits.</description>
+    </item>
+    <item>
       <title>AE Chunking, Solved Exactly: A 256-State Recursion, e^γ Instead of e−1, and Why Real Text Overshoots by 16%</title>
       <link>https://mohakchugh.is-a.dev/blog/ae-content-defined-chunking-horizon-exact-markov-chain-euler-gamma</link>
       <pubDate>Fri, 16 Oct 2026 00:00:00 GMT</pubDate>
