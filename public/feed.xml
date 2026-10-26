@@ -7,6 +7,12 @@
     <language>en</language>
     <atom:link href="https://mohakchugh.is-a.dev/feed.xml" rel="self" type="application/rss+xml"/>
     <item>
+      <title>Metastable Failures as Markov Chains: The Orbit Cap Is Load-Bearing</title>
+      <link>https://mohakchugh.is-a.dev/blog/metastable-failures-retry-storm-ctmc-orbit-truncation-drop-semantics</link>
+      <pubDate>Mon, 26 Oct 2026 00:00:00 GMT</pubDate>
+      <description>A 2025 paper models retry storms as a two-dimensional CTMC and defines metastability by escape probabilities and eigenvalues. I rebuilt the chain and a discrete-event simulator of the same system. The paper's bistability depends on capping the retry orbit at 20. With a cap of 400, recovery goes from 577 s to 1.6×10⁹ s and throttling stops working. The simulator recovers in 570 s on average because a retry that hits a full queue ends the request, which the generator doesn't model and the cap happens to stand in for. The eigenvalue proxy measures the wrong crossing, and dropping expired work at dequeue brings recovery down to 163 s.</description>
+    </item>
+    <item>
       <title>DFloat11, Audited: The 2.6-Bit Exponent Is a Gaussian Constant, and the Parallel-Decode Index Costs 6× the Huffman Loss</title>
       <link>https://mohakchugh.is-a.dev/blog/dfloat11-lossless-bf16-huffman-exponent-gaussian-entropy-gap-array</link>
       <pubDate>Wed, 21 Oct 2026 00:00:00 GMT</pubDate>
