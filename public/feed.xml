@@ -7,6 +7,12 @@
     <language>en</language>
     <atom:link href="https://mohakchugh.is-a.dev/feed.xml" rel="self" type="application/rss+xml"/>
     <item>
+      <title>The RoPE Base Lower Bound Isn't a Threshold: Re-solving 'Base of RoPE Bounds Context Length'</title>
+      <link>https://mohakchugh.is-a.dev/blog/rope-base-bounds-context-length-non-monotone-feasibility</link>
+      <pubDate>Wed, 28 Oct 2026 00:00:00 GMT</pubDate>
+      <description>Men et al. (2024) derive a minimum RoPE base for each target context length, defined as the smallest base where the sum of cosines B_m = Σcos(mθ_i) stays non-negative out to L. I re-solved it for head dimension 128 and matched 3 of the 11 table entries to two significant figures. The bigger issue is that feasibility is not monotone in base: it flips on and off 21–93 times on a 0.46% grid. Seven of the paper's 11 rounded bases fail the paper's own criterion, a base that is safe for every larger value is 1.4–8× higher, and Mistral's 1e6 at 32K goes negative at m=27,115. The scaling law, base ∝ L^1.7, holds up. The threshold doesn't.</description>
+    </item>
+    <item>
       <title>Chorba CRC32: Every Fast Polynomial Is an Error CRC-32 Can't Detect</title>
       <link>https://mohakchugh.is-a.dev/blog/chorba-crc32-zero-polynomials-undetectable-errors-hamming-distance</link>
       <pubDate>Tue, 27 Oct 2026 00:00:00 GMT</pubDate>
