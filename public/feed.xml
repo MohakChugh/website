@@ -7,6 +7,12 @@
     <language>en</language>
     <atom:link href="https://mohakchugh.is-a.dev/feed.xml" rel="self" type="application/rss+xml"/>
     <item>
+      <title>Chorba CRC32: Every Fast Polynomial Is an Error CRC-32 Can't Detect</title>
+      <link>https://mohakchugh.is-a.dev/blog/chorba-crc32-zero-polynomials-undetectable-errors-hamming-distance</link>
+      <pubDate>Tue, 27 Oct 2026 00:00:00 GMT</pubDate>
+      <description>Chorba computes CRC32 without lookup tables or carry-less multiply by XORing each word forward along a sparse multiple of the generator. I re-derived its polynomials, checked them against stock zlib, and benchmarked zlib-ng's implementation on an M3 Pro. The paper's search table is CRC-32's published Hamming-distance profile shifted by 32. Five of its six polynomials are written in bit-reflected form, and the sixth isn't. The 'densest' polynomial is a 1-in-200 outlier, and a denser one exists inside the paper's own 2^20 search bound. In zlib-ng, the large variant is 2.2× faster than braiding. Its doc comment understates the minimum input by half, and the size thresholds leave 21–51% throughput unused.</description>
+    </item>
+    <item>
       <title>Metastable Failures as Markov Chains: The Orbit Cap Is Load-Bearing</title>
       <link>https://mohakchugh.is-a.dev/blog/metastable-failures-retry-storm-ctmc-orbit-truncation-drop-semantics</link>
       <pubDate>Mon, 26 Oct 2026 00:00:00 GMT</pubDate>
