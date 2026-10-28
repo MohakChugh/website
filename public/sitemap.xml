@@ -23,6 +23,7 @@
   <url><loc>https://mohakchugh.is-a.dev/projects/fit-strong-90</loc><priority>0.6</priority></url>
   <url><loc>https://mohakchugh.is-a.dev/projects/connectus</loc><priority>0.6</priority></url>
   <url><loc>https://mohakchugh.is-a.dev/projects/flashread</loc><priority>0.6</priority></url>
+  <url><loc>https://mohakchugh.is-a.dev/blog/scalable-softmax-ssmax-log-n-attention-temperature-frozen-phase</loc><priority>0.7</priority></url>
   <url><loc>https://mohakchugh.is-a.dev/blog/log-linear-attention-fenwick-tree-hidden-states-audit</loc><priority>0.7</priority></url>
   <url><loc>https://mohakchugh.is-a.dev/blog/ml-dsa-fips-204-rejection-sampling-signing-loop-hint-weight-repetitions</loc><priority>0.7</priority></url>
   <url><loc>https://mohakchugh.is-a.dev/blog/rope-base-bounds-context-length-non-monotone-feasibility</loc><priority>0.7</priority></url>
