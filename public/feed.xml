@@ -7,6 +7,12 @@
     <language>en</language>
     <atom:link href="https://mohakchugh.is-a.dev/feed.xml" rel="self" type="application/rss+xml"/>
     <item>
+      <title>Log-Linear Attention, Audited: Fenwick-Tree States, Aliased Scales, and Where the Log Factor Goes</title>
+      <link>https://mohakchugh.is-a.dev/blog/log-linear-attention-fenwick-tree-hidden-states-audit</link>
+      <pubDate>Wed, 28 Oct 2026 00:00:00 GMT</pubDate>
+      <description>Log-linear attention gives Mamba-2 and Gated DeltaNet a logarithmically growing set of hidden states instead of one. I re-implemented both forms (they agree to 4e-14), found that a token's level is just bit_length(t XOR s), and measured what the paper doesn't: the token one step back shares its level weight with up to 8,191 others, the decode state equals a Transformer's KV cache at ~1.9K tokens, the 8K speed crossover implies a 7–11× FLOP-efficiency gap to FlashAttention-2, and the released config cannot exceed 16,384 tokens.</description>
+    </item>
+    <item>
       <title>The RoPE Base Lower Bound Isn't a Threshold: Re-solving 'Base of RoPE Bounds Context Length'</title>
       <link>https://mohakchugh.is-a.dev/blog/rope-base-bounds-context-length-non-monotone-feasibility</link>
       <pubDate>Wed, 28 Oct 2026 00:00:00 GMT</pubDate>
