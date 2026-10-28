@@ -13,6 +13,12 @@
       <description>Men et al. (2024) derive a minimum RoPE base for each target context length, defined as the smallest base where the sum of cosines B_m = Σcos(mθ_i) stays non-negative out to L. I re-solved it for head dimension 128 and matched 3 of the 11 table entries to two significant figures. The bigger issue is that feasibility is not monotone in base: it flips on and off 21–93 times on a 0.46% grid. Seven of the paper's 11 rounded bases fail the paper's own criterion, a base that is safe for every larger value is 1.4–8× higher, and Mistral's 1e6 at 32K goes negative at m=27,115. The scaling law, base ∝ L^1.7, holds up. The threshold doesn't.</description>
     </item>
     <item>
+      <title>Stream-K Re-derived: Its Own Fixup Model Caps the 14.7× at ~3×, and Stream-K++'s Bloom Filters Are a 546-Byte Table</title>
+      <link>https://mohakchugh.is-a.dev/blog/stream-k-gemm-fixup-cost-model-wave-quantization-bloom-filter-audit</link>
+      <pubDate>Wed, 28 Oct 2026 00:00:00 GMT</pubDate>
+      <description>Stream-K splits GEMM work by MAC-loop iteration instead of by output tile, which removes wave quantization. I inverted the paper's grid-size model against its own Fig. 8. Reading one peer's partial sums costs 7–9.9 MAC iterations, and at that cost the model can't produce more than ~3.1× over data-parallel on the paper's test domain, against a reported 14.7×. The 2024 follow-up, Stream-K++, describes an MI250X with 104 CUs (the MI250X has 110 per die), benchmarks 923 of a 1,456-cell grid, and attributes atomics to an algorithm that never used them. It also selects policies with Bloom filters that need ~82 KiB to do what an exact 546-byte lookup table does with no false positives.</description>
+    </item>
+    <item>
       <title>Chorba CRC32: Every Fast Polynomial Is an Error CRC-32 Can't Detect</title>
       <link>https://mohakchugh.is-a.dev/blog/chorba-crc32-zero-polynomials-undetectable-errors-hamming-distance</link>
       <pubDate>Tue, 27 Oct 2026 00:00:00 GMT</pubDate>
