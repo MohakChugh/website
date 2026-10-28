@@ -13,6 +13,12 @@
       <description>Log-linear attention gives Mamba-2 and Gated DeltaNet a logarithmically growing set of hidden states instead of one. I re-implemented both forms (they agree to 4e-14), found that a token's level is just bit_length(t XOR s), and measured what the paper doesn't: the token one step back shares its level weight with up to 8,191 others, the decode state equals a Transformer's KV cache at ~1.9K tokens, the 8K speed crossover implies a 7–11× FLOP-efficiency gap to FlashAttention-2, and the released config cannot exceed 16,384 tokens.</description>
     </item>
     <item>
+      <title>ML-DSA's Signing Loop, Simulated: FIPS 204's 4.25 / 5.1 / 3.85 Repetitions Are a Floor, and the Hint Check Is Why</title>
+      <link>https://mohakchugh.is-a.dev/blog/ml-dsa-fips-204-rejection-sampling-signing-loop-hint-weight-repetitions</link>
+      <pubDate>Wed, 28 Oct 2026 00:00:00 GMT</pubDate>
+      <description>FIPS 204 says ML-DSA's signing loop runs 4.25, 5.1 and 3.85 times on average. Those figures come from the exponential approximation of two of the four rejection checks. I ran Algorithm 7's acceptance tests on real keys, 300,000 candidates per parameter set. The true means are 4.37, 5.13 and 3.91. The hint-weight check ω alone rejects 1.5% of otherwise-valid ML-DSA-44 candidates. With the corrected mean, ML-DSA-65's 814-iteration limit gives a 2^-254.6 failure probability, not 2^-256. The bigger operational number is the geometric tail: p99.9 signing takes 6 to 7 times the mean.</description>
+    </item>
+    <item>
       <title>The RoPE Base Lower Bound Isn't a Threshold: Re-solving 'Base of RoPE Bounds Context Length'</title>
       <link>https://mohakchugh.is-a.dev/blog/rope-base-bounds-context-length-non-monotone-feasibility</link>
       <pubDate>Wed, 28 Oct 2026 00:00:00 GMT</pubDate>

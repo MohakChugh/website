@@ -24,6 +24,7 @@
   <url><loc>https://mohakchugh.is-a.dev/projects/connectus</loc><priority>0.6</priority></url>
   <url><loc>https://mohakchugh.is-a.dev/projects/flashread</loc><priority>0.6</priority></url>
   <url><loc>https://mohakchugh.is-a.dev/blog/log-linear-attention-fenwick-tree-hidden-states-audit</loc><priority>0.7</priority></url>
+  <url><loc>https://mohakchugh.is-a.dev/blog/ml-dsa-fips-204-rejection-sampling-signing-loop-hint-weight-repetitions</loc><priority>0.7</priority></url>
   <url><loc>https://mohakchugh.is-a.dev/blog/rope-base-bounds-context-length-non-monotone-feasibility</loc><priority>0.7</priority></url>
   <url><loc>https://mohakchugh.is-a.dev/blog/stream-k-gemm-fixup-cost-model-wave-quantization-bloom-filter-audit</loc><priority>0.7</priority></url>
   <url><loc>https://mohakchugh.is-a.dev/blog/chorba-crc32-zero-polynomials-undetectable-errors-hamming-distance</loc><priority>0.7</priority></url>
