@@ -7,6 +7,12 @@
     <language>en</language>
     <atom:link href="https://mohakchugh.is-a.dev/feed.xml" rel="self" type="application/rss+xml"/>
     <item>
+      <title>Ascon in NIST SP 800-232: What the Lightweight AEAD Standard Actually Promises</title>
+      <link>https://mohakchugh.is-a.dev/blog/ascon-sp-800-232-truncated-tags-nonce-masking-duplex-audit</link>
+      <pubDate>Thu, 29 Oct 2026 00:00:00 GMT</pubDate>
+      <description>NIST finalized SP 800-232 in August 2025, making Ascon the US lightweight-crypto standard. I implemented Ascon-AEAD128, Hash256 and XOF128 from the spec and passed all 3,139 reference KATs. Then I checked the fine print. The decryption-failure rule R5 works out to a fixed 2^-32 forgery budget per key, and it stops being the binding limit above 81-bit tags. With the 32-bit tags the standard allows, two keys that open the same ciphertext fell out of a birthday search after 102,725 trials. Nonce reuse leaks only up to the first differing block. On an M3 Pro, portable Ascon runs about 10× slower than AES-GCM.</description>
+    </item>
+    <item>
       <title>FROST (RFC 9591): Why Threshold Schnorr Needs Two Nonces and a Binding Factor</title>
       <link>https://mohakchugh.is-a.dev/blog/frost-rfc-9591-threshold-schnorr-binding-factors</link>
       <pubDate>Thu, 29 Oct 2026 00:00:00 GMT</pubDate>
