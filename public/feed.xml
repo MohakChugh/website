@@ -7,6 +7,12 @@
     <language>en</language>
     <atom:link href="https://mohakchugh.is-a.dev/feed.xml" rel="self" type="application/rss+xml"/>
     <item>
+      <title>FROST (RFC 9591): Why Threshold Schnorr Needs Two Nonces and a Binding Factor</title>
+      <link>https://mohakchugh.is-a.dev/blog/frost-rfc-9591-threshold-schnorr-binding-factors</link>
+      <pubDate>Thu, 29 Oct 2026 00:00:00 GMT</pubDate>
+      <description>RFC 9591 standardizes FROST, a two-round t-of-n Schnorr threshold signature whose output is an ordinary Schnorr signature. The core design choice is that each signer commits to two nonces, and the binding factor ρ_i ties every signer's nonce to the message and to everyone else's commitments. I implemented the secp256k1 ciphersuite from the spec and matched every Appendix E.5 test vector byte for byte. Below I walk through why the second nonce exists, what the hedged nonce function does and doesn't protect against, and why per-signer cost grows linearly with signer count.</description>
+    </item>
+    <item>
       <title>Scalable-Softmax, Audited: Log-n Attention Is a Temperature Schedule, and Past a Point It Freezes on Noise</title>
       <link>https://mohakchugh.is-a.dev/blog/scalable-softmax-ssmax-log-n-attention-temperature-frozen-phase</link>
       <pubDate>Thu, 29 Oct 2026 00:00:00 GMT</pubDate>
