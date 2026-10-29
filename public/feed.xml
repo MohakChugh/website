@@ -7,6 +7,12 @@
     <language>en</language>
     <atom:link href="https://mohakchugh.is-a.dev/feed.xml" rel="self" type="application/rss+xml"/>
     <item>
+      <title>Shuffled DP-SGD Is Not Poisson DP-SGD: Re-running the Accountants on the Batch-Sampler Gap</title>
+      <link>https://mohakchugh.is-a.dev/blog/dp-sgd-shuffle-vs-poisson-batch-sampling-privacy-accounting-gap</link>
+      <pubDate>Fri, 30 Oct 2026 00:00:00 GMT</pubDate>
+      <description>Most DP-SGD pipelines shuffle the data and chop it into fixed batches, then report ε from an accountant that assumes Poisson subsampling. Chua et al. (ICML 2024) showed the two can be far apart. I reproduced their numbers with Google's dp_accounting library. At σ=0.5 and 10,000 steps, Poisson PLD reports ε=1.95, while shuffling is provably at least 10.99, essentially no amplification at all. Sweeping σ, the gap peaks at 61× near σ=0.8. A 4M-sample Monte Carlo shows the paper's cheap max-coordinate lower bound is tight to within MC noise. To hit the same ε, shuffling needs about 2× the noise multiplier. Balls-and-Bins sampling came out at or below Poisson in every setting I ran.</description>
+    </item>
+    <item>
       <title>Ascon in NIST SP 800-232: What the Lightweight AEAD Standard Actually Promises</title>
       <link>https://mohakchugh.is-a.dev/blog/ascon-sp-800-232-truncated-tags-nonce-masking-duplex-audit</link>
       <pubDate>Thu, 29 Oct 2026 00:00:00 GMT</pubDate>
