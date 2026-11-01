@@ -7,6 +7,12 @@
     <language>en</language>
     <atom:link href="https://mohakchugh.is-a.dev/feed.xml" rel="self" type="application/rss+xml"/>
     <item>
+      <title>KyberSlash and Clangover: When the Compiler Writes Your ML-KEM Side Channel</title>
+      <link>https://mohakchugh.is-a.dev/blog/kyberslash-clangover-ml-kem-compiler-timing-leaks</link>
+      <pubDate>Sun, 01 Nov 2026 00:00:00 GMT</pubDate>
+      <description>In 2024 the ML-KEM reference code had two timing leaks, neither visible in the C source: a division by q (KyberSlash) and a bit mask that clang turned back into a branch (Clangover). I re-checked both with Apple clang 21. The multiply-shift fix constants match division on all 3,329 inputs, and the d=4 and d=5 variants overflow uint32 on purpose. Clang keeps the real divide at -O0 and -Oz, and on Cortex-M0 it calls __aeabi_uidiv at every optimization level. Clangover still reproduces on x86-64 at -O1, -Os and -Oz. On an M3 Pro, udiv latency grows with the dividend's bit length. Kyber's d=1 operands come out flat, so testing on a Mac would wrongly clear KyberSlash1. ML-KEM-1024's du=11 compression is 10% slower for coefficients ≥ 2048.</description>
+    </item>
+    <item>
       <title>Shuffled DP-SGD Is Not Poisson DP-SGD: Re-running the Accountants on the Batch-Sampler Gap</title>
       <link>https://mohakchugh.is-a.dev/blog/dp-sgd-shuffle-vs-poisson-batch-sampling-privacy-accounting-gap</link>
       <pubDate>Fri, 30 Oct 2026 00:00:00 GMT</pubDate>
