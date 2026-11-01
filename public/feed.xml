@@ -7,6 +7,12 @@
     <language>en</language>
     <atom:link href="https://mohakchugh.is-a.dev/feed.xml" rel="self" type="application/rss+xml"/>
     <item>
+      <title>AlphaEvolve's 48-Multiplication 4×4 Matmul, Audited: Exact, Dense, and Only Worth It as One Level in a Hybrid</title>
+      <link>https://mohakchugh.is-a.dev/blog/alphaevolve-rank-48-4x4-matrix-multiplication-rational-slp-audit</link>
+      <pubDate>Mon, 02 Nov 2026 00:00:00 GMT</pubDate>
+      <description>I verified AlphaEvolve's rank-48 decomposition of 4×4 complex matmul exactly, plus six rational rank-48 variants published by Dumas, Pernet and Sedoglavic. My own straight-line-program count reproduces their 347/32 leading constant, and their 201-op variant gets it down to 233/32. Under full recursion, that constant only beats Strassen–Winograd above n ≈ 450,000. Used as one level in a hybrid, it saves flops from n = 128 (3.0% at 1024, 6.0% at 8192). The cheapest variant is 8× less accurate than Strassen² in float32. In numpy on an M3 Pro, its additions eat the saved GEMM: 0.92× of plain GEMM at n = 8192, against 1.20× for Strassen².</description>
+    </item>
+    <item>
       <title>HQC's 2026 Parameter Bump Was Paid For by a Better Failure Model, Not a Better Code</title>
       <link>https://mohakchugh.is-a.dev/blog/hqc-2026-dfr-model-2-correlated-error-concatenated-reed-muller-reed-solomon</link>
       <pubDate>Sun, 01 Nov 2026 00:00:00 GMT</pubDate>
