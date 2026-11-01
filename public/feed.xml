@@ -7,6 +7,12 @@
     <language>en</language>
     <atom:link href="https://mohakchugh.is-a.dev/feed.xml" rel="self" type="application/rss+xml"/>
     <item>
+      <title>HQC's 2026 Parameter Bump Was Paid For by a Better Failure Model, Not a Better Code</title>
+      <link>https://mohakchugh.is-a.dev/blog/hqc-2026-dfr-model-2-correlated-error-concatenated-reed-muller-reed-solomon</link>
+      <pubDate>Sun, 01 Nov 2026 00:00:00 GMT</pubDate>
+      <description>The October 2026 HQC spec raised ω and ωr and still claims DFR targets of 2^-127.9, 2^-196.4 and 2^-257. I rebuilt the analysis from the spec. Under the old independence model (Model 1), the new parameters miss all three targets: 2^-117.8, 2^-185.8 and 2^-242.9. They pass only under the new correlated model (Model 2), which I reproduced to 2^-128.3. In 1.2M real HQC-1 error vectors the gain is invisible. Real errors and a binary symmetric channel fail the same number of inner blocks per ciphertext (dispersion 0.998 vs 1.000). The ~10 bits come entirely from weight tails near +7σ that no simulation can reach.</description>
+    </item>
+    <item>
       <title>KyberSlash and Clangover: When the Compiler Writes Your ML-KEM Side Channel</title>
       <link>https://mohakchugh.is-a.dev/blog/kyberslash-clangover-ml-kem-compiler-timing-leaks</link>
       <pubDate>Sun, 01 Nov 2026 00:00:00 GMT</pubDate>
