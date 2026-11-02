@@ -13,6 +13,12 @@
       <description>I verified AlphaEvolve's rank-48 decomposition of 4×4 complex matmul exactly, plus six rational rank-48 variants published by Dumas, Pernet and Sedoglavic. My own straight-line-program count reproduces their 347/32 leading constant, and their 201-op variant gets it down to 233/32. Under full recursion, that constant only beats Strassen–Winograd above n ≈ 450,000. Used as one level in a hybrid, it saves flops from n = 128 (3.0% at 1024, 6.0% at 8192). The cheapest variant is 8× less accurate than Strassen² in float32. In numpy on an M3 Pro, its additions eat the saved GEMM: 0.92× of plain GEMM at n = 8192, against 1.20× for Strassen².</description>
     </item>
     <item>
+      <title>DPconv, Reproduced: Join Ordering Below 3^n via Fast Subset Convolution, and Where the Crossover Really Is</title>
+      <link>https://mohakchugh.is-a.dev/blog/dpconv-join-ordering-fast-subset-convolution-cmax-binary-search</link>
+      <pubDate>Mon, 02 Nov 2026 00:00:00 GMT</pubDate>
+      <description>Every exact bushy join-ordering DP since Selinger evaluates a subset convolution term by term, which costs O(3^n). DPconv (SIGMOD 2025) gets C_max in O(2^n n^3): binary-search the bottleneck, then answer each feasibility question with a counting convolution in the (+,·) ring. I rebuilt DPsub[max] and DPconv[max] in C. They agree on 200/200 random cliques. On an M3 Pro the crossover is n=19, not 17, and the speedup at n=24 is 7.2×, not 29×. Uniform-random benchmark cardinalities also hide something: under an independence model, the C_out-optimal and C_max-optimal plans were identical in 600 of 600 cliques.</description>
+    </item>
+    <item>
       <title>SOAR, Audited: Orthogonality-Amplified Spilling Is Exact on the Sphere, Wrong About the Queries, and Worth ~4% Without Anisotropic VQ</title>
       <link>https://mohakchugh.is-a.dev/blog/soar-orthogonality-amplified-spilling-ivf-vector-search-audit</link>
       <pubDate>Mon, 02 Nov 2026 00:00:00 GMT</pubDate>
