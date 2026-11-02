@@ -7,6 +7,12 @@
     <language>en</language>
     <atom:link href="https://mohakchugh.is-a.dev/feed.xml" rel="self" type="application/rss+xml"/>
     <item>
+      <title>RLibm-MultiRound on Apple Silicon: Correct Under Every Rounding Mode, and What a Mode Switch Really Costs</title>
+      <link>https://mohakchugh.is-a.dev/blog/rlibm-multiround-rounding-mode-invariant-correctly-rounded-libm-fpcr-cost</link>
+      <pubDate>Tue, 03 Nov 2026 00:00:00 GMT</pubDate>
+      <description>A correctly rounded libm is only correct in the rounding mode it was built for. RLibm-MultiRound (arXiv:2504.07409) removes the fesetround calls RLibm needed for non-default modes, using either round-to-zero emulation or interval bounds baked into the polynomial generator. I fuzzed its RZ-emulation algorithms on an M3 Pro: 0 mismatches in 200M pairs per mode. A rounding-mode change costs ~17 ns per FPCR write there, but only when the mode actually changes. RZ emulation runs ~11× a plain polynomial, which flips the paper's AMD ranking. I also swept all 2^32 floats through Apple's libm in all four modes: sinf misrounds 2.28 billion inputs under directed rounding.</description>
+    </item>
+    <item>
       <title>AlphaEvolve's 48-Multiplication 4×4 Matmul, Audited: Exact, Dense, and Only Worth It as One Level in a Hybrid</title>
       <link>https://mohakchugh.is-a.dev/blog/alphaevolve-rank-48-4x4-matrix-multiplication-rational-slp-audit</link>
       <pubDate>Mon, 02 Nov 2026 00:00:00 GMT</pubDate>
