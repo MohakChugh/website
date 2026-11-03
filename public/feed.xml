@@ -13,6 +13,12 @@
       <description>Ben Joffe's 2025 date algorithm turns a day count into year/month/day with 4 multiplications instead of Neri–Schneider's 7, by counting backwards from a leap day. I checked it against a 128-bit reference on an M3 Pro. Both 64-bit range boundaries reproduce to the exact day, with 0 misses in 1.2 billion random inputs. The repo's 32-bit form misses the bottom 7,172 days of int32 because of a uint32 wrap, and no ERAS constant can fix that. Scalar code runs 1.27–1.36× faster than Neri–Schneider. Batch code is different: Neri–Schneider's 32-bit arithmetic auto-vectorizes on NEON and wins by 2.3×.</description>
     </item>
     <item>
+      <title>Batched Dice Rolls Audited: Six Fisher–Yates Indices From One 64-bit Word, and Where the 2× Goes</title>
+      <link>https://mohakchugh.is-a.dev/blog/batched-ranged-random-integers-fisher-yates-one-word-many-dice-audit</link>
+      <pubDate>Tue, 03 Nov 2026 00:00:00 GMT</pubDate>
+      <description>Brackett-Rozinsky and Lemire extend the nearly-divisionless bounded-random method to draw several dice from one 64-bit word with one multiply each. I checked their theorem exhaustively: 0 biased cases out of 122,695 dice tuples at 8–12-bit word sizes. Two plausible-looking acceptance rules are biased in 92–94% of tuples. Their Table 2 cost model reproduces to the integer. On an M3 Pro the shuffle speedup with an inlined Lehmer generator is 1.38–1.45×, not 1.5–2.3×. Calling the generator out of line gives 2.2–2.8×. A system CSPRNG gives up to 5.3×, within 2–11% of the call-count ceiling. Out of cache, the Lehmer gain disappears (1.0×).</description>
+    </item>
+    <item>
       <title>LeaseGuard Audited: Raft Leases Where the Log Is the Lease, and a Limbo Region That's One Entry Short</title>
       <link>https://mohakchugh.is-a.dev/blog/leaseguard-raft-leases-log-is-the-lease-limbo-region-audit</link>
       <pubDate>Tue, 03 Nov 2026 00:00:00 GMT</pubDate>
