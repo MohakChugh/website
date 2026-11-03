@@ -7,6 +7,12 @@
     <language>en</language>
     <atom:link href="https://mohakchugh.is-a.dev/feed.xml" rel="self" type="application/rss+xml"/>
     <item>
+      <title>Counting Days Backwards: Auditing the Fastest 64-Bit Date Algorithm on Apple Silicon</title>
+      <link>https://mohakchugh.is-a.dev/blog/backwards-counting-date-algorithm-neri-schneider-mulhi-neon-audit</link>
+      <pubDate>Tue, 03 Nov 2026 00:00:00 GMT</pubDate>
+      <description>Ben Joffe's 2025 date algorithm turns a day count into year/month/day with 4 multiplications instead of Neri–Schneider's 7, by counting backwards from a leap day. I checked it against a 128-bit reference on an M3 Pro. Both 64-bit range boundaries reproduce to the exact day, with 0 misses in 1.2 billion random inputs. The repo's 32-bit form misses the bottom 7,172 days of int32 because of a uint32 wrap, and no ERAS constant can fix that. Scalar code runs 1.27–1.36× faster than Neri–Schneider. Batch code is different: Neri–Schneider's 32-bit arithmetic auto-vectorizes on NEON and wins by 2.3×.</description>
+    </item>
+    <item>
       <title>RLibm-MultiRound on Apple Silicon: Correct Under Every Rounding Mode, and What a Mode Switch Really Costs</title>
       <link>https://mohakchugh.is-a.dev/blog/rlibm-multiround-rounding-mode-invariant-correctly-rounded-libm-fpcr-cost</link>
       <pubDate>Tue, 03 Nov 2026 00:00:00 GMT</pubDate>
