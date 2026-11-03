@@ -7,6 +7,12 @@
     <language>en</language>
     <atom:link href="https://mohakchugh.is-a.dev/feed.xml" rel="self" type="application/rss+xml"/>
     <item>
+      <title>Universally Optimal Dijkstra, Audited: Working-Set Heaps Win 29× on the Paper's Graph and 0.8–5% on Grids and Random Graphs</title>
+      <link>https://mohakchugh.is-a.dev/blog/universal-optimality-dijkstra-working-set-heaps-audit</link>
+      <pubDate>Wed, 04 Nov 2026 00:00:00 GMT</pubDate>
+      <description>Haeupler, Hladík, Rozhoň, Tarjan and Tětek (FOCS 2024 best paper) prove that Dijkstra with a working-set heap is universally optimal for ordering vertices by distance. I implemented their outer heap of doubly-exponentially sized inner heaps and counted comparisons. On the paper's star-plus-path graph a binary heap does 28.8× more work, and the ratio grows at about 2.9 per bit of log₂ t. On grids and random digraphs Σlog W is within 0.8–5% of Σlog |heap|, so the theory has almost no headroom. A naive find-min scan adds 3× the outer heap's own comparisons unless you use the bit-vector trick. On a path, even the optimal heap is 52× above the information-theoretic bound until bottleneck lookahead removes the additive n.</description>
+    </item>
+    <item>
       <title>Counting Days Backwards: Auditing the Fastest 64-Bit Date Algorithm on Apple Silicon</title>
       <link>https://mohakchugh.is-a.dev/blog/backwards-counting-date-algorithm-neri-schneider-mulhi-neon-audit</link>
       <pubDate>Tue, 03 Nov 2026 00:00:00 GMT</pubDate>
