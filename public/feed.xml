@@ -13,6 +13,12 @@
       <description>Ben Joffe's 2025 date algorithm turns a day count into year/month/day with 4 multiplications instead of Neri–Schneider's 7, by counting backwards from a leap day. I checked it against a 128-bit reference on an M3 Pro. Both 64-bit range boundaries reproduce to the exact day, with 0 misses in 1.2 billion random inputs. The repo's 32-bit form misses the bottom 7,172 days of int32 because of a uint32 wrap, and no ERAS constant can fix that. Scalar code runs 1.27–1.36× faster than Neri–Schneider. Batch code is different: Neri–Schneider's 32-bit arithmetic auto-vectorizes on NEON and wins by 2.3×.</description>
     </item>
     <item>
+      <title>LeaseGuard Audited: Raft Leases Where the Log Is the Lease, and a Limbo Region That's One Entry Short</title>
+      <link>https://mohakchugh.is-a.dev/blog/leaseguard-raft-leases-log-is-the-lease-limbo-region-audit</link>
+      <pubDate>Tue, 03 Nov 2026 00:00:00 GMT</pubDate>
+      <description>LeaseGuard (SIGMOD 2026) gets zero-round-trip linearizable reads in Raft by treating the newest committed log entry as the lease, and adds two failover optimizations: deferred-commit writes and inherited-lease reads. I re-derived its numbers and read both reference implementations. The 55k ops/s write spike reproduces exactly from 10 ms chart buckets. The authors' own closed form predicts ~661 blocked reads for the LogCabin failover run, against the 70 reported, and I could not reconcile that 10× gap. The C++ limbo-region loop also stops one entry early: an exhaustive check finds stale reads in 12–22% of small configurations, where the paper's inclusive bound finds none.</description>
+    </item>
+    <item>
       <title>RLibm-MultiRound on Apple Silicon: Correct Under Every Rounding Mode, and What a Mode Switch Really Costs</title>
       <link>https://mohakchugh.is-a.dev/blog/rlibm-multiround-rounding-mode-invariant-correctly-rounded-libm-fpcr-cost</link>
       <pubDate>Tue, 03 Nov 2026 00:00:00 GMT</pubDate>
