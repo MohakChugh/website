@@ -13,6 +13,12 @@
       <description>Falcon (NIST's FN-DSA) signs with two restart loops. One rejects samples whose norm is too large, and the spec bounds it. The other rejects samples whose compressed encoding overflows the fixed signature size, and the spec never quantifies it. I harvested 30,000 real preimage samples from the reference implementation and computed the exact length distribution by convolution. Falcon-512 overflows 1 time in 5.3 million. Falcon-1024 overflows 1 time in 1,055 (12 hits in 10,000 samples, against 9.5 predicted). That is 6.8 million times its norm-restart rate. Seven more bytes would bring it level with Falcon-512.</description>
     </item>
     <item>
+      <title>Go's Swiss-Table Maps Under Churn, Audited: Pruning Stopped the Doubling, but Tables Above ~62% Load Still Double and Misses Run 2× Slower</title>
+      <link>https://mohakchugh.is-a.dev/blog/go-swiss-table-maps-tombstone-churn-prune-cliff-audit</link>
+      <pubDate>Wed, 04 Nov 2026 00:00:00 GMT</pubDate>
+      <description>Go 1.24 replaced its bucket maps with Swiss tables split into 1024-slot tables under an extendible-hashing directory. It can't rehash in place, so delete/insert churn at constant size doubled maps (issue #70886). Go 1.25 added tombstone pruning. I read the code and churned maps of 1k to 1M keys on 1.24.0 and 1.27.3. Pruning keeps memory flat for maps that start below about 62% table load. At 64% and above, a table doubles anyway (6/6 seeds), which covers about half of all map sizes. Tombstones still hold 20–31% of slots, miss lookups probe 2.4–2.5 groups instead of 1.1–1.7 and take 1.7–2.2× as long, and since 1.25 maps.Clone copies the tombstones over unchanged.</description>
+    </item>
+    <item>
       <title>Universally Optimal Dijkstra, Audited: Working-Set Heaps Win 29× on the Paper's Graph and 0.8–5% on Grids and Random Graphs</title>
       <link>https://mohakchugh.is-a.dev/blog/universal-optimality-dijkstra-working-set-heaps-audit</link>
       <pubDate>Wed, 04 Nov 2026 00:00:00 GMT</pubDate>
