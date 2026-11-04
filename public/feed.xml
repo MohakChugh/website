@@ -7,6 +7,12 @@
     <language>en</language>
     <atom:link href="https://mohakchugh.is-a.dev/feed.xml" rel="self" type="application/rss+xml"/>
     <item>
+      <title>Falcon's Signature Compressor, Audited: FN-DSA-1024 Restarts 1 in 1,055 Signings on Encoding Overflow, 6.8 Million Times Its Norm Check</title>
+      <link>https://mohakchugh.is-a.dev/blog/falcon-fn-dsa-signature-compression-overflow-restart-audit</link>
+      <pubDate>Wed, 04 Nov 2026 00:00:00 GMT</pubDate>
+      <description>Falcon (NIST's FN-DSA) signs with two restart loops. One rejects samples whose norm is too large, and the spec bounds it. The other rejects samples whose compressed encoding overflows the fixed signature size, and the spec never quantifies it. I harvested 30,000 real preimage samples from the reference implementation and computed the exact length distribution by convolution. Falcon-512 overflows 1 time in 5.3 million. Falcon-1024 overflows 1 time in 1,055 (12 hits in 10,000 samples, against 9.5 predicted). That is 6.8 million times its norm-restart rate. Seven more bytes would bring it level with Falcon-512.</description>
+    </item>
+    <item>
       <title>Universally Optimal Dijkstra, Audited: Working-Set Heaps Win 29× on the Paper's Graph and 0.8–5% on Grids and Random Graphs</title>
       <link>https://mohakchugh.is-a.dev/blog/universal-optimality-dijkstra-working-set-heaps-audit</link>
       <pubDate>Wed, 04 Nov 2026 00:00:00 GMT</pubDate>
