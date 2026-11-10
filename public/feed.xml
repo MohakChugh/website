@@ -7,6 +7,12 @@
     <language>en</language>
     <atom:link href="https://mohakchugh.is-a.dev/feed.xml" rel="self" type="application/rss+xml"/>
     <item>
+      <title>MLS TreeKEM Under Churn, Simulated: Fresh Groups Start at (2N−1)/3 Ciphertexts, Admin-Committed Removes Decay to N−2, and Letting the Neighbour Commit Keeps It at log N</title>
+      <link>https://mohakchugh.is-a.dev/blog/mls-treekem-ratchet-tree-churn-blank-nodes-commit-cost-simulated</link>
+      <pubDate>Tue, 10 Nov 2026 00:00:00 GMT</pubDate>
+      <description>RFC 9420 says TreeKEM can encrypt to everyone but one member with log(N) ciphertexts. That holds only for a ratchet tree with no blank nodes. I wrote a ratchet-tree simulator from the RFC's rules (it reproduces Figures 10 and 11) and measured commit sizes. A freshly created group's first commit averages exactly (2N−1)/3 ciphertexts, 682 at N=1024. Under steady remove/add churn with random committers, parent nodes settle at about 50% blank, which matches a closed form of (1−q)/(2−q) per node, and commits cost about 124 ciphertexts instead of 10. If one admin commits every remove, the tree drops to 99% blank and every commit costs N−2. If the removed member's nearest neighbour commits instead, the tree stays fully populated at log2(N)−1.</description>
+    </item>
+    <item>
       <title>Falcon's Signature Compressor, Audited: FN-DSA-1024 Restarts 1 in 1,055 Signings on Encoding Overflow, 6.8 Million Times Its Norm Check</title>
       <link>https://mohakchugh.is-a.dev/blog/falcon-fn-dsa-signature-compression-overflow-restart-audit</link>
       <pubDate>Wed, 04 Nov 2026 00:00:00 GMT</pubDate>
