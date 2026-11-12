@@ -7,6 +7,12 @@
     <language>en</language>
     <atom:link href="https://mohakchugh.is-a.dev/feed.xml" rel="self" type="application/rss+xml"/>
     <item>
+      <title>Bitcoin Core's Cluster Mempool, Simulated: Spanning-Forest Linearization Hits the Brute-Force Optimum on 3,300/3,300 Clusters, Ancestor-Set Sort Misses on up to 6%, and Most Dense-Cluster Splits Are Wasted Self-Merges</title>
+      <link>https://mohakchugh.is-a.dev/blog/bitcoin-cluster-mempool-spanning-forest-linearization-simulated</link>
+      <pubDate>Thu, 12 Nov 2026 00:00:00 GMT</pubDate>
+      <description>Bitcoin Core 31.0 replaced ancestor/descendant limits with 64-transaction clusters, each kept in a linearized order that the new spanning-forest linearization (SFL) algorithm computes. I wrote a brute-force optimal linearizer, the old ancestor-set sort, and SFL from the rules in cluster_linearize.h. SFL matched the optimum on all 3,300 test clusters and its convexified diagram area never decreased. Ancestor-set sort was suboptimal on 0.5–6% of clusters and lost up to 14.8% of fees at its worst prefix. At n=64, SFL needs a mean of 21–31 splits from scratch, but in dense clusters 68–86% of them are self-merges that change nothing. Warm-starting from ancestor sort cuts split counts 5× on sparse clusters but only 1.5× on dense ones.</description>
+    </item>
+    <item>
       <title>MLS TreeKEM Under Churn, Simulated: Fresh Groups Start at (2N−1)/3 Ciphertexts, Admin-Committed Removes Decay to N−2, and Letting the Neighbour Commit Keeps It at log N</title>
       <link>https://mohakchugh.is-a.dev/blog/mls-treekem-ratchet-tree-churn-blank-nodes-commit-cost-simulated</link>
       <pubDate>Tue, 10 Nov 2026 00:00:00 GMT</pubDate>
