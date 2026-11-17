@@ -7,6 +7,12 @@
     <language>en</language>
     <atom:link href="https://mohakchugh.is-a.dev/feed.xml" rel="self" type="application/rss+xml"/>
     <item>
+      <title>Bucketed Approximate Top-k, Audited: XLA's approx_max_k Allocates 2.1–3.5× the Bins It Needs, Error at b·kb = k Is a Poisson PMF, and Interleaved Buckets Keep 128 of 7,380 Outlier Activations</title>
+      <link>https://mohakchugh.is-a.dev/blog/approximate-top-k-bucketed-recall-poisson-xla-overprovisioning-interleaved-aliasing-audit</link>
+      <pubDate>Tue, 17 Nov 2026 00:00:00 GMT</pubDate>
+      <description>Bucketed approximate top-k splits a vector into b buckets, keeps the top kb of each, and optionally runs an exact top-k on the survivors. I checked Key et al.'s recall model (arXiv:2412.04358) by Monte Carlo and audited XLA's bin-sizing code. XLA sizes bins with a model that overstates the error by about 2×, so for N = 2^20 it allocates 2.1–3.5× the bins needed and delivers 0.29–0.47× the requested error. When b·kb = k the expected error is exactly the Poisson(kb) PMF at its mean, about 1/√(2π·kb), so raising kb with no slack in the candidate budget improves recall slowly. Interleaved buckets, the paper's recommended assignment, alias with power-of-two row strides. On a 1024×4096 activation matrix with 8 outlier channels they keep 128 of 7,380 top-k outlier elements and capture 60% of the top-k mass, against 95% for a random assignment. A one-line skewed interleave fixes it.</description>
+    </item>
+    <item>
       <title>Bitcoin Core's Cluster Mempool, Simulated: Spanning-Forest Linearization Hits the Brute-Force Optimum on 3,300/3,300 Clusters, Ancestor-Set Sort Misses on up to 6%, and Most Dense-Cluster Splits Are Wasted Self-Merges</title>
       <link>https://mohakchugh.is-a.dev/blog/bitcoin-cluster-mempool-spanning-forest-linearization-simulated</link>
       <pubDate>Thu, 12 Nov 2026 00:00:00 GMT</pubDate>
