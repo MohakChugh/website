@@ -19,6 +19,12 @@
       <description>Sequoia picks speculative-decoding token trees with an O(N²B) dynamic program and proves expected accepted tokens grow as Ω(b·log n / log log n). I reimplemented both. For a non-increasing acceptance vector, a 15-line heap gives the same trees to 3e-15. The real growth rate is ln(n)/H, where H is the entropy of the rank at which the target accepts a draft token. That constant tells you what each doubling of the tree buys, and the best tree size lands on the verifier's roofline knee.</description>
     </item>
     <item>
+      <title>Signal's SPQR Ratchet, Simulated: Erasure-Coded ML-KEM Chunks, 87 Messages per Epoch, and Where the Incremental Braid Stops Paying</title>
+      <link>https://mohakchugh.is-a.dev/blog/signal-spqr-ml-kem-braid-erasure-coded-chunks-epoch-cost-simulated</link>
+      <pubDate>Wed, 18 Nov 2026 00:00:00 GMT</pubDate>
+      <description>Signal's Triple Ratchet adds a post-quantum ratchet by slicing ML-KEM-768 keys and ciphertexts into 32-byte erasure-coded chunks, one per message. I checked the spec's arithmetic: 74 chunks per epoch (4.2% over a raw KEM), and an attacker must drop 99.947% of messages to stall it, versus 2.8% for naive chunking. I also simulated the scheduling. Under strict turn-taking an epoch costs exactly 2(3+36+5)−1 = 87 messages, against 141 without the incremental split. The advantage shrinks as messages come in runs and reverses at a mean run length of about 20.</description>
+    </item>
+    <item>
       <title>Bucketed Approximate Top-k, Audited: XLA's approx_max_k Allocates 2.1–3.5× the Bins It Needs, Error at b·kb = k Is a Poisson PMF, and Interleaved Buckets Keep 128 of 7,380 Outlier Activations</title>
       <link>https://mohakchugh.is-a.dev/blog/approximate-top-k-bucketed-recall-poisson-xla-overprovisioning-interleaved-aliasing-audit</link>
       <pubDate>Tue, 17 Nov 2026 00:00:00 GMT</pubDate>
