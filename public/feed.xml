@@ -7,6 +7,12 @@
     <language>en</language>
     <atom:link href="https://mohakchugh.is-a.dev/feed.xml" rel="self" type="application/rss+xml"/>
     <item>
+      <title>Parallel IIR Filtering, Audited: Decoupled Look-Back on a Biquad Cascade, and Why the Carry Decays Before It Travels</title>
+      <link>https://mohakchugh.is-a.dev/blog/parallel-iir-biquad-cascade-decoupled-lookback-carry-decay-audit</link>
+      <pubDate>Thu, 19 Nov 2026 00:00:00 GMT</pubDate>
+      <description>A July 2026 paper runs cascaded biquad IIR filters at 38.2 GS/s on an RTX 3060. It splits each group's output into a zero-state response plus a homogeneous correction, then chains the carries with decoupled look-back. I rebuilt the scheme in numpy and confirmed the paper's direct-form failure (a pole at radius 1.0057 at order 16). On the paper's benchmark filter, a look-back depth of 1 is already exact. The samples needed for the carry to fall below float32 precision follow W ≈ 16.6/(1 − r_max), and depth only matters for narrowband filters. That is roughly where float32 itself starts failing the paper's accuracy gate.</description>
+    </item>
+    <item>
       <title>PeerDAS Samples the Same Columns Every Slot: Auditing Fusaka's Custody Sampling Against an Adversary Who Reads the Spec</title>
       <link>https://mohakchugh.is-a.dev/blog/peerdas-custody-sampling-deterministic-columns-targeted-unavailability-audit</link>
       <pubDate>Wed, 18 Nov 2026 00:00:00 GMT</pubDate>
