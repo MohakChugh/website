@@ -7,6 +7,12 @@
     <language>en</language>
     <atom:link href="https://mohakchugh.is-a.dev/feed.xml" rel="self" type="application/rss+xml"/>
     <item>
+      <title>Dynamic Tanh, Audited: Where LayerNorm's S-Curve Comes From, the Ceiling on Any Element-wise Replacement, and Why the 52% Speedup Is a Kernel Count</title>
+      <link>https://mohakchugh.is-a.dev/blog/dynamic-tanh-dyt-layernorm-s-curve-elementwise-ceiling-audit</link>
+      <pubDate>Sat, 21 Nov 2026 00:00:00 GMT</pubDate>
+      <description>DyT (CVPR 2025) replaces LayerNorm with γ·tanh(αx), arguing from scatter plots that trained LN layers already look like tanh. I derived where that S-curve comes from and simulated how much of LayerNorm any element-wise function can reproduce. A single outlier in a C-wide token is normalized to exactly v/√(1+v²/C), which is within 0.074 of √C·tanh(v/√C). With rare outliers, tanh fits LN with R² 0.990, the same as the best element-wise function. With token-scale spread or common outliers, every element-wise map tops out around 0.85, and tanh is never more than 0.016 below that ceiling. The 52% layer speedup in the paper matches eager-mode memory traffic (36 vs 16 bytes per element) and disappears once the kernels are fused, as the paper's own Table 15 shows.</description>
+    </item>
+    <item>
       <title>FP8 Accumulation on Hopper, Audited: What DeepSeek-V3's '14 Bits' Actually Costs, and Why N_C = 128 Is Pinned From Both Sides</title>
       <link>https://mohakchugh.is-a.dev/blog/deepseek-v3-fp8-accumulation-14-bit-truncation-promotion-interval-audit</link>
       <pubDate>Fri, 20 Nov 2026 00:00:00 GMT</pubDate>
