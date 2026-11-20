@@ -7,6 +7,12 @@
     <language>en</language>
     <atom:link href="https://mohakchugh.is-a.dev/feed.xml" rel="self" type="application/rss+xml"/>
     <item>
+      <title>FP8 Accumulation on Hopper, Audited: What DeepSeek-V3's '14 Bits' Actually Costs, and Why N_C = 128 Is Pinned From Both Sides</title>
+      <link>https://mohakchugh.is-a.dev/blog/deepseek-v3-fp8-accumulation-14-bit-truncation-promotion-interval-audit</link>
+      <pubDate>Fri, 20 Nov 2026 00:00:00 GMT</pubDate>
+      <description>The DeepSeek-V3 report says Hopper FP8 tensor cores keep only about 14 bits when they accumulate, that this gives a maximum relative error of 'nearly 2%' at K = 4096, and that copying partial sums to FP32 every 128 products fixes it. I built a bit-level simulator of the mechanism the report describes. With truncation in the register alone, the error is a data-independent shrink toward zero, close to K·7×10⁻⁷ (0.28% at K = 4096). If the accumulator also takes part in the exponent alignment, the error runs from 0.13% to 7% depending on the sign structure of the inputs. Promoting every 128 products brings every case down to 1–5×10⁻⁴. The 128 is also squeezed from both sides: quantization groups cap it from above, and CUDA-core throughput sets a floor from below.</description>
+    </item>
+    <item>
       <title>Parallel IIR Filtering, Audited: Decoupled Look-Back on a Biquad Cascade, and Why the Carry Decays Before It Travels</title>
       <link>https://mohakchugh.is-a.dev/blog/parallel-iir-biquad-cascade-decoupled-lookback-carry-decay-audit</link>
       <pubDate>Thu, 19 Nov 2026 00:00:00 GMT</pubDate>
