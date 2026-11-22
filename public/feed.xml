@@ -7,6 +7,12 @@
     <language>en</language>
     <atom:link href="https://mohakchugh.is-a.dev/feed.xml" rel="self" type="application/rss+xml"/>
     <item>
+      <title>UUIDv7 in PostgreSQL 18, Audited: The 245 ns Step, a Collision Trade That Is Exactly Neutral, and the Out-of-Order Cliff That Halves Index Fill</title>
+      <link>https://mohakchugh.is-a.dev/blog/postgres-18-uuidv7-method-3-monotonic-step-btree-out-of-order-cliff-audit</link>
+      <pubDate>Sun, 22 Nov 2026 00:00:00 GMT</pubDate>
+      <description>PostgreSQL 18 ships a native uuidv7() built on RFC 9562's Method 3: 12 bits of sub-millisecond clock replace random bits. I read uuid.c and nbtsplitloc.c, then checked them with my own code. The 245 ns minimum step is exactly the smallest value that guarantees per-backend monotonicity (244 ns fails 1,728 times per 3 ms). Giving up 12 random bits for clock bits costs nothing in collision odds when arrivals are uniform, and at most 4096× when they cluster. A leaf-level simulation using PostgreSQL's split rules finds a cliff. Out-of-order inserts are harmless up to about 2.5× the fillfactor slack. Beyond that, fill drops to 54%, worse than random v4. And fillfactor=100 on a v7 index sits at 51% with almost any reordering.</description>
+    </item>
+    <item>
       <title>Dynamic Tanh, Audited: Where LayerNorm's S-Curve Comes From, the Ceiling on Any Element-wise Replacement, and Why the 52% Speedup Is a Kernel Count</title>
       <link>https://mohakchugh.is-a.dev/blog/dynamic-tanh-dyt-layernorm-s-curve-elementwise-ceiling-audit</link>
       <pubDate>Sat, 21 Nov 2026 00:00:00 GMT</pubDate>
