@@ -13,6 +13,12 @@
       <description>PostgreSQL 18 ships a native uuidv7() built on RFC 9562's Method 3: 12 bits of sub-millisecond clock replace random bits. I read uuid.c and nbtsplitloc.c, then checked them with my own code. The 245 ns minimum step is exactly the smallest value that guarantees per-backend monotonicity (244 ns fails 1,728 times per 3 ms). Giving up 12 random bits for clock bits costs nothing in collision odds when arrivals are uniform, and at most 4096× when they cluster. A leaf-level simulation using PostgreSQL's split rules finds a cliff. Out-of-order inserts are harmless up to about 2.5× the fillfactor slack. Beyond that, fill drops to 54%, worse than random v4. And fillfactor=100 on a v7 index sits at 51% with almost any reordering.</description>
     </item>
     <item>
+      <title>Sarathi-Serve's Chunked Prefill, Audited: KV Re-Reads Cost 0.4%, the 25% Overhead Is Wave Quantization, and 'Stall-Free' Means ~200 Free Tokens</title>
+      <link>https://mohakchugh.is-a.dev/blog/sarathi-serve-chunked-prefill-token-budget-roofline-wave-quantization-audit</link>
+      <pubDate>Sun, 22 Nov 2026 00:00:00 GMT</pubDate>
+      <description>Sarathi-Serve (OSDI '24) splits prompts into chunks and runs them alongside ongoing decodes under a fixed per-iteration token budget. I rebuilt its cost structure as an A100 roofline plus a tile-and-wave model and checked the paper's numbers. Re-reading prior chunks' KV costs 0.37% of an 8K Yi-34B prefill at chunk 512, so the paper is right that it doesn't matter. Launches and re-reads cannot explain the measured ~25% chunking overhead. GEMM and attention grids that leave the A100's 108 SMs partly idle predict +21–32%. Only 157–335 prefill tokens ride along with a decode batch for free; at the strict budget of 512, an iteration costs 1.7–2.4× a decode-only one.</description>
+    </item>
+    <item>
       <title>Stochastic Rounding for Pure-BF16 Training, Audited: Weight Decay Is a No-Op Without It, Adam's β2 = 0.999 Becomes a Ratchet, and a Convergence Floor That Ignores β2</title>
       <link>https://mohakchugh.is-a.dev/blog/stochastic-rounding-bf16-training-weight-decay-no-op-adam-beta2-ratchet-audit</link>
       <pubDate>Sun, 22 Nov 2026 00:00:00 GMT</pubDate>
