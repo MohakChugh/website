@@ -7,6 +7,12 @@
     <language>en</language>
     <atom:link href="https://mohakchugh.is-a.dev/feed.xml" rel="self" type="application/rss+xml"/>
     <item>
+      <title>AdEMAMix, Audited: The Slow EMA Is a 9× Learning Rate Below ηh = 1−β3, a 1× One Above It, and a 4.8× Spike When Gradients Shrink</title>
+      <link>https://mohakchugh.is-a.dev/blog/ademamix-slow-ema-frequency-selective-learning-rate-audit</link>
+      <pubDate>Mon, 23 Nov 2026 00:00:00 GMT</pubDate>
+      <description>AdEMAMix adds a second, very slow momentum buffer to Adam (β3 = 0.9999, weighted by α = 8). I checked its formulas and modeled it as a linear filter. The half-life numbers and the β3-scheduler derivation are exact. The update noise rises only 4.5% while the step on persistent gradients grows 9×. On a quadratic, AdEMAMix converges 9.9× faster in low-curvature directions. The advantage is exactly 1.00× at ηh = 1−β3 and turns into a small slow tail above it. The noise floor matches Adam at 9× the learning rate in flat directions but rises only 2–9% in stiff ones. The stability edge barely moves (38 → 37.7). The failure mode is different: a 10× drop in gradient scale makes the normalized update spike to 4.8× its steady value, about 6,000 steps later.</description>
+    </item>
+    <item>
       <title>UUIDv7 in PostgreSQL 18, Audited: The 245 ns Step, a Collision Trade That Is Exactly Neutral, and the Out-of-Order Cliff That Halves Index Fill</title>
       <link>https://mohakchugh.is-a.dev/blog/postgres-18-uuidv7-method-3-monotonic-step-btree-out-of-order-cliff-audit</link>
       <pubDate>Sun, 22 Nov 2026 00:00:00 GMT</pubDate>
