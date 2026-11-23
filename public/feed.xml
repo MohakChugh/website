@@ -7,6 +7,12 @@
     <language>en</language>
     <atom:link href="https://mohakchugh.is-a.dev/feed.xml" rel="self" type="application/rss+xml"/>
     <item>
+      <title>WSD Cooldowns vs. Convex Theory, Audited: The Exact Limit Is a One-Line Formula, a 20% Cooldown Costs 8% (Not 33%), and the Tuned LR Wants a 42% Cooldown</title>
+      <link>https://mohakchugh.is-a.dev/blog/wsd-cooldown-convex-bound-exact-limit-optimal-cooldown-fraction-audit</link>
+      <pubDate>Tue, 24 Nov 2026 00:00:00 GMT</pubDate>
+      <description>Schaipp et al. (ICML 2025) show that a last-iterate SGD bound from non-smooth convex optimization reproduces the loss curves of LLM learning-rate schedules, including the sudden drop during a WSD cooldown. I re-implemented the bound in O(T) and derived its exact large-T limit for WSD: sqrt(2(2+ln((1+β)/(1−β)))/(1+β)) · DG/√T. At 20% cooldown that is 2.160, against 2.666 from the paper's Theorem G.1, so the theorem overstates the cost relative to linear decay by about 4× (33% vs 8%). The same algebra gives a closed form for the best cooldown fraction at a fixed LR, 2γ'²/(1+γ'²). At the LR tuned for 20% cooldown, that is 42%.</description>
+    </item>
+    <item>
       <title>AdEMAMix, Audited: The Slow EMA Is a 9× Learning Rate Below ηh = 1−β3, a 1× One Above It, and a 4.8× Spike When Gradients Shrink</title>
       <link>https://mohakchugh.is-a.dev/blog/ademamix-slow-ema-frequency-selective-learning-rate-audit</link>
       <pubDate>Mon, 23 Nov 2026 00:00:00 GMT</pubDate>
