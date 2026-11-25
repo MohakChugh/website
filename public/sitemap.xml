@@ -24,6 +24,7 @@
   <url><loc>https://mohakchugh.is-a.dev/projects/connectus</loc><priority>0.6</priority></url>
   <url><loc>https://mohakchugh.is-a.dev/projects/flashread</loc><priority>0.6</priority></url>
   <url><loc>https://mohakchugh.is-a.dev/blog/exact-bpe-linear-time-backtracking-pair-compatibility-cl100k-audit</loc><priority>0.7</priority></url>
+  <url><loc>https://mohakchugh.is-a.dev/blog/sorting-free-llm-sampling-dual-pivot-rejection-bf16-ties-audit</loc><priority>0.7</priority></url>
   <url><loc>https://mohakchugh.is-a.dev/blog/wsd-cooldown-convex-bound-exact-limit-optimal-cooldown-fraction-audit</loc><priority>0.7</priority></url>
   <url><loc>https://mohakchugh.is-a.dev/blog/ademamix-slow-ema-frequency-selective-learning-rate-audit</loc><priority>0.7</priority></url>
   <url><loc>https://mohakchugh.is-a.dev/blog/postgres-18-uuidv7-method-3-monotonic-step-btree-out-of-order-cliff-audit</loc><priority>0.7</priority></url>

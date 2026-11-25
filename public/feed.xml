@@ -13,6 +13,12 @@
       <description>GitHub's bpe crate encodes text into byte-pair tokens exactly, in linear time, by checking only whether each new token is compatible with the one before it. I re-implemented the backtracking encoder against the real cl100k vocabulary. It matched reference BPE on every sample, and 0 of 8,000 random pairwise-compatible token chains failed to round-trip. Two of the README's numbers do not survive. 96.97% ± 0.03% of cl100k's 10 billion token pairs are compatible, about 9.75B, against the stated 'roughly 500 million'. Overlapping matches are 2.84 per byte on my corpus, against 3.5. I also prove a bound the README does not state: each input position is scanned at most once, so the worst case is O(n·L).</description>
     </item>
     <item>
+      <title>Sorting-Free LLM Sampling, Audited: Single-Pivot Rejection Already Averages ≤ 1 + ln(1/P) Rounds, Dual-Pivot Changes Nothing on Real Logits, and bf16 Ties Make top_k=50 Keep 58 Tokens</title>
+      <link>https://mohakchugh.is-a.dev/blog/sorting-free-llm-sampling-dual-pivot-rejection-bf16-ties-audit</link>
+      <pubDate>Wed, 25 Nov 2026 00:00:00 GMT</pubDate>
+      <description>FlashInfer replaced sort-then-cumsum top-k/top-p sampling with rejection sampling, then added a dual-pivot version that bounds the worst-case number of rounds. I re-implemented both and ran them on 1,536 real next-token distributions from Qwen2.5-0.5B. Both are exact: 0 invalid tokens in 4M draws. Their round counts are the same on every metric I measured, including the max over a 64-row batch. I derive the expected round count for the single-pivot sampler in closed form, E = 1 + Σ m(v)/M(≥v) ≤ 1 + ln(1/Z), which caps top-p=0.9 at 1.105 rounds. The bigger surprise is semantic: a bf16 row has only about 2,860 distinct logits across 151,665 tokens, so threshold-based top_k=50 keeps more than 50 tokens at 60.7% of positions.</description>
+    </item>
+    <item>
       <title>WSD Cooldowns vs. Convex Theory, Audited: The Exact Limit Is a One-Line Formula, a 20% Cooldown Costs 8% (Not 33%), and the Tuned LR Wants a 42% Cooldown</title>
       <link>https://mohakchugh.is-a.dev/blog/wsd-cooldown-convex-bound-exact-limit-optimal-cooldown-fraction-audit</link>
       <pubDate>Tue, 24 Nov 2026 00:00:00 GMT</pubDate>
