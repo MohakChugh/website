@@ -7,6 +7,12 @@
     <language>en</language>
     <atom:link href="https://mohakchugh.is-a.dev/feed.xml" rel="self" type="application/rss+xml"/>
     <item>
+      <title>Exact BPE in Linear Time, Audited: Pair Compatibility Holds on cl100k, 97% of Token Pairs Are Compatible (Not 5%), and Each Position Is Scanned At Most Once</title>
+      <link>https://mohakchugh.is-a.dev/blog/exact-bpe-linear-time-backtracking-pair-compatibility-cl100k-audit</link>
+      <pubDate>Wed, 25 Nov 2026 00:00:00 GMT</pubDate>
+      <description>GitHub's bpe crate encodes text into byte-pair tokens exactly, in linear time, by checking only whether each new token is compatible with the one before it. I re-implemented the backtracking encoder against the real cl100k vocabulary. It matched reference BPE on every sample, and 0 of 8,000 random pairwise-compatible token chains failed to round-trip. Two of the README's numbers do not survive. 96.97% ± 0.03% of cl100k's 10 billion token pairs are compatible, about 9.75B, against the stated 'roughly 500 million'. Overlapping matches are 2.84 per byte on my corpus, against 3.5. I also prove a bound the README does not state: each input position is scanned at most once, so the worst case is O(n·L).</description>
+    </item>
+    <item>
       <title>WSD Cooldowns vs. Convex Theory, Audited: The Exact Limit Is a One-Line Formula, a 20% Cooldown Costs 8% (Not 33%), and the Tuned LR Wants a 42% Cooldown</title>
       <link>https://mohakchugh.is-a.dev/blog/wsd-cooldown-convex-bound-exact-limit-optimal-cooldown-fraction-audit</link>
       <pubDate>Tue, 24 Nov 2026 00:00:00 GMT</pubDate>
